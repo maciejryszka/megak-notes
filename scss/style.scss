@@ -1,0 +1,344 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background: #202020;
+  color: #6a7b76;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 38px;
+  color: #beb0a7;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #6b7b76e6;
+
+  &-navigation {
+    width: 1000px;
+    height: 38px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 0;
+
+    &__menu-button {
+      position: fixed;
+      left: 0px;
+      margin-left: 10px;
+      background: none;
+      border: none;
+      color: #beb0a7;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    &__text {
+      margin: 0;
+      line-height: 28px;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 1366px) {
+      width: 100vw;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 1024px) {
+      width: 100vw;
+    }
+  }
+}
+
+.hamburger-menu {
+  width: 0;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #6b7b76e6;
+  text-align: left;
+
+  &--active {
+    width: 190px;
+    position: absolute;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #beb0a7;
+  }
+
+  &__list {
+    margin: 5px 20px;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+
+    &-item {
+      margin: 0 5px;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@mixin main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 38px;
+
+  @media screen and (orientation: landscape) and (max-width: 823px) {
+    max-width: 800px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 812px) {
+    max-width: 720px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 736px) {
+    max-width: 700px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 680px) {
+    max-width: 670px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 667px) {
+    max-width: 650px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 640px) {
+    max-width: 600px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 568px) {
+    max-width: 550px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 533px) {
+    max-width: 520px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 768px) {
+    max-width: 700px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 414px) {
+    max-width: 400px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 393px) {
+    max-width: 380px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 375px) {
+    max-width: 350px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 320px) {
+    max-width: 300px;
+  }
+}
+
+@mixin main-heading {
+  color: #beb0a7;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin main-image {
+  margin: 0 auto;
+  width: 640px;
+  height: 426px;
+  border-radius: 50px;
+  background-position: center center;
+
+  @media screen and (orientation: landscape) and (max-width: 823px) {
+    height: 200px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 812px) {
+    height: 150px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 640px) {
+    width: 500px;
+    height: 100px;
+    border-radius: 25px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 1024px) {
+    height: 300px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 768px) {
+    height: 200px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 414px) {
+    width: 400px;
+    height: 100px;
+    border-radius: 25px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 393px) {
+    width: 380px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 375px) {
+    width: 350px;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 320px) {
+    width: 300px;
+  }
+}
+
+.diary-main {
+  @include main;
+
+  &__heading {
+    @include main-heading;
+  }
+
+  &__image {
+    @include main-image;
+    background-image: url("img/writing.jpg");
+
+    @media screen and (orientation: landscape) and (max-width: 823px) {
+      background-position: center 70%;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 667px) {
+      background-position: center 80%;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 640px) {
+      width: 500px;
+      height: 100px;
+      border-radius: 25px;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 1024px) {
+      background-position: center 80%;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 414px) {
+      background-position: center 85%;
+    }
+  }
+}
+
+.theory-main {
+  @include main;
+
+  &__heading {
+    @include main-heading;
+
+    &::before {
+      content: "☺ ";
+      color: #48e496;
+    }
+  }
+
+  &__image {
+    @include main-image;
+    background-image: url("img/knowledge.jpg");
+
+    @media screen and (orientation: landscape) and (max-width: 823px) {
+      background-position: center 0%;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 812px) {
+      background-position: center 20%;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 1024px) {
+      background-position: center 0%;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 414px) {
+      background-position: center 25%;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: #beb0a7;
+  }
+
+  &__links {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+.main {
+  @include main;
+
+  &__text {
+    text-align: center;
+  }
+}
+
+.diary-articles-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+
+  @media screen and (orientation: landscape) and (max-width: 736px) {
+    display: block;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 414px) {
+    display: block;
+  }
+}
+
+.article {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #6a7b76;
+  border-radius: 10px;
+
+  &__heading {
+    color: #beb0a7;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-weight: bold;
+    color: #6a7b76;
+
+    &--capital {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer {
+  &__link {
+    font-weight: bold;
+    color: #6a7b76;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

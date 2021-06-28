@@ -1,0 +1,548 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background: #202020;
+  color: #6a7b76;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 38px;
+  color: #beb0a7;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #6b7b76e6;
+}
+.header-navigation {
+  width: 1000px;
+  height: 38px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 0;
+}
+.header-navigation__menu-button {
+  position: fixed;
+  left: 0px;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #beb0a7;
+  font-size: 24px;
+  cursor: pointer;
+}
+.header-navigation__text {
+  margin: 0;
+  line-height: 28px;
+}
+@media screen and (orientation: landscape) and (max-width: 1366px) {
+  .header-navigation {
+    width: 100vw;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .header-navigation {
+    width: 100vw;
+  }
+}
+
+.hamburger-menu {
+  width: 0;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #6b7b76e6;
+  text-align: left;
+}
+.hamburger-menu--active {
+  width: 190px;
+  position: absolute;
+}
+.hamburger-menu__link {
+  text-decoration: none;
+  color: #beb0a7;
+}
+.hamburger-menu__list {
+  margin: 5px 20px;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+.hamburger-menu__list-item {
+  margin: 0 5px;
+}
+.hamburger-menu__list-item:hover {
+  font-weight: bold;
+}
+
+.diary-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .diary-main {
+    max-width: 800px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .diary-main {
+    max-width: 720px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 736px) {
+  .diary-main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  .diary-main {
+    max-width: 670px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 667px) {
+  .diary-main {
+    max-width: 650px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .diary-main {
+    max-width: 600px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 568px) {
+  .diary-main {
+    max-width: 550px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 533px) {
+  .diary-main {
+    max-width: 520px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .diary-main {
+    max-width: 900px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .diary-main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .diary-main {
+    max-width: 400px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .diary-main {
+    max-width: 380px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .diary-main {
+    max-width: 350px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 320px) {
+  .diary-main {
+    max-width: 300px;
+  }
+}
+.diary-main__heading {
+  color: #beb0a7;
+  text-align: center;
+  text-transform: uppercase;
+}
+.diary-main__image {
+  margin: 0 auto;
+  width: 640px;
+  height: 426px;
+  border-radius: 50px;
+  background-position: center center;
+  background-image: url("img/writing.jpg");
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .diary-main__image {
+    height: 200px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .diary-main__image {
+    height: 150px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .diary-main__image {
+    width: 500px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .diary-main__image {
+    height: 300px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .diary-main__image {
+    height: 200px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .diary-main__image {
+    width: 400px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .diary-main__image {
+    width: 380px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .diary-main__image {
+    width: 350px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 320px) {
+  .diary-main__image {
+    width: 300px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .diary-main__image {
+    background-position: center 70%;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 667px) {
+  .diary-main__image {
+    background-position: center 80%;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .diary-main__image {
+    width: 500px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .diary-main__image {
+    background-position: center 80%;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .diary-main__image {
+    background-position: center 85%;
+  }
+}
+
+.theory-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .theory-main {
+    max-width: 800px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .theory-main {
+    max-width: 720px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 736px) {
+  .theory-main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  .theory-main {
+    max-width: 670px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 667px) {
+  .theory-main {
+    max-width: 650px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .theory-main {
+    max-width: 600px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 568px) {
+  .theory-main {
+    max-width: 550px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 533px) {
+  .theory-main {
+    max-width: 520px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .theory-main {
+    max-width: 900px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .theory-main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .theory-main {
+    max-width: 400px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .theory-main {
+    max-width: 380px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .theory-main {
+    max-width: 350px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 320px) {
+  .theory-main {
+    max-width: 300px;
+  }
+}
+.theory-main__heading {
+  color: #beb0a7;
+  text-align: center;
+  text-transform: uppercase;
+}
+.theory-main__heading::before {
+  content: "☺ ";
+  color: #48e496;
+}
+.theory-main__image {
+  margin: 0 auto;
+  width: 640px;
+  height: 426px;
+  border-radius: 50px;
+  background-position: center center;
+  background-image: url("img/knowledge.jpg");
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .theory-main__image {
+    height: 200px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .theory-main__image {
+    height: 150px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .theory-main__image {
+    width: 500px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .theory-main__image {
+    height: 300px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .theory-main__image {
+    height: 200px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .theory-main__image {
+    width: 400px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .theory-main__image {
+    width: 380px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .theory-main__image {
+    width: 350px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 320px) {
+  .theory-main__image {
+    width: 300px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .theory-main__image {
+    background-position: center 0%;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .theory-main__image {
+    background-position: center 20%;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .theory-main__image {
+    background-position: center 0%;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .theory-main__image {
+    background-position: center 25%;
+  }
+}
+.theory-main__link {
+  text-transform: uppercase;
+  color: #beb0a7;
+}
+.theory-main__links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+@media screen and (orientation: landscape) and (max-width: 823px) {
+  .main {
+    max-width: 800px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 812px) {
+  .main {
+    max-width: 720px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 736px) {
+  .main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  .main {
+    max-width: 670px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 667px) {
+  .main {
+    max-width: 650px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 640px) {
+  .main {
+    max-width: 600px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 568px) {
+  .main {
+    max-width: 550px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 533px) {
+  .main {
+    max-width: 520px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .main {
+    max-width: 900px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .main {
+    max-width: 700px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .main {
+    max-width: 400px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .main {
+    max-width: 380px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .main {
+    max-width: 350px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 320px) {
+  .main {
+    max-width: 300px;
+  }
+}
+.main__text {
+  text-align: center;
+}
+
+.diary-articles-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+@media screen and (orientation: landscape) and (max-width: 736px) {
+  .diary-articles-wrapper {
+    display: block;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 414px) {
+  .diary-articles-wrapper {
+    display: block;
+  }
+}
+
+.article {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #6a7b76;
+  border-radius: 10px;
+}
+.article__heading {
+  color: #beb0a7;
+  text-transform: uppercase;
+}
+.article__link {
+  font-weight: bold;
+  color: #6a7b76;
+}
+.article__link--capital {
+  text-transform: uppercase;
+}
+
+.footer__link {
+  font-weight: bold;
+  color: #6a7b76;
+}
+.footer__text {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
