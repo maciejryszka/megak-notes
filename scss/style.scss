@@ -219,7 +219,7 @@ body {
 
   &__image {
     @include main-image;
-    background-image: url("img/knowledge.jpg");
+    background-image: url("../img/knowledge.jpg");
 
     @media screen and (orientation: landscape) and (max-width: 823px) {
       background-position: center 0%;
