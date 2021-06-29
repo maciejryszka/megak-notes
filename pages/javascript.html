@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MegaKurs - notatki</title>
+    <title>MegaKurs - JavaScript</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../style.css" />
     <script
       src="https://kit.fontawesome.com/9e22ac749d.js"
       crossorigin="anonymous"
@@ -27,9 +27,7 @@
               >
             </li>
             <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="pages/javascript.html"
-                >1: JavaScript</a
-              >
+              <a class="hamburger-menu__link" href="#">1: JavaScript</a>
             </li>
             <li class="hamburger-menu__list-item">
               <a class="hamburger-menu__link" href="#">2: Node.js</a>
@@ -59,22 +57,35 @@
         <p class="header-navigation__text">mega kurs javascriptu</p>
       </nav>
     </header>
-    <main class="main">
-      <header class="main__header">
-        <p class="main__text">
-          Na stronie znajdziesz notatki zawierające teorię przedstawioną podczas
-          kursu Bartłomieja Borowczyka i Jakuba Króla -
-          <a
-            class="article__link article__link--capital"
-            href="https://www.megak.pl/"
-            >mega kurs javascriptu</a
-          >.
-        </p>
-      </header>
+    <main id="top" class="theory-main">
+      <h1 class="theory-main__heading">javascript</h1>
+      <nav class="theory-main__links">
+        <a href="#fundaments" class="theory-main__link"
+          >fundamenty javascriptu</a
+        >
+        <a href="#operations" class="theory-main__link">operacje i operatory</a>
+      </nav>
+      <article id="fundaments" class="article">
+        <h2 class="article__heading">fundamenty javascriptu</h2>
+        <p class="article__text">xd2</p>
+        <ul class="article__list">
+          <li class="article__list-item"></li>
+        </ul>
+        <a class="article__link" href=""></a>
+      </article>
+      <article id="operations" class="article">
+        <h2 class="article__heading">operacje i operatory</h2>
+        <p class="article__text">xd</p>
+        <ul class="article__list">
+          <li class="article__list-item"></li>
+        </ul>
+        <a class="article__link" href=""></a>
+      </article>
     </main>
     <footer class="footer">
       <p class="footer__text">
         Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
+        <a class="footer__link" href="#top">Wróć na górę</a>
       </p>
       <p class="footer__text">Maciej Ryszka - 2021</p>
     </footer>

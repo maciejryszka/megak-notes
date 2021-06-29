@@ -69,7 +69,7 @@ body {
   text-align: left;
 
   &--active {
-    width: 190px;
+    width: 275px;
     position: absolute;
   }
 
@@ -210,51 +210,11 @@ body {
   }
 }
 
-.diary-main {
-  @include main;
-
-  &__heading {
-    @include main-heading;
-  }
-
-  &__image {
-    @include main-image;
-    background-image: url("img/writing.jpg");
-
-    @media screen and (orientation: landscape) and (max-width: 823px) {
-      background-position: center 70%;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 667px) {
-      background-position: center 80%;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 640px) {
-      width: 500px;
-      height: 100px;
-      border-radius: 25px;
-    }
-
-    @media screen and (orientation: portrait) and (max-width: 1024px) {
-      background-position: center 80%;
-    }
-
-    @media screen and (orientation: portrait) and (max-width: 414px) {
-      background-position: center 85%;
-    }
-  }
-}
-
 .theory-main {
   @include main;
 
   &__heading {
     @include main-heading;
-
-    &::before {
-      content: "☺ ";
-      color: #48e496;
-    }
   }
 
   &__image {
@@ -294,20 +254,6 @@ body {
 
   &__text {
     text-align: center;
-  }
-}
-
-.diary-articles-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-
-  @media screen and (orientation: landscape) and (max-width: 736px) {
-    display: block;
-  }
-
-  @media screen and (orientation: portrait) and (max-width: 414px) {
-    display: block;
   }
 }
 
