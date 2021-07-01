@@ -174,7 +174,7 @@ body {
   height: 426px;
   border-radius: 50px;
   background-position: center center;
-  background-image: url("img/knowledge.jpg");
+  background-image: url("../img/knowledge.jpg");
 }
 @media screen and (orientation: landscape) and (max-width: 823px) {
   .theory-main__image {

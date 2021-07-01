@@ -123,15 +123,35 @@
                 (możliwe jest użycie nawiasów). Podczas wykonywania takich wyrażeń zwracany jest ich wynik.</p>
             <a class="article__link" href=""></a>
             <p class="article__text">Operatory porównania:</p>
-            <li class="article__list-item"><strong>></strong> - większy;</li>
-            <li class="article__list-item"><strong>>=</strong> - większy bądź równy;</li>
-            <li class="article__list-item"><strong>&lt;</strong> - mniejszy;</li>
-            <li class="article__list-item"><strong>&lt;=</strong> - mniejszy bądź równy)</li>
-            <li class="article__list-item"><strong>==</strong> - równy (bez porównania typu zmiennej);</li>
-            <li class="article__list-item"><strong>===</strong> - równy (z porównaniem typu zmiennej);</li>
-            <li class="article__list-item"><strong>!=</strong> - różny (bez porównania typu zmiennej);</li>
-            <li class="article__list-item"><strong>!==</strong> - różny (z porównaniem typu zmiennej);</li>
-
+            <ul class="article__list">
+                <li class="article__list-item"><strong>></strong> - większy;</li>
+                <li class="article__list-item"><strong>>=</strong> - większy bądź równy;</li>
+                <li class="article__list-item"><strong>&lt;</strong> - mniejszy;</li>
+                <li class="article__list-item"><strong>&lt;=</strong> - mniejszy bądź równy);</li>
+                <li class="article__list-item"><strong>==</strong> - równy (bez porównania typu zmiennej);</li>
+                <li class="article__list-item"><strong>===</strong> - równy (z porównaniem typu zmiennej);</li>
+                <li class="article__list-item"><strong>!=</strong> - różny (bez porównania typu zmiennej);</li>
+                <li class="article__list-item"><strong>!==</strong> - różny (z porównaniem typu zmiennej).</li>
+            </ul>
+            <p class="article__text">Dobrą praktyką jest używanie <b>===</b> podczas wykonywania porównań. <a
+                    class="article__link" href="https://dorey.github.io/JavaScript-Equality-Table/unified/">Tabela</a>
+                obrazująca różnice w porównaniach z użyciem różnych operatorów równości.</p>
+            <p class="article__text">Operatory logiczne:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>&&</strong> - wszystkie warunki muszą być
+                    prawdziwe, żeby wyrażenie było prawdziwe (logiczne "i");</li>
+                <li class="article__list-item">
+                    <strong>||</strong> - przynajmniej jeden warunek muszi być
+                    prawdziwy, żeby wyrażenie było prawdziwe (logiczne "lub");
+                </li>
+                <li class="article__list-item"><strong>!</strong> - odwraca wartość wyrażenia logicznego (negacja).</li>
+            </ul>
+            <p class="article__text">Podwójna negacja (<b>!!</b>) pozwala na sprawdzenie jaką wartość logiczną przyjmie
+                operand po konwersji do typu "boolean".</p>
+            <p class="article__text"><a class="article__link"
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table">Tabela</a>
+                pierwszeństwa
+                operatorów.</p>
         </article>
     </main>
     <footer class="footer">
