@@ -54,6 +54,9 @@
         <nav class="theory-main__links">
             <a href="#fundaments" class="theory-main__link">fundamenty javascriptu</a>
             <a href="#operations" class="theory-main__link">operacje i operatory</a>
+            <a href="#variables" class="theory-main__link">zmienne</a>
+            <a href="#arrays" class="theory-main__link">tablice</a>
+            <a href="#loops" class="theory-main__link">pętle</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -168,7 +171,7 @@
                 pierwszeństwa
                 operatorów.</p>
         </article>
-        <article id="operations" class="article">
+        <article id="variables" class="article">
             <h2 class="article__heading">zmienne</h2>
             <p class="article__text"><strong>Zmienna</strong> - miejsce w pamięci, przechowujące pewne informacje.
                 Precyzyjniej jest to połączenie między zadeklarowaną nazwą a miejscem w pamięci przechowującym pewną
@@ -197,6 +200,137 @@
                     kluczowego <b>const</b>, a jeśli połączenie między zmienną i jej
                     wartością będzie edytowane w trakcie działania programu -
                     <b>let</b>.
+                </li>
+            </ul>
+        </article>
+        <article id="arrays" class="article">
+            <h2 class="article__heading">tablice</h2>
+            <p class="article__text">Tablica (array):</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    Jest niejednorodną strukturą danych, ponieważ może przechowywać
+                    różne typy danych jednocześnie (np. liczby, łańcuchy znaków,
+                    obiekty).
+                </li>
+                <li class="article__list-item">
+                    Aby zadeklarować tablicę, należy użyć nawiasów kwadratowych.
+                    Elementy tablicy można zdefiniować już podczas deklaracji tablicy
+                    (poprzez umieszczenie ich wewnątrz nawiasów kwadratowych i
+                    oddzielenie od siebie przecinkiem) lub dodać je później (z
+                    wykorzystaniem odpowiednich metod).
+                </li>
+                <li class="article__list-item">
+                    Każdy z elementów tablicy posiada indeks, czyli swoją pozycję w
+                    tablicy. Pierwszy element tablicy ma indeks 0. Aby odwołać się do
+                    elementu o danym indeksie, należy podać indeks w nawiasach
+                    kwadratowych po nazwie zmiennej, do której przypisana jest tablica.
+                </li>
+            </ul>
+            <p class="article__text">Wybrane własności i funkcje tablic:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>length</b> Zwraca ilość elementów tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>push(element)</b> Dodaje <b>element</b> na koniec tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>pop()</b> Usuwa element z końca tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>unshift(element)</b> Dodaje <b>element</b> na początek tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>shift()</b> Usuwa element z początku tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>indexOf(element)</b> Zwraca indeks pierwszego napotkanego
+                    <b>element</b> lub wartość -1, gdy <b>element</b> nie zotanie
+                    odnaleziony w tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>splice(index, amount)</b> Rozpoczynając od elementu o indeksie
+                    <b>index</b>, usuwa <b>amount</b> elementów z tablicy.
+                </li>
+                <li class="article__list-item">
+                    <b>slice(startIndex, endIndex)</b> Rozpoczynając od elementu o
+                    indeksie <b>startIndex</b> (włącznie), pobiera elementy z tablicy
+                    kończąc na elemencie o indeksie <b>endIndex</b> (z wyłączeniem tego
+                    elementu).
+                </li>
+            </ul>
+        </article>
+        <article id="loops" class="article">
+            <h2 class="article__heading">pętle</h2>
+            <p class="article__text">
+                Pętla (loop) wykonuje blok kodu określoną liczbę razy.
+            </p>
+            <p class="article__text">Rodzaje pętli:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>for(let</b> <u>i=0</u><b>;</b> <u>i&lt;10</u><b>;</b> <u>i++</u><b>) {</b>blockOfCode<b>}</b>
+                </li>
+                <li class="article__list-item">
+                    <b>while(</b><u>i&lt;10</u><b>) {</b>blockOfCode<b>}</b>
+                </li>
+                <li class="article__list-item">
+                    <b>do {</b>blockOfCode<b>} while(</b><u>i&lt;10</u><b>)</b>
+                </li>
+                <li class="article__list-item">
+                    <b>for(let</b> <u>propertyName</u> <b>in</b> <u>object</u><b>)</b>
+                </li>
+                <li class="article__list-item">
+                    <b>for(let</b> <u>element</u> <b>of</b> <u>array</u><b>)</b>
+                </li>
+            </ul>
+            <p class="article__text">
+                Pętla <b>for</b> składa się z inicjalizacji <u>iteratora</u>,
+                <u>warunku</u> oraz <u>wyrażenia inkrementacji/dekrementacji</u>. Blok
+                kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość
+                prawdziwą.
+            </p>
+            <p class="article__text">
+                Pętla <b>while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli
+                zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+                najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli
+                początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani
+                razu.
+            </p>
+            <p class="article__text">
+                Pętla <b>do ... while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz
+                pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+                najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli
+                początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
+            </p>
+            <p class="article__text">
+                Pętla <b>for ... in</b> składa się z inicjalizacji
+                <u>zmiennej określającej własność obiektu</u>
+                oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
+                własnościach przekazanego obiektu.
+            </p>
+            <p class="article__text">
+                Pętla <b>for ... of</b> składa się z inicjalizacji
+                <u>zmiennej określającej element tablicy</u>
+                oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach
+                tablicy.
+            </p>
+            <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>preinkrementacja (++i)</b> Zwiększa wartośc wyrażenia o 1 przed
+                    wykonaniem pozostałych operacji.
+                </li>
+                <li class="article__list-item">
+                    <b>predekrementacja (--i)</b> Zmniejsza wartość wyrażenia o 1 przed
+                    wykonaniem pozostałych operacji.
+                </li>
+                <li class="article__list-item">
+                    <b>postinkrementacja (i++)</b> Zwiększa wartość wyrażenia o 1 po
+                    wykonaniu pozostałych operacji.
+                </li>
+                <li class="article__list-item">
+                    <b>postdekrementacja (i--)</b> Zmniejsza wartość wyrażenia o 1 po
+                    wykonaniu pozostałych operacji.
                 </li>
             </ul>
         </article>
