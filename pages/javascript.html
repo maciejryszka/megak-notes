@@ -148,10 +148,57 @@
             </ul>
             <p class="article__text">Podwójna negacja (<b>!!</b>) pozwala na sprawdzenie jaką wartość logiczną przyjmie
                 operand po konwersji do typu "boolean".</p>
+            <p class="article__text">Operatory przypisania:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>=</strong> - przypisanie operandu z prawej strony operatora do
+                    operandu z lewej strony operatora;</li>
+                <li class="article__list-item"><strong>*=</strong> - nadpisanie operandu z lewej strony operatora przez
+                    pomnożenie go przez operand z prawej strony operatora;</li>
+                <li class="article__list-item"><strong>/=</strong> - nadpisanie operandu z lewej strony operatora przez
+                    podzielenie go przez operand z prawej strony operatora;</li>
+                <li class="article__list-item"><strong>%=</strong> - nadpisanie operandu z lewej strony operatora przez
+                    resztę z dzielenia go przez operand z prawej strony operatora;</li>
+                <li class="article__list-item"><strong>+=</strong> - nadpisanie operandu z lewej strony operatora przez
+                    dodanie do niego operandu z prawej strony operatora;</li>
+                <li class="article__list-item"><strong>-=</strong> - nadpisanie operandu z lewej strony operatora przez
+                    odjęcie od niego operandu z prawej strony operatora.</li>
+            </ul>
             <p class="article__text"><a class="article__link"
                     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table">Tabela</a>
                 pierwszeństwa
                 operatorów.</p>
+        </article>
+        <article id="operations" class="article">
+            <h2 class="article__heading">zmienne</h2>
+            <p class="article__text"><strong>Zmienna</strong> - miejsce w pamięci, przechowujące pewne informacje.
+                Precyzyjniej jest to połączenie między zadeklarowaną nazwą a miejscem w pamięci przechowującym pewną
+                wartość. Wartość posiada typ, natomiast zmienna - nie. </p>
+            <p class="article__text">Koncept <strong>immutability</strong> polega na tym, że nie można zmieniać
+                wartości 'primitive
+                values' (wartości typów prostych, do których podłączamy się za pomocą zmiennych) w JavaScript. To co
+                zmieniamy, to połączenia między nimi a zmiennymi. Wartości już istnieją, są niezmienne. Na przykład nie
+                można sobie zmienić 'true' na 'false' lub na odwrót.</p>
+            <p class="article__text">
+                Słowa kluczowe służące do deklaracji zmiennych w JavaScript (możliwa jest również deklaracja bez
+                poprzedzenia nazwy zmiennej słowem kluczowym, lecz nie należy stosować takiej praktyki):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <strong>const</strong> Deklaruje zmienną. Połączenie między zmienną i jej
+                    wartością nie może być zmieniane w trakcie działania programu.
+                </li>
+                <li class="article__list-item">
+                    <strong>let</strong> Deklaruje zmienną. Połączenie między zmienną i jej
+                    wartością może być zmieniane w trakcie działania programu.
+                </li>
+                <li class="article__list-item">
+                    <strong>var</strong> Używany do deklaracji we wcześniejszych wersjach
+                    JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
+                    kluczowego <b>const</b>, a jeśli połączenie między zmienną i jej
+                    wartością będzie edytowane w trakcie działania programu -
+                    <b>let</b>.
+                </li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
