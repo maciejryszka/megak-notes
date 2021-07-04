@@ -11,8 +11,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #202020;
-  color: #6a7b76;
+  background: #181a1b;
+  color: #a0978b;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,10 +20,10 @@ body {
   position: fixed;
   width: 100%;
   height: 38px;
-  color: #beb0a7;
+  color: #b8b2a8;
   text-align: center;
   text-transform: uppercase;
-  background-color: #6b7b76e6;
+  background-color: #575e61e6;
 
   &-navigation {
     width: 1000px;
@@ -40,7 +40,7 @@ body {
       margin-left: 10px;
       background: none;
       border: none;
-      color: #beb0a7;
+      color: #b8b2a8;
       font-size: 24px;
       cursor: pointer;
     }
@@ -65,7 +65,7 @@ body {
   position: absolute;
   top: 38px;
   left: 0;
-  background-color: #6b7b76e6;
+  background-color: #575e61e6;
   text-align: left;
 
   &--active {
@@ -75,7 +75,7 @@ body {
 
   &__link {
     text-decoration: none;
-    color: #beb0a7;
+    color: #b8b2a8;
   }
 
   &__list {
@@ -157,7 +157,7 @@ body {
 }
 
 @mixin main-heading {
-  color: #beb0a7;
+  color: #b8b2a8;
   text-align: center;
   text-transform: uppercase;
 }
@@ -240,7 +240,7 @@ body {
 
   &__link {
     text-transform: uppercase;
-    color: #beb0a7;
+    color: #b8b2a8;
   }
 
   &__links {
@@ -260,17 +260,17 @@ body {
 .article {
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #6a7b76;
+  border: 1px solid #a0978b;
   border-radius: 10px;
 
   &__heading {
-    color: #beb0a7;
+    color: #b8b2a8;
     text-transform: uppercase;
   }
 
   &__link {
     font-weight: bold;
-    color: #6a7b76;
+    color: #a0978b;
 
     &--capital {
       text-transform: uppercase;
@@ -281,7 +281,7 @@ body {
 .footer {
   &__link {
     font-weight: bold;
-    color: #6a7b76;
+    color: #a0978b;
   }
 
   &__text {

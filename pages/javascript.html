@@ -57,6 +57,7 @@
             <a href="#variables" class="theory-main__link">zmienne</a>
             <a href="#arrays" class="theory-main__link">tablice</a>
             <a href="#loops" class="theory-main__link">pętle</a>
+            <a href="#conditional-statements" class="theory-main__link">instrukcje warunkowe</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -109,6 +110,8 @@
                 Przykład: console.log() nie jest częścią specyfikacji, lecz funkcjonalnością, która została dostarczona
                 zarówno przez Node.js jak i przez przeglądarkę pod tą samą nazwą, w celu ułatwienia korzystania z obu
                 środowisk.</p>
+            <p class="article__text"><strong>window.prompt()</strong> - metoda pozwalająca na pobranie danych od
+                użytkownika.</p>
         </article>
         <article id="operations" class="article">
             <h2 class="article__heading">operacje i operatory</h2>
@@ -202,6 +205,11 @@
                     <b>let</b>.
                 </li>
             </ul>
+            <p class="article__text">
+                Inicjalizacja zmiennej to nadanie jej wartości. Możliwa jest inicjalizacja zmiennej podczas
+                deklaracji. Jeśli w czasie deklaracji żadna wartość nie zostanie przypisana do zmiennej, automatycznie
+                przyjmie ona wartość <strong>undefined</strong>.
+            </p>
         </article>
         <article id="arrays" class="article">
             <h2 class="article__heading">tablice</h2>
@@ -333,6 +341,93 @@
                     wykonaniu pozostałych operacji.
                 </li>
             </ul>
+        </article>
+        <article id="conditional-statements" class="article">
+            <h2 class="article__heading">instrukcje warunkowe</h2>
+            <p class="article__text">Instrukcje warunkowe:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>if(condition)</b> Kod w klamrach następujących po instrukcji 'if'
+                    wykona się jeśli warunek w nawiasie zwróci prawdę.
+                </li>
+                <li class="article__list-item">
+                    <b>else if(condition)</b> Kod w klamrach następujących po instrukcji
+                    'if else' wykona się jeśli warunek w nawiasie zwróci prawdę oraz
+                    jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
+                </li>
+                <li class="article__list-item">
+                    <b>else</b> Kod w klamrach następujących po instrukcji 'else' wykona
+                    się jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił
+                    prawdy.
+                </li>
+            </ul>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>switch(variable)</b> Wykona kod dla przypadku odpowiadającego
+                    wartości zmiennej znajdującej się w nawiasie. W przypadku braku
+                    takiego przypadku zwróci wartość domyślną, która jest zdefiniowana
+                    na końcu instrukcji. Instrukcja przy porównaniu sprawdza również
+                    zgodność typów.
+                </li>
+            </ul>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b> (condition) ? 'ifTrue' : 'ifFalse' </b> 'Ternary operator'.
+                    Jeśli warunek podany przed znakiem zapytania jest spełniony,
+                    zwracana jest wartość znajdująca się między znakiem zapytania a
+                    dwukropkiem. W przeciwnym razie zwracana jest wartość znajdująca się
+                    po dwukropku.
+                </li>
+            </ul>
+        </article>
+        <article id="data-types" class="article">
+            <h2 class="article__heading">typy danych</h2>
+            <p class="article__text">Typy proste w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>String</b> Tekst. Należy podać go w apostrofach (zalecany
+                    pojedynczy).
+                </li>
+                <li class="article__list-item"><b>Number</b> Liczba.</li>
+                <li class="article__list-item">
+                    <b>Bigint</b> Duża liczba. Większa niż 2^53.
+                </li>
+                <li class="article__list-item"><b>boolean</b> True lub false.</li>
+                <li class="article__list-item">
+                    <b>null</b> Wartość celowo niezdefiniowana. Na etapie deklaracji
+                    jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo że zmienna
+                    będzie wykorzystana w trakcie działania programu. Przez niektóre źródła zaliczany jako typ złożony
+                    (operator 'typeof' zwraca dla 'null' wartość 'object' ze względu na to, że JS jest
+                    kompatybilny wstecz i zmiana tego mogłaby spowodować nieprawidłowe działanie istniejących
+                    programów).
+                </li>
+                <li class="article__list-item">
+                    <b>undefinied</b> Brak definicji. Przy próbie odwołania do
+                    nieistniejącej zmiennej występuje błąd.
+                </li>
+                <li class="article__list-item">
+                    <b>*symbol</b> Tworzy "unikalne opakowanie".
+                </li>
+            </ul>
+            <p class="article__text">Typy złożone w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    <b>Object</b> Służy do przechowywania bardziej złożonych informacji niż te, które można przedstawić
+                    za pomocą typów prostych.
+                </li>
+            </ul>
+            <p class="article__text">
+                Do nazywania zmiennych należy używać schematu camelCase.<br />
+                Do sprawdzenia typu zmiennej służy słowo kluczowe <b>typeof</b>.<br />
+                Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
+                zwraca połączenie.<br />
+                W przypadku połączenia zmiennej 'a' ze zmienną 'b', występuje
+                połączenie z wartością zmiennej 'b' a nie bezpośrednio z samą zmienną
+                'b'.<br />
+                Wywoływanie metod na typach prostych jest możliwe, ponieważ przed wykonaniem metody dokonuje się
+                zamiana wartości prostej na obiekt (konwersja niejawna), a po wykonaniu metody dokonuje się taka sama
+                zamiana w przeciwnym kierunku.
+            </p>
         </article>
     </main>
     <footer class="footer">

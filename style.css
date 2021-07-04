@@ -11,8 +11,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #202020;
-  color: #6a7b76;
+  background: #181a1b;
+  color: #a0978b;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,10 +20,10 @@ body {
   position: fixed;
   width: 100%;
   height: 38px;
-  color: #beb0a7;
+  color: #b8b2a8;
   text-align: center;
   text-transform: uppercase;
-  background-color: #6b7b76e6;
+  background-color: #575e61e6;
 }
 .header-navigation {
   width: 1000px;
@@ -40,7 +40,7 @@ body {
   margin-left: 10px;
   background: none;
   border: none;
-  color: #beb0a7;
+  color: #b8b2a8;
   font-size: 24px;
   cursor: pointer;
 }
@@ -64,7 +64,7 @@ body {
   position: absolute;
   top: 38px;
   left: 0;
-  background-color: #6b7b76e6;
+  background-color: #575e61e6;
   text-align: left;
 }
 .hamburger-menu--active {
@@ -73,7 +73,7 @@ body {
 }
 .hamburger-menu__link {
   text-decoration: none;
-  color: #beb0a7;
+  color: #b8b2a8;
 }
 .hamburger-menu__list {
   margin: 5px 20px;
@@ -164,7 +164,7 @@ body {
   }
 }
 .theory-main__heading {
-  color: #beb0a7;
+  color: #b8b2a8;
   text-align: center;
   text-transform: uppercase;
 }
@@ -247,7 +247,7 @@ body {
 }
 .theory-main__link {
   text-transform: uppercase;
-  color: #beb0a7;
+  color: #b8b2a8;
 }
 .theory-main__links {
   text-align: center;
@@ -336,16 +336,16 @@ body {
 .article {
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #6a7b76;
+  border: 1px solid #a0978b;
   border-radius: 10px;
 }
 .article__heading {
-  color: #beb0a7;
+  color: #b8b2a8;
   text-transform: uppercase;
 }
 .article__link {
   font-weight: bold;
-  color: #6a7b76;
+  color: #a0978b;
 }
 .article__link--capital {
   text-transform: uppercase;
@@ -353,7 +353,7 @@ body {
 
 .footer__link {
   font-weight: bold;
-  color: #6a7b76;
+  color: #a0978b;
 }
 .footer__text {
   text-align: center;
