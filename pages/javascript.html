@@ -56,8 +56,8 @@
             <a href="#operations" class="theory-main__link">operacje i operatory</a>
             <a href="#variables" class="theory-main__link">zmienne</a>
             <a href="#arrays" class="theory-main__link">tablice</a>
-            <a href="#loops" class="theory-main__link">pętle</a>
             <a href="#conditional-statements" class="theory-main__link">instrukcje warunkowe</a>
+            <a href="#functions" class="theory-main__link">funkcje</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -427,6 +427,43 @@
                 Wywoływanie metod na typach prostych jest możliwe, ponieważ przed wykonaniem metody dokonuje się
                 zamiana wartości prostej na obiekt (konwersja niejawna), a po wykonaniu metody dokonuje się taka sama
                 zamiana w przeciwnym kierunku.
+            </p>
+        </article>
+        <article id="functions" class="article">
+            <h2 class="article__heading">funkcje</h2>
+            <p class="article__text">Składowe funkcji w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Deklaracja.</li>
+                <li class="article__list-item">Parametr (opcjonalnie).</li>
+                <li class="article__list-item">
+                    Słowo kluczowe <b>return</b> (opcjonalnie).
+                </li>
+                <li class="article__list-item">Wynik.</li>
+            </ul>
+            <p class="article__text">
+                Wynikiem funkcji, która nie posiada słowa kluczowego jest
+                <b>undefined</b>.<br />
+                Funkcja może przyjmować dowolną ilość argumentów (może również nie
+                przyjmować żadnego).<br />
+                Typ zwracanej wartości może być inny niż typ argumetu/argumentów
+                przyjmowanych przez funkcję.<br />
+                Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w
+                wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego
+                czytelność oraz ułatwia wyszukiwanie i poprawę błędów.<br />
+                Dobrą praktyką jest nazywanie funkcji podczas deklaracji.<br />
+                Wewnątrz funkcji wykowywane są obliczenia/zadania.<br />
+            </p>
+            <p class="article__text">
+                Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
+                arrow function': <b>const</b> functionName <b>= (</b>parameter<b>) => {</b>functionBody<b>}.</b><br />
+                Jeśli w ciele funkcji znajduje się tylko <b>return</b> oraz zwracana
+                wartość, można zapisać tę wartość bezpośrednio po strzałce z
+                pominięciem słowa kluczowego <b>return</b>.<br />
+                Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
+                czytelność.<br />
+                Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
+                dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
+                tradycyjnej funkcji.
             </p>
         </article>
     </main>
