@@ -58,6 +58,7 @@
             <a href="#arrays" class="theory-main__link">tablice</a>
             <a href="#conditional-statements" class="theory-main__link">instrukcje warunkowe</a>
             <a href="#functions" class="theory-main__link">funkcje</a>
+            <a href="#object-orientation" class="theory-main__link">obiektowość</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -486,6 +487,58 @@
                 </li>
                 <li class="article__list-item">Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma dostępu
                     do 'arguments' i 'super', a więc nie jest zamiennikiem tradycyjnej funkcji.</li>
+            </ul>
+        </article>
+        <article id="object-orientation" class="article">
+            <h2 class="article__heading">obiektowość</h2>
+            <p class="article__text">Nawiasy klamrowe tworzą izolowany blok kodu. Zmienne i funkcje zadeklarowane
+                w bloku są dostępne tylko w nim (a także w zakresach niższego poziomu zagnieżdżonych w tym bloku).</p>
+            <p class="article__text">Obiekt w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    Jest strukturą danych ułatwiającą odwzorowanie świata rzeczywistego
+                    w świecie programowania.
+                </li>
+                <li class="article__list-item">
+                    Aby go zadeklarować, należy użyć nawiasów klamrowych.
+                </li>
+                </li>
+                <li class="article__list-item">
+                    Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu)
+                    oraz metody (funcje wewnątrz obiektu).
+                </li>
+                <li class="article__list-item">
+                    Własności/metody składają się z unikalnego w ramach obiektu klucza
+                    oraz podanej po dwukropku wartości, którą może być typ prymitywny,
+                    funkcja lub zagnieżdżenie.
+                </li>
+                <li class="article__list-item">
+                    Aby dostać się do konkretnej własności obiektu, należy po jego
+                    nazwie i kropce odwołać się do konkretnego klucza (w przypadku kiedy
+                    w obiekcie występują zagnieżdżenia, można dostać się do kolejnych
+                    poziomów własności z wykorzystaniem kolejnych kropek).
+                </li>
+                <li class="article__list-item">
+                    Aby dostać się do konkretnej metody obiektu, należy po jego nazwie i
+                    kropce odwołać się do konkretnego klucza oraz użyć nawiasów
+                    okrągłych (i opcjonalnie argumentów) w celu wywołania metody. W przypadku braku użycia nawiasów
+                    okrągłych wyświetlona zostanie informacja, że obiekt posiada funkcję pod tą nazwą.
+                </li>
+                <li class="article__list-item">
+                    Alternatywną opcją dostania się do własności obiektu jest
+                    skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
+                    wewnątrz nich konkretnego klucza (w apostrofach). Sposób wykorzystywany głównie w przypadku klucza
+                    zdefiniowanego w apostrofach (np. wielowyrazowy klucz zawierający spacje).
+                </li>
+                <li class="article__list-item">
+                    Własności/metody obiektu można edytować. Wystarczy dostać się do nich z wykorzystaniem klucza, użyć
+                    operatora przypisania
+                    oraz podać nową wartość (odwołanie z użyciem nieistniejącego klucza spowoduje dodanie obiektowi
+                    nowej własności/metody).
+                </li>
+                <li class="article__list-item">
+                    Na własnościach obiektu możliwe jest wykonywanie metod.
+                </li>
             </ul>
         </article>
     </main>
