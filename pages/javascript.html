@@ -540,6 +540,37 @@
                     Na własnościach obiektu możliwe jest wykonywanie metod.
                 </li>
             </ul>
+            <p class="article__text">Mutowanie obiektów:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Kontekst 'this' powstaje w momencie wywołania metody. W przypadku funkcji
+                    strzałkowej jest pobierany z zewnętrznego zakresu (z zakresu wyższego poziomu), natomiast w
+                    przypadku
+                    innej funkcji kontekst ten jest tworzony (odnosi się do obiektu, na którym wywołano metodę).</li>
+                <li class="article__list-item">Jeśli obiekt został stworzony z użyciem słowa kluczowego const, jedynie
+                    połączenie między nazwą zmiennej a obiektem jest stałe i nie może zostać zmienione. Połączenia
+                    między własnościami obiektu i wartościami na jakie wskazują mogą być jednak w dalszym ciągu
+                    edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie. Cecha ta odróżnia typy złożone
+                    (obiekty) od typów prostych, które nie mogą być mutowane.</li>
+                <li class="article__list-item">Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do danej
+                    wartości, dopóki nie zmienimy dokładnie tego przypięcia.</li>
+                <li class="article__list-item">Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy zmienione
+                    zostanie przypięcie dla którejś z jego własności. Zmiana takiego przypięcia może nastąpić z
+                    "inicjatywy" innego elementu wskazującego na ten obiekt.</li>
+            </ul>
+            <p class="article__text">Konstruktory:</p>
+            <ul class="article__list">
+                <li class="article__list-item">To szablony służące do tworzenia nowych, podobnych obiektów.</li>
+                <li class="article__list-item">Jest to funkcja pozwalająca na tworzenie nowych obiektów (dla odróżnienia
+                    od standardowej funkcji, jej nazwę należy pisać wielką literą).</li>
+                <li class="article__list-item">Musi być to funcja nazwana, ponieweż funkcja strzałkowa posiada kontekst
+                    'this' wyższego poziomu.</li>
+                <li class="article__list-item">Konstruktory należy wywoływać z użyciem słowa kluczowego 'new', które
+                    tworzy nowy obiekt, dzięki czemu kontekst 'this' dotyczy tego utworzonego obiektu, zamiast zakresu
+                    wyższego poziomu.</li>
+                <li class="article__list-item">Obiekt utworzony za pomocą konstruktora należy przypisać do zmiennej. W
+                    przeciwnym razie zostanie stworzony, lecz natychmiast zniknie ze względu na brak możliwości
+                    odwołania się do niego.</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
