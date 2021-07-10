@@ -116,7 +116,7 @@ body {
   }
 
   @media screen and (orientation: landscape) and (max-width: 667px) {
-    max-width: 650px;
+    max-width: 640px;
   }
 
   @media screen and (orientation: landscape) and (max-width: 640px) {
@@ -139,6 +139,10 @@ body {
     max-width: 700px;
   }
 
+  @media screen and (orientation: portrait) and (max-width: 540px) {
+    max-width: 500px;
+  }
+
   @media screen and (orientation: portrait) and (max-width: 414px) {
     max-width: 400px;
   }
@@ -154,6 +158,10 @@ body {
   @media screen and (orientation: portrait) and (max-width: 320px) {
     max-width: 300px;
   }
+
+  @media screen and (orientation: portrait) and (max-width: 280px) {
+    max-width: 265px;
+  }
 }
 
 @mixin main-heading {
@@ -164,8 +172,8 @@ body {
 
 @mixin main-image {
   margin: 0 auto;
-  width: 640px;
-  height: 426px;
+  max-width: 558px;
+  height: 266px;
   border-radius: 50px;
   background-position: center center;
 
@@ -208,6 +216,10 @@ body {
   @media screen and (orientation: portrait) and (max-width: 320px) {
     width: 300px;
   }
+
+  @media screen and (orientation: portrait) and (max-width: 280px) {
+    width: 260px;
+  }
 }
 
 .theory-main {
@@ -226,15 +238,15 @@ body {
     }
 
     @media screen and (orientation: landscape) and (max-width: 812px) {
-      background-position: center 20%;
+      background-position: center 37%;
     }
 
     @media screen and (orientation: portrait) and (max-width: 1024px) {
-      background-position: center 0%;
+      background-position: center 18%;
     }
 
     @media screen and (orientation: portrait) and (max-width: 414px) {
-      background-position: center 25%;
+      background-position: center 37%;
     }
   }
 

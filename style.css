@@ -115,7 +115,7 @@ body {
 }
 @media screen and (orientation: landscape) and (max-width: 667px) {
   .theory-main {
-    max-width: 650px;
+    max-width: 640px;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 640px) {
@@ -143,6 +143,11 @@ body {
     max-width: 700px;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 540px) {
+  .theory-main {
+    max-width: 500px;
+  }
+}
 @media screen and (orientation: portrait) and (max-width: 414px) {
   .theory-main {
     max-width: 400px;
@@ -163,6 +168,11 @@ body {
     max-width: 300px;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 280px) {
+  .theory-main {
+    max-width: 265px;
+  }
+}
 .theory-main__heading {
   color: #b8b2a8;
   text-align: center;
@@ -170,8 +180,8 @@ body {
 }
 .theory-main__image {
   margin: 0 auto;
-  width: 640px;
-  height: 426px;
+  max-width: 558px;
+  height: 266px;
   border-radius: 50px;
   background-position: center center;
   background-image: url("../img/knowledge.jpg");
@@ -225,6 +235,11 @@ body {
     width: 300px;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 280px) {
+  .theory-main__image {
+    width: 260px;
+  }
+}
 @media screen and (orientation: landscape) and (max-width: 823px) {
   .theory-main__image {
     background-position: center 0%;
@@ -232,17 +247,17 @@ body {
 }
 @media screen and (orientation: landscape) and (max-width: 812px) {
   .theory-main__image {
-    background-position: center 20%;
+    background-position: center 37%;
   }
 }
 @media screen and (orientation: portrait) and (max-width: 1024px) {
   .theory-main__image {
-    background-position: center 0%;
+    background-position: center 18%;
   }
 }
 @media screen and (orientation: portrait) and (max-width: 414px) {
   .theory-main__image {
-    background-position: center 25%;
+    background-position: center 37%;
   }
 }
 .theory-main__link {
@@ -281,7 +296,7 @@ body {
 }
 @media screen and (orientation: landscape) and (max-width: 667px) {
   .main {
-    max-width: 650px;
+    max-width: 640px;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 640px) {
@@ -309,6 +324,11 @@ body {
     max-width: 700px;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 540px) {
+  .main {
+    max-width: 500px;
+  }
+}
 @media screen and (orientation: portrait) and (max-width: 414px) {
   .main {
     max-width: 400px;
@@ -327,6 +347,11 @@ body {
 @media screen and (orientation: portrait) and (max-width: 320px) {
   .main {
     max-width: 300px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 280px) {
+  .main {
+    max-width: 265px;
   }
 }
 .main__text {
