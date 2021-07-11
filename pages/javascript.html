@@ -595,6 +595,37 @@
                     parametrów, to argumenty te będą przyporządkowywane do zdefiniowanych parametrów po kolei od lewej
                     strony.
                 </li>
+                <li class="article__list-item"><b>Destrukturyzacja w tablicach</b> - pozwala na przypisanie do zmiennych
+                    początkowych elementów tablicy (z wykorzystaniem dodatkowych przecinków pomiędzy elementami można
+                    także przypisać elementy inne niż
+                    początkowe, jednak nie jest to zalecane ze względu na brak czytelności): <b>const
+                        [element0ConstName,
+                        element1ConstName] = arrayName;</b>.
+                </li>
+                <li class="article__list-item"><b>Destrukturyzacja w obiektach</b> - pozwala na przypisanie do zmiennych
+                    własności/metod obiektów (jeśli po dwukropku nie zostaną podane nazwy zmiennych, będą one takie same
+                    jak klucze danej własności/metody w obiekcie): <b>const {propertyKey, methodKey:
+                        methodConstName} =
+                        objectName;</b>.
+                </li>
+                <li class="article__list-item"><b>Spread operator</b> - pozwala na pobranie wszystkich elementów
+                    tablicy/własności i metod obiektu. Najczęściej wykorzystywany do towrzenia kopii tablicy/obiektu
+                    przez przypisanie go do innej zmiennej. W celu użycia operatora należy poprzedzić trzema kropkami
+                    nazwę
+                    tablicy/obiektu:
+                    <b>...arrayName</b>.
+                </li>
+                <li class="article__list-item"><b>Rest operator</b> - pozwala na przyjęcie przez funkcję niegoraniczonej
+                    liczby argumentów (przed operatorem mogą zostać przekazane także inne argumenty). Argumenty
+                    przekazane z użyciem operatora są przekazywane do funkcji w formie tablicy. W celu użycia
+                    operatora należy przy deklaracji funkcji podać jako ostatni parametr nazwę tablicy poprzedzoną
+                    trzema kropkami: <b>const functionName = (optionalParameter, ...arrayName) =>
+                        {functionBody};</b>.</li>
+                <li class="article__list-item"><b>String templates</b> - pozwala na używanie wewnątrz Stringa wyrażeń
+                    JavaScript, tabulatorów oraz enterów. String taki musi zawierać się wewnątrz grawisów (`). Nie
+                    zadziła w przypadku apostrofów (') i cudzysłowów ("). Wyrażenia JavaScript wewnątrz takiego Stringa
+                    należy przekazać wewnątrz nawiasów klamrowych poprzedzonych znakiem dolara: <b>`Text ${JavaScript
+                        expression} text.`</b>.</li>
             </ul>
         </article>
     </main>
