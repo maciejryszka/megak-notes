@@ -67,6 +67,10 @@
             <a href="#object-orientation" class="theory-main__link">obiektowość</a>
             <span class="theory-main__text">•</span>
             <a href="#ecmascript-6" class="theory-main__link">ecmascript 6</a>
+            <span class="theory-main__text">•</span>
+            <a href="#classes" class="theory-main__link">klasy</a>
+            <span class="theory-main__text">•</span>
+            <a href="#advanced-arrays" class="theory-main__link">zaawansowane metody tablicowe</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -544,6 +548,11 @@
                     oraz podać nową wartość (odwołanie z użyciem nieistniejącego klucza spowoduje dodanie obiektowi
                     nowej własności/metody).
                 </li>
+                <li class="article__list-item">Kiedy podczas tworzenia obiektu nadawana jest mu własność, której wartość
+                    pochodzi ze zmiennej, a klucz tej wartości ma taką samą
+                    nazwę jak ta zmienna - wystarczy wpisać sam klucz w obiekcie i pominąć dwukropek oraz wartość.
+                    Zostanie
+                    ona przypisana automatycznie ze zmiennej.</li>
                 <li class="article__list-item">
                     Na własnościach obiektu możliwe jest wykonywanie metod.
                 </li>
@@ -582,7 +591,7 @@
         </article>
         <article id="ecmascript-6" class="article">
             <h2 class="article__heading">ecmascript 6</h2>
-            <p class="article__text">ECMAScript 6 to specyfikacja/standart JavaScript wprowadzony w 2015 roku.</p>
+            <p class="article__text">ECMAScript 6 to specyfikacja/standard JavaScript wprowadzony w 2015 roku.</p>
             <p class="article__text">Najistotniejsze zmiany wprowadzone wraz z ES 6:</p>
             <ul class="article__list">
                 <li class="article__list-item"><b>Parametry domyślne funkcji</b> - parametry, które zostaną użyte
@@ -627,6 +636,42 @@
                     należy przekazać wewnątrz nawiasów klamrowych poprzedzonych znakiem dolara: <b>`Text ${JavaScript
                         expression} text.`</b>.</li>
             </ul>
+        </article>
+        <article id="classes" class="article">
+            <h2 class="article__heading">klasy</h2>
+            <p class="article__text">Klasy są elementem programowania zorientowanego obiektowo i podobnie jak
+                konstrutrory
+                są szablonami służącymi do tworzenia obiektów. </p>
+            <p class="article__text">Właściwości klas:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Typem klasy jest <b>function</b>, ponieważ operator <b>typeof</b> odnosi
+                    się on do jej konstruktora.</li>
+                <li class="article__list-item">W momencie wywołania klasy, tak naprawdę wywoływana
+                    jest metoda <b>constructor</b>. Dzieje się tak nawet w przypadku braku zdefiniowania tej metody w
+                    klasie, ponieważ wtedy pusty konstruktor zostanie zdefiniowany domyślnie (wywołanie go nie wymaga
+                    podania jego nazwy przed nawiasami). Zdefiniowanie tej metody w klasie pozwala na utworzenie
+                    własnego konstruktora.</li>
+                <li class="article__list-item">Wywołanie metody <b>constructor</b> zdefiniowanej w klasie działa
+                    analoicznie jak (używana głównie przed wprowadzeniem standardu ES 6) funkcja konstruktora. Oba te
+                    sposoby tworzą kopię danej własności/metody dla każdego utworzonego obiektu (co jest mniej wydajne i
+                    zajmuje dodatkowe miejsce w pamięci RAM).<br />
+                    Metoda <b>constructor</b> zdefiniowana w klasie: <b>class ClassName {constructor() {}}</b>.<br />
+                    Funkcja konstruktora: <b>function ConstructorFunctionName() {}</b>.
+                </li>
+                <li class="article__list-item">Zdefiniowanie metody obiektu bezpośrdnio w klasie (poza konstruktorem)
+                    działa analoicznie jak zdefiniowanie jej z wykorzystaniem (używanego głównie przed wprowadzeniem
+                    standardu ES 6) <b>prototype</b>. Oba te sposoby podczas utworzenia nowego obiektu tworzą
+                    odniesienie do danej metody, zamiast kopiować ją dla każdego utworzonego obiektu (co jest
+                    bardziej wydajne i nie zajmuje dodatkowego miejsca w pamięci RAM).<br />
+                    Metoda zdefiniowana bezpośrdnio w klasie: <b>class ClassName {methodName() {methodBody}}</b>.<br />
+                    Metoda zdefiniowana z wykorzystaniem <b>prototype</b>:
+                    <b>ConstructorFunctionName.prototype.methodName = function() {methodBody}</b>.
+                </li>
+            </ul>
+        </article>
+        <article id="advanced-arrays" class="article">
+            <h2 class="article__heading">zaawansowane metody tablicowe</h2>
+            <p class="article__text"></p>
         </article>
     </main>
     <footer class="footer">
