@@ -671,7 +671,27 @@
         </article>
         <article id="advanced-arrays" class="article">
             <h2 class="article__heading">zaawansowane metody tablicowe</h2>
-            <p class="article__text"></p>
+            <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><b>forEach</b> - jako argument przyjmuje funkcję, która z kolei może
+                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez każdy jej
+                    element.
+                </li>
+                <li class="article__list-item"><b>map</b> - jako argument przyjmuje funkcję, która z kolei może
+                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak oryginalna
+                    tablica. Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej tablicy i
+                    w każdej iteracji zwraca wartość, która trafia do nowej tablicy z takim samym indeksem.
+                </li>
+                <li class="article__list-item"><b>filter</b> - jako argument przyjmuje funkcję, która z kolei może
+                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody przechodzi
+                    przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość <b>true</b> (wtedy
+                    element znajdujący się pod tym indeksem jest dodawany do nowej tablicy) w lub <b>false</b> (wtedy
+                    element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
+                </li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
