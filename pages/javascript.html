@@ -71,6 +71,8 @@
             <a href="#classes" class="theory-main__link">klasy</a>
             <span class="theory-main__text">•</span>
             <a href="#advanced-arrays" class="theory-main__link">zaawansowane metody tablicowe</a>
+            <span class="theory-main__text">•</span>
+            <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -692,6 +694,16 @@
                     element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
                 </li>
             </ul>
+        </article>
+        <article id="asynchrony" class="article">
+            <h2 class="article__heading">asynchroniczność</h2>
+            <p class="article__text">Asynchroniczność to brak oczekiwania na zakończenie jednego zadania, podczas gdy
+                wykonuje się inne zadanie. Różni się od wielowątkowości pewnego rodzaju bezwładnością. Możemy reagować
+                na zakończenie danego zadania, ale nie mamy pełnej kontroli nad tym jak zadanie jest wykonywane w
+                środku (jan na przykład w języku C++).</p>
+            <p class="article__text">W JavaScript bardzo wiele API jest asynchroniczne, tzn. odbieraie danych polega na
+                reagowaniu np. na callback. Nawet podstawowy javascript zawiera asynchroniczne funkcje/metody.
+                Najprostszym przykładem jest <b>setTimeout</b> i <b>setInterval</b>.</p>
         </article>
     </main>
     <footer class="footer">
