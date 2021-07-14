@@ -675,18 +675,18 @@
             <h2 class="article__heading">zaawansowane metody tablicowe</h2>
             <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
             <ul class="article__list">
-                <li class="article__list-item"><b>forEach</b> - jako argument przyjmuje funkcję, która z kolei może
+                <li class="article__list-item"><b>forEach()</b> - jako argument przyjmuje funkcję, która z kolei może
                     przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez każdy jej
                     element.
                 </li>
-                <li class="article__list-item"><b>map</b> - jako argument przyjmuje funkcję, która z kolei może
+                <li class="article__list-item"><b>map()</b> - jako argument przyjmuje funkcję, która z kolei może
                     przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak oryginalna
                     tablica. Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej tablicy i
                     w każdej iteracji zwraca wartość, która trafia do nowej tablicy z takim samym indeksem.
                 </li>
-                <li class="article__list-item"><b>filter</b> - jako argument przyjmuje funkcję, która z kolei może
+                <li class="article__list-item"><b>filter()</b> - jako argument przyjmuje funkcję, która z kolei może
                     przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody przechodzi
                     przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość <b>true</b> (wtedy
@@ -703,8 +703,40 @@
                 środku (jan na przykład w języku C++).</p>
             <p class="article__text">W JavaScript bardzo wiele API jest asynchroniczne, tzn. odbieraie danych polega na
                 reagowaniu np. na callback. Nawet podstawowy javascript zawiera asynchroniczne funkcje/metody.
-                Najprostszym przykładem jest <b>setTimeout</b> i <b>setInterval</b>.</p>
-        </article>
+                Najprostszym przykładem są funkcje: <b>setTimeout()</b> i <b>setInterval()</b>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><b>setTimeout()</b> - wykonuje funkcję przekazaną jako argument
+                    (<b>callback</b>) z określonym opóźnieniem. W związku z tym, że <b>setTimeout()</b> jest funkcją
+                    asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej funkcji.
+                </li>
+                <li class="article__list-item"><b>setInterval()</b> - wykonuje funkcję przekazaną jako argument
+                    (<b>callback</b>) wielokrotnie z określonym interwałem. W związku z tym, że <b>setInterval()</b>
+                    jest
+                    funkcją asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej
+                    funkcji.</li>
+            </ul>
+            <p class="article__text">JavaScript jest jednak językiem jednowątkowym. Jeśli powyższe fukcje zostaną
+                wywołane z mniejszym opóźnieniem niż wynosi czas wykonania wyrażeń następujących po nich - funkcja
+                wykona się dpiero po zakończeniu wykonywania takich wyrażeń (kiedy będzie możliwe wejście w wątek).</p>
+            <p class="article__text">Większość aktualnie powstających API JavaScriptu opiera się w jakimś stopniu na
+                asynchroniczności. Nie blokuje to głównego wątku, np. strony internetowej podczas wykonywania zapytań do
+                sieci lub do serwera, kiedy obsługuje on zapytania/żądania.</p>
+            <p class="article__text">Node.js czerpie jeszcze bardziej z asynchroniczności. Wprowadza tzw. <b>Async
+                    I/O</b> dzięki bibliotece <b>libuv</b>. Pozwala ona na brak blokowania podczas m.in.: operacji
+                sieciowych, operacji na plikach, operacji na bazach danych. Jest to bardzo ważne od strony biznesowej,
+                ponieważ pozwala to w praktyce bardzo łatwo obsługiwać wiele operacji jednocześnie.</p>
+            <p class="article__text">Sposoby obsługi asynchroniczności w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><b>Callback</b> - przekazywanie jako argumentu fuknkcji, która zostanie
+                    uruchomiona pod pewnym warunkiem (np. po upływie określonego czasu). Minusem tego rozwiązania jest
+                    tzw. <b>callback hell</b> - zbyt rozbudowana struktura zagnieżdżeń funkcji.</li>
+                <li class="article__list-item"><b>Promises</b> - warstwa abstrakcji na zadania asynchroniczne w
+                    JavaScript. Użycie <b>Promise</b> można rozważać z dwóch stron: jako <b>wykonawca</b> lub jako
+                    <b>oczekujący na wynik</b>. Promise może znajdować się w jednym z trzech stanów: <b>pending</b>
+                    (oczekujący), <b>fulfilled</b> (spełniony), <b>rejected</b> (odrzucony).
+                </li>
+            </ul>
+        </article>fuknkcji
     </main>
     <footer class="footer">
         <p class="footer__text">
