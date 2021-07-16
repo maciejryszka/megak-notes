@@ -731,19 +731,27 @@
                     uruchomiona pod pewnym warunkiem (np. po upływie określonego czasu). Minusem tego rozwiązania jest
                     tzw. <b>callback hell</b> - zbyt rozbudowana struktura zagnieżdżeń funkcji.</li>
                 <li class="article__list-item"><b>Promises</b> - warstwa abstrakcji na zadania asynchroniczne w
-                    JavaScript. Użycie <b>Promise</b> można rozważać z dwóch stron: jako <b>wykonawca</b> lub jako
-                    <b>oczekujący na wynik</b>. <b>Promise</b> może znajdować się w jednym z trzech stanów:
-                    <b>pending</b>
-                    (oczekujący), <b>fulfilled</b> (spełniony), <b>rejected</b> (odrzucony).
+                    JavaScript. Minusem tego rozwiązania jest tzw. <b>promise hell</b> - zbyt rozbudowana struktura
+                    zagnieżdżeń zwracanych obiektów typu <b>Promise</b>. Użycie <b>Promise</b> można rozważać z dwóch
+                    stron: jako <b>wykonawca</b> lub
+                    jako<b>oczekujący na wynik</b>. <b>Promise</b> może znajdować się w jednym z trzech stanów:
+                    <b>pending</b> (oczekujący), <b>fulfilled</b> (spełniony), <b>rejected</b> (odrzucony).
                 </li>
             </ul>
             <p class="article__text">Wbudowana funkca przeglądarkowa pozwalająca na wysłanie żądania w celu otrzymania
                 informacji zwrotnej to <b>fetch()</b>. Wywołanie tej funcji tworzy asynchroniczną obietnicę, której
                 rozwiązanmiem będzie informacja zwrotna z serwera. Funkcja <b>fetch()</b> przyjmuje jako argument adres
                 URL pod który zostanie wysłane żądanie. Funkcja zwraca obiekt typu <b>Promise</b>, na którym można
-                wywołać m.in. metody: <b>then()</b> (której <b>callback</b> wykona się w przypadku spełnienia
-                obietnicy), <b>catch()</b> (której <b>callback</b> wykona się w przypadku niespełnienia obietnicy).
+                wywołać m.in. metody: <b>then()</b> (która jako argument może przyjąć odpowiedź na <b>Promise</b>, a jej
+                <b>callback</b> wykona się w przypadku spełnienia obietnicy), <b>catch()</b> (której <b>callback</b>
+                wykona się w przypadku niespełnienia obietnicy). Odpowiedź zwracana przez obiekt <b>Promise</b> musi
+                zostać rozkodowana poprzez wywołoanie na niej metody <b>json()</b>, która zwraca kolejny obiekt
+                <b>Promise</b> (który zawiera w sobie właściwe dane) ze względu na to że rozkodowanie danych również
+                może zajmować czas, który przeglądarka mogłaby poświęcić na wykonywanie innych czynności. Zarówno motodę
+                <b>then()</b> jak i <b>catch()</b> można wywołać bezpośrednio po sobie na jednym obiekcie (w większości
+                przypadków zostanie wykonana jedynie jedna z nich w zależności od tego czy obietnica została spełniona).
             </p>
+
         </article>
     </main>
     <footer class="footer">
