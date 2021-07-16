@@ -732,11 +732,19 @@
                     tzw. <b>callback hell</b> - zbyt rozbudowana struktura zagnieżdżeń funkcji.</li>
                 <li class="article__list-item"><b>Promises</b> - warstwa abstrakcji na zadania asynchroniczne w
                     JavaScript. Użycie <b>Promise</b> można rozważać z dwóch stron: jako <b>wykonawca</b> lub jako
-                    <b>oczekujący na wynik</b>. Promise może znajdować się w jednym z trzech stanów: <b>pending</b>
+                    <b>oczekujący na wynik</b>. <b>Promise</b> może znajdować się w jednym z trzech stanów:
+                    <b>pending</b>
                     (oczekujący), <b>fulfilled</b> (spełniony), <b>rejected</b> (odrzucony).
                 </li>
             </ul>
-        </article>fuknkcji
+            <p class="article__text">Wbudowana funkca przeglądarkowa pozwalająca na wysłanie żądania w celu otrzymania
+                informacji zwrotnej to <b>fetch()</b>. Wywołanie tej funcji tworzy asynchroniczną obietnicę, której
+                rozwiązanmiem będzie informacja zwrotna z serwera. Funkcja <b>fetch()</b> przyjmuje jako argument adres
+                URL pod który zostanie wysłane żądanie. Funkcja zwraca obiekt typu <b>Promise</b>, na którym można
+                wywołać m.in. metody: <b>then()</b> (której <b>callback</b> wykona się w przypadku spełnienia
+                obietnicy), <b>catch()</b> (której <b>callback</b> wykona się w przypadku niespełnienia obietnicy).
+            </p>
+        </article>
     </main>
     <footer class="footer">
         <p class="footer__text">
