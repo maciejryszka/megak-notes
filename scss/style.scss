@@ -288,6 +288,14 @@ body {
       text-transform: uppercase;
     }
   }
+
+  &__list-item {
+    text-align: justify;
+  }
+
+  &__text {
+    text-align: justify;
+  }
 }
 
 .footer {
