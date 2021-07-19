@@ -75,6 +75,10 @@
             <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
             <span class="theory-main__text">•</span>
             <a href="#dom" class="theory-main__link">dom</a>
+            <span class="theory-main__text">•</span>
+            <a href="#local-storage" class="theory-main__link">local storage</a>
+            <span class="theory-main__text">•</span>
+            <a href="#json" class="theory-main__link">json</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -822,9 +826,56 @@
                     nasłuchuje</b> (jako <b>string</b>) oraz <b>nazwę wywoływanej funkcji</b>. Opcjonalnie metoda
                 <b>addEventListener()</b> może przyjąć również inne argumenty. Wywoływaną funkcją może być również
                 funkcja strzałkowa, przyjmująca jako argument dowolną nazwę. W takim przypadku nazwa ta będzie
-                odnosić
-                się do <b>eventu</b>.
+                odnosić się do <b>eventu</b>.
             </p>
+        </article>
+        <article id="local-storage" class="article">
+            <h2 class="article__heading">local storage</h2>
+            <p class="article__text"><b>Local storage</b> to jeden z prostszych sposobów zapisywania na urządzeniu
+                lokalnym (m.in. w przeglądarce) pewnych informacji tekstowych. Wyglądają one jak zmienne typu
+                <b>string</b>. Każda informacja posiada nazwę i wartość tekstową. Dane są przechowywane do momentu
+                ręcznego wyczyszczenia.
+            </p>
+            <p class="article__text">Zalety:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Szybkie przechowanie informacji na czyimś komputerze.</li>
+                <li class="article__list-item">Niewymagana zgoda właściciela urządzenia (stan na 07.2021).</li>
+                <li class="article__list-item">Prostota obsługi.</li>
+            </ul>
+            <p class="article__text">Wady:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Ograniczona wielkość przechowywanych danych.</li>
+                <li class="article__list-item">Możliwość przechowywania jedynie danych tekstowych (przechowywania innych
+                    typów danych wymaga używania różnych metod).</li>
+                <li class="article__list-item">Synchroniczność.</li>
+                <li class="article__list-item">Działanie lokalne na urządzeniu klienta (nie na serwerze).</li>
+            </ul>
+            <p class="article__text">Operacje na <b>localStorage</b>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Wyświetlenie zawartośi local storage na stronie: zakładka
+                    <b>Application</b> w narzędziach deweloperskich lub polecenie <b>localStorage</b> w konsoli.
+                </li>
+                <li class="article__list-item">Dodawanie nowego przechowywanego elementu:
+                    <b>localStorage.setItem('</b>key<b>', '</b>value<b>')</b>.
+                </li>
+                <li class="article__list-item">Pobieranie przechowywanego elementu (w przypadku podania
+                    nieistniejącego klucza, zwrócona zostanie wartość <b>null</b>):
+                    <b>localStorage.getItem('</b>key<b>')</b>.
+                </li>
+                <li class="article__list-item">Usuwanie przechowywanego elementu:
+                    <b>localStorage.removeItem('</b>key<b>')</b>.
+                </li>
+                <li class="article__list-item">W celu dodania obiektu do local storage, należy go najpierw
+                    przekształcić na JSONString z wykorzystaniemmetody: <b>JSON.stringify(</b>object<b>)</b>.</li>
+                <li class="article__list-item">W celu pobrania z local storage obiektu przechowywanego
+                    jako JSONString, należy go najpierw przekształcić na obiekt z wykorzystaniem metody:
+                    <b>JSON.parse(</b>JSONString<b>)</b>.
+                </li>
+            </ul>
+        </article>
+        <article id="json" class="article">
+            <h2 class="article__heading">json</h2>
+            <p class="article__text"></p>
         </article>
     </main>
     <footer class="footer">
