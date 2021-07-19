@@ -73,6 +73,8 @@
             <a href="#advanced-arrays" class="theory-main__link">zaawansowane metody tablicowe</a>
             <span class="theory-main__text">•</span>
             <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
+            <span class="theory-main__text">•</span>
+            <a href="#dom" class="theory-main__link">dom</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -733,7 +735,7 @@
                 <li class="article__list-item"><b>Promises</b> - warstwa abstrakcji na zadania asynchroniczne w
                     JavaScript. W tym przypadku potencjalnym problemem może być tzw. <b>promise hell</b> - zbyt
                     rozbudowana struktura zagnieżdżeń zwracanych obiektów typu <b>Promise</b>. Można go jednak uniknąć
-                    wywołując kolejnye funkcje <b>then()</b> bezpośrednio po sobie oraz funkcję <b>catch()</b> na końcu
+                    wywołując kolejne funkcje <b>then()</b> bezpośrednio po sobie oraz funkcję <b>catch()</b> na końcu
                     (zostanie ona wywołana w przypadku niezwrócenia obiektu <b>Promise</b> przez którąś z wcześniejszych
                     funkcji). Użycie <b>Promise</b> można rozważać z dwóch stron: jako <b>wykonawca</b> lub jako
                     <b>oczekujący na wynik</b>. <b>Promise</b> może znajdować się w jednym z trzech stanów:
@@ -745,7 +747,7 @@
                     jest to konieczne). Współpracuje z obiektami typu <b>Promise</b>. Słowo kluczowe <b>async</b>,
                     poprzedzające deklarację funkcji, oznacza ją jako asynchroniczną oraz tworzy ukryty obiekt
                     <b>Promise</b>. Natomiast <b>await</b> wskazuje w którym miejscu należy oczekiwać na rezultat i
-                    zwolnić wątek dla innych operacji. Funkcja typu <b>async</b> może sama się wywołwać, wystarczy jej
+                    zwolnić wątek dla innych operacji. Funkcja typu <b>async</b> może sama się wywoływać, wystarczy jej
                     deklarację umieścić w nawiasach, a po niej użyć dwóch kolejnych oznaczających wywołanie.
                 </li>
             </ul>
@@ -757,7 +759,7 @@
                 <b>callback</b> wykona się w przypadku spełnienia obietnicy), <b>catch()</b> (która jako argument może
                 przyjąć błąd, a jej <b>callback</b> wykona się w przypadku niespełnienia obietnicy). Odpowiedź zwracana
                 przez obiekt <b>Promise</b> musi zostać rozkodowana poprzez wywołanie na niej metody <b>json()</b>,
-                która zwraca kolejny obiekt <b>Promise</b> (zawiarejący właściwe dane) ze względu na to, że
+                która zwraca kolejny obiekt <b>Promise</b> (zawierający właściwe dane) ze względu na to, że
                 rozkodowanie danych również może zajmować czas, który przeglądarka mogłaby poświęcić na wykonywanie
                 innych czynności. Zarówno metodę <b>then()</b> jak i <b>catch()</b> można wywołać bezpośrednio po sobie
                 na jednym obiekcie (w większości przypadków zostanie wykonana jedynie jedna z nich, w zależności od tego
@@ -776,6 +778,52 @@
                 asynchroniczne metody), natomiast zwraca jeden wspólny obiekt tego samego typu, kiedy wszystkie obiekty
                 przekazane jako argument zostaną zwrócone. Użycie słowa kluczowego <b>await</b> przed takim wspólnym
                 obiektem, pozwala na uruchomienie grupy metod w sposób asynchroniczny.
+            </p>
+        </article>
+        <article id="dom" class="article">
+            <h2 class="article__heading">dom</h2>
+            <p class="article__text">
+                HTML zmieniany jest przez przeglądarkę w reprezentację zwaną <b>Document Object Model</b> (Model
+                obiektowy dokumentu) - <b>DOM</b>.
+            </p>
+            <p class="article__text"><b>DOM</b> to zbiór obiektów (węzłów) tworzonych przede wszystkim przez znaczniki,
+                atrybuty i zawartość tekstową. <b>DOM</b> ustawia wężły w strukturze typu drzewo, co tworzy między nimi
+                relacje i zagnieżdżenia.
+            </p>
+            <p class="article__text">Elementy <b>DOM</b> mogą posiadać:</p>
+            <ul class="article__list">
+                <li class="article__list-item">rodzica;</li>
+                <li class="article__list-item">rodzeństwo;</li>
+                <li class="article__list-item">dzieci.</li>
+            </ul>
+            <p class="article__text">API przeglądarki pozwala poruszać się po drzewie <b>DOM</b> używając tych nazw.</p>
+            <p class="article__text">Skrypty powinny być dodawane do pliku HTML na końcu znacznika <b>body</b>, ponieważ
+                operują one na elementach <b>DOM</b>, które są generowane w momencie otwarcia znacznika. Dlatego ważne
+                jest, aby po znacznikach dodających skrypty do strony nie było już żadnych innych znaczników
+                otwierających.
+            </p>
+            <p class="article__text">Sposoby na pobranie konkretnego elementu DOM (które mogą zostać zapisane do
+                zmiennej):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">Zaznaczenie go w zakładce <b>Elements</b> w narzędziach deweloperskich
+                    przeglądarki a następnie odwołanie się do niego w zakładce <b>Console</b> za pomocą <b>$0</b>.</li>
+                <li class="article__list-item">Odwołanie się poprzez element <b>document</b> (dotyczy jedynie niewielu
+                    elementów strony, np. <b>document.head</b>, <b>document.body</b>, <b>document.links</b>).</li>
+                <li class="article__list-item">Użycie metody <b>querySelector()</b> na obiekcie <b>document</b> z
+                    parametrem odnoszącym się do ID (<b>'#idName'</b>), klasy (<b>'.className'</b>) bądź znacznika
+                    (<b>'tagName'</b>). Selektory w JavaScript muszą być typu <b>string</b>. Zalecane jest pobieranie
+                    elementów odwołując się do nazw klas, ponieważ w łatwy sposób pozwala na pobranie konkretnego
+                    elementu.
+                </li>
+            </ul>
+            <p class="article__text">Metoda służąca do nasłuchiwania w JavaScript to <b>addEventListener()</b>, która
+                wywoływana jest na konkretnym elemencie <b>DOM</b> i przyjmuje jako argumenty: <b>typ zdarzenia jakiego
+                    nasłuchuje</b> (jako <b>string</b>) oraz <b>nazwę wywoływanej funkcji</b>. Opcjonalnie metoda
+                <b>addEventListener()</b> może przyjąć również inne argumenty. Wywoływaną funkcją może być również
+                funkcja strzałkowa, przyjmująca jako argument dowolną nazwę. W takim przypadku nazwa ta będzie
+                odnosić
+                się do <b>eventu</b>.
             </p>
         </article>
     </main>
