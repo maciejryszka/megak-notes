@@ -852,7 +852,7 @@
             </ul>
             <p class="article__text">Operacje na <b>localStorage</b>:</p>
             <ul class="article__list">
-                <li class="article__list-item">Wyświetlenie zawartośi local storage na stronie: zakładka
+                <li class="article__list-item">Możliwości interakcji z zawartością local storage na stronie: zakładka
                     <b>Application</b> w narzędziach deweloperskich lub polecenie <b>localStorage</b> w konsoli.
                 </li>
                 <li class="article__list-item">Dodawanie nowego przechowywanego elementu:
@@ -865,17 +865,26 @@
                 <li class="article__list-item">Usuwanie przechowywanego elementu:
                     <b>localStorage.removeItem('</b>key<b>')</b>.
                 </li>
+
+            </ul>
+        </article>
+        <article id="json" class="article">
+            <h2 class="article__heading">json</h2>
+            <p class="article__text"><b>JSON (JavaScript Object Notation)</b> - lekki, tekstowy format wymiany danych
+                między różnymi programami, API itd. Pozwala przechowywać liczby, tekst, wartości typu boolean, null,
+                tablice i obiekty w formie tekstowej. Aplikacja służąca do przeglądania, edycji i formatowania danych
+                typu JSON to <a class="article__link" href="https://jsoneditoronline.org">JSON Editor Online</a>.</p>
+            <ul class="article__list">
                 <li class="article__list-item">W celu dodania obiektu do local storage, należy go najpierw
-                    przekształcić na JSONString z wykorzystaniemmetody: <b>JSON.stringify(</b>object<b>)</b>.</li>
+                    przekształcić na JSONString z wykorzystaniem metody: <b>JSON.stringify(</b>object<b>)</b>.</li>
                 <li class="article__list-item">W celu pobrania z local storage obiektu przechowywanego
                     jako JSONString, należy go najpierw przekształcić na obiekt z wykorzystaniem metody:
                     <b>JSON.parse(</b>JSONString<b>)</b>.
                 </li>
             </ul>
-        </article>
-        <article id="json" class="article">
-            <h2 class="article__heading">json</h2>
-            <p class="article__text"></p>
+            <p class="article__text">Podczas pracy na serwerze lub na przeglądarce klienta zazwyczaj korzysta się z
+                obiektów. Format JSON wykorzystywany jest głównie w celu przesyłania danych i może zostać odkodowany
+                niezależnie od języka programowania.</p>
         </article>
     </main>
     <footer class="footer">
