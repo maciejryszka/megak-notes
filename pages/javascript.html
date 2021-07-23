@@ -575,7 +575,8 @@
                     strzałkowej jest pobierany z zewnętrznego zakresu (z zakresu wyższego poziomu), natomiast w
                     przypadku
                     innej funkcji kontekst ten jest tworzony (odnosi się do obiektu, na którym wywołano metodę).</li>
-                <li class="article__list-item">Jeśli obiekt został stworzony z użyciem słowa kluczowego const, jedynie
+                <li class="article__list-item">Jeśli obiekt został stworzony z użyciem słowa kluczowego <b>const</b>,
+                    jedynie
                     połączenie między nazwą zmiennej a obiektem jest stałe i nie może zostać zmienione. Połączenia
                     między własnościami obiektu i wartościami na jakie wskazują mogą być jednak w dalszym ciągu
                     edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie. Cecha ta odróżnia typy złożone
@@ -600,6 +601,16 @@
                     przeciwnym razie zostanie stworzony, lecz natychmiast zniknie ze względu na brak możliwości
                     odwołania się do niego.</li>
             </ul>
+            <p class="article__text">Metody statyczne:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><b>Object.keys()</b> - jako argument przyjmuje obiekt. Zwraca tablicę
+                    elementów typu <b>string</b> zawierającą nazwy kluczy obiektu.</li>
+                <li class="article__list-item"><b>Object.values()</b> - jako argument przyjmuje obiekt. Zwraca tablicę
+                    zawierającą wartości obiektu.</li>
+                <li class="article__list-item"><b>Object.entries()</b> - jako argument przyjmuje obiekt. Zwraca tablicę
+                    tablic, w której każda zagnieżdżona tablica zawiera parę elementów - nazwę klucza oraz odpowiadającą
+                    mu wartość.</li>
+            </ul>
         </article>
         <article id="ecmascript-6" class="article">
             <h2 class="article__heading">ecmascript 6</h2>
@@ -616,12 +627,10 @@
                     parametrów, to argumenty te będą przyporządkowywane do zdefiniowanych parametrów po kolei od lewej
                     strony.
                 </li>
-                <li class="article__list-item"><b>Destrukturyzacja w tablicach</b> - pozwala na przypisanie do zmiennych
-                    początkowych elementów tablicy (z wykorzystaniem dodatkowych przecinków pomiędzy elementami można
-                    także przypisać elementy inne niż
-                    początkowe, jednak nie jest to zalecane ze względu na brak czytelności): <b>const
-                        [element0ConstName,
-                        element1ConstName] = arrayName;</b>.
+                <li class="article__list-item"><b>Destrukturyzacja w tablicach</b> - pozwala na przypisanie początkowych
+                    elementów tablicy do zmiennych (z wykorzystaniem dodatkowych przecinków pomiędzy elementami można
+                    także przypisać elementy inne niż początkowe, jednak nie jest to zalecane ze względu na brak
+                    czytelności): <b>const [element0ConstName, element1ConstName] = arrayName;</b>.
                 </li>
                 <li class="article__list-item"><b>Destrukturyzacja w obiektach</b> - pozwala na przypisanie do zmiennych
                     własności/metod obiektów (jeśli po dwukropku nie zostaną podane nazwy zmiennych, będą one takie same
@@ -686,22 +695,33 @@
             <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
             <ul class="article__list">
                 <li class="article__list-item"><b>forEach()</b> - jako argument przyjmuje funkcję, która z kolei może
-                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez każdy jej
                     element.
                 </li>
                 <li class="article__list-item"><b>map()</b> - jako argument przyjmuje funkcję, która z kolei może
-                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak oryginalna
                     tablica. Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej tablicy i
                     w każdej iteracji zwraca wartość, która trafia do nowej tablicy z takim samym indeksem.
                 </li>
                 <li class="article__list-item"><b>filter()</b> - jako argument przyjmuje funkcję, która z kolei może
-                    przyjmować trzy parametry (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
+                    przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie): element,
                     indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody przechodzi
                     przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość <b>true</b> (wtedy
                     element znajdujący się pod tym indeksem jest dodawany do nowej tablicy) w lub <b>false</b> (wtedy
                     element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
+                </li>
+                <li class="article__list-item"><b>reduce()</b> - jako pierwszy argument przyjmuje funkcję, która z kolei
+                    może przyjmować cztery argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
+                    akumulator, wartość bieżącego elementu, indeks bieżącego elementu, oryginalna tablica. Drugim
+                    argumantem metody jest wartość początkowa (jest to argument opcjonalny - w przypadku jego braku
+                    pierwsza iteracja wykona się z pominięciem pierwszego elementu tablicy, który będzie pełnił rolę
+                    akumulatora). Metoda redukuje tablicę do pojedynczej wartości (która zostaje zwrócona w ostatniej
+                    iteracji przez funkcję <b>callback</b>).<br />
+                    Warto dodawać wartość początkową w metodzie reduce, ponieważ w przypadku działania. np. na obiektach
+                    można uzyskać niepożądany rezultat. Powinna być to wartość neutralna dla wykonywanej operacji, np.
+                    pusty łańcuch znaków dla konkatenacji tekstu, 1 dla iloczynu, 0 dla sumy.
                 </li>
             </ul>
         </article>
