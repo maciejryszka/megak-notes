@@ -1,5 +1,5 @@
 const hamburgerMenuButton = document.querySelector(
-  ".header-navigation__menu-button"
+  ".header-navigation__button--menu"
 );
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 
