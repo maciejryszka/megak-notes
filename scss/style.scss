@@ -51,8 +51,6 @@ body {
         display: none;
         right: 0px;
         margin-right: 10px;
-        opacity: 0.5;
-        transition: 0.4s;
       }
     }
 
@@ -312,6 +310,8 @@ body {
 
 .footer {
   &__text {
+    margin: 0;
+    padding: 10px 0;
     text-align: center;
   }
 

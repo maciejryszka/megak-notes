@@ -50,8 +50,6 @@ body {
   display: none;
   right: 0px;
   margin-right: 10px;
-  opacity: 0.5;
-  transition: 0.4s;
 }
 .header-navigation__text {
   margin: 0;
@@ -393,6 +391,8 @@ body {
 }
 
 .footer__text {
+  margin: 0;
+  padding: 10px 0;
   text-align: center;
 }
 .footer--index {
