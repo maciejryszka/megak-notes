@@ -833,7 +833,8 @@
             <p class="article__text">Skrypty powinny być dodawane do pliku <i>HTML</i> na końcu znacznika <i>body</i>,
                 ponieważ operują one na elementach <i>DOM</i>, które są generowane w momencie otwarcia znacznika.
                 Dlatego ważne jest, aby po znacznikach dodających skrypty do strony nie było już żadnych innych
-                znaczników otwierających.
+                znaczników otwierających. Skrypty wykonywane są po kolei, więc kolejność ich dodania do pliku
+                <i>HTML</i> ma znaczenie.
             </p>
             <p class="article__text">Sposoby na pobranie konkretnego elementu DOM (które mogą zostać zapisane do
                 zmiennej):
@@ -846,17 +847,51 @@
                 <li class="article__list-item">Użycie metody <strong>querySelector</strong>() na obiekcie
                     <i>document</i> z parametrem odnoszącym się do ID (<i>#idName</i>), klasy (<i>.className</i>) bądź
                     znacznika (<i>tagName</i>). Selektory w JavaScript muszą być typu <i>string</i>. Zalecane jest
-                    pobieranie elementów odwołując się do nazw klas, ponieważ sposób ten w łatwy sposób pozwala na
-                    pobranie konkretnego elementu.
+                    pobieranie elementów odwołując się do nazw klas (np. ze względu na ułatwienie identyfikacji
+                    poszczególnych elementów przy wykorzystaniu metodologii nazewnictwa klas <i>BEM</i>).
                 </li>
             </ul>
             <p class="article__text">Metoda służąca do nasłuchiwania w JavaScript to
-                <strong>addEventListener</strong>(), która wywoływana jest na konkretnym elemencie <i>DOM</i> i
-                przyjmuje jako argumenty: <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako <i>string</i>) oraz
-                <strong>nazwę wywoływanej funkcji</strong>. Opcjonalnie metoda <i>addEventListener</i> może przyjąć
-                również inne argumenty. Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca jako
-                argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić się do <i>eventu</i>.
+                <strong>addEventListener</strong>(), która wywoływana jest na konkretnym (pojedynczym) elemencie
+                <i>DOM</i> i przyjmuje jako argumenty: <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako
+                <i>string</i>) oraz <strong>nazwę wywoływanej funkcji</strong>. Opcjonalnie metoda
+                <i>addEventListener</i> może przyjąć również inne argumenty. Wywoływaną funkcją może być również funkcja
+                strzałkowa, przyjmująca jako argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić się do
+                <i>eventu</i> (reprezentacji zdarzenia, które wystąpiło). W celu odwołania się do elementu, na którym
+                wykonywane jest nasłuchiwanie, należy skorzystać z właściwości <i>target</i> konkretnego <i>eventu</i>.
             </p>
+            <p class="article__text">Nie wszystkie atrybuty znaczników <i>HTML</i> muszą posiadać wartość. Przykładem
+                jest atrybut <i>disabled</i>, który powoduje deaktywację elementu, na którym został użyty. Atrybut ten
+                może zostać użyty jedynie dla części tagów (np. dla znacznika <i>button</i>).</p>
+            <p class="article__">Praca z atrybutami HTML w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item">JavaScript podczas pracy z elementami <i>DOM</i> może odwoływać się
+                    również do innych atrybutów tych elementów niż <i>id</i> i <i>class</i>. Atrybuty dotyczące danych
+                    elementów <i>HTML</i> składają się z dwuczłonowych nazw oddzielonych myślnikiem (gdzie pierwszy
+                    człon to <i>data</i>): <strong>data-name</strong>.
+                </li>
+                <li class="article__list-item">Aby dostać się do tych atrybutów z poziomu JavaScript należy na
+                    konkretnym elemencie odwołać się do właściwości <i>dataset</i>, a po niej do drugiego członu nazwy
+                    atrybutu: <strong>element.dataset.name</strong>.
+                </li>
+                <li class="article__list-item">Aby pobrać wszystkie elementy posiadające dany atrybut należy w metodzie
+                    <i>querySelectorAll</i> przekazać jako argument klucz tego atrybutu w nawiasach kwadratowych:
+                    <strong>document.querySelectorAll('[data-name]');</strong>.
+                </li>
+                <li class="article__list-item">Metoda <i>querySelectorAll</i> zwraca obiekt <i>NodeList</i>, na którym
+                    nie można wywołać wszystkich metod tablicowych. Aby przekonwertować taki obiekt na tablicę, należy
+                    skorzystać z operatora rozproszenia (<i>spread</i>) oraz nawiasów kwadratowych:
+                    <strong>[...<i>NodeList</i>]</strong>.
+                </li>
+                <li class="article__list-item">
+                    Edycja wartości atrybutu elementu <i>DOM</i>: <strong>element.setAttribute(attribute-key) =
+                        newAttributeValue</strong>.
+                </li>
+                <li class="article__list-item">
+                    Pobranie wartości atrybutu elementu <i>DOM</i>:
+                    <strong>element.getAttribute(attribute-key)</strong>.
+                </li>
+            </ul>
         </article>
         <article id="local-storage" class="article">
             <h2 class="article__heading">local storage</h2>
