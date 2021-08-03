@@ -468,7 +468,8 @@
             <ul class="article__list">
                 <li class="article__list-item">
                     <strong>function functionName (parameter) {functionBody}</strong> - funkcja nazwana (możliwe jest
-                    jej napisanie poprzez nadanie takiej samej nazwy innej funkcji);
+                    jej nadpisanie poprzez nadanie takiej samej nazwy innej funkcji; z racji tego że nie jest przypisana
+                    do zmiennej, jej wywołanie może nastąpić wcześniej w kodzie niż jej deklaracja);
                 </li>
                 <li class="article__list-item">
                     <strong>const name = function (parameter) {functionBody}</strong> - funkcja anonimowa (przypisana
@@ -870,9 +871,9 @@
                     elementów <i>HTML</i> składają się z dwuczłonowych nazw oddzielonych myślnikiem (gdzie pierwszy
                     człon to <i>data</i>): <strong>data-name</strong>.
                 </li>
-                <li class="article__list-item">Aby dostać się do tych atrybutów z poziomu JavaScript należy na
-                    konkretnym elemencie odwołać się do właściwości <i>dataset</i>, a po niej do drugiego członu nazwy
-                    atrybutu: <strong>element.dataset.name</strong>.
+                <li class="article__list-item">Aby dostać się do atrybutów dotyczących danych z poziomu JavaScript
+                    należy na konkretnym elemencie odwołać się do właściwości <i>dataset</i>, a po niej do drugiego
+                    członu nazwy atrybutu: <strong>element.dataset.name</strong>.
                 </li>
                 <li class="article__list-item">Aby pobrać wszystkie elementy posiadające dany atrybut należy w metodzie
                     <i>querySelectorAll</i> przekazać jako argument klucz tego atrybutu w nawiasach kwadratowych:
@@ -884,12 +885,16 @@
                     <strong>[...<i>NodeList</i>]</strong>.
                 </li>
                 <li class="article__list-item">
-                    Edycja wartości atrybutu elementu <i>DOM</i>: <strong>element.setAttribute(attribute-key) =
-                        newAttributeValue</strong>.
+                    Dodanie nowego atrybutu/edycja wartości istniejącego atrybutu elementu <i>DOM</i>:
+                    <strong>element.setAttribute('attribute-key', 'attribute-value')</strong>.
                 </li>
                 <li class="article__list-item">
                     Pobranie wartości atrybutu elementu <i>DOM</i>:
-                    <strong>element.getAttribute(attribute-key)</strong>.
+                    <strong>element.getAttribute('attribute-key)</strong>.
+                </li>
+                <li class="article__list-item">
+                    Usunięcie atrybutu elementu <i>DOM</i>:
+                    <strong>element.removeAttribute('attribute-key')</strong>.
                 </li>
             </ul>
         </article>
