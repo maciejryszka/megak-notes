@@ -900,15 +900,15 @@
             <p class="article__text">Znaczniki dotyczące formularzy:</p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>&lt;form></strong> - opakowanie dla formularza.</li>
-                <li class="article__list-item"><strong>&lt;input id="" name="" type="" value="" placeholder=""></strong>
-                    - podstawowy element budujący formularz. Zgodnie z dokumentacją znacznik <i>input</i> powinien być
-                    opakowany w paragraf wraz z opisującym go znacznikiem <i>label</i>. <i>Id</i> służy do odniesienia
-                    się do etykiety i może posiadać wartość taką jak nazwa. <i>Name</i> służy do identyfikacji wartości
-                    w miejscu, do którego wysyłamy dane za pomocą formularza. <i>Type</i> określa typ pola. <i>Value</i>
-                    to domyślna wartość pola, wyświetlana zanim wpiszemy tam cokolwiek. <i>Placeholder</i> przechowuje
-                    podpowieź dotyczącą pola, która wyświetlana jest, kiedy pole jest puste. Właściwość
-                    <i>placeholder</i> nie zastępuje znacznika <i>label</i>, ponieważ czytniki jako opis pola zawsze
-                    odczytują etykietę.
+                <li class="article__list-item"><strong>&lt;input id="" name="" type="" value="" placeholder=""
+                        required></strong> - podstawowy element budujący formularz. Zgodnie z dokumentacją znacznik
+                    <i>input</i> powinien być opakowany w paragraf wraz z opisującym go znacznikiem <i>label</i>.
+                    <i>Id</i> służy do odniesienia się do etykiety i może posiadać wartość taką jak nazwa. <i>Name</i>
+                    służy do identyfikacji wartości w miejscu, do którego wysyłamy dane za pomocą formularza.
+                    <i>Type</i> określa typ pola. <i>Value</i> to domyślna wartość pola, wyświetlana zanim wpiszemy tam
+                    cokolwiek. <i>Placeholder</i> przechowuje podpowieź dotyczącą pola, która wyświetlana jest, kiedy
+                    pole jest puste. Właściwość <i>placeholder</i> nie zastępuje znacznika <i>label</i>, ponieważ
+                    czytniki jako opis pola zawsze odczytują etykietę. <i>Required</i> wymaga uzupełnienia danego pola.
                 </li>
                 <li class="article__list-item"><strong>&lt;label for=""></strong> - etykieta tworząca opis pola. Aby
                     przypiąć ją do konkretnego pola, atrybut <i>for</i> musi przyjąć wartość atrybutu <i>id</i> tego
@@ -975,6 +975,25 @@
                 <li class="article__list-item"><strong>POST</strong> - nie umieszcza w adresie URL żadnych dodatkowych
                     znaków. Jest metodą bezpieczniejszą. Używa <i>Form Data</i> (zakładka <i>Network</i> w
                     przeglądarce). Metoda służy zazwyczaj do wysyłania danych.</li>
+            </ul>
+            <p class="article__text">Podczas przesyłania danych za pomocą formularza należy obsługiwać zdarzenie
+                wysłania formularza, zamiast zdarzenia kliknięcia w przycisk (ponieważ można wysłać formularz na różne
+                sposoby, np. klawiszem enter). Metoda <i>addEventListener</i> powinna zostać wykonana na obiekcie
+                formularza oraz nasłuchiwać zdarzenia typu <i>submit</i>. Aby uniknąć domyślnego zachowania
+                przeglądarki, jakim jest odświeżenie strony podczas wysyłania formularza, należy w funkcji
+                <i>callback</i> na obiekcie <i>event</i> wywołać metodę <strong>preventDefault()</strong>.
+            </p>
+            <p class="article__text">Sposoby na odwołanie się do danych przesłanych przez dany element formularza
+                (należy ich używać w trakcie przesłania formularza - wewnątrz fukcji <i>callback</i> zdarzenia
+                <i>submit</i>):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>event.target.elements['name-property-value'].value</strong> -
+                    poprzez odwołanie się do konkretnego elementu <i>input</i> z wykorzystaniem wartości jego atrybutu
+                    <i>name</i> , a następnie wywołanie na nim własności <i>value</i>.
+                </li>
+                <li class="article__list-item"><strong>inputElement.value</strong> - poprzez pobranie konretnego
+                    elementu <i>input</i>, a następnie wywołanie na nim własności <i>value</i>.</li>
             </ul>
         </article>
         <article id="local-storage" class="article">
