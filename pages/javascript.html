@@ -864,7 +864,7 @@
             <p class="article__text">Nie wszystkie atrybuty znaczników <i>HTML</i> muszą posiadać wartość. Przykładem
                 jest atrybut <i>disabled</i>, który powoduje deaktywację elementu, na którym został użyty. Atrybut ten
                 może zostać użyty jedynie dla części tagów (np. dla znacznika <i>button</i>).</p>
-            <p class="article__">Praca z atrybutami HTML w JavaScript:</p>
+            <p class="article__text">Praca z atrybutami HTML w JavaScript:</p>
             <ul class="article__list">
                 <li class="article__list-item">JavaScript podczas pracy z elementami <i>DOM</i> może odwoływać się
                     również do innych atrybutów tych elementów niż <i>id</i> i <i>class</i>. Atrybuty dotyczące danych
@@ -896,6 +896,85 @@
                     Usunięcie atrybutu elementu <i>DOM</i>:
                     <strong>element.removeAttribute('attribute-key')</strong>.
                 </li>
+            </ul>
+            <p class="article__text">Znaczniki dotyczące formularzy:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>&lt;form></strong> - opakowanie dla formularza.</li>
+                <li class="article__list-item"><strong>&lt;input id="" name="" type="" value="" placeholder=""></strong>
+                    - podstawowy element budujący formularz. Zgodnie z dokumentacją znacznik <i>input</i> powinien być
+                    opakowany w paragraf wraz z opisującym go znacznikiem <i>label</i>. <i>Id</i> służy do odniesienia
+                    się do etykiety i może posiadać wartość taką jak nazwa. <i>Name</i> służy do identyfikacji wartości
+                    w miejscu, do którego wysyłamy dane za pomocą formularza. <i>Type</i> określa typ pola. <i>Value</i>
+                    to domyślna wartość pola, wyświetlana zanim wpiszemy tam cokolwiek. <i>Placeholder</i> przechowuje
+                    podpowieź dotyczącą pola, która wyświetlana jest, kiedy pole jest puste. Właściwość
+                    <i>placeholder</i> nie zastępuje znacznika <i>label</i>, ponieważ czytniki jako opis pola zawsze
+                    odczytują etykietę.
+                </li>
+                <li class="article__list-item"><strong>&lt;label for=""></strong> - etykieta tworząca opis pola. Aby
+                    przypiąć ją do konkretnego pola, atrybut <i>for</i> musi przyjąć wartość atrybutu <i>id</i> tego
+                    pola. Jeśli znacznik <i>input</i> znajduje się zaś wewnątrz znacznika <i>label</i>, takie przypięcie
+                    nie jest konieczne.</li>
+                <li class="article__list-item"><strong>&lt;fieldset></strong> - grupa pól.</li>
+                <li class="article__list-item"><strong>&lt;legend></strong> - opis grupy pól znajdującej się wewnątrz
+                    znacznika <i>fieldset</i>.</li>
+                <li class="article__list-item"><strong>&lt;select></strong> - umożliwia wybór elementu z rozwijanej
+                    listy.</li>
+                <li class="article__list-item"><strong>&lt;option></strong> - element rozwijanej listy. Znajduje się
+                    wewnątrz znacznika <i>select</i>. Można zdefiniować wartość pola w atrybucie <i>value</i> w
+                    przypadku gdy ma być ona inna niż wyświetlana w polu.</li>
+                <li class="article__list-item"><strong>&lt;textarea></strong> - służy do wprowadzania dłuższej treści.
+                    Nie posiada atrybutu <i>value</i>, w związku z czym jego wartość należy umieścić jako treść
+                    znacznika.</li>
+            </ul>
+            <p class="article__text">Typy pól formularza:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>text</strong> - służy do wpisywania widocznego tekstu.</li>
+                <li class="article__list-item"><strong>radio</strong> - służy do wyboru jednej wartości z grupy.
+                    Wszystkie pola danej grupy muszą posiadać taką samą wartość znacznika <i>name</i>. Dodanie
+                    nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje domyślny wybór tego
+                    pola.</li>
+                <li class="article__list-item"><strong>checkbox</strong> - służy do wyboru większej ilości wartości. Gdy
+                    pole nie będzie posiadało parametru <i>value</i>, w momencie przesłania formularza zostanie
+                    przesłana wartość <i>on</i>, kiedy pole było zaznaczone lub brak tej wartości, kiedy pole nie było
+                    zaznaczone. Dodanie nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje
+                    domyślny wybór tego pola.</li>
+                <li class="article__list-item"><strong>number</strong> - umożliwia wpisywanie jedynie cyfr do pola.</li>
+                <li class="article__list-item"><strong>tel</strong> - sygnalizuje, że podane pole zawiera numer
+                    telefonu. Ze względu na różne formaty numerów telefonicznych, nie posiada ograniczeń.</li>
+                <li class="article__list-item"><strong>email</strong> - sygnalizuje, że podane pole zawiera adres
+                    e-mail.</li>
+                <li class="article__list-item"><strong>range</strong> - służy do wyboru konkretnej wartości z danego
+                    zakresu za pomocą suwaka. Wartość minimalną, maksymalną oraz skok określają odpowiednio atrybuty
+                    pola: <i>min</i>, <i>max</i> oraz <i>step</i>. Do aktualnie wskazywanej wartości można dostać się z
+                    poziomu JavaScript, odwołując się do własności <i>value</i> znacznika <i>input</i>.</li>
+                <li class="article__list-item"><strong>password</strong> - służy do wpisywania hasła. Wpisywane znaki są
+                    ukryte na ekranie.</li>
+                <li class="article__list-item"><strong>file</strong> - służy do wyboru pliku (z pamięci urządzenia) do
+                    przesłania.</li>
+                <li class="article__list-item"><strong>submit</strong> - służy do wysyłania formularza. Nie posiada
+                    etykiety, a jego nazwa jest zdefiniowana w atrybucie <i>value</i>.</li>
+            </ul>
+            <p class="article__text">Atrybuty formularza:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>action</strong> - jako wartość przyjmuje adres URL miejsca, gdzie
+                    wysłąny będzie formularz. Domyślnie jest wysyłany do strony, na której się znajduje.</li>
+                <li class="article__list-item"><strong>enctype</strong> - mówi o tym czy jest to zwykły formularz
+                    (domyślna wartość: <i>application/x-www-form-urlencoded</i>) czy zawiera inne treści poza
+                    tekstowymi, np. kiedy wysyłane są pliki (wartość: <i>multipart/form-data</i>).</li>
+                <li class="article__list-item"><strong>method</strong> - pozwala na wybór metody wysłania żądania (GET
+                    lub POST).</li>
+            </ul>
+            <p class="article__text">Metody wysłania żądania:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>GET</strong> - domyślna metoda. Przekazuje parametry i wartości w
+                    adresie URL strony. Wysyłane są wartości atrybutu <i>value</i> pola, niezależnie od tego co znajduje
+                    się w etykiecie pola. Ze względu na limitowaną liczbę znaków w adresie, plików nie wysyła się tą
+                    metodą. Używa <i>Query String Parameters</i> (zakładka <i>Network</i> w przeglądarce). Metoda służy
+                    zazwyczaj do pobierania danych.
+                </li>
+                <li class="article__list-item"><strong>POST</strong> - nie umieszcza w adresie URL żadnych dodatkowych
+                    znaków. Jest metodą bezpieczniejszą. Używa <i>Form Data</i> (zakładka <i>Network</i> w
+                    przeglądarce). Metoda służy zazwyczaj do wysyłania danych.</li>
             </ul>
         </article>
         <article id="local-storage" class="article">
@@ -935,7 +1014,6 @@
                 <li class="article__list-item">usuwanie przechowywanego elementu:
                     <strong>localStorage.removeItem(key)</strong>.
                 </li>
-
             </ul>
         </article>
         <article id="json" class="article">
