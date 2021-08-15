@@ -86,6 +86,8 @@
             <a href="#local-storage" class="theory-main__link">local storage</a>
             <span class="theory-main__text">•</span>
             <a href="#json" class="theory-main__link">json</a>
+            <span class="theory-main__text">•</span>
+            <a href="#exceptions" class="theory-main__link">błędy i wyjątki</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -173,12 +175,22 @@
             <p class="article__text">Operatory logiczne:</p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>&&</strong> - wszystkie warunki muszą być
-                    prawdziwe, żeby wyrażenie było prawdziwe (logiczne "i"),</li>
+                    prawdziwe, żeby wyrażenie zwróciło prawdę (logiczne "i"),</li>
                 <li class="article__list-item">
                     <strong>||</strong> - przynajmniej jeden warunek musi być
-                    prawdziwy, żeby wyrażenie było prawdziwe (logiczne "lub"),
+                    prawdziwy, żeby wyrażenie zwróciło prawdę (logiczne "lub"),
                 </li>
                 <li class="article__list-item"><strong>!</strong> - odwraca wartość wyrażenia logicznego (negacja).</li>
+            </ul>
+            <p class="article__text">Wartości zwracane przez operatory logiczne, kiedy nie są używane w odniesieniu do
+                wartości logicznych:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>&&</strong> - zwraca pierwszy element, który po konwersji do typu
+                    <i>boolean</i> zwraca wartość <i>false</i>. Kiedy nie ma takiego elementu, zwraca ostatni element.
+                </li>
+                <li class="article__list-item"><strong>||</strong> - zwraca pierwszy element, który po konwersji do typu
+                    <i>boolean</i> zwraca wartość <i>true</i>. Kiedy nie ma takiego elementu, zwraca ostatni element.
+                </li>
             </ul>
             <p class="article__text">Podwójna negacja (<strong>!!</strong>) pozwala na sprawdzenie jaką wartość logiczną
                 przyjmie operand po konwersji do typu <i>boolean</i>.</p>
@@ -395,10 +407,17 @@
                     zgodność typów.
                 </li>
                 <li class="article__list-item">
-                    (<u>condition</u>) <strong>?</strong> <u>ifTrue</u> <strong>:</strong> <u>ifFalse</u> - <i>ternary
+                    <u>condition</u> <strong>?</strong> <u>ifTrue</u> <strong>:</strong> <u>ifFalse</u> - <i>ternary
                         operator</i> - jeśli <u>warunek</u> podany przed znakiem zapytania jest spełniony, zwracana jest
                     <u>wartość</u> znajdująca się między znakiem zapytania a dwukropkiem. W przeciwnym razie zwracana
                     jest <u>wartość</u> znajdująca się po dwukropku.
+                </li>
+                <li class="article__list-item">
+                    <u>leftOperand</u> <strong>??</strong> <u>rightOperand</u> - <i>nullish coalescing operator</i> -
+                    jeśli <u>lewy operand</u> zwraca wartość <i>null</i> lub <i>undefined</i>, zwracany jest
+                    <u>prawy operand</u>. W przeciwnym razie zwracany jest <u>lewy operand</u> (nawet jeśli są to inne
+                    wartości, które po konwersji do typu <i>boolean</i> zwracają <i>false</i>, np.: 0, pusty
+                    <i>string</i>).
                 </li>
             </ul>
         </article>
@@ -527,6 +546,9 @@
                 <li class="article__list-item">
                     Aby go zadeklarować, należy użyć nawiasów klamrowych.
                 </li>
+                <li class="article__list-item">
+                    Do sprawdzenia czy obiekt jest instancją danej klasy (obiektem danego konstruktora, obiektem danego
+                    typu) służy słowo kluczowe <i>instanceof</i>.
                 </li>
                 <li class="article__list-item">
                     Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu)
@@ -852,6 +874,34 @@
                     poszczególnych elementów przy wykorzystaniu metodologii nazewnictwa klas <i>BEM</i>).
                 </li>
             </ul>
+            <p class="article__text">Dodawanie nowych elementów <i>DOM</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    Utworzenie nowego elementu <i>DOM</i>:
+                    <strong>document.createElement('tag-name')</strong>.
+                </li>
+                <li class="article__list-item">
+                    Usunięcie nowego tekstowego elementu <i>DOM</i>:
+                    <strong>document.createTextNode('text')</strong>.
+                </li>
+                <li class="article__list-item">
+                    Dodanie utworzonego elementu/tekstowego elementu <i>DOM</i> do rodzica:
+                    <strong>parentElement.appendChild(newElement)</strong>.
+                </li>
+            </ul>
+            <p class="article__text">Operacje na klasach elementów <i>DOM</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">
+                    Dodanie nowej klasy: <strong>element.classList.add('className')</strong>.
+                </li>
+                <li class="article__list-item">
+                    Usunięcie klasy: <strong>element.classList.remove('className')</strong>.
+                </li>
+                <li class="article__list-item">
+                    Dodanie klasy jeśli element jej nie posiada lub usunięcie klasy jeśli element ją posiada:
+                    <strong>element.classList.toggle('className')</strong>.
+                </li>
+            </ul>
             <p class="article__text">Metoda służąca do nasłuchiwania w JavaScript to
                 <strong>addEventListener</strong>(), która wywoływana jest na konkretnym (pojedynczym) elemencie
                 <i>DOM</i> i przyjmuje jako argumenty: <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako
@@ -890,7 +940,7 @@
                 </li>
                 <li class="article__list-item">
                     Pobranie wartości atrybutu elementu <i>DOM</i>:
-                    <strong>element.getAttribute('attribute-key)</strong>.
+                    <strong>element.getAttribute('attribute-key')</strong>.
                 </li>
                 <li class="article__list-item">
                     Usunięcie atrybutu elementu <i>DOM</i>:
@@ -1055,6 +1105,35 @@
             <p class="article__text">Podczas pracy na serwerze lub na przeglądarce klienta zazwyczaj korzysta się z
                 obiektów. Format JSON wykorzystywany jest głównie w celu przesyłania danych i może zostać odkodowany
                 niezależnie od języka programowania.</p>
+        </article>
+        <article id="exceptions" class="article">
+            <h2 class="article__heading">błędy i wyjątki</h2>
+            <p class="article__text">W każdym potencjalnm miejscu, gdzie w programie może wystąpić błąd, należy wykonać
+                jego obsługę (aby błąd był zrozumiały dla użytkownika). W celu przechwycenia błędu należy skorzystać ze
+                słowa kluczowego <i>throw</i> oraz obiektu typu <i>Error</i>. Sposób ten domyślnie przerywa działanie
+                programu oraz pozwala na prostą identyfikację miejsca wystąpienia błędu (poprzez wyświetlenie
+                odpowiednich danych w konsoli). Umożliwia także obsługę tego błędu.
+            </p>
+            <p class="article__text">Sposoby obsługi błędów:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>try{functionWithThrowKeyword()} catch(errorObjectVariableName)
+                        {handlingInstruction}</strong> - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele
+                    słowo kluczowe <i>throw</i>. Jeśli zostanie wywołany fragment funkcji z błędem, błąd ten zostanie
+                    obsłużony zgodnie z instrukcją z bloku <i>catch</i>.
+                </li>
+                <li class="article__list-item"><strong>try{functionWithThrowKeyword()} finally
+                        {handlingInstruction}</strong> - instrukcja z bloku <i>finally</i> (umieszczana jako ostatni
+                    blok) zostanie wykonana niezależnie od tego czy w programie wystąpił błąd.
+                </li>
+                <li class="article__list-item"><strong>try{functionWithAwaitKeyword()} catch(errorObjectVariableName)
+                        {handlingInstruction}</strong> - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele
+                    słowo kluczowe <i>await</i>. Jeśli wystąpi błąd, zostanie on obsłużony zgodnie z instrukcją z bloku
+                    <i>catch</i>.
+                </li>
+            </ul>
+            <p class="article__text">Obiekt typu <i>Error</i> posiada wiele typów oraz własności ułatwiających obsługę
+                błędów.</p>
+            <p class="article__text">Obsługa błędów wbudowanych:</p>
         </article>
     </main>
     <footer class="footer">
