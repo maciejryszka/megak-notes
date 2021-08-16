@@ -88,6 +88,8 @@
             <a href="#json" class="theory-main__link">json</a>
             <span class="theory-main__text">•</span>
             <a href="#exceptions" class="theory-main__link">błędy i wyjątki</a>
+            <span class="theory-main__text">•</span>
+            <a href="#debugging" class="theory-main__link">debugowanie</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -1134,6 +1136,54 @@
             <p class="article__text">Obiekt typu <i>Error</i> posiada wiele typów oraz własności ułatwiających obsługę
                 błędów.</p>
             <p class="article__text">Obsługa błędów wbudowanych:</p>
+        </article>
+        <article id="debugging" class="article">
+            <h2 class="article__heading">debugowanie</h2>
+            <p class="article__text">
+                Tryb ścisły wprowadza zmiany w semantyce JavaScript:
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">Eliminuje niektóre błędy języka, zmieniając je tak, aby wyświtlały błędy.
+                </li>
+                <li class="article__list-item">Naprawia błędy, które utrudniają silnikom przeprowadzanie
+                    optymalizacji (czasami kod w trybie ścisłym może działać szybciej niż identyczny kod, który nie jest
+                    w trybie ścisłym).</li>
+                <li class="article__list-item">Zabrania niektórych składni, które prawdopodobnie zostaną zdefiniowane w
+                    przyszłych wersjach ECMAScript.</li>
+            </ul>
+            <p class="article__text">Niektóre właściwości trybu ścisłego:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Uniemożliwia deklarację zmiennych bez poprzedzenia ich nazwy słowem
+                    kluczowym <i>let</i>, <i>const</i> lub <i>var</i>.
+                </li>
+                <li class="article__list-item">
+                    Uniemożliwia deklarację zmiennych z użyciem słów zastrzeżonych jako nazwy (np. <i>undefined</i>).
+                </li>
+                <li class="article__list-item">Kontekst <i>this</i> podczas wywołania funkcji nazwanej oraz anonimowej
+                    nie dotyczny obiektu globalnego, lecz przyjmuje wartość <i>undefined</i>.</li>
+            </ul>
+            <p class="article__list">Aby rozpocząć pracę w trybie ścisłym, należy na początku pliku JavaScript umieścić
+                <i>string</i>: <strong>'use strict'</strong>. Tryb działa od wersji <i>ECMAScript 5</i>. Wiele
+                mechanizmów (od wersji <i>ECMAScript 6</i>) nie wymaga stosowania trybu ścisłego, ponieważ ma
+                zaimplementowane różnego rodzaju zabezpieczenia.
+            </p>
+            <p class="article__list">Debugowanie w Chrome:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Dostęp do plików źródłowych możliwy jest z poziomu zakładki
+                    <i>Sources</i>. Widoczna jest tu także zawartość używanych zmiennych, stos wywołań funkcji -
+                    <i>callstack</i>, aktualny obiekt <i>this</i>.
+                </li>
+                <li class="article__list-item">Słowo kluczowe <strong>debugger</strong> umożliwia zatrzymanie
+                    wykonywania programu w miejscu, w którym zostało użyte w kodzie. <i>Debugger</i> zatrzymuje się w
+                    czasie wywołania funkcji, a nie w czasie jej deklaracji.</li>
+                <li class="article__list-item">Możliwe jest również ustalenie punktu zatrzymania poprzez kliknięcie
+                    odpowiedniej linijki w kodzie źródłowym w zakładce <i>Sources</i>.
+                </li>
+                <li class="article__list-item">Panel służący do sterowania przepływem programu umożliwia akcje takie
+                    jak: wznowienie/zatrzymanie wykonywania skryptu, przejście do kolejnego wywołania funkcji, wejście
+                    do wywoływanej funkcji, wyjście z wywoływanej funkcji, przejście do następnego kroku.
+                </li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
