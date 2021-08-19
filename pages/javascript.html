@@ -90,6 +90,10 @@
             <a href="#exceptions" class="theory-main__link">błędy i wyjątki</a>
             <span class="theory-main__text">•</span>
             <a href="#debugging" class="theory-main__link">debugowanie</a>
+            <span class="theory-main__text">•</span>
+            <a href="#collections" class="theory-main__link">kolekcje</a>
+            <span class="theory-main__text">•</span>
+            <a href="#eslint" class="theory-main__link">eslint</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -131,6 +135,16 @@
                 </li>
                 <li class="article__list-item">środowisko uruchomieniowe Node.js,</li>
                 <li class="article__list-item">przeglądarka internetowa.</li>
+            </ul>
+            <p class="article__text">Strony przydatne podczas pracy w JavaScript:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><a class="article__link" href="https://caniuse.com/">caniuse.com</a> -
+                    wykaz wsparcia poszczególnych funkcji w przeglądarce,</li>
+                <li class="article__list-item"><a class="article__link" href="https://node.green/">node.green</a> -
+                    wykaz wspracia poszczególnych funkcji w Node.js.</li>
+                <li class="article__list-item"><a class="article__link" href="https://babeljs.io/">babeljs.io</a> -
+                    transpilator do starszej wersji JavaScript. Umożliwia na korzystanie z funkcji języka, które pojawią
+                    się dopiero w przyszłości.</li>
             </ul>
             <p class="article__text"><strong>Interpreterem</strong> JavaScript w przeglądarce (zarówno Chrome jak i
                 Edge) jest stworzony
@@ -1135,7 +1149,6 @@
             </ul>
             <p class="article__text">Obiekt typu <i>Error</i> posiada wiele typów oraz własności ułatwiających obsługę
                 błędów.</p>
-            <p class="article__text">Obsługa błędów wbudowanych:</p>
         </article>
         <article id="debugging" class="article">
             <h2 class="article__heading">debugowanie</h2>
@@ -1143,7 +1156,8 @@
                 Tryb ścisły wprowadza zmiany w semantyce JavaScript:
             </p>
             <ul class="article__list">
-                <li class="article__list-item">Eliminuje niektóre błędy języka, zmieniając je tak, aby wyświtlały błędy.
+                <li class="article__list-item">Eliminuje niektóre niedoskonałości języka, zmieniając je tak, aby
+                    wyświtlały błędy.
                 </li>
                 <li class="article__list-item">Naprawia błędy, które utrudniają silnikom przeprowadzanie
                     optymalizacji (czasami kod w trybie ścisłym może działać szybciej niż identyczny kod, który nie jest
@@ -1184,6 +1198,116 @@
                     do wywoływanej funkcji, wyjście z wywoływanej funkcji, przejście do następnego kroku.
                 </li>
             </ul>
+        </article>
+        <article id="collections" class="article">
+            <h2 class="article__heading">kolekcje</h2>
+            <p class="article__text">Kolekcje danych to iterowalne obiekty, przechowujące unikalne dane. Iteracja w
+                kolekcjach przebiega w kolejności dodania do nich danych. Wyróżnia się dwa typy kolekcji: zbiór
+                (<strong>set</strong>) oraz mapę (<strong>map</strong>).
+            </p>
+            <p class="article__text">Zbiór pozwala na przechowywanie ukikalnych wartości (zarówno typu prostego jak i
+                referencji do obiektów). Najważniejsze metody:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>new Set(array)</strong> - utworzenie zbioru z tablicy.</li>
+                <li class="article__list-item"><strong>new Array(...set)</strong> - utworzenie tablicy ze zbioru.</li>
+                <li class="article__list-item"><strong>set.add(element)</strong> - dodanie elementu do zbioru.</li>
+                <li class="article__list-item"><strong>set.delete(element)</strong> - usunięcie elementu ze zbioru.</li>
+                <li class="article__list-item"><strong>set.has(element)</strong> - sprawdzenie czy zbiór posiada
+                    element.</li>
+                <li class="article__list-item"><strong>set.delete(element)</strong> - usunięcie wszystkich elementów
+                    zbioru.</li>
+            </ul>
+            <p class="article__text">Mapa pozwala na przechowywanie par klucz-wartość. Zarówno wartość typu
+                prostego jak i obiekt mogą zostać użyte jako klucz lub jako wartość mapy. Najważniejsze metody:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>new Map(Object.entries(object))</strong> - utworzenie mapy z
+                    obiektu.</li>
+                <li class="article__list-item"><strong>new Map(arrayOfKeyValueArrays)</strong> - utworzenie mapy z
+                    dwuwymiarowej tablicy przechowującej tablice zawierające pary klucz-wartość.</li>
+                <li class="article__list-item"><strong>map.get(key)</strong> - pobranie wartości o danym kluczu z mapy.
+                </li>
+                <li class="article__list-item"><strong>map.set(key, value)</strong> - ustawienie pary klucz-wartość w
+                    mapie.</li>
+                <li class="article__list-item"><strong>map.delete(key)</strong> - usunięcie elementu o danym kluczu z
+                    mapy.</li>
+                <li class="article__list-item"><strong>map.has(key)</strong> - sprawdzenie czy mapa posiada element o
+                    danym kluczu.</li>
+                <li class="article__list-item"><strong>map.clear()</strong> - usunięcie wszystkich elementów mapy.</li>
+                <li class="article__list-item"><strong>map.entries()</strong> - pobrabie z mapy dwuwymiarowej tablicy
+                    zawierającej tablice z parami klucz-wartość.</li>
+            </ul>
+            <p class="article__text">Kolekcje wykorzystywane są głównie kiedy wymagana jest unikalność danych lub duża
+                szybkość pracy na danych.</p>
+        </article>
+        <article id="eslint" class="article">
+            <h2 class="article__heading">eslint</h2>
+            <p class="article__text"><strong>ESLint</strong> to narzędzie do statycznej analizy kodu oraz identyfikacji
+                problematycznych fragmentów w kodzie JavaScript. Pozwala pisać coraz lepszy, zgodny dobrymi praktykami
+                kod. Często ujednolica również styl pisania kodu w całym zespole/całej firmie.
+            </p>
+            <p class="article__text"><i>Linter</i> pomaga otrzymywać jednolity styl kodu. <i>Style guide</i> to zestaw
+                reguł <i>Lintera</i>. <a class="article__link" href="https://github.com/airbnb/javascript">Airbnb
+                    JavaScript Style Guide</a> to popularny <i>style guide</i> stworzony przez firmę <i>Airbnb</i>.
+            </p>
+            <p class="article__text">Przygotowanie <i>ESLint</i> i włączenie <i>style guide</i> (instrukcje należy
+                wykonać dla każdego projektu osobno):</p>
+            <ol class="article__list">
+                <li class="article__list-item"><strong>npm init -y</strong></li>
+                <li class="article__list-item"><strong>npm i -D eslint babel-eslint eslint-config-airbnb</strong></li>
+                <li class="article__list-item">utworzenie pliku <strong>.eslintrc</strong> w głównym folderze projektu z
+                    zawartością: <strong>{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true}, "parser":
+                        "babel-eslint", "extends": "airbnb", "rules": {}}</strong></li>
+                <li class="article__list-item">ustawienia <i>ESLint</i> w <i>WebStorm</i>: <strong>Automatic ESLint
+                        configuration</strong></li>
+            </ol>
+            <p class="article__text">Sposoby naprawy niedoskonałości w kodzie:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy katalogu projektu i wybranie opcji
+                    <i>Fix ESLint Problems</i> (działa na cały projekt).
+                </li>
+                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy pliku i wybranie opcji <i>Fix ESLint
+                        Problems</i> (działa na wybrany plik).
+                </li>
+                <li class="article__list-item">Użycie skrótu klawiaturowego <strong>alt + enter</strong> podczas gdy
+                    kursor edyora znajduje się na danej niedoskonałości (poprawia wybraną niedoskonałość).
+                </li>
+                <li class="article__list-item">Użycie skrótu klawiaturowego <strong>alt + shift + enter</strong>
+                    (poprawia wszystkie niedoskonałości w pliku).
+                </li>
+                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy konkretnego elementu kodu
+                    i wybranie sugerowanego sposobu naprawy.</li>
+            </ul>
+            <p class="article__text">Sposób użycia innego stylu niż sugerowany w pojedynczym pliku:</p>
+            <ol class="article__list">
+                <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element
+                    kodu.</li>
+                <li class="article__list-item">Wyszukanie w <a class="article__link"
+                        href="https://eslint.org/">dokumentacji</a> <i>ESLint</i> tej właściwości.</li>
+                <li class="article__list-item">Skopiowanie wybranej reguły (np. <strong>/*eslint quotes: ["error",
+                        "double"]*/</strong>) i wklejenie jej (jako komentarza) na początku pliku, który będzie używał
+                    innych stylów <i>ESLint</i>.
+                </li>
+            </ol>
+            <p class="article__text">Sposób użycia innego stylu niż sugerowany w całym projekcie:</p>
+            <ol class="article__list">
+                <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element
+                    kodu.</li>
+                <li class="article__list-item">Wyszukanie w <a class="article__link"
+                        href="https://eslint.org/">dokumentacji</a> <i>ESLint</i> tej właściwości.</li>
+                <li class="article__list-item">Skopiowanie wybranej reguły (np. <strong>/*eslint quotes: ["error",
+                        "double"]*/</strong>) i wklejenie jej jako jednej z własności obietktu <i>rules</i>
+                    w pliku <i>.eslintrc</i> (np. <strong>"rules": {"quotes": ["error", "double"]}</strong>).
+                </li>
+            </ol>
+            <p class="article__text"><i>ESLint</i> może wyświelać niedoskonałości kodu jako błąd lub jako ostrzeżenie
+                (pełna lista błędów i ostrzeżeń znajduje się w zakładce <i>Problems</i> w <i>WebStorm</i>). Aby zmienić
+                domyślny sposób ich wyświetlania, należy wybrać typ w nadpisywanej regule pomiędzy <i>error</i> i
+                <i>warn</i> (np. <strong>"quotes": ["warn", "double"</strong>).
+            </p>
+            <p class="article__text">W celu automatycznego korygowania niedoskonałości w pliku podczas jego zapisu,
+                należy wybrać opcję <strong>Run eslint --fix on save</strong> w ustawieniach <i>ESLint</i> w
+                <i>WebStorm</i>.
+            </p>
         </article>
     </main>
     <footer class="footer">
