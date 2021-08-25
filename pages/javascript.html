@@ -24,7 +24,7 @@
                         <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
                     </li>
                     <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">2: Node.js</a>
+                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
                     </li>
                     <li class="hamburger-menu__list-item">
                         <a class="hamburger-menu__link" href="#">3: Express.js</a>
@@ -247,7 +247,7 @@
             <ul class="article__list">
                 <li class="article__list-item">
                     <strong>const</strong> - deklaruje zmienną, lecz połączenie między nią i jej
-                    wartością nie może być zmieniane w trakcie działania programu,
+                    wartością nie może być zmieniane w trakcie działania programu;
                 </li>
                 <li class="article__list-item">
                     <strong>let</strong> - deklaruje zmienną, a połączenie między nią i jej
@@ -600,10 +600,9 @@
                     nowej własności/metody).
                 </li>
                 <li class="article__list-item">Kiedy podczas tworzenia obiektu nadawana jest mu własność, której wartość
-                    pochodzi ze zmiennej, a klucz tej wartości ma taką samą
-                    nazwę jak ta zmienna - wystarczy wpisać sam klucz w obiekcie i pominąć dwukropek oraz wartość.
-                    Zostanie
-                    ona przypisana automatycznie ze zmiennej.</li>
+                    pochodzi ze zmiennej, a klucz tej własności ma taką samą nazwę jak ta zmienna - wystarczy wpisać sam
+                    klucz w obiekcie i pominąć dwukropek oraz wartość. Zostanie ona przypisana automatycznie ze
+                    zmiennej.</li>
                 <li class="article__list-item">
                     Na własnościach obiektu możliwe jest wykonywanie metod.
                 </li>
@@ -671,12 +670,12 @@
                     początkowych elementów tablicy do zmiennych (z wykorzystaniem dodatkowych przecinków pomiędzy
                     elementami można także przypisać elementy inne niż początkowe, jednak nie jest to zalecane ze
                     względu na brak czytelności): <strong>const [element0ConstName, element1ConstName] =
-                        arrayName;</strong>.
+                        arrayName</strong>.
                 </li>
                 <li class="article__list-item"><strong>Destrukturyzacja w obiektach</strong> - pozwala na przypisanie do
                     zmiennych własności/metod obiektów (jeśli po dwukropku nie zostaną podane nazwy zmiennych, będą one
                     takie same jak klucze danej własności/metody w obiekcie): <strong>const {propertyKey, methodKey:
-                        methodConstName} = objectName;</strong>.
+                        methodConstName} = objectName</strong>.
                 </li>
                 <li class="article__list-item"><strong>Spread operator</strong> - pozwala na pobranie wszystkich
                     elementów tablicy/własności i metod obiektu. Najczęściej wykorzystywany do tworzenia kopii
@@ -688,7 +687,7 @@
                     Argumenty przekazane z użyciem operatora są przekazywane do funkcji w formie tablicy. W celu użycia
                     operatora należy przy deklaracji funkcji podać jako ostatni parametr nazwę tablicy poprzedzoną
                     trzema kropkami: <strong>const functionName = (optionalParameter, ...arrayName) =>
-                        {functionBody};</strong>.</li>
+                        {functionBody}</strong>.</li>
                 <li class="article__list-item"><strong>String templates</strong> - pozwala na używanie wewnątrz
                     <i>stringa</i> wyrażeń JavaScript, tabulatorów oraz enterów. <i>String</i> taki musi zawierać się
                     wewnątrz grawisów (`). Nie zadziała w przypadku apostrofów (') i cudzysłowów ("). Wyrażenia
@@ -943,7 +942,7 @@
                 </li>
                 <li class="article__list-item">Aby pobrać wszystkie elementy posiadające dany atrybut należy w metodzie
                     <i>querySelectorAll</i> przekazać jako argument klucz tego atrybutu w nawiasach kwadratowych:
-                    <strong>document.querySelectorAll('[data-name]');</strong>.
+                    <strong>document.querySelectorAll('[data-name]')</strong>.
                 </li>
                 <li class="article__list-item">Metoda <i>querySelectorAll</i> zwraca obiekt <i>NodeList</i>, na którym
                     nie można wywołać wszystkich metod tablicowych. Aby przekonwertować taki obiekt na tablicę, należy
@@ -1044,7 +1043,8 @@
             </ul>
             <p class="article__text">Podczas przesyłania danych za pomocą formularza należy obsługiwać zdarzenie
                 wysłania formularza, zamiast zdarzenia kliknięcia w przycisk (ponieważ można wysłać formularz na różne
-                sposoby, np. klawiszem enter). Metoda <i>addEventListener</i> powinna zostać wykonana na obiekcie
+                sposoby, np. klawiszem <strong>enter</strong>). Metoda <i>addEventListener</i> powinna zostać wykonana
+                na obiekcie
                 formularza oraz nasłuchiwać zdarzenia typu <i>submit</i>. Aby uniknąć domyślnego zachowania
                 przeglądarki, jakim jest odświeżenie strony podczas wysyłania formularza, należy w funkcji
                 <i>callback</i> na obiekcie <i>event</i> wywołać metodę <strong>preventDefault()</strong>.
@@ -1252,13 +1252,13 @@
             <p class="article__text">Przygotowanie <i>ESLint</i> i włączenie <i>style guide</i> (instrukcje należy
                 wykonać dla każdego projektu osobno):</p>
             <ol class="article__list">
-                <li class="article__list-item"><strong>npm init -y</strong></li>
-                <li class="article__list-item"><strong>npm i -D eslint babel-eslint eslint-config-airbnb</strong></li>
-                <li class="article__list-item">utworzenie pliku <strong>.eslintrc</strong> w głównym folderze projektu z
-                    zawartością: <strong>{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true}, "parser":
-                        "babel-eslint", "extends": "airbnb", "rules": {}}</strong></li>
-                <li class="article__list-item">ustawienia <i>ESLint</i> w <i>WebStorm</i>: <strong>Automatic ESLint
-                        configuration</strong></li>
+                <li class="article__list-item"><strong>npm init -y</strong>.</li>
+                <li class="article__list-item"><strong>npm i -D eslint babel-eslint eslint-config-airbnb</strong>.</li>
+                <li class="article__list-item">Utworzenie pliku <strong>.eslintrc</strong> w głównym folderze projektu z
+                    zawartością: <strong>{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true, "node":
+                        true}, "parser": "babel-eslint", "extends": "airbnb", "rules": {}}</strong>.</li>
+                <li class="article__list-item">Ustawienia <i>ESLint</i> w <i>WebStorm</i>: <strong>Automatic ESLint
+                        configuration</strong>.</li>
             </ol>
             <p class="article__text">Sposoby naprawy niedoskonałości w kodzie:</p>
             <ul class="article__list">
@@ -1268,8 +1268,9 @@
                 <li class="article__list-item">Kliknięcie prawym przyciskiem myszy pliku i wybranie opcji <i>Fix ESLint
                         Problems</i> (działa na wybrany plik).
                 </li>
-                <li class="article__list-item">Użycie skrótu klawiaturowego <strong>alt + enter</strong> podczas gdy
-                    kursor edyora znajduje się na danej niedoskonałości (poprawia wybraną niedoskonałość).
+                <li class="article__list-item">Użycie skrótu klawiaturowego <strong>alt</strong> +
+                    <strong>enter</strong> podczas gdy kursor edyora znajduje się na danej niedoskonałości (poprawia
+                    wybraną niedoskonałość).
                 </li>
                 <li class="article__list-item">Kliknięcie prawym przyciskiem myszy konkretnego elementu kodu
                     i wybranie sugerowanego sposobu naprawy.</li>
@@ -1301,16 +1302,13 @@
                 domyślny sposób ich wyświetlania, należy wybrać typ w nadpisywanej regule pomiędzy <i>error</i> i
                 <i>warn</i> (np. <strong>"quotes": ["warn", "double"</strong>).
             </p>
-            <p class="article__text">W celu automatycznego korygowania niedoskonałości w pliku podczas jego zapisu,
+            <p class="article__text">W celu automatycznego korygowania niedoskonałości pliku, podczas jego zapisu
                 należy wybrać opcję <strong>Run eslint --fix on save</strong> w ustawieniach <i>ESLint</i> w
                 <i>WebStorm</i>.
             </p>
         </article>
     </main>
     <footer class="footer">
-        <p class="footer__text">
-            Zawartość będzie aktualizowana na bieżąco.
-        </p>
         <p class="footer__text">Maciej Ryszka - 2021</p>
     </footer>
     <script src="../scripts/hamburger-menu.js"></script>

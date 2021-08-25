@@ -6,8 +6,6 @@ function goToTheTop() {
 
 topButton.addEventListener("click", goToTheTop);
 
-// visibility
-
 window.addEventListener("scroll", () =>
   window.scrollY >= 500
     ? (topButton.style.display = "block")

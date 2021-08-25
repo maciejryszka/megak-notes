@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaKurs - JavaScript</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-navigation">
+            <nav class="hamburger-menu hamburger-menu--js">
+                <ul class="hamburger-menu__list">
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">3: Express.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">4: bazy danych</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header-navigation__button header-navigation__button--menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="header-navigation__button header-navigation__button--top">
+                <i class="fas fa-arrow-circle-up"></i>
+            </button>
+            <p class="header-navigation__text">mega kurs javascriptu</p>
+        </nav>
+    </header>
+    <main id="top" class="main theory-main">
+        <h1 class="theory-main__heading">node.js</h1>
+        <nav class="theory-main__links">
+            <a href="#fundaments" class="theory-main__link">fundamenty node.js</a>
+            <span class="theory-main__text">•</span>
+            <a href="#files" class="theory-main__link">praca z plikami</a>
+        </nav>
+        <div class="theory-main__image"></div>
+        <article id="fundaments" class="article">
+            <h2 class="article__heading">fundamenty node.js</h2>
+            <p class="article__text">Node.js jest środowiskiem uruchomieniowym JavaScript poza przeglądarką. Umożliwia
+                używanie JavaScript po stronie back-endu oraz wykonywanie zadań <i>dev-ops</i>. Pliki w Node.js z
+                technicznego punktu widzenia są modułami.</p>
+            <p class="article__text">Menedżer paczek (a także ich rejestr) dla ekosystemu Node.js to <a
+                    class="article__link" href="https://www.npmjs.com/">npm</a>. Umożliwia on wykorzystanie w projektach
+                kodu pochodzącego z zewnątrz.</p>
+            <p class="article__text">Node.js można pobrać z oficjalnej <a class="article__link"
+                    href="https://nodejs.org/">strony</a> (posiada on także wbudowany <i>npm</i>). Polecaną wersją jest
+                taka która jest lub będzie długo wspierana (informacja ta znajduje się w <a class="article__link"
+                    href="https://nodejs.org/about/releases/">tabeli</a>). Aplikacje produkcyjne powinny używać
+                wyłącznie wersji <i>Active LTS</i> lub <i>Maintenance LTS</i>.</p>
+            <p class="article__text">Komendy przydatne w terminalu:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>node</strong> - uruchamia interatkywną konsolę w środowisku
+                    Node.js (aby ją opuścić należy skorzystać z kombinacji <strong>ctrl + c</strong>).</li>
+                <li class="article__list-item"><strong>node -v</strong> - sprawdza posiadaną wersję Node.js.</li>
+                <li class="article__list-item"><strong>npm -v</strong> - sprawdza posiadaną wersję <i>npm</i>.</li>
+            </ul>
+            <p class="article__text">Jeśli plik ma działać cały czas (np. dlatego że jest stałym procesem) należy
+                jedynie go uruchomić. Node.js rozpozna odpowiednio taki proces i go nie przerwie.</p>
+            <p class="article__text">Import modułów z API dostarczonego przez Node.js wykonuje się głównie z
+                wykorzystaniem metody <strong>require</strong>() (będącej metodą modułu). Metoda ta zwraca obiekt z
+                różnymi klasami, funkcjami, zmiennymi dostępnymi w module. Zazwyczaj jest on przypisywany do zmiennej
+                (lub od razu używana jest destrukturyzacja, w celu pobrania jedynie potrzebnych metod/własności):
+                <strong>const {nameOfMethodFromMyModule} = require('myModule')</strong>.
+            </p>
+            <p class="article__text">Dobrą praktyką jest umieszczanie wszelkich <i>require</i> na samej górze pliku.
+                Alternatywą dla <i>require</i> jest <i>import</i>, który może jednak powodować problemy podczas pracy z
+                modułami <i>npm</i>.
+            </p>
+            <p class="article__text">Konfiguracja projektu oraz <i>npm</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>npm init</strong> - polecenie wykonywane tylko raz w projekcie,
+                    tworzące główny plik konfiguracyjny <i>package.json</i>. Należy odpowiedzieć na pytania o projekcie
+                    (odpowiedzi w nawiasie to wartości domyślne - aby ich użyć wystarczy nacisnąć klawisz
+                    <strong>enter</strong>).
+                </li>
+                <li class="article__list-item"><strong>npm install &lt;package name></strong> - polecenie instalujące
+                    paczki o danej nazwie (np. "babel-eslint", "eslint", "eslint-config-airbnb". Nazw nie należy
+                    umiesczać w cudzysłowie. W przypadku instalacji kilku paczek jednocześnie, należy oddzielić ich
+                    nazwy <strong>spacją</strong>. Słowo <strong>install</strong> w poleceniu można zamienić na literę
+                    <strong>i</strong>. Paczki domyślnie instalują się lokalnie (jedynie dla danego projektu). Aby
+                    zainstalować je globalnie (dla wszystkich projektów), należy użyć flagi <strong>-g</strong> przed
+                    nazwą paczki.
+                </li>
+                <li class="article__list-item">Zainstalowane paczki pojawiają się w pliku <i>package.json</i>. Istnieją
+                    dwa typy zależności: <i>dependencies</i> (związane z kodem na produkcji, wymagane w plikach
+                    końcowych) oraz <i>devDependencies</i> (związane z tworzeniem kodu, niewymagane na produkcji). Aby
+                    zainsatlować paczkę jako deweloperską, należy podczas jej instalacji użyć flagi <strong>-D</strong>.
+                    Dobrą praktyką jest instalowanie paczek jako produkcyjnych tylko wtedy, kiedy jest to wymagane do
+                    poprawnego działania aplikacji w środowisku produkcyjnym.
+                </li>
+                <li class="article__list-item"><strong>npm i &lt;package name>@&lt;package version></strong> -
+                    polecenie instalujące konkretną wersję paczki. W przypadku braku podania wersji instalowanej paczki,
+                    zainstalowana zostanie najnowsza dostępna wersja. Jeśli w pliku konfiguracyjnym przed numerem wersji
+                    występuje znak <strong>^</strong>, oznacza to że paczki będą aktualizować się automatycznie, lecz
+                    nie nastąpi aktualizacja do wyższej wersji (tj. pierwszy człon numeru wersji pozostanie taki sam,
+                    gdyż zmiana wersji może wymagać nawet zmian w kodzie). Im dalszy człon numeru wersji, tym mniejsze
+                    znaczenie wprowadzonej zmiany/poprawki.
+                </li>
+                <li class="article__list-item"><strong>npm i -D @types/&lt;package name></strong> - polecenie
+                    instalujące paczkę z typami (powinna być to paczka deweloperska). Pozwala to na uzyskanie większej
+                    ilości podpowiedzi od edytora na temat wykorzystywanego kodu.
+                </li>
+                <li class="article__list-item"><strong>npm i</strong> - polecenie użyte po wprowadzeniu zmian w pliku
+                    <i>package.json</i> analizuje ponownie katalog <i>node modules</i> oraz dostosowuje go do nowego
+                    pliku <i>package.json</i> (instaluje bądź usuwa elementy).
+            </ul>
+            <p class="article__text">Informacje o licencjach typu <i>open source</i> można znaleźć na <a
+                    class="article__link" href="https://opensource.org/licenses">stronie</a>.</p>
+            <p class="article__text">Plik <i>package-lock.json</i> jest to wewnętrzna informacja zawierająca szczegóły
+                na temat wszystkich paczek zainstalowanych w projekcie. Pozwala dokładnie odwzorować projekt na innym
+                urządzeniu.</p>
+            <p class="article__text">Katalog <i>node modules</i> zawiera zainstalowane paczki, które zdefiniowano w
+                pliku <i>pacgage.json</i>. Mogą one korzystać z innych paczek, a te jeszcze z innych - w związku z czym
+                katalog <i>node modules</i> często zajmuje dużą ilość miejsca. W przypadku przesyłania projektu,
+                należy udostępnić jedynie kod źródłowy aplikacji oraz pliki: <i>.eslintrc</i>, <i>package-lock.josn</i>
+                i <i>package.json</i> (bez katalogu <i>node modules</i>). Dzięki nim paczki będą mogły zostać pobrane
+                i zainstalowane w takiej samej konfiguracji jak w oryginalnym projekcie.
+            </p>
+        </article>
+        <article id="files" class="article">
+            <h2 class="article__heading">praca z plikami</h2>
+            <p class="article__text">Eksport funkcjonalności z danego pliku odbywa się z użyciem <strong>module.exports
+                    = {}</strong>. W połączeniu z <i>require</i> pozwala to na dzielenie kodu w prosty sposób:</p>
+            <ul class="article__list">
+                <li class="article__list-item">W module (pliku), z którego udostępniana jest funkcjonalność, należy użyć
+                    <i>module.exports</i> (domyślnie dla modułu jest to pusty obiekt, zatem należy go nadpisać), podając
+                    w nawiasach klamrowych funkcjonalności danego modułu, które będą mogły zostać użyte na zewnątrz poza
+                    nim: <strong>module.exports = {methodName: method, propertyName}</strong>.
+                </li>
+                <li class="article__list-item">W module (pliku), który korzysta z wyeksportowanej funkcjonalności, w
+                    celu importu obiektu należy użyć <i>require</i>, podając jako argument ścieżkę oraz nazwę pliku, z
+                    którego eksportowane są funkcjonalności (dla modułów wbudowanych wystarczy podanie samej nazwy,
+                    natomiast dla plików ścieżka musi zazynaś się od kropki lub dwóch kropek w zależności od lokalizacji
+                    pliku): <strong>const {exportedMethod} = require('./exportsFile')</strong>.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">
+            Zawartość będzie aktualizowana na bieżąco.
+        </p>
+        <p class="footer__text">Maciej Ryszka - 2021</p>
+    </footer>
+    <script src="../scripts/hamburger-menu.js"></script>
+    <script src="../scripts/top-button.js"></script>
+</body>
+
+</html>
