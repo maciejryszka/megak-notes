@@ -58,6 +58,8 @@
             <a href="#fundaments" class="theory-main__link">fundamenty node.js</a>
             <span class="theory-main__text">•</span>
             <a href="#files" class="theory-main__link">praca z plikami</a>
+            <span class="theory-main__text">•</span>
+            <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -158,6 +160,62 @@
                     którego eksportowane są funkcjonalności (dla modułów wbudowanych wystarczy podanie samej nazwy,
                     natomiast dla plików ścieżka musi zazynaś się od kropki lub dwóch kropek w zależności od lokalizacji
                     pliku): <strong>const {exportedMethod} = require('./exportsFile')</strong>.
+                </li>
+            </ul>
+        </article>
+        <article id="asynchrony" class="article">
+            <h2 class="article__heading">asynchroniczność</h2>
+            <p class="article__text">Node.js jest oparty o asynchroniczność. Dzięki temu program może wykonywać się
+                dalej bez oczekiwania na wykonanie dłuższych/bardziej żłożonych operacji. Asynchroniczność nawet mimo
+                jednowątkowości rozwiązuje wiele problemów.</p>
+            <p class="article__text">Sposoby pracy z asynchronicznością w Node.js (należy importować metodę
+                <i>readFile</i> z modułu <i>fs</i>):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">W przypadku korzystania z <i>callback</i> w Node.js należy sprawdzić czy
+                    pierwszy argument (<i>error</i>) to <i>null</i>. Jeśli tak, oznacza to że błąd nie wystąpił, lecz
+                    jeśli przyjmuje inną wartość, należy obsłużyć taki błąd, np.:<br>
+                    <strong>readFile('./file-name.js',
+                        'utf8', (error, data) => {<br>
+                        &emsp;if (error === null) {<br>
+                        &emsp;&emsp;console.log(data);<br>
+                        &emsp;} else {<br>
+                        &emsp;&emsp;console.log(`Something went wrong! ${error}`);<br>
+                        &emsp;}<br>
+                        });</strong>
+                </li>
+                <li class="article__list-item">W celu przekształcenia <i>callback</i> w obiekt typu <i>promise</i>
+                    należy skorzystać z <strong>util.promisify</strong> (należy również importować metodę
+                    <i>promisify</i> z modułu <i>util</i>), np.:<br>
+                    <strong>promisify(readFile)('./test.js', 'utf8').then((data) => {<br>
+                        &emsp;console.log(data);<br>
+                        }).catch((error) => {<br>
+                        &emsp;console.log(`Something went wrong! ${error}`);<br>
+                        });</strong>
+                </li>
+                <li class="article__list-item">Deklaracja i jednoczesne wywołanie (<i>Immediately Invoked Function
+                        Expression</i>) funkcji asynchronicznej (należy również importować metodę <i>promisify</i> z
+                    modułu <i>util</i>), np.:<br>
+                    <strong>(async () => {<br>
+                        &emsp;try {<br>
+                        &emsp;&emsp;const data = await promisify(readFile)('./test.js', 'utf8');<br>
+                        &emsp;&emsp;console.log(data);<br>
+                        &emsp;} catch(error) {<br>
+                        &emsp;&emsp;console.log(`Something went wrong! ${error}`);<br>
+                        &emsp;}<br>
+                        })();</strong>
+                </li>
+                <li class="article__list-item">Najlbardziej poprawnym sposobem jest skorzystanie z ulepszeonej wersji
+                    API <i>fs</i> używając własności <i>promises</i> na obiekcie zwróconym przez funkcję <i>require</i>
+                    podczas przypisywania funkcjonalności modułu do zmiennej, np.:<br>
+                    <strong>(async () => {<br>
+                        &emsp;try {<br>
+                        &emsp;&emsp;const data = await readFile('./test.js', 'utf8');<br>
+                        &emsp;&emsp;console.log(data);<br>
+                        &emsp;} catch(error) {<br>
+                        &emsp;&emsp;console.log(`Something went wrong! ${error}`);<br>
+                        &emsp;}<br>
+                        })();</strong>
                 </li>
             </ul>
         </article>
