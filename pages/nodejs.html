@@ -60,6 +60,8 @@
             <a href="#files" class="theory-main__link">praca z plikami</a>
             <span class="theory-main__text">•</span>
             <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
+            <span class="theory-main__text">•</span>
+            <a href="#fs-module" class="theory-main__link">moduł fs</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -144,6 +146,9 @@
                 i <i>package.json</i> (bez katalogu <i>node modules</i>). Dzięki nim paczki będą mogły zostać pobrane
                 i zainstalowane w takiej samej konfiguracji jak w oryginalnym projekcie.
             </p>
+            <p class="article__text">Funkcje modułów Node.js mogą przyjmować parametry różnego typu. Wszyskie funkcje
+                zostały opisane w oficjalnej <a class="article__link"
+                    href="https://nodejs.org/en/docs/">dokumentacji</a>.</p>
         </article>
         <article id="files" class="article">
             <h2 class="article__heading">praca z plikami</h2>
@@ -217,6 +222,24 @@
                         &emsp;}<br>
                         })();</strong>
                 </li>
+            </ul>
+            <p class="article__text">Moduł <i>dns</i> pozwala na wykonywanie operacji związanych z serwerami nazw.
+                Asynchroniczna funkcja <i>dns.lookup()</i> pozwala na sprawdzenie adresu IP hosta danej domeny:
+                <strong>dns.lookup("example.com")</strong>.
+            </p>
+        </article>
+        <article id="fs-module" class="article">
+            <h2 class="article__heading">moduł fs</h2>
+            <p class="article__text">Moduł <i>fs</i> (<i>file system</i>) służy do współpracy z plikami. Pozwala
+                na wykonywanie na nich operacji takich jak: odczyt, zapis, przegląd.</p>
+            <p class="article__text">Funkcje modułu <i>fs</i> służące do współpracy z plikami w Node.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>readFile</strong> - odczyt plików.</li>
+                <li class="article__list-item"><strong>writeFile</strong> - zapis plików. W celu zapisu plików w sposób
+                    inny niż domyślny (np. dodawanie nowych elementów na koniec pliku, zamiast zastępowanie nimi
+                    poprzednich elementów), należy użyć odpowiednich flag jako argumentu funkcji.</li>
+                <li class="article__list-item"><strong>readdir</strong> - listowanie plików i folderów znajdujących się
+                    w danym katalogu.</li>
             </ul>
         </article>
     </main>
