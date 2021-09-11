@@ -62,6 +62,8 @@
             <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
             <span class="theory-main__text">•</span>
             <a href="#fs-module" class="theory-main__link">moduł fs</a>
+            <span class="theory-main__text">•</span>
+            <a href="#path-module" class="theory-main__link">moduł path</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -234,13 +236,82 @@
                 na wykonywanie na nich operacji takich jak: odczyt, zapis, przegląd.</p>
             <p class="article__text">Funkcje modułu <i>fs</i> służące do współpracy z plikami w Node.js:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>readFile</strong> - odczyt plików.</li>
-                <li class="article__list-item"><strong>writeFile</strong> - zapis plików. W celu zapisu plików w sposób
-                    inny niż domyślny (np. dodawanie nowych elementów na koniec pliku, zamiast zastępowanie nimi
-                    poprzednich elementów), należy użyć odpowiednich flag jako argumentu funkcji.</li>
-                <li class="article__list-item"><strong>readdir</strong> - listowanie plików i folderów znajdujących się
-                    w danym katalogu.</li>
+                <li class="article__list-item"><strong>readFile</strong> - umożliwia odczyt plików.</li>
+                <li class="article__list-item"><strong>writeFile</strong> - umożliwia zapis plików. W celu zapisu plików
+                    w sposób inny niż domyślny (np. dodawanie nowych elementów na koniec pliku, zamiast zastępowanie
+                    nimi poprzednich elementów), należy użyć odpowiednich flag jako argumentu funkcji.</li>
+                <li class="article__list-item"><strong>readdir</strong> - umożliwia listowanie plików i folderów
+                    znajdujących się w danym katalogu.</li>
+                <li class="article__list-item"><strong>stat</strong> - umożliwia dostęp do szczegółowych informacji o
+                    elementac znajdujących się w danym katalogu.</li>
+                <li class="article__list-item"><strong>exists</strong> - umożliwia sprawdzenie czy plik istnieje
+                    (niezalecany sposób).</li>
+                <li class="article__list-item"><strong>access</strong> - umożliwia sprawdzenie czy plik istnieje
+                    (lepszy, lecz również niezalecany sposób).</li>
+                <li class="article__list-item"><strong>mkdir</strong> - umożliwia tworzenie nowego katalogu. W celu
+                    utworzenia zarówno katalogu/katalogów nadrzędnych oraz docelowego katalogu lub pliku, należy włączyć
+                    rekursywność.
+                </li>
+                <li class="article__list-item"><strong>rmdir</strong> - umożliwia usuwanie katalogów.</li>
+                <li class="article__list-item"><strong>rm</strong> - umożliwia usuwanie plików oraz katalogów. W celu
+                    usunięcia elementów zagniżdżonych, należy włączyć rekursywność.</li>
+                <li class="article__list-item"><strong>rename</strong> - umożliwia zmianę nazwy oraz przenoszenie
+                    elementu. </li>
+                <li class="article__list-item"><strong>unlink</strong> - umożliwia usuwanie niezagnieżdżonych plików.
+                </li>
             </ul>
+            <p class="article__text">Nie należy sprawdzać istnienia pliku próbą jego odczytu/zapisu, pownieważ
+                z racji asynchroniczności JavaScript, plik może zostać usunięty/dodany między momentem sprawdzenia
+                czy istnieje, a momentem próby wykoania na nim akcji. Funkcja wykonująca akcję na pliku, np.
+                <i>readFile</i> sprawdzi czy dany plik istnieje. Jedyną istotną kwestią jest odpowiednia obsługa tego
+                błędu, korzystając z własności <strong>error.code</strong>.
+            </p>
+            <p class="article__text"><strong>process</strong> to globalna zmienna, zawierająca wszystkie informacje na
+                temat środowiska, Node.js, silnika itp..</p>
+            <p class="article__text"><strong>process.argv</strong> to tablica zawierająca elementy wprowadzone za
+                pośrednictwem linii komend (ścieżki zawierające spacje, należy umieścić w cudzysłowie, ponieważ w
+                przeciwnym razie spacja zostanie zinterpretowana jako sepearator kolejnych argumentów). Tablica
+                <i>process.argv</i> zawiera zawsze minimum dwa elementy: <strong>pełną ścieżkę do środowiska
+                    uruchomieniowego</strong> oraz <strong>pełną ścieżkę do aktualnie wykonywanego pliku</strong>.
+                Kolejne argumenty przekazywane są za pomocą konsoli i mogą być wykorzystane w programie dzięki pobraniu
+                ich z tablicy <i>process.argv</i> z wykorzystaniem indeksu.
+            </p>
+        </article>
+        <article id="path-module" class="article">
+            <h2 class="article__heading">moduł path</h2>
+            <p class="article__text">Umożlwienie podania ścieżki przez aplikację dla sterującego programem jest bardzo
+                niebezpieczne. Stwarza możliwość dostania się z zewnątrz do zasobów całego komputera. W celu zapewnienia
+                bezpieczeńśtwa należy użyć synchronicznego modułu <i>path</i> oraz kilku wbudowanych zmiennych.</p>
+            <p class="article__text">Zmienne globalne współpracujące z modułem <i>path</i>:
+            <ul class="article__list">
+                <li class="article__list-item"><strong>__dirname</strong> - zwraca ścieżkę do katalogu, w którym
+                    znajduje się wywoływany plik JavaScript.</li>
+                <li class="article__list-item"><strong>__filename</strong> - zwraca ścieżkę do wywoływanego pliku
+                    JavaScript.</li>
+            </ul>
+            <p class="article__text">Funkcje synchronicznego modułu <i>path</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>basename</strong> - zwraca ostatnią część ścieżki, ignorując
+                    końcowe separatory.</li>
+                <li class="article__list-item"><strong>join</strong> - łączy wszystkie składowe ścieżki z użyciem
+                    sparatora specyficznego dla danej platformy oraz upraszcza ścieżkę.</li>
+                <li class="article__list-item"><strong>dirname</strong> - zwraca ścieżkę do katalogu w którym znajduje
+                    się element przekazany jako argument, ignorując końcowe separatory.</strong></li>
+                <li class="article__list-item"><strong>extname</strong> - zwraca rozszerzenie wraz z kropką.</li>
+                <li class="article__list-item"><strong>normalize</strong> - normalizuje podaną ścieżkę, usuwając
+                    zbędne elementy przejścia do katalogu wyżej (<strong>..</strong>) oraz zbędne przejścia do
+                    aktualnego katalogu (<strong>.</strong>).</li>
+                <li class="article__list-item"><strong>resolve</strong> - łączy ścieżki do postaci ścieżki bezwzględnej.
+                </li>
+            </ul>
+            <p class="article__text">Funkcja <i>safaJoin</i> (korzystająca z funkcji <i>normalize</i> i <i>resolve</i>
+                modułu <i>path</i> pozwala na skuteczne zabezpiecznie ścieżki, uniemożliwiając
+                przechodzenie do nadrzędnych katalogów:<br>
+                <strong>function safeJoin(base, target) {<br>
+                    &emsp;const targetPath = '.' + normalize('/' + target);<br>
+                    &emsp;return resolve(base, targetPath);<br>
+                    }</strong>
+            </p>
         </article>
     </main>
     <footer class="footer">
