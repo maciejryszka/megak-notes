@@ -64,6 +64,12 @@
             <a href="#fs-module" class="theory-main__link">moduł fs</a>
             <span class="theory-main__text">•</span>
             <a href="#path-module" class="theory-main__link">moduł path</a>
+            <span class="theory-main__text">•</span>
+            <a href="#yarn" class="theory-main__link">yarn</a>
+            <span class="theory-main__text">•</span>
+            <a href="#file-tracking" class="theory-main__link">śledzenie plików</a>
+            <span class="theory-main__text">•</span>
+            <a href="#fetch" class="theory-main__link">fetch</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -135,7 +141,10 @@
                 <li class="article__list-item"><strong>npm i</strong> - polecenie użyte po wprowadzeniu zmian w pliku
                     <i>package.json</i> analizuje ponownie katalog <i>node modules</i> oraz dostosowuje go do nowego
                     pliku <i>package.json</i> (instaluje bądź usuwa elementy).
+                </li>
             </ul>
+            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menedżer paczek w projekcie i
+                nie używać kilku jednocześnie!</p>
             <p class="article__text">Informacje o licencjach typu <i>open source</i> można znaleźć na <a
                     class="article__link" href="https://opensource.org/licenses">stronie</a>.</p>
             <p class="article__text">Plik <i>package-lock.json</i> jest to wewnętrzna informacja zawierająca szczegóły
@@ -200,9 +209,9 @@
                         &emsp;console.log(`Something went wrong! ${error}`);<br>
                         });</strong>
                 </li>
-                <li class="article__list-item">Deklaracja i jednoczesne wywołanie (<i>Immediately Invoked Function
-                        Expression</i>) funkcji asynchronicznej (należy również importować metodę <i>promisify</i> z
-                    modułu <i>util</i>), np.:<br>
+                <li class="article__list-item">Deklaracja i jednoczesne wywołanie (<i>IIFE - Immediately Invoked
+                        Function Expression</i>) funkcji asynchronicznej (należy również importować metodę
+                    <i>promisify</i> z modułu <i>util</i>), np.:<br>
                     <strong>(async () => {<br>
                         &emsp;try {<br>
                         &emsp;&emsp;const data = await promisify(readFile)('./test.js', 'utf8');<br>
@@ -296,7 +305,7 @@
                 <li class="article__list-item"><strong>join</strong> - łączy wszystkie składowe ścieżki z użyciem
                     sparatora specyficznego dla danej platformy oraz upraszcza ścieżkę.</li>
                 <li class="article__list-item"><strong>dirname</strong> - zwraca ścieżkę do katalogu w którym znajduje
-                    się element przekazany jako argument, ignorując końcowe separatory.</strong></li>
+                    się element przekazany jako argument, ignorując końcowe separatory.</li>
                 <li class="article__list-item"><strong>extname</strong> - zwraca rozszerzenie wraz z kropką.</li>
                 <li class="article__list-item"><strong>normalize</strong> - normalizuje podaną ścieżkę, usuwając
                     zbędne elementy przejścia do katalogu wyżej (<strong>..</strong>) oraz zbędne przejścia do
@@ -304,7 +313,7 @@
                 <li class="article__list-item"><strong>resolve</strong> - łączy ścieżki do postaci ścieżki bezwzględnej.
                 </li>
             </ul>
-            <p class="article__text">Funkcja <i>safaJoin</i> (korzystająca z funkcji <i>normalize</i> i <i>resolve</i>
+            <p class="article__text">Funkcja <i>safeJoin</i> (korzystająca z funkcji <i>normalize</i> i <i>resolve</i>
                 modułu <i>path</i> pozwala na skuteczne zabezpiecznie ścieżki, uniemożliwiając
                 przechodzenie do nadrzędnych katalogów:<br>
                 <strong>function safeJoin(base, target) {<br>
@@ -312,6 +321,92 @@
                     &emsp;return resolve(base, targetPath);<br>
                     }</strong>
             </p>
+        </article>
+        <article id="yarn" class="article">
+            <h2 class="article__heading">yarn</h2>
+            <p class="article__text"><strong>Yarn</strong> to menedżer paczek, będący alternatywą dla <i>npm</i>.
+                <i>Yarn</i> jest nieznacznie szybszy oraz posiada szybsze komendy niż <i>npm</i>. <i>Yarn</i> w
+                przeciwieństwie do <i>nmp</i> nie jest dostarczany wraz z Node.js, lecz musi zostać pobany i
+                zainstalowany. Istnieje także możliwość instalacji <i>Yarn</i> z poziomu <i>npm</i> z wykorzystaniem
+                polecenia: <strong>npm install --global yarn</strong>.
+            </p>
+            <p class="article__text">Konfiguracja <i>Yarn</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>yarn</strong> - polecenie użyte po wprowadzeniu zmian w pliku
+                    <i>package.json</i> analizuje ponownie katalog <i>node modules</i> oraz dostosowuje go do nowego
+                    pliku <i>package.json</i> (instaluje bądź usuwa elementy).
+                </li>
+                <li class="article__list-item"><strong>yarn add &lt;package name></strong> - polecenie instalujące
+                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umiesczać w cudzysłowie. Aby zainsatlować
+                    paczkę jako deweloperską, należy podczas jej instalacji użyć flagi <strong>-D</strong>. Dobrą
+                    praktyką jest instalowanie paczek jako produkcyjnych tylko wtedy, kiedy jest to wymagane do
+                    poprawnego działania aplikacji w środowisku produkcyjnym.</li>
+                <li class="article__list-item"><strong>yarn remove &lt;package name></strong> - polecenie usuwające
+                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umiesczać w cudzysłowie.</li>
+            </ul>
+            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menedżer paczek w projekcie i
+                nie używać kilku jednocześnie!</p>
+            <p class="article__text">Alternatywne menedżery paczek:
+            <ul class="article__list">
+                <li class="article__list-item"><strong>Yarn 2 (Yarn Modern)</strong> - jeszcze szybsza wersja
+                    <i>Yarn</i> posiadająca nowe możliwości (np. automatyczne pobieranie paczek z typami
+                    <strong>@types</strong>).
+                </li>
+                <li class="article__list-item"><strong>pnpm</strong> - o wiele szybsza wersja <i>npm</i>. Instalacja
+                    odbywa się z wykorzystaniem polecenia: <strong>npm install -g pnpm</strong>.</li>
+            </ul>
+        </article>
+        <article id="file-tracking" class="article">
+            <h2 class="article__heading">śledzenie plików</h2>
+            <p class="article__text">Śledzenie plików w Node.js zostało bardzo dobrze zrealizowane przez zewnętrzne API
+                - <strong>chokidar</strong>. Wykorzystuje się je w celu reagowania na zmiany w kodzie (nawet w
+                zewnętrznych usługach), reagowania na pliki wysłane przez klientów (np. za pomocą FTP na lokalny
+                serwer) czy w celu utworzenia narzędzia logującego zmiany w systemie.
+            </p>
+            <p class="article__text">Metoda <strong>watch</strong> modułu <i>chokidar</i> służy do nasłuchiwania zdarzeń
+                na plikach oraz zwraca instancję klasy <i>FSWatcher</i>, która z kolei zawiera metody takie jak:
+                <i>add</i>, <i>on</i>, <i>unwatch</i>, <i>close</i> (metoda asynchroniczna), <i>getWatched</i>. Możliwe
+                jest wielokrotne wywoływanie metod instancji klasy <i>FSWatcher</i> bezpośrednio po sobie.
+            </p>
+            <p class="article__text">Moduł <i>chokidar</i> wykorzystuje <i>callback</i> zamiast <i>promise</i>, ponieważ
+                <i>promise</i> jest obietnicą, która może zostać spełniona, niespełniona lub nie skończy się nigdy
+                (zawsze będzie jednak miała tylko jeden scenariusz - nigdy wiele). Zdarzenia mogą natomiast występować
+                wielokrotnie, stąd użycie <i>callback</i> zamiast <i>promise</i> (który nie może być wykorzystany do
+                tego typu zdarzeń).
+            </p>
+            <p class="article__text"><strong>Glob</strong> to wzorzec pozwalający na określenie śledzonych
+                katalogów (wzorzec <strong>./**/*</strong> pozwala na śledzenie wszystkich plików zawartych w bieżącej
+                lokalizacji).</p>
+            <p class="article__text"><strong>Pooling</strong> to opcja domyślnie wyłączona ze względu na niską
+                wydajność, często przydatna w czasie obserwacji nietypowych zmian w lokalizacjach zdalnych.
+            </p>
+            <p class="article__text">Flaga <strong>awaitWriteFinish</strong> powoduje oczekiwanie na zapis pliku w
+                całości (na tyle na ile to możliwe), zanim zostanie wyemitowane zdarzenie <i>add</i> lub <i>change</i>.
+                Często przydatna w sytuacjach, kiedy zapis nie jest natychmiastowy (np. w przypadku FTP), a
+                <i>chokidar</i> jest wykorzystywany w celu sprawdzenia zawartości pliku.
+            </p>
+            <p class="article__text">Flaga <strong>ignoreInitial</strong> pozwala na zignorowanie zdarzeń mających
+                miejsce przed wywołaniem metody <i>watch</i>.
+            </p>
+            <p class="article__text">Należy pamiętać o prawidłowych ścieżkach oraz o tym, aby były
+                bezpieczne. Obserwowanie zbyt wielu lokalizacji obciąża system.</p>
+            <p class="article__text">Dokumentację <i>chokidar</i> można znaleźć na <a class="article__link"
+                    href="https://www.npmjs.com/package/chokidar/">npmjs.com</a> lub na <a class="article__link"
+                    href="https://github.com/paulmillr/chokidar">github.com</a>.
+            </p>
+        </article>
+        <article id="fetch" class="article">
+            <h2 class="article__heading">fetch</h2>
+            <p class="article__text"><strong>Fetch</strong> to standardowe API wprowadzone do przeglądarek jednak można
+                z nim pracować także w Node.js (należy pobrać <i>node-fetch</i> z <i>npm</i>). <i>Fetch</i> nie posiada
+                jednak kilku ułatwień i skrótów, które posiadają inne alternatywy, (np. <i>axios</i>).</p>
+            <p class="article__text">Import modułu <i>fetch</i> (w wersji 2) odbywa się w inny sposób niż standardowy. W
+                związku z tym, że cały moduł jest jedną, dużą funkcją należy przypisać go do zmiennej bez użycia
+                detrukturyzacji.
+            </p>
+            <p class="article__text">Zapytania/żądania niezależnie od użytej biblioteki działają inaczej we front-endzie
+                i w back-endzie. We front-endzie przeglądarka dba o <i>CORS (Cross-Origin Resource Sharing)</i> i
+                wszystko co z nim związanie. Natomiast back-end nie podlega podobnym ograniczeniom.</p>
         </article>
     </main>
     <footer class="footer">

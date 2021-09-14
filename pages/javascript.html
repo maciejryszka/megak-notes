@@ -763,6 +763,13 @@
                     niepożądany rezultat. Wartość początkowa powinna być to wartość neutralna dla wykonywanej operacji,
                     np. pusty <i>string</i> dla konkatenacji tekstu, 1 dla iloczynu, 0 dla sumy.
                 </li>
+                <li class="article__list-item"><strong>find</strong>() - jako argument przyjmuje funkcję, która z
+                    kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
+                    element, indeks, oryginalna tablica. Funkcja <i>callback</i> przechodzi przez elementy oryginalnej
+                    tablicy i w przypadku zwrócenia prawdy, metoda zwróci wartość bieżącego elementu. W przypadku gdy
+                    funkcja <i>callback</i> po przejściu przez wszystkie elementy nie zwróci prawdy, metoda zwróci
+                    wartość <i>undefined</i>.
+                </li>
             </ul>
         </article>
         <article id="asynchrony" class="article">
