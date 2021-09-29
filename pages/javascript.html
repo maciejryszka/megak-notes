@@ -770,6 +770,13 @@
                     funkcja <i>callback</i> po przejściu przez wszystkie elementy nie zwróci prawdy, metoda zwróci
                     wartość <i>undefined</i>.
                 </li>
+                <li class="article__list-item"><strong>sort</strong>() - jako argument przyjmuje funkcję sortującą,
+                    która z kolei przyjmuje dwa argumenty: element pierwszy oraz element drugi. Funkcja <i>callback</i>
+                    zwraca wartość 1, gdy element pierwszy ma mniejszą wartość od elementu drugiego, 0 gdy oba elementy
+                    są równe lub -1 gdy element pierwszy ma większą wartość od elementu drugiego. Metoda zwraca nową
+                    tablicę z posortowanymi wartościami (domyślnie operuje na elementach typu <i>string</i>), a także
+                    dokonuje zmian w oryginalnej tablicy.
+                </li>
             </ul>
         </article>
         <article id="asynchrony" class="article">

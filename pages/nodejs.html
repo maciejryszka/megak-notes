@@ -70,6 +70,8 @@
             <a href="#file-tracking" class="theory-main__link">śledzenie plików</a>
             <span class="theory-main__text">•</span>
             <a href="#fetch" class="theory-main__link">fetch</a>
+            <span class="theory-main__text">•</span>
+            <a href="#child-processes" class="theory-main__link">child processes</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -407,6 +409,58 @@
             <p class="article__text">Zapytania/żądania niezależnie od użytej biblioteki działają inaczej we front-endzie
                 i w back-endzie. We front-endzie przeglądarka dba o <i>CORS (Cross-Origin Resource Sharing)</i> i
                 wszystko co z nim związanie. Natomiast back-end nie podlega podobnym ograniczeniom.</p>
+        </article>
+        <article id="child-processes" class="article">
+            <h2 class="article__heading">child processes</h2>
+            <p class="article__text"><strong>Child_process</strong> ze szczególnym uwzględnieniem <i>exec</i>
+                pozwala na wywoływanie dowolnych procesów programów, a nawet komend i odczytywania z nich wyjścia.
+            </p>
+            <p class="article__text">Cel uruchamiania innych procesów:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Uruchamianie dosłownie dowolnych komend dostępnych w programach
+                    <i>CLI</i>/linii komend.
+                </li>
+                <li class="article__list-item">Kontrolowanie systemu i pobieranie informacji na jego temat.</li>
+                <li class="article__list-item">Automatyczne systemy <i>CI/CD</i>, w tym automatyczne pobieranie
+                    aktualizacji czy kodu z Git.
+                </li>
+            </ul>
+            <p class="article__text">Uruchamianie innych zewnętrznych procesów/komend/programów w Node.js odbywa się z
+                wykorzystaniem kilku alternatywnych metod, robiących teoretycznie to samo (bezpośrednio po tych metodach
+                można wywoływać podpocesy, np. <i>stdout</i>, <i>stdin</i>, <i>stderr</i>):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>child_process.exec</strong> (najbardziej uniwersalna i
+                    bezproblemowa metoda modułu <i>child_process</i>),</li>
+                <li class="article__list-item"><strong>child_process.execFile</strong>,</li>
+                <li class="article__list-item"><strong>child_process.fork</strong>,</li>
+                <li class="article__list-item"><strong>child_process.spawn</strong>.</li>
+            </ul>
+            <p class="article__text">Podstawowe opcje metody <i>exec</i> modułu <i>child_process</i> (przekazywane jako
+                drugi argument):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>env</strong> - odnosi się do zmiennych środowiskowych.</li>
+                <li class="article__list-item"><strong>cwd</strong> - ustawia aktualny folder roboczy (ustawianie tej
+                    opcji jest zalecane zwłaszcza w większych systemach, aby mieć pewność że program wykonuje się w
+                    prawidłowym miejscu).</li>
+                <li class="article__list-item"><strong>timeout</strong> - pozwala na określenie maksymalnego
+                    uruchamiania procesu, po którym próba jego uruchomienia zostanie przerwana. Jest dobrym narzędziem
+                    do kontroli płynności programu - pozwala uniknąć nagłego wstrzymania programu.</li>
+                <li class="article__list-item"><strong>kill</strong> - pozwala wysłać prośbę do procesu o jego
+                    zakończenie (<i>Unix</i>) lub nagle zatrzymuje cały proces (<i>Windows</i>). Aby nagle zatrzymać
+                    cały proces w <i>Unix</i>, należy wywołać metodę z użyciem parametru <strong>SIGKILL</strong>.</li>
+            </ul>
+            <p class="article__text">Standardowe strumienie to standardowe kanały komunikacji między komputerem a
+                otoczeniem (zwykle terminalem). Przykłady strumieni:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>stdout</strong> - standardowe wyjście programu, np. alert lub
+                    konsola.</li>
+                <li class="article__list-item"><strong>stdin</strong> - standardowe wejście programu, np. <i>prompt</i>
+                    lub konsola.</li>
+                <li class="article__list-item"><strong>stderr</strong> - standardowe wyjście programu dla błędów
+                    (niektóre programy wykorzystują czasem to wyjście, żeby podkreślić coś ważnego, co niekoniecznie
+                    jest błędem).</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
