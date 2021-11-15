@@ -72,6 +72,10 @@
             <a href="#fetch" class="theory-main__link">fetch</a>
             <span class="theory-main__text">•</span>
             <a href="#child-processes" class="theory-main__link">child processes</a>
+            <span class="theory-main__text">•</span>
+            <a href="#cryptography" class="theory-main__link">kryptografia</a>
+            <span class="theory-main__text">•</span>
+            <a href="#hash-functions" class="theory-main__link">funkcje skrótu</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -292,7 +296,7 @@
             <h2 class="article__heading">moduł path</h2>
             <p class="article__text">Umożlwienie podania ścieżki przez aplikację dla sterującego programem jest bardzo
                 niebezpieczne. Stwarza możliwość dostania się z zewnątrz do zasobów całego komputera. W celu zapewnienia
-                bezpieczeńśtwa należy użyć synchronicznego modułu <i>path</i> oraz kilku wbudowanych zmiennych.</p>
+                bezpieczeństwa należy użyć synchronicznego modułu <i>path</i> oraz kilku wbudowanych zmiennych.</p>
             <p class="article__text">Zmienne globalne współpracujące z modułem <i>path</i>:
             <ul class="article__list">
                 <li class="article__list-item"><strong>__dirname</strong> - zwraca ścieżkę do katalogu, w którym
@@ -461,6 +465,59 @@
                     (niektóre programy wykorzystują czasem to wyjście, żeby podkreślić coś ważnego, co niekoniecznie
                     jest błędem).</li>
             </ul>
+            <p class="article__text">Sposób wyświetlenia argumentów fukcji <i>callback</i> metod modułu
+                <i>child_process</i>:
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>exec('node index.js', (error, stdout, stderr) => {<br>
+                        console.log({error, stdout, stderr});<br>
+                        });</strong></li>
+            </ul>
+            <p class="article__text">
+                Użycie <i>promise</i> jest uzasadnione jednynie w przypadku prostych operacji. Nie sprawdza się on w
+                przypadku bardziej złożonych operacji, ponieważ nie ma wtedy obiektu <i>child_process</i>
+                umożliwiającego sterowanie z zewnątrz procesem (np. zatrzymanie go z użyciem metody <i>kill</i>).
+                <i>Child_process</i> nie posiada domyślnie wersji używającej obiektów typu <i>promise</i>, więc należy
+                ją stworzyć z wykorzystaniem metody <i>promisify</i> z modułu <i>util</i>:<br>
+                <strong>const exec = promisify(require('child_process').exec);</strong>
+            </p>
+            <p class="article__text">W związku z tym że obiekt typu <i>promise</i> może zwrócić tylko jedną informację -
+                zwraca obiekt zawierający własności takie jak: <i>error</i>, <i>stdout</i>, <i>stderr</i> (można
+                użyć destrukturyzacji bezpośrednio w <i>callbacku</i> metody <i>then</i>). Natoimiast <i>callback</i> z
+                racji tego, że może zwrócić wiele informacji jednocześnie - zwraca te własności pojedynczo.
+            </p>
+            <p class="article__text">Należy pamiętać, aby nie przekazywać żadnych zmiennych, danych z bazy ani danych
+                podanych przez użytkownika. Jest to bardzo niebezpieczny zabieg, ponieważ konsola umożliwia wyjście z
+                aktualnej komendy oraz wykoanie dowolnej innej na wiele sposobów. Może nawet zostać usunięta cała
+                zawartość dysku. W celu bezpiecznego przekazania paramatrów należy dopuszczać wyłącznie bardzo
+                restrykcyjne formy danych opierające się wyłącznie na <i>whiteliście</i> znanych dobrych znaków
+                (najczęściej z wykorzystaniem wyrażeń regularnych), a przy nazwach plików używać koniecznie metody
+                <i>safeResolve</i>.
+            </p>
+            <p class="article__text"><strong>Wyrażenie regularne (<i>RegExp</i>)</strong> jest to wzorzec opisujący
+                łańcuch symboli. Może określać zbiór pasujących łańcuchów jak również wyszczególniać istotne części
+                łańcucha. <a class="article__link" href="https://regexlib.com/">Baza</a> wyrażeń regularnych (ze
+                względów bezpieczeństwa należy używać tylko sprawdzonych i zweryfikowanych wyrażeń).</p>
+        </article>
+        <article id="cryptography" class="article">
+            <h2 class="article__heading">kryptografia</h2>
+            <p class="article__text"><strong>Kryptologia</strong> to dziedzina wiedzy o przekazywaniu informacji w
+                sposób zabezpieczony przed niepowołanym dostępem. Dzieli się na kryptografię (gałąź wiedzy o utajaniu
+                wiadomości) oraz kryptoanalizę (gałąź wiedzy o przełamywaniu oraz o deszyfrowaniu wiadomości przy braku
+                klucza lub innego wymaganego elementu schematu szyfrowania).</p>
+            <p class="article__text">Programowanie aplikacji back-endowych to duża odpowiedzialność, a bezpieczeństwo
+                to bardzo ważna kwestia. Kryptografia w programowaniu jest potrzebna do bezpiecznego przesyłania danych
+                czy przechowywania haseł.</p>
+            <p class="article__text">Szyfr lub kryptograficzny algorytm szyfrujący <i>(cipher)</i> - funkcja
+                matematyczna wykorzystywana do szyfrowania tekstu jawnego lub jego deszyfrowania. Zazwyczaj jedna
+                funkcja wykorzystywana jest do szyfrowania, a inna do desztfrowania wiadomości.</p>
+            <p class="article__text">Moduł <i>crypto</i> działa na podstawie <i>OpenSSL</i> - bardzo znanej biblioteki
+                pozwalającej m.in. szyfrować. Moduł ten nie zawsze jest jednak dostępny (warto korzystać z Node.js w
+                wersji 14 lub wyższej).</p>
+        </article>
+        <article id="hash-functions" class="article">
+            <h2 class="article__heading">funkcje skrótu</h2>
+            <p class="article__text"></p>
         </article>
     </main>
     <footer class="footer">
