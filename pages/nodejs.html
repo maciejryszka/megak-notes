@@ -517,7 +517,83 @@
         </article>
         <article id="hash-functions" class="article">
             <h2 class="article__heading">funkcje skrótu</h2>
-            <p class="article__text"></p>
+            <p class="article__text"><strong>Funkcja skrótu (mieszająca, haszująca)</strong> jest to funkcja
+                przyporządkowująca dowolnie dużej liczbie krótką wartość o stałym rozmiarze, tzw. skrót nieodwracalny. W
+                informatyce funkcje skrótu pozwalają na ustalenie krótkich i łatwych do weryfikacji sygnatur dla
+                dowolnie dużych zbiorów danych. Funkcja ta tworzy zatem z dowolnych danych (np. pliku, liczby, tekstu)
+                krótki <i>hash</i>.
+            </p>
+            <p class="article__text">W przypadku funkcji skrótu nie jest możliwe odzyskanie pierwotnego tekstu (wtedy
+                byłoby to szyfrowanie lub kompresja).</p>
+            <p class="article__text">Zastosowanie funkcji skrótu:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Weryfikacja poprawności dowolnej wielkości danych - sprawdzenie sumy
+                    (<i>checksum</i>) pozwalające skontrolować czy dane nie zostały zmienione po drodze lub czy nie
+                    wystąpił błąd.
+                </li>
+                <li class="article__list-item">Przechowywanie haseł - należy pamiętać aby nigdy nie przechowywać haseł w
+                    postaci standardowego tekstu (czyli w postaci hasła podanego przez użytkownika). Często ludzie
+                    używają tych samych haseł w wielu miejscach, co w przypadku przechowywania hasła jako standardowego
+                    tekstu stwarzałoby zagrożenie. Kiedy hasło przechowywane jest jako wartość zwracana przez funkcję
+                    skrótu - wartość ta jest zupełnie bezużyteczna w przypadku wycieku danych, ponieważ niemożliwe jest
+                    odzyskanie pierwotnych danych zmienionych przez funkcję skrótu.</li>
+            </ul>
+            <p class="article__text">Możliwe zagrożenia podczas korzystania z funkcji skrótu:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Kolizje w funkcjach skrótu.</li>
+                <li class="article__list-item">Rainbow tables.</li>
+                <li class="article__list-item">Zbyt banalny tekst (proste, często używane hasło dla którego łatwo
+                    znaleźć kolizję lub wpis w <i>rainbow table</i>).</li>
+            </ul>
+            <p class="article__text">Szczególną podgrupą funkcji skrótu są funkcje uznawane za bezpieczne do zastosowań
+                kryptologicznych (jak np. <i>SHA-3</i>). Kryptograficzna funkcja skrótu powinna spełniać kombinację
+                następujących kryteriów, w zależności od zastosowania:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Odporność na kolizje (<i>collision resistance</i>) - brak praktycznej
+                    możliwości wygenerowania dwóch dowolnych wiadomości o takim samym skrócie.</li>
+                <li class="article__list-item">Odporność na kolizje konkretnych wiadomości (<i>target
+                        collision-resistance, preimage resistance</i>) pierwszego i drugiego rzęd - brak praktycznej
+                    możliwości wygenerowania wiadomości o takim samym skrócie jak wskazana wiadomość.</li>
+            </ul>
+            <p class="article__text">Tęczowe tabele (<i>rainbow tables</i>) są powiązane z funkcjami skrótu, które mają
+                sporo kolizji lub po prostu prześledzono dużą liczbę tekstów i stworzono tabelę, gdzie możliwe jest
+                wyszukanie danego tekstu w postaci zaszyfrowanej. Znając taki tekst, możliwa jest zatem identyfikacja
+                tekstu w postaci odszyfrowanej (jeżeli występuje on w tabeli).</p>
+            <p class="article__text">Sposoby poradzenia sobie z zagrożeniami:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Używanie bezpiecznych funkcji skrótu (m.in. takich które są zbyt powolne,
+                    aby generować dla nich duże tęczowe tabele).</li>
+                <li class="article__list-item">Używanie soli (losowego ciągu znaków, który jest dodawany do tekstu
+                    wprowadzonego przez użytkownika).</li>
+                <li class="article__list-item"></li>
+            </ul>
+            <p class="article__text">Cechy soli dobrej jakości:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Powinna być inna dla każdego użytkownika.</li>
+                <li class="article__list-item">Powinna być długa co najmniej na tyle znaków ile zostanie zwróconych
+                    przez funkcję skrótu.</li>
+                <li class="article__list-item">Powinna zawierać losowe znaki.</li>
+            </ul>
+            <p class="article__text">Niebezpieczne funkcje skrótu:</p>
+            <ul class="article__list">
+                <li class="article__list-item">md5 (oraz poprzednie wersje),</li>
+                <li class="article__list-item">sha1,</li>
+                <li class="article__list-item">sha2,</li>
+                <li class="article__list-item">wielokrotny <i>hash</i> (często jest wbrew pozorom mniej bezpieczny niż
+                    pojedynczy),</li>
+                <li class="article__list-item">własne funkcje skrótu.</li>
+            </ul>
+            <p class="article__text">Bezpieczne (jeśli są używane poprawnie) funkcje skrótu dostępne w Node.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item">sha512</li>
+                <li class="article__list-item">PBKDF2</li>
+            </ul>
+            <p class="article__text">Jeszcze bezpieczniejsze (jeśli są używane poprawnie) funkcje skrótu dostępne w
+                ekosystemie <i>npm</i>, lecz niedostarczone w API Node.js (wymagana jest ich instalacja):</p>
+            <ul class="article__list">
+                <li class="article__list-item">bcrypt</li>
+                <li class="article__list-item">Whirpool</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
