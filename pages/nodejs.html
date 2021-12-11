@@ -76,6 +76,10 @@
             <a href="#cryptography" class="theory-main__link">kryptografia</a>
             <span class="theory-main__text">•</span>
             <a href="#hash-functions" class="theory-main__link">funkcje skrótu</a>
+            <span class="theory-main__text">•</span>
+            <a href="#buffer" class="theory-main__link">buffer</a>
+            <span class="theory-main__text">•</span>
+            <a href="#stream" class="theory-main__link">stream</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -83,7 +87,7 @@
             <p class="article__text">Node.js jest środowiskiem uruchomieniowym JavaScript poza przeglądarką. Umożliwia
                 używanie JavaScript po stronie back-endu oraz wykonywanie zadań <i>dev-ops</i>. Pliki w Node.js z
                 technicznego punktu widzenia są modułami.</p>
-            <p class="article__text">Menedżer paczek (a także ich rejestr) dla ekosystemu Node.js to <a
+            <p class="article__text">Menadżer paczek (a także ich rejestr) dla ekosystemu Node.js to <a
                     class="article__link" href="https://www.npmjs.com/">npm</a>. Umożliwia on wykorzystanie w projektach
                 kodu pochodzącego z zewnątrz.</p>
             <p class="article__text">Node.js można pobrać z oficjalnej <a class="article__link"
@@ -119,7 +123,7 @@
                 </li>
                 <li class="article__list-item"><strong>npm install &lt;package name></strong> - polecenie instalujące
                     paczki o danej nazwie (np. "babel-eslint", "eslint", "eslint-config-airbnb". Nazw nie należy
-                    umiesczać w cudzysłowie. W przypadku instalacji kilku paczek jednocześnie, należy oddzielić ich
+                    umieszczać w cudzysłowie. W przypadku instalacji kilku paczek jednocześnie, należy oddzielić ich
                     nazwy <strong>spacją</strong>. Słowo <strong>install</strong> w poleceniu można zamienić na literę
                     <strong>i</strong>. Paczki domyślnie instalują się lokalnie (jedynie dla danego projektu). Aby
                     zainstalować je globalnie (dla wszystkich projektów), należy użyć flagi <strong>-g</strong> przed
@@ -128,7 +132,7 @@
                 <li class="article__list-item">Zainstalowane paczki pojawiają się w pliku <i>package.json</i>. Istnieją
                     dwa typy zależności: <i>dependencies</i> (związane z kodem na produkcji, wymagane w plikach
                     końcowych) oraz <i>devDependencies</i> (związane z tworzeniem kodu, niewymagane na produkcji). Aby
-                    zainsatlować paczkę jako deweloperską, należy podczas jej instalacji użyć flagi <strong>-D</strong>.
+                    zainstalować paczkę jako deweloperską, należy podczas jej instalacji użyć flagi <strong>-D</strong>.
                     Dobrą praktyką jest instalowanie paczek jako produkcyjnych tylko wtedy, kiedy jest to wymagane do
                     poprawnego działania aplikacji w środowisku produkcyjnym.
                 </li>
@@ -149,7 +153,7 @@
                     pliku <i>package.json</i> (instaluje bądź usuwa elementy).
                 </li>
             </ul>
-            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menedżer paczek w projekcie i
+            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menadżer paczek w projekcie i
                 nie używać kilku jednocześnie!</p>
             <p class="article__text">Informacje o licencjach typu <i>open source</i> można znaleźć na <a
                     class="article__link" href="https://opensource.org/licenses">stronie</a>.</p>
@@ -163,7 +167,7 @@
                 i <i>package.json</i> (bez katalogu <i>node modules</i>). Dzięki nim paczki będą mogły zostać pobrane
                 i zainstalowane w takiej samej konfiguracji jak w oryginalnym projekcie.
             </p>
-            <p class="article__text">Funkcje modułów Node.js mogą przyjmować parametry różnego typu. Wszyskie funkcje
+            <p class="article__text">Funkcje modułów Node.js mogą przyjmować parametry różnego typu. Wszystkie funkcje
                 zostały opisane w oficjalnej <a class="article__link"
                     href="https://nodejs.org/en/docs/">dokumentacji</a>.</p>
         </article>
@@ -180,15 +184,15 @@
                 <li class="article__list-item">W module (pliku), który korzysta z wyeksportowanej funkcjonalności, w
                     celu importu obiektu należy użyć <i>require</i>, podając jako argument ścieżkę oraz nazwę pliku, z
                     którego eksportowane są funkcjonalności (dla modułów wbudowanych wystarczy podanie samej nazwy,
-                    natomiast dla plików ścieżka musi zazynaś się od kropki lub dwóch kropek w zależności od lokalizacji
-                    pliku): <strong>const {exportedMethod} = require('./exportsFile')</strong>.
+                    natomiast dla plików ścieżka musi zaczynać się od kropki lub dwóch kropek w zależności od
+                    lokalizacji pliku): <strong>const {exportedMethod} = require('./exportsFile')</strong>.
                 </li>
             </ul>
         </article>
         <article id="asynchrony" class="article">
             <h2 class="article__heading">asynchroniczność</h2>
             <p class="article__text">Node.js jest oparty o asynchroniczność. Dzięki temu program może wykonywać się
-                dalej bez oczekiwania na wykonanie dłuższych/bardziej żłożonych operacji. Asynchroniczność nawet mimo
+                dalej bez oczekiwania na wykonanie dłuższych/bardziej złożonych operacji. Asynchroniczność nawet mimo
                 jednowątkowości rozwiązuje wiele problemów.</p>
             <p class="article__text">Sposoby pracy z asynchronicznością w Node.js (należy importować metodę
                 <i>readFile</i> z modułu <i>fs</i>):
@@ -227,7 +231,7 @@
                         &emsp;}<br>
                         })();</strong>
                 </li>
-                <li class="article__list-item">Najlbardziej poprawnym sposobem jest skorzystanie z ulepszeonej wersji
+                <li class="article__list-item">Najbardziej poprawnym sposobem jest skorzystanie z ulepszonej wersji
                     API <i>fs</i> używając własności <i>promises</i> na obiekcie zwróconym przez funkcję <i>require</i>
                     podczas przypisywania funkcjonalności modułu do zmiennej, np.:<br>
                     <strong>(async () => {<br>
@@ -258,7 +262,7 @@
                 <li class="article__list-item"><strong>readdir</strong> - umożliwia listowanie plików i folderów
                     znajdujących się w danym katalogu.</li>
                 <li class="article__list-item"><strong>stat</strong> - umożliwia dostęp do szczegółowych informacji o
-                    elementac znajdujących się w danym katalogu.</li>
+                    elementach znajdujących się w danym katalogu.</li>
                 <li class="article__list-item"><strong>exists</strong> - umożliwia sprawdzenie czy plik istnieje
                     (niezalecany sposób).</li>
                 <li class="article__list-item"><strong>access</strong> - umożliwia sprawdzenie czy plik istnieje
@@ -269,15 +273,15 @@
                 </li>
                 <li class="article__list-item"><strong>rmdir</strong> - umożliwia usuwanie katalogów.</li>
                 <li class="article__list-item"><strong>rm</strong> - umożliwia usuwanie plików oraz katalogów. W celu
-                    usunięcia elementów zagniżdżonych, należy włączyć rekursywność.</li>
+                    usunięcia elementów zagnieżdżonych, należy włączyć rekursywność.</li>
                 <li class="article__list-item"><strong>rename</strong> - umożliwia zmianę nazwy oraz przenoszenie
                     elementu. </li>
                 <li class="article__list-item"><strong>unlink</strong> - umożliwia usuwanie niezagnieżdżonych plików.
                 </li>
             </ul>
-            <p class="article__text">Nie należy sprawdzać istnienia pliku próbą jego odczytu/zapisu, pownieważ
+            <p class="article__text">Nie należy sprawdzać istnienia pliku próbą jego odczytu/zapisu, ponieważ
                 z racji asynchroniczności JavaScript, plik może zostać usunięty/dodany między momentem sprawdzenia
-                czy istnieje, a momentem próby wykoania na nim akcji. Funkcja wykonująca akcję na pliku, np.
+                czy istnieje, a momentem próby wykonania na nim akcji. Funkcja wykonująca akcję na pliku, np.
                 <i>readFile</i> sprawdzi czy dany plik istnieje. Jedyną istotną kwestią jest odpowiednia obsługa tego
                 błędu, korzystając z własności <strong>error.code</strong>.
             </p>
@@ -285,7 +289,7 @@
                 temat środowiska, Node.js, silnika itp..</p>
             <p class="article__text"><strong>process.argv</strong> to tablica zawierająca elementy wprowadzone za
                 pośrednictwem linii komend (ścieżki zawierające spacje, należy umieścić w cudzysłowie, ponieważ w
-                przeciwnym razie spacja zostanie zinterpretowana jako sepearator kolejnych argumentów). Tablica
+                przeciwnym razie spacja zostanie zinterpretowana jako separator kolejnych argumentów). Tablica
                 <i>process.argv</i> zawiera zawsze minimum dwa elementy: <strong>pełną ścieżkę do środowiska
                     uruchomieniowego</strong> oraz <strong>pełną ścieżkę do aktualnie wykonywanego pliku</strong>.
                 Kolejne argumenty przekazywane są za pomocą konsoli i mogą być wykorzystane w programie dzięki pobraniu
@@ -294,7 +298,7 @@
         </article>
         <article id="path-module" class="article">
             <h2 class="article__heading">moduł path</h2>
-            <p class="article__text">Umożlwienie podania ścieżki przez aplikację dla sterującego programem jest bardzo
+            <p class="article__text">Umożliwienie podania ścieżki przez aplikację dla sterującego programem jest bardzo
                 niebezpieczne. Stwarza możliwość dostania się z zewnątrz do zasobów całego komputera. W celu zapewnienia
                 bezpieczeństwa należy użyć synchronicznego modułu <i>path</i> oraz kilku wbudowanych zmiennych.</p>
             <p class="article__text">Zmienne globalne współpracujące z modułem <i>path</i>:
@@ -309,7 +313,7 @@
                 <li class="article__list-item"><strong>basename</strong> - zwraca ostatnią część ścieżki, ignorując
                     końcowe separatory.</li>
                 <li class="article__list-item"><strong>join</strong> - łączy wszystkie składowe ścieżki z użyciem
-                    sparatora specyficznego dla danej platformy oraz upraszcza ścieżkę.</li>
+                    separatora specyficznego dla danej platformy oraz upraszcza ścieżkę.</li>
                 <li class="article__list-item"><strong>dirname</strong> - zwraca ścieżkę do katalogu w którym znajduje
                     się element przekazany jako argument, ignorując końcowe separatory.</li>
                 <li class="article__list-item"><strong>extname</strong> - zwraca rozszerzenie wraz z kropką.</li>
@@ -320,7 +324,7 @@
                 </li>
             </ul>
             <p class="article__text">Funkcja <i>safeJoin</i> (korzystająca z funkcji <i>normalize</i> i <i>resolve</i>
-                modułu <i>path</i> pozwala na skuteczne zabezpiecznie ścieżki, uniemożliwiając
+                modułu <i>path</i> pozwala na skuteczne zabezpieczenie ścieżki, uniemożliwiając
                 przechodzenie do nadrzędnych katalogów:<br>
                 <strong>function safeJoin(base, target) {<br>
                     &emsp;const targetPath = '.' + normalize('/' + target);<br>
@@ -330,9 +334,9 @@
         </article>
         <article id="yarn" class="article">
             <h2 class="article__heading">yarn</h2>
-            <p class="article__text"><strong>Yarn</strong> to menedżer paczek, będący alternatywą dla <i>npm</i>.
+            <p class="article__text"><strong>Yarn</strong> to menadżer paczek, będący alternatywą dla <i>npm</i>.
                 <i>Yarn</i> jest nieznacznie szybszy oraz posiada szybsze komendy niż <i>npm</i>. <i>Yarn</i> w
-                przeciwieństwie do <i>nmp</i> nie jest dostarczany wraz z Node.js, lecz musi zostać pobany i
+                przeciwieństwie do <i>nmp</i> nie jest dostarczany wraz z Node.js, lecz musi zostać pobrany i
                 zainstalowany. Istnieje także możliwość instalacji <i>Yarn</i> z poziomu <i>npm</i> z wykorzystaniem
                 polecenia: <strong>npm install --global yarn</strong>.
             </p>
@@ -343,16 +347,16 @@
                     pliku <i>package.json</i> (instaluje bądź usuwa elementy).
                 </li>
                 <li class="article__list-item"><strong>yarn add &lt;package name></strong> - polecenie instalujące
-                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umiesczać w cudzysłowie. Aby zainsatlować
+                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umieszczać w cudzysłowie. Aby zainstalować
                     paczkę jako deweloperską, należy podczas jej instalacji użyć flagi <strong>-D</strong>. Dobrą
                     praktyką jest instalowanie paczek jako produkcyjnych tylko wtedy, kiedy jest to wymagane do
                     poprawnego działania aplikacji w środowisku produkcyjnym.</li>
                 <li class="article__list-item"><strong>yarn remove &lt;package name></strong> - polecenie usuwające
-                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umiesczać w cudzysłowie.</li>
+                    paczkę o danej nazwie (np. "chokidar"). Nazw nie należy umieszczać w cudzysłowie.</li>
             </ul>
-            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menedżer paczek w projekcie i
+            <p class="article__text">Należy pamiętać, aby zdecydować się na tylko jeden menadżer paczek w projekcie i
                 nie używać kilku jednocześnie!</p>
-            <p class="article__text">Alternatywne menedżery paczek:
+            <p class="article__text">Alternatywne menadżery paczek:
             <ul class="article__list">
                 <li class="article__list-item"><strong>Yarn 2 (Yarn Modern)</strong> - jeszcze szybsza wersja
                     <i>Yarn</i> posiadająca nowe możliwości (np. automatyczne pobieranie paczek z typami
@@ -408,7 +412,7 @@
                 jednak kilku ułatwień i skrótów, które posiadają inne alternatywy, (np. <i>axios</i>).</p>
             <p class="article__text">Import modułu <i>fetch</i> (w wersji 2) odbywa się w inny sposób niż standardowy. W
                 związku z tym, że cały moduł jest jedną, dużą funkcją należy przypisać go do zmiennej bez użycia
-                detrukturyzacji.
+                destrukturyzacji.
             </p>
             <p class="article__text">Zapytania/żądania niezależnie od użytej biblioteki działają inaczej we front-endzie
                 i w back-endzie. We front-endzie przeglądarka dba o <i>CORS (Cross-Origin Resource Sharing)</i> i
@@ -431,7 +435,7 @@
             </ul>
             <p class="article__text">Uruchamianie innych zewnętrznych procesów/komend/programów w Node.js odbywa się z
                 wykorzystaniem kilku alternatywnych metod, robiących teoretycznie to samo (bezpośrednio po tych metodach
-                można wywoływać podpocesy, np. <i>stdout</i>, <i>stdin</i>, <i>stderr</i>):
+                można wywoływać podprocesy, np. <i>stdout</i>, <i>stdin</i>, <i>stderr</i>):
             </p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>child_process.exec</strong> (najbardziej uniwersalna i
@@ -465,7 +469,7 @@
                     (niektóre programy wykorzystują czasem to wyjście, żeby podkreślić coś ważnego, co niekoniecznie
                     jest błędem).</li>
             </ul>
-            <p class="article__text">Sposób wyświetlenia argumentów fukcji <i>callback</i> metod modułu
+            <p class="article__text">Sposób wyświetlenia argumentów funkcji <i>callback</i> metod modułu
                 <i>child_process</i>:
             </p>
             <ul class="article__list">
@@ -474,7 +478,7 @@
                         });</strong></li>
             </ul>
             <p class="article__text">
-                Użycie <i>promise</i> jest uzasadnione jednynie w przypadku prostych operacji. Nie sprawdza się on w
+                Użycie <i>promise</i> jest uzasadnione jedynie w przypadku prostych operacji. Nie sprawdza się on w
                 przypadku bardziej złożonych operacji, ponieważ nie ma wtedy obiektu <i>child_process</i>
                 umożliwiającego sterowanie z zewnątrz procesem (np. zatrzymanie go z użyciem metody <i>kill</i>).
                 <i>Child_process</i> nie posiada domyślnie wersji używającej obiektów typu <i>promise</i>, więc należy
@@ -483,13 +487,13 @@
             </p>
             <p class="article__text">W związku z tym że obiekt typu <i>promise</i> może zwrócić tylko jedną informację -
                 zwraca obiekt zawierający własności takie jak: <i>error</i>, <i>stdout</i>, <i>stderr</i> (można
-                użyć destrukturyzacji bezpośrednio w <i>callbacku</i> metody <i>then</i>). Natoimiast <i>callback</i> z
+                użyć destrukturyzacji bezpośrednio w <i>callbacku</i> metody <i>then</i>). Natomiast <i>callback</i> z
                 racji tego, że może zwrócić wiele informacji jednocześnie - zwraca te własności pojedynczo.
             </p>
             <p class="article__text">Należy pamiętać, aby nie przekazywać żadnych zmiennych, danych z bazy ani danych
                 podanych przez użytkownika. Jest to bardzo niebezpieczny zabieg, ponieważ konsola umożliwia wyjście z
-                aktualnej komendy oraz wykoanie dowolnej innej na wiele sposobów. Może nawet zostać usunięta cała
-                zawartość dysku. W celu bezpiecznego przekazania paramatrów należy dopuszczać wyłącznie bardzo
+                aktualnej komendy oraz wykonanie dowolnej innej na wiele sposobów. Może nawet zostać usunięta cała
+                zawartość dysku. W celu bezpiecznego przekazania parametrów należy dopuszczać wyłącznie bardzo
                 restrykcyjne formy danych opierające się wyłącznie na <i>whiteliście</i> znanych dobrych znaków
                 (najczęściej z wykorzystaniem wyrażeń regularnych), a przy nazwach plików używać koniecznie metody
                 <i>safeResolve</i>.
@@ -510,10 +514,15 @@
                 czy przechowywania haseł.</p>
             <p class="article__text">Szyfr lub kryptograficzny algorytm szyfrujący <i>(cipher)</i> - funkcja
                 matematyczna wykorzystywana do szyfrowania tekstu jawnego lub jego deszyfrowania. Zazwyczaj jedna
-                funkcja wykorzystywana jest do szyfrowania, a inna do desztfrowania wiadomości.</p>
+                funkcja wykorzystywana jest do szyfrowania, a inna do deszyfrowania wiadomości.</p>
             <p class="article__text">Moduł <i>crypto</i> działa na podstawie <i>OpenSSL</i> - bardzo znanej biblioteki
                 pozwalającej m.in. szyfrować. Moduł ten nie zawsze jest jednak dostępny (warto korzystać z Node.js w
                 wersji 14 lub wyższej).</p>
+            <p class="article__text">W sporej części kryptografia opiera się na operacjach matematycznych trudnych dla
+                aktualnych komputerów, np. liczby pierwsze. Komputery kwantowe potrafią jednak rozwiązać takie zadania
+                bardzo szybko. Potencjalnie mogą więc łamać dotychczasowe algorytmy szyfrowania czy skrótu. Dlatego
+                istnieje takie pojęcie jak <strong>kryptografia postkwantowa</strong>, czyli nauka zajmująca się
+                algorytmami kryptograficznymi, które mają być odporne na złamanie za pomocą komputera kwantowego.</p>
         </article>
         <article id="hash-functions" class="article">
             <h2 class="article__heading">funkcje skrótu</h2>
@@ -541,7 +550,7 @@
             <p class="article__text">Możliwe zagrożenia podczas korzystania z funkcji skrótu:</p>
             <ul class="article__list">
                 <li class="article__list-item">Kolizje w funkcjach skrótu.</li>
-                <li class="article__list-item">Rainbow tables.</li>
+                <li class="article__list-item"><i>Rainbow tables</i>.</li>
                 <li class="article__list-item">Zbyt banalny tekst (proste, często używane hasło dla którego łatwo
                     znaleźć kolizję lub wpis w <i>rainbow table</i>).</li>
             </ul>
@@ -552,7 +561,7 @@
                 <li class="article__list-item">Odporność na kolizje (<i>collision resistance</i>) - brak praktycznej
                     możliwości wygenerowania dwóch dowolnych wiadomości o takim samym skrócie.</li>
                 <li class="article__list-item">Odporność na kolizje konkretnych wiadomości (<i>target
-                        collision-resistance, preimage resistance</i>) pierwszego i drugiego rzęd - brak praktycznej
+                        collision-resistance, preimage resistance</i>) pierwszego i drugiego rzędu - brak praktycznej
                     możliwości wygenerowania wiadomości o takim samym skrócie jak wskazana wiadomość.</li>
             </ul>
             <p class="article__text">Tęczowe tabele (<i>rainbow tables</i>) są powiązane z funkcjami skrótu, które mają
@@ -565,7 +574,6 @@
                     aby generować dla nich duże tęczowe tabele).</li>
                 <li class="article__list-item">Używanie soli (losowego ciągu znaków, który jest dodawany do tekstu
                     wprowadzonego przez użytkownika).</li>
-                <li class="article__list-item"></li>
             </ul>
             <p class="article__text">Cechy soli dobrej jakości:</p>
             <ul class="article__list">
@@ -573,6 +581,8 @@
                 <li class="article__list-item">Powinna być długa co najmniej na tyle znaków ile zostanie zwróconych
                     przez funkcję skrótu.</li>
                 <li class="article__list-item">Powinna zawierać losowe znaki.</li>
+                <li class="article__list-item">Powinna być osobna dla każdej wykonywanej operacji (np. jedna dla
+                    szyfrowania/deszyfrowania, druga dla funkcji skrótu).</li>
             </ul>
             <p class="article__text">Niebezpieczne funkcje skrótu:</p>
             <ul class="article__list">
@@ -585,15 +595,161 @@
             </ul>
             <p class="article__text">Bezpieczne (jeśli są używane poprawnie) funkcje skrótu dostępne w Node.js:</p>
             <ul class="article__list">
-                <li class="article__list-item">sha512</li>
-                <li class="article__list-item">PBKDF2</li>
+                <li class="article__list-item">sha512,</li>
+                <li class="article__list-item">PBKDF2 (nie posiada domyślnie wersji używającej obiektów typu
+                    <i>promise</i>, więc należy ją stworzyć z wykorzystaniem metody <i>promisify</i> z modułu
+                    <i>util</i>).
+                </li>
             </ul>
             <p class="article__text">Jeszcze bezpieczniejsze (jeśli są używane poprawnie) funkcje skrótu dostępne w
                 ekosystemie <i>npm</i>, lecz niedostarczone w API Node.js (wymagana jest ich instalacja):</p>
             <ul class="article__list">
-                <li class="article__list-item">bcrypt</li>
-                <li class="article__list-item">Whirpool</li>
+                <li class="article__list-item">bcrypt (nie posiada domyślnie wersji używającej obiektów typu
+                    <i>promise</i>, więc należy ją stworzyć z wykorzystaniem metody <i>promisify</i> z modułu
+                    <i>util</i>),
+                </li>
+                <li class="article__list-item">Whirlpool.</li>
             </ul>
+        </article>
+        <article id="buffer" class="article">
+            <h2 class="article__heading">buffer</h2>
+            <p class="article__text">Node.js zawiera kilka specyficznych (często dla siebie, ale czasem też adoptowanych
+                dalej) struktur i technik. Jedną z takich struktur jest <strong>Buffer</strong>, czyli klasa
+                reprezentująca czysty wycinek pamięci lub danych - często binarnych - bez ich obróbki czy zmiany na
+                tekst. Klasa <i>Buffer</i> dostępna jest bezpośrednio w API Node.js (nie jest konieczny jej
+                import).</p>
+            <p class="article__text">Czysty JavaScript, chociaż świetnie radzi sobie z ciągami zakodowanymi w
+                <i>Unicode</i>, nie radzi sobie zbyt dobrze z prostymi danymi binarnymi. Jest to w porządku w
+                przeglądarce, w której większość danych ma postać <i>stringów</i>. Jednak serwery Node.js muszą również
+                radzić sobie ze strumieniami <i>TCP</i> oraz odczytywaniem i zapisywaniem w systemie plików, co wymaga
+                radzenia sobie z czysto binarnymi strumieniami danych. Jednym ze sposobów poradzenia sobie z tym
+                problemem jest po prostu użycie ciągów, co jest dokładnie tym, co Node.js zrobił na początku. Jednak
+                takie podejście jest niezwykle problematyczne w pracy. Ciągi binarne są powolne, mają tendencję do
+                łamania się w dziwny i tajemniczy sposób, a samo API jest zaprojektowane dla ciągów zamiast dla danych
+                binarnych. W związku z tym należy używać klasy <i>Buffer</i>, zamiast ciągów binarnych.
+            </p>
+            <p class="article__text"><i>Buffer</i> jest czymś w rodzaju tablicy, która ma stałą szerokość. Reprezentuje
+                pewną pamięć, która znajduje się poza <i>V8</i> - silnikiem JavaScript. <i>Buffer</i> zawiera liczby -
+                ciąg bajtów. Są one więc z przedziału: 0 - 255 (lub w systemie szesnastkowym: 0 - ff).</p>
+            <p class="article__text">Mimo, że <i>Buffer</i> to klasa, wyjątkowo nie można deklarować jej instancji z
+                użyciem słowa kluczowego <i>new</i>. Aby ręcznie stworzyć <i>Buffer</i>, należy zrobić to z jednoczesną
+                alokacją (rezerwacją) określonej liczby bajtów w pamięci:<br>
+                <strong>const buff = Buffer.alloc(20);</strong>
+            </p>
+            <p class="article__text">Własności i metody wykonywane na obiektach typu <i>Buffer</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>length</strong> - własność zwraca ilość bajtów potrzebną do
+                    zapisania danego obiektu.</li>
+                <li class="article__list-item"><strong>write()</strong> - jako pierwszy argument przyjmuje łańcuch
+                    znaków (obiekt typu <i>Buffer</i> można tworzyć też z danych binarnych, więc argumentem takim może
+                    być również wypełniona elementami tablica) będący tekstem do zapisania w obiekcie. Drugim argumentem
+                    jest łańcuch znaków oznaczający rodzaj kodowania. Metoda zapisuje binarnie tekst podany jako
+                    pierwszy argument zapisany z wykorzystaniem kodowania podanego jako drugi argument.</li>
+                <li class="article__list-item"><strong>toString()</strong> - jako argument przyjmuje łańcuch znaków
+                    oznaczający rodzaj kodowania. Metoda konwertuje tekst przechowywany jako wartość binarna z
+                    użyciem kodowania przekazanego jako argument.</li>
+            </ul>
+            <p class="article__text">Metody statyczne wykonywane na klasie <i>Buffer</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>byteLength()</strong> - jako pierwszy argument przyjmuje łańcuch
+                    znaków będący potencjalnym tekstem do zapisania w obiekcie. Drugim argumentem jest łańcuch znaków
+                    oznaczający rodzaj kodowania. Metoda zwraca ilość bajtów jaką należy zarezerwować w pamięci, aby
+                    przechować dany tekst w obiekcie typu <i>Buffer</i>.</li>
+                <li class="article__list-item"><strong>from()</strong> - jako argument przyjmuje łańcuch
+                    znaków będący tekstem do zapisania w obiekcie. Metoda tworzy obiekt typu <i>Buffer</i> alokując
+                    minimalną ilość pamięci jaka jest wymagana do przechowania danego tekstu.</li>
+            </ul>
+            <p class="article__text">Obiekt typu <i>Buffer</i> może być również czyszczony, wypełniany, kopiowany,
+                porównywany, odczytywany. Bardzo przypomina standardowe tablice. <i>Buffer</i> pozwala m.in. na
+                szyfrowanie/deszyfrowanie plików binarnych.</p>
+            <p class="article__text">Zastosowania modułu <i>Buffer</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Operacje na plikach binarnych.</li>
+                <li class="article__list-item">Kompresowanie plików.</li>
+                <li class="article__list-item">Przesyłanie strumieni wideo i audio w sieci.</li>
+                <li class="article__list-item">Jest strukturą typową dla Node.js (może pojawić się na rozmowie
+                    kwalifikacyjnej).</li>
+            </ul>
+        </article>
+        <article id="stream" class="article">
+            <h2 class="article__heading">stream</h2>
+            <p class="article__text"><i>Buffer</i> przedstawia binarny obszar w pamięci, więc może generować problem,
+                ponieważ element obsługiwany za jego pomocą musi znajdować się w całości w pamięci operacyjnej RAM. W
+                przypadku większych plików należy operować na strumieniach danych.</p>
+            <p class="article__text"><strong>Stream</strong> to koncepcja rozwinięta ponad <i>Buffer</i>. Pozwala
+                operować na strumieniach danych, którymi mogą być:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Komunikacja TCP/IP.</li>
+                <li class="article__list-item">Pliki znajdujące się bezpośrednio na dysku.</li>
+                <li class="article__list-item">Przetworzone dane (np. skompresowane lub zaszyfrowane).</li>
+            </ul>
+            <p class="article__text"><i>Stream</i> odczytuje, zapisuje i/lub przekształca dane, wczytując w danym
+                momencie niewielką ich ilość do pamięci. Jest bardzo wydajny pod kątem pamięci oraz dość szybki. Dane
+                wczytywane są w kawałkach (tzw. <i>chunks</i>).</p>
+            <p class="article__text"><i>Stream</i> - typy:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><i>Writable</i> - typ, do którego można coś zapisać (zapisywalny).</li>
+                <li class="article__list-item"><i>Readable</i> - typ, z którego można coś odczytać (odczytywalny).</li>
+                <li class="article__list-item"><i>Duplex</i> - typ, do którego można zarówno coś zapisać jak i coś z
+                    niego odczytać (przykładem jest komunikacja klient-serwer za pomocą <i>TCP/IP</i>).</li>
+                <li class="article__list-item"><i>Transform</i> - typ, który może przekształcać przechodzące przez niego
+                    dane (działa podobnie jak <i>Duplex</i> - można do niego zapisywać oraz odczytywać z niego dane,
+                    przykładem jest kompresja danych).</li>
+            </ul>
+            <p class="article__text">Używany pojedynczo <i>Stream</i> bardzo rzadko ma sens. Najczęściej łączy się ze
+                sobą różne jego typy.</p>
+            <p class="article__text">Algorytm kopiowania pliku (kiedy jest to możliwe, należy wykonywać kopiowanie z
+                wykorzystaniem modułu <i>fs</i>):</p>
+            <ol class="article__list">
+                <li class="article__list-item"><i>Readable Stream</i> do odczytu pliku.</li>
+                <li class="article__list-item"><i>Writable Stream</i> do zapisu pliku.</li>
+            </ol>
+            <p class="article__text">Algorytm pobierania pliku:</p>
+            <ol class="article__list">
+                <li class="article__list-item"><i>Readable Stream</i> lub <i>Duplex Stream</i> do odczytu danych z
+                    innego serwera.</li>
+                <li class="article__list-item"><i>Writable Stream</i> do zapisu pliku.</li>
+            </ol>
+            <p class="article__text">Algorytm kompresowania pliku:</p>
+            <ol class="article__list">
+                <li class="article__list-item"><i>Readable Stream</i> do odczytu pliku.</li>
+                <li class="article__list-item"><i>Transform Stream</i> do kompresowania danych.</li>
+                <li class="article__list-item"><i>Writable Stream</i> do zapisu pliku.</li>
+            </ol>
+            <p class="article__text">Algorytm szyfrowania pliku (pozwala na szyfrowanie plików dowolnej wielkości):</p>
+            <ol class="article__list">
+                <li class="article__list-item"><i>Readable Stream</i> do odczytu pliku.</li>
+                <li class="article__list-item"><i>Transform Stream</i> do szyfrowania danych.</li>
+                <li class="article__list-item"><i>Writable Stream</i> do zapisu pliku.</li>
+            </ol>
+            <p class="article__text">Moduł <i>stream</i> używany jest jedynie do zarządzania strumieniami, np. ich
+                łączenia. Jednak to poszczególne moduły Node.js dostarczają różnych strumieni (np. moduł <i>fs</i>).
+                Można spotkać różne wersje użycia <i>Stream</i>, np. korzystanie ze zdarzeń <i>data</i> czy <i>end</i>.
+                Node.js od wersji 16. umożliwia używanie wersji strumieni wykorzystującej obiekty typu <i>promise</i>
+                oraz specjalnego API. W przypadku korzystania ze strumieni, warto na początku utworzyć algorytm.</p>
+            <p class="article__text"><strong>Zlib</strong> to moduł umożliwiający kompresję i dekompresję za pomocą
+                kilku wbudowanych algorytmów (najpopularniejszy to <strong>Gzip</strong>). Kompresja za pomocą modułu
+                takiego jak <i>zlib</i> zazwyczaj nie tworzy tzw. archiwum, czyli pliku zawierającego wiele
+                skompresowanych plików i metadanych. Kompresja/dekompresja oznacza zmniejszenie rozmiaru pojedynczych
+                danych (np. jednego pliku) oraz następnie przywrócenie ich pierwotnego rozmiaru.</p>
+            <p class="article__text">Metody służące do kompresji plików:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><i>zlib.gzip(buffer)</i> - metoda dla obiektów typu <i>Buffer</i>. Jest
+                    prostsza w użyciu. Wystarczy podać wejściowy obiekt typu <i>Buffer</i>, aby otrzymać skompresowany.
+                </li>
+                <li class="article__list-item"><i>zlib.createGzip()</i> - metoda dla obiektów typu <i>Stream</i>. Może
+                    przetwarzać znaczne większe dane. Oszczędza również RAM, ponieważ obiekty typu <i>Buffer</i> zajmują
+                    tyle pamięci RAM, ile ważą dane.</li>
+            </ul>
+            <p class="article__text">Metody służące do dekompresji plików:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><i>zlib.gunzip(buffer)</i> - metoda dla obiektów typu <i>Buffer</i>.</li>
+                <li class="article__list-item"><i>zlib.createGunzip()</i> - metoda dla obiektów typu <i>Stream</i>.</li>
+            </ul>
+            <p class="article__text">W niektórych przypadkach kompresja skompresowanych danych może przynieść efekt
+                odwrotny do zamierzonego, np. plik graficzny o rozszerzeniu <i>webp</i> jest już domyślnie bardzo dobrze
+                skompresowany i ciężko skompresować go lepiej. Najlepiej sprawdza się kompresowanie danych tekstowych,
+                np. kod, HTML, CSS, JS, JSON.</p>
         </article>
     </main>
     <footer class="footer">
