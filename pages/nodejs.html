@@ -80,6 +80,10 @@
             <a href="#buffer" class="theory-main__link">buffer</a>
             <span class="theory-main__text">•</span>
             <a href="#stream" class="theory-main__link">stream</a>
+            <span class="theory-main__text">•</span>
+            <a href="#event-emitter" class="theory-main__link">event emitter</a>
+            <span class="theory-main__text">•</span>
+            <a href="#http" class="theory-main__link">http</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -749,7 +753,89 @@
             <p class="article__text">W niektórych przypadkach kompresja skompresowanych danych może przynieść efekt
                 odwrotny do zamierzonego, np. plik graficzny o rozszerzeniu <i>webp</i> jest już domyślnie bardzo dobrze
                 skompresowany i ciężko skompresować go lepiej. Najlepiej sprawdza się kompresowanie danych tekstowych,
-                np. kod, HTML, CSS, JS, JSON.</p>
+                np. kod, <i>HTML</i>, <i>CSS</i>, <i>JS</i>, <i>JSON</i>.</p>
+        </article>
+        <article id="event-emitter" class="article">
+            <h2 class="article__heading">event emitter</h2>
+            <p class="article__text"><strong>EventEmitter</strong> to specyficzna dla Node.js wbudowana klasa, która
+                wymusza pewien sposób pisania kodu. Jest związana ze zdarzeniami (<i>events</i>) - coś nastąpiło i
+                możliwa jest reakcja.</p>
+            <p class="article__text">Przykłady zdarzeń:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Kliknięcie na przycisk.</li>
+                <li class="article__list-item">Zmiana pliku na dysku.</li>
+                <li class="article__list-item">Otrzymanie danych ze strumienia.</li>
+            </ul>
+            <p class="article__text">Programowanie za pomocą zdarzeń oznacza w praktyce że:</p>
+            <ol class="article__list">
+                <li class="article__list-item">Z jednej strony emitujemy informację o tym, że coś się stało. Zaszło
+                    pewne zdarzenie.</li>
+                <li class="article__list-item">Z drugiej strony możemy na takie zdarzenie zareagować i je obsłużyć.
+                    Wykonać działanie, gdy informacja o zajściu zdarzenie zostanie wyemitowana.</li>
+            </ol>
+            <p class="article__text">Dzięki obiektom typu <i>EventEmitter</i> z wykorzystaniem pewnych metod możliwe
+                jest zarówno emitowanie zdarzeń oraz reakcja na nie. Obiekty te umożliwiają również w dowolnym miejscu
+                programu (o ile możliwy jest dostp do tego samego obiektu typu <i>EventEmitter</i>) nasłuchiwanie na
+                dowolne zdarzenie dowolną ilość razy.</p>
+            <p class="article__text">Import klasy <i>EventEmitter</i>:<br>
+                <strong>const { EventEmitter } = require('events');</strong>
+            </p>
+            <p class="article__text">Sposoby utworzenia obiektu typu <i>EventEmitter</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Metoda z wykorzystaniem funkcji. Utworzenie obiektu typu
+                    <i>EventEmitter</i> wewnątrz funkcji. Wywołanie takiej funkcji wywoła także metody emitujące
+                    zdarzenie wywołane wewnątrze tej funkcji.
+                </li>
+                <li class="article__list-item">Metoda z wykorzystaniem klasy. Utworzenie nowej klasy poprzez
+                    rozszerzenie klasy <i>EventEmitter</i>. Należy pamiętać, aby w konstruktorze wywołać <i>super</i> (w
+                    celu uzyskania dostępu do rodzica obiektu oraz możliwości wywoływania jego funkcji) a oprócz tego
+                    umieścić w nim metody emitujące zdarzenia (zostaną one automatycznie wywołane w momencie utworzenia
+                    obiektu z użyciem tego konstruktora).
+                </li>
+            </ul>
+            <p class="article__text">Metody obiektu typu <i>EventEmitter</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>emit</strong>() - jako argument przyjmuje łańcuch znaków
+                    reprezentujący nazwę zdarzenia, kolejnymi, potencjalnymi argumentami mogą być dowolne dane, do
+                    których będzie możliwe odwołanie się z poziomu obsługi zdarzenia.</li>
+                <li class="article__list-item"><strong>on</strong>() - jako pierwszy argument przyjmuje łańcuch znaków
+                    reprezentujący nazwę zdarzenia, drugim argumentem jest funkcja <i>callback</i>, która jako
+                    parametry może przyjąć kolejne (z wyłączeniem pierwszego - nazwy) argumenty emitowanego zdarzenia
+                    (przekazane do funkcji <i>emit</i>). Funkcja <i>callback</i> zostaje wywołana w momencie zajścia
+                    zdarzenia. Metoda służy do obsługi zdarzeń i zwraca obiekt na którym została wywołana (dzięki czemu
+                    możliwa jest prosta obsługa wielu zdarzeń wywołując bezpośrednio po aktualnym nasłuchiwaniu, kolejne
+                    - tzw. <i>chaining</i>).
+                </li>
+                <li class="article__list-item"><strong></strong><strong>once</strong>() - działa analogicznie jak metoda
+                    <i>on</i>, lecz funkcja przestaje nasłuchiwać po pierwszym zajściu zdarzenia.
+                </li>
+            </ul>
+            <p class="article__text">Domyślnie <i>EventEmitter</i> wywołuje synchronicznie wszystkie metody nasłuchujące
+                danego zdarzenia po kolei, w kolejności w jakiej zostały dodane.</p>
+        </article>
+        <article id="http" class="article">
+            <h2 class="article__heading">http</h2>
+            <p class="article__text"><strong>Web server (HTTP server)</strong> to aplikacja (program), która nasłuchuje
+                żądania (od klienta), przetwarza je i wysyła odpowiedź. <i>Web server</i> działa (najczęściej) w oparciu
+                o protokół <strong>HTTP</strong>, który określa reguły komunikacji między klientem (najczęściej
+                przeglądarka) a serwerem. Polskim określeniem na <i>Web server</i> jest <strong>serwer WWW</strong>,
+                <strong>Web serwer</strong> lub <strong>serwer webowy</strong>.
+            </p>
+            <p class="article__text"><strong>Serwer (Web serwer/serwer HTTP)</strong> - jego definicja zależy głównie od
+                kontekstu. Może być to:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Program, do którego łączy się klient (najczęściej przeglądarka).</li>
+                <li class="article__list-item">Fizyczne urządzenie, podłączone do sieci (internetu), które świadczy
+                    usługi, np. udostępnia zasoby.</li>
+            </ul>
+            <p class="article__text">Zadanie Web serwera:</p>
+            <ol class="article__list">
+                <li class="article__list-item">Nasłuchiwanie żądań (<i>request</i>) od klienta (najczęściej
+                    przeglądarki).</li>
+                <li class="article__list-item">Przetwarzanie żądania, kiedy nastąpi (cała logika to aplikacja
+                    serwerowa).</li>
+                <li class="article__list-item">Wysyłanie odpowiedzi do klienta (<i>response</i>).</li>
+            </ol>
         </article>
     </main>
     <footer class="footer">
