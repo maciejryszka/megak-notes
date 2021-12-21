@@ -108,7 +108,7 @@
             </ul>
             <p class="article__text">Jeśli plik ma działać cały czas (np. dlatego że jest stałym procesem) należy
                 jedynie go uruchomić. Node.js rozpozna odpowiednio taki proces i go nie przerwie.</p>
-            <p class="article__text">Import modułów z API dostarczonego przez Node.js wykonuje się głównie z
+            <p class="article__text">Import modułów z <i>API</i> dostarczonego przez Node.js wykonuje się głównie z
                 wykorzystaniem metody <strong>require</strong>() (będącej metodą modułu). Metoda ta zwraca obiekt z
                 różnymi klasami, funkcjami, zmiennymi dostępnymi w module. Zazwyczaj jest on przypisywany do zmiennej
                 (lub od razu używana jest destrukturyzacja, w celu pobrania jedynie potrzebnych metod/własności):
@@ -236,7 +236,7 @@
                         })();</strong>
                 </li>
                 <li class="article__list-item">Najbardziej poprawnym sposobem jest skorzystanie z ulepszonej wersji
-                    API <i>fs</i> używając własności <i>promises</i> na obiekcie zwróconym przez funkcję <i>require</i>
+                    <i>API fs</i> używając własności <i>promises</i> na obiekcie zwróconym przez funkcję <i>require</i>
                     podczas przypisywania funkcjonalności modułu do zmiennej, np.:<br>
                     <strong>(async () => {<br>
                         &emsp;try {<br>
@@ -249,7 +249,7 @@
                 </li>
             </ul>
             <p class="article__text">Moduł <i>dns</i> pozwala na wykonywanie operacji związanych z serwerami nazw.
-                Asynchroniczna funkcja <i>dns.lookup()</i> pozwala na sprawdzenie adresu IP hosta danej domeny:
+                Asynchroniczna funkcja <i>dns.lookup()</i> pozwala na sprawdzenie adresu <i>IP</i> hosta danej domeny:
                 <strong>dns.lookup("example.com")</strong>.
             </p>
         </article>
@@ -372,7 +372,8 @@
         </article>
         <article id="file-tracking" class="article">
             <h2 class="article__heading">śledzenie plików</h2>
-            <p class="article__text">Śledzenie plików w Node.js zostało bardzo dobrze zrealizowane przez zewnętrzne API
+            <p class="article__text">Śledzenie plików w Node.js zostało bardzo dobrze zrealizowane przez zewnętrzne
+                <i>API</i>
                 - <strong>chokidar</strong>. Wykorzystuje się je w celu reagowania na zmiany w kodzie (nawet w
                 zewnętrznych usługach), reagowania na pliki wysłane przez klientów (np. za pomocą FTP na lokalny
                 serwer) czy w celu utworzenia narzędzia logującego zmiany w systemie.
@@ -411,9 +412,9 @@
         </article>
         <article id="fetch" class="article">
             <h2 class="article__heading">fetch</h2>
-            <p class="article__text"><strong>Fetch</strong> to standardowe API wprowadzone do przeglądarek jednak można
-                z nim pracować także w Node.js (należy pobrać <i>node-fetch</i> z <i>npm</i>). <i>Fetch</i> nie posiada
-                jednak kilku ułatwień i skrótów, które posiadają inne alternatywy, (np. <i>axios</i>).</p>
+            <p class="article__text"><strong>Fetch</strong> to standardowe <i>API</i> wprowadzone do przeglądarek jednak
+                można z nim pracować także w Node.js (należy pobrać <i>node-fetch</i> z <i>npm</i>). <i>Fetch</i> nie
+                posiada jednak kilku ułatwień i skrótów, które posiadają inne alternatywy, (np. <i>axios</i>).</p>
             <p class="article__text">Import modułu <i>fetch</i> (w wersji 2) odbywa się w inny sposób niż standardowy. W
                 związku z tym, że cały moduł jest jedną, dużą funkcją należy przypisać go do zmiennej bez użycia
                 destrukturyzacji.
@@ -606,7 +607,7 @@
                 </li>
             </ul>
             <p class="article__text">Jeszcze bezpieczniejsze (jeśli są używane poprawnie) funkcje skrótu dostępne w
-                ekosystemie <i>npm</i>, lecz niedostarczone w API Node.js (wymagana jest ich instalacja):</p>
+                ekosystemie <i>npm</i>, lecz niedostarczone w <i>API</i> Node.js (wymagana jest ich instalacja):</p>
             <ul class="article__list">
                 <li class="article__list-item">bcrypt (nie posiada domyślnie wersji używającej obiektów typu
                     <i>promise</i>, więc należy ją stworzyć z wykorzystaniem metody <i>promisify</i> z modułu
@@ -620,7 +621,7 @@
             <p class="article__text">Node.js zawiera kilka specyficznych (często dla siebie, ale czasem też adoptowanych
                 dalej) struktur i technik. Jedną z takich struktur jest <strong>Buffer</strong>, czyli klasa
                 reprezentująca czysty wycinek pamięci lub danych - często binarnych - bez ich obróbki czy zmiany na
-                tekst. Klasa <i>Buffer</i> dostępna jest bezpośrednio w API Node.js (nie jest konieczny jej
+                tekst. Klasa <i>Buffer</i> dostępna jest bezpośrednio w <i>API</i> Node.js (nie jest konieczny jej
                 import).</p>
             <p class="article__text">Czysty JavaScript, chociaż świetnie radzi sobie z ciągami zakodowanymi w
                 <i>Unicode</i>, nie radzi sobie zbyt dobrze z prostymi danymi binarnymi. Jest to w porządku w
@@ -629,8 +630,8 @@
                 radzenia sobie z czysto binarnymi strumieniami danych. Jednym ze sposobów poradzenia sobie z tym
                 problemem jest po prostu użycie ciągów, co jest dokładnie tym, co Node.js zrobił na początku. Jednak
                 takie podejście jest niezwykle problematyczne w pracy. Ciągi binarne są powolne, mają tendencję do
-                łamania się w dziwny i tajemniczy sposób, a samo API jest zaprojektowane dla ciągów zamiast dla danych
-                binarnych. W związku z tym należy używać klasy <i>Buffer</i>, zamiast ciągów binarnych.
+                łamania się w dziwny i tajemniczy sposób, a samo <i>API</i> jest zaprojektowane dla ciągów zamiast dla
+                danych binarnych. W związku z tym należy używać klasy <i>Buffer</i>, zamiast ciągów binarnych.
             </p>
             <p class="article__text"><i>Buffer</i> jest czymś w rodzaju tablicy, która ma stałą szerokość. Reprezentuje
                 pewną pamięć, która znajduje się poza <i>V8</i> - silnikiem JavaScript. <i>Buffer</i> zawiera liczby -
@@ -730,7 +731,8 @@
                 łączenia. Jednak to poszczególne moduły Node.js dostarczają różnych strumieni (np. moduł <i>fs</i>).
                 Można spotkać różne wersje użycia <i>Stream</i>, np. korzystanie ze zdarzeń <i>data</i> czy <i>end</i>.
                 Node.js od wersji 16. umożliwia używanie wersji strumieni wykorzystującej obiekty typu <i>promise</i>
-                oraz specjalnego API. W przypadku korzystania ze strumieni, warto na początku utworzyć algorytm.</p>
+                oraz specjalnego <i>API</i>. W przypadku korzystania ze strumieni, warto na początku utworzyć algorytm.
+            </p>
             <p class="article__text"><strong>Zlib</strong> to moduł umożliwiający kompresję i dekompresję za pomocą
                 kilku wbudowanych algorytmów (najpopularniejszy to <strong>Gzip</strong>). Kompresja za pomocą modułu
                 takiego jak <i>zlib</i> zazwyczaj nie tworzy tzw. archiwum, czyli pliku zawierającego wiele
@@ -818,17 +820,17 @@
             <p class="article__text"><strong>Web server (HTTP server)</strong> to aplikacja (program), która nasłuchuje
                 żądania (od klienta), przetwarza je i wysyła odpowiedź. <i>Web server</i> działa (najczęściej) w oparciu
                 o protokół <strong>HTTP</strong>, który określa reguły komunikacji między klientem (najczęściej
-                przeglądarka) a serwerem. Polskim określeniem na <i>Web server</i> jest <strong>serwer WWW</strong>,
-                <strong>Web serwer</strong> lub <strong>serwer webowy</strong>.
+                przeglądarka) a serwerem. Polskim określeniem na <i>web server</i> jest <strong>serwer WWW</strong>,
+                <strong>web serwer</strong> lub <strong>serwer webowy</strong>.
             </p>
-            <p class="article__text"><strong>Serwer (Web serwer/serwer HTTP)</strong> - jego definicja zależy głównie od
+            <p class="article__text"><strong>Serwer (web serwer/serwer HTTP)</strong> - jego definicja zależy głównie od
                 kontekstu. Może być to:</p>
             <ul class="article__list">
                 <li class="article__list-item">Program, do którego łączy się klient (najczęściej przeglądarka).</li>
                 <li class="article__list-item">Fizyczne urządzenie, podłączone do sieci (internetu), które świadczy
                     usługi, np. udostępnia zasoby.</li>
             </ul>
-            <p class="article__text">Zadanie Web serwera:</p>
+            <p class="article__text">Zadanie web serwera:</p>
             <ol class="article__list">
                 <li class="article__list-item">Nasłuchiwanie żądań (<i>request</i>) od klienta (najczęściej
                     przeglądarki).</li>
@@ -838,14 +840,14 @@
             </ol>
             <p class="article__text"><strong>Klient</strong> - dowolny program, który łączy się z serwerem. Najczęściej
                 jest nim przeglądarka internetowa. Klientem może być także aplikacja mobilna lub serwer, np. gdy wysyła
-                żądanie do zewnętrznego API.</p>
+                żądanie do zewnętrznego <i>API</i>.</p>
             <p class="article__text"><strong>TCP/IP (Transmission Control Protocol)</strong> - protokół stanowiący
                 fundament internetu. Definiuje sposób w jaki komunikuje się klient z serwerem.</p>
             <p class="article__text"><strong>HTTP (HyperText Transfer Protocol)</strong> - zbiór reguł dla przesyłanych
                 danych i ich formatu. Obejmuje m.in. budowę zawartości żądania (<i>request</i>) i odpowiedzi
                 (<i>response</i>). Najpopularniejszy z protokołów, z którego korzysta <i>TCP/IP</i>. Inne popularne
                 to <i>FTP</i> czy <i>SMTP</i>. Protokół <i>HTTP</i> powstał w 1991 roku. Jest wykorzystywany zarówno w
-                świecie stron internetowych oraz przy udostępnianiu API (np. dla aplikacji mobilnych czy urządzeń
+                świecie stron internetowych oraz przy udostępnianiu <i>API</i> (np. dla aplikacji mobilnych czy urządzeń
                 <i>IoT</i>).
             </p>
             <p class="article__text"><strong>REST API/RESTful API</strong> - specjalna architektura pisania serwerów
@@ -869,6 +871,97 @@
                 wyobrazić jako linię łączącą (połączenie), po której przesyłane są dane. Otwiera się i zamyka.</p>
             <p class="article__text"><strong>Pakiet</strong> - sposób przesyłania danych. Dane dzielone są na fragmenty
                 i w taki sposób przesyłane są między klientem a serwerem.</p>
+            <p class="article__text"><strong>Adres URL</strong> - adres składający się z protokołu, hosta, portu oraz
+                ścieżki. W adresie <strong>https://websitename.com:443/path/to/resource</strong> można wyróżnić:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><i>HTTP/HTTPS/FTP</i> - protokół, określany również schematem
+                    (<i>scheme</i>). <i>HTTPS</i> to protokół <i>HTTP</i> w wersji szyfrowanej.</li>
+                <li class="article__list-item"><i>websitename.com</i> - host (domena lub adres IP).</li>
+                <li class="article__list-item"><i>443</i> - port. Połączenie wymaga nie tylko adresu <i>IP</i>, ale
+                    także numeru portu, na którym web serwer nasłuchuje zapytania. Na serwerze może działać wiele
+                    programów nasłuchujących żądania i port ma na celu prawidłowe rozdzielenie żądań. Kiedy przychodzi
+                    zapytanie do serwera (w przypadku platformy Node.js), to sprawdzane jest czy serwer obsługuje dany
+                    port. Jeśli tak, to żądanie takie trafia do serwera. Nie trzeba podawać portu w adresie strony,
+                    ponieważ istnieją porty domyślne, np. 443 dla protokołu <i>HTTPS</i>, 80 dla protokołu <i>HTTP</i>.
+                </li>
+                <li class="article__list-item"><i>path/to/resource</i> - ścieżka.</li>
+            </ul>
+            <p class="article__text"><i>URL (Uniform Resource Locator)</i> to rodzaj <i>URI (Uniform Resource
+                    Identifier)</i>, czyli unikalnego identyfikatora.</p>
+            <p class="article__text">W Node.js web serwer i aplikacja serwerowa to w istocie to samo. Node.js jest
+                używany do tworzenia aplikacji serwerowych, których częścią jest serwer <i>HTTP</i>. Wynikiem działania
+                aplikacji serwerowej najczęściej jest strona www, aplikacja webowa (sieciowa) czy udostępnione
+                <i>API</i> (<i>RESTful API</i>).
+            </p>
+            <p class="article__text">Moduł <i>http</i> w Node.js, to kompletne i wydajne rozwiązania pozwalające tworzyć
+                serwer <i>HTTP</i>. Inne, bardziej zaawansowane frameworki (np. <i>Express</i>, <i>NestJS</i>),
+                zazwyczaj pod spodem korzystają właśnie z modułu <i>http</i>.</p>
+            <p class="article__text">Metodą modułu <i>http</i> pozwalającą na stworzenie obiektu typu <i>Server</i> jest
+                <i>createServer</i>. Na obiekcie typu <i>Server</i> możliwe jest z kolei wywołanie metody <i>on</i>,
+                która jako argument przyjmuje funkcję <i>callback</i>, która z kolei przyjmuje dwa argumenty:
+                <i>request</i> i <i>response</i> oznaczające odpowiednio obiekt żądania klienta i obiekt odpowiedzi
+                serwera. Funkcja <i>callback</i> jest <i>listenerem</i>, czyli zostania wywołana przez jakieś zdarzenie,
+                np. w momencie wpisania adresu w przeglądarce przez użytkownika. Ile żądań, tyle razy wywoływana jest
+                funkcja <i>callback</i> (dla każdego żądania tworzony jest obiekt żądania (instancja klasy
+                <i>IncomingMessage</i>) i obiekt odpowiedzi (instancja klasy <i>ServerResponse</i>), które zostają
+                przekazane do wywoływanej funkcji).
+            </p>
+            <p class="article__text">Własności obiektu żądania:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>req.url</strong> - ścieżka <i>URL</i> (sama domena to '/').</li>
+                <li class="article__list-item"><strong>req.method</strong> - metoda (domyślnie <i>GET</i>).</li>
+                <li class="article__list-item"><strong>req.headers</strong> - obiekt składający się z par klucz-wartość)
+                </li>
+            </ul>
+            <p class="article__text">Własność i metody obiektu odpowiedzi:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>res.statusCode</strong> - kod odpowiedzi.</li>
+                <li class="article__list-item"><strong>res.writeHead()</strong> - jako pierwszy argument przyjmuje kod
+                    odpowiedzi serwera, drugim argumentem jest nagłówek w formie obiektu typu <i>JSON</i>. Metoda
+                    definiuje status odpowiedzi oraz nagłówki odpowiedzi w formie obiektu, np. <strong>writeHead(200, {
+                        'content-type': 'applcation/json' })</strong>.</li>
+                <li class="article__list-item"><strong>write()</strong> - jako argument przyjmuje zawartość odpowiedzi
+                    właściwej (np. fragment dokumentu <i>HTML</i>), która będzie odesłana do klienta.</li>
+                <li class="article__list-item"><strong>res.end()</strong> - jako opcjonalny argument przyjmuje zawartość
+                    odpowiedzi właściwej (np. fragment dokumentu <i>HTML</i>), dzięki czemu metoda ta może również
+                    pełnić rolę metody <i>write</i>. Metoda <i>end</i> informuje serwer, że wszystkie nagłówki oraz
+                    treść odpowiedzi zostały wysłane. Jej wywołanie jest obowiązkowe dla każdego obiektu odpowiedzi,
+                    ponieważ bez niej odpowiedź nie zostanie wysłana do klienta.</li>
+            </ul>
+            <p class="article__text">Metoda ustawiająca nasłuchiwanie na serwerze to <i>listen</i>. Jako argumenty
+                przyjmuje numer portu i adres <i>IP</i>
+                hosta. Może zostać wywołana na obiektach typu <i>Server</i>.</p>
+            <p class="article__text">Żądanie wysłane przez klienta zawiera:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Nazwę metody (domyślnie <i>GET</i>).</li>
+                <li class="article__list-item">Ścieżkę <i>URL</i>.</li>
+                <li class="article__list-item">Wersję protokołu.</li>
+                <li class="article__list-item">Nagłówki (pary klucz-wartość, np. <strong>{ host: 'localhost:2000'
+                        }</strong>).</li>
+                <li class="article__list-item"><i>Body</i> (opcjonalnie, np. dane w formacie <i>JSON</i>
+                    przesłane za pomocą formularza).</li>
+            </ul>
+            <p class="article__text">Odpowiedź wysłana przez serwer zawiera:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Wersję protokołu.</li>
+                <li class="article__list-item">Kod odpowiedzi.</li>
+                <li class="article__list-item">Nagłówki (pary klucz-wartość, np. <strong>{ connection: 'keep-alive'
+                        }</strong> lub nagłówek własny, który zawsze rozpoczyna się znakiem <strong>X</strong>, np.
+                    <strong>{ X-my-header: 'Hello World!'</strong>).
+                </li>
+                <li class="article__list-item"><i>Body</i> (odpowiedź właściwa).</li>
+            </ul>
+            <p class="article__text">Przykłady żądań:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>GET / HTTP/1.1</strong> (sam <i>slash</i> oznacza pobranie
+                    ścieżki głównej).</li>
+                <li class="article__list-item"><strong>POST /user/name/exampleuser HTTP/1.1</strong>.</li>
+            </ul>
+            <p class="article__text">Zarówno w żądaniu jak i w odpowiedzi najpierw wysyłane są nagłówki a następnie
+                treść właściwa. Serwer generuje obiekt odpowiedzi i przekazuje go do funkcji zwrotnej jako drugi
+                argument. Wewnątrz funkcji możliwa jest edycja i zakończenie (wysłanie do klienta) takiego obiektu.
+                Należy pamiętać, aby wewnątrz funkcji tworzyć logikę asynchroniczną, aby uniknąć blokowania serwera.
+                Jest to kluczem do wydajnych serwerów Node.js.</p>
         </article>
     </main>
     <footer class="footer">
