@@ -312,19 +312,20 @@
                 <li class="article__list-item"><strong>__filename</strong> - zwraca ścieżkę do wywoływanego pliku
                     JavaScript.</li>
             </ul>
-            <p class="article__text">Funkcje synchronicznego modułu <i>path</i>:</p>
+            <p class="article__text">Metody synchronicznego modułu <i>path</i>:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>basename</strong> - zwraca ostatnią część ścieżki, ignorując
+                <li class="article__list-item"><strong>basename</strong>() - zwraca ostatnią część ścieżki, ignorując
                     końcowe separatory.</li>
-                <li class="article__list-item"><strong>join</strong> - łączy wszystkie składowe ścieżki z użyciem
+                <li class="article__list-item"><strong>join</strong>() - łączy wszystkie składowe ścieżki z użyciem
                     separatora specyficznego dla danej platformy oraz upraszcza ścieżkę.</li>
-                <li class="article__list-item"><strong>dirname</strong> - zwraca ścieżkę do katalogu w którym znajduje
+                <li class="article__list-item"><strong>dirname</strong>() - zwraca ścieżkę do katalogu w którym znajduje
                     się element przekazany jako argument, ignorując końcowe separatory.</li>
-                <li class="article__list-item"><strong>extname</strong> - zwraca rozszerzenie wraz z kropką.</li>
-                <li class="article__list-item"><strong>normalize</strong> - normalizuje podaną ścieżkę, usuwając
+                <li class="article__list-item"><strong>extname</strong>() - zwraca rozszerzenie wraz z kropką.</li>
+                <li class="article__list-item"><strong>normalize</strong>() - normalizuje podaną ścieżkę, usuwając
                     zbędne elementy przejścia do katalogu wyżej (<strong>..</strong>) oraz zbędne przejścia do
                     aktualnego katalogu (<strong>.</strong>).</li>
-                <li class="article__list-item"><strong>resolve</strong> - łączy ścieżki do postaci ścieżki bezwzględnej.
+                <li class="article__list-item"><strong>resolve</strong>() - łączy ścieżki do postaci ścieżki
+                    bezwzględnej.
                 </li>
             </ul>
             <p class="article__text">Funkcja <i>safeJoin</i> (korzystająca z funkcji <i>normalize</i> i <i>resolve</i>
