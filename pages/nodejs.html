@@ -101,7 +101,7 @@
                 wyłącznie wersji <i>Active LTS</i> lub <i>Maintenance LTS</i>.</p>
             <p class="article__text">Komendy przydatne w terminalu:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>node</strong> - uruchamia interatkywną konsolę w środowisku
+                <li class="article__list-item"><strong>node</strong> - uruchamia interaktywną konsolę w środowisku
                     Node.js (aby ją opuścić należy skorzystać z kombinacji <strong>ctrl + c</strong>).</li>
                 <li class="article__list-item"><strong>node -v</strong> - sprawdza posiadaną wersję Node.js.</li>
                 <li class="article__list-item"><strong>npm -v</strong> - sprawdza posiadaną wersję <i>npm</i>.</li>
@@ -777,7 +777,7 @@
             </ol>
             <p class="article__text">Dzięki obiektom typu <i>EventEmitter</i> z wykorzystaniem pewnych metod możliwe
                 jest zarówno emitowanie zdarzeń oraz reakcja na nie. Obiekty te umożliwiają również w dowolnym miejscu
-                programu (o ile możliwy jest dostp do tego samego obiektu typu <i>EventEmitter</i>) nasłuchiwanie na
+                programu (o ile możliwy jest dostęp do tego samego obiektu typu <i>EventEmitter</i>) nasłuchiwanie na
                 dowolne zdarzenie dowolną ilość razy.</p>
             <p class="article__text">Import klasy <i>EventEmitter</i>:<br>
                 <strong>const { EventEmitter } = require('events');</strong>
@@ -786,7 +786,7 @@
             <ul class="article__list">
                 <li class="article__list-item">Metoda z wykorzystaniem funkcji. Utworzenie obiektu typu
                     <i>EventEmitter</i> wewnątrz funkcji. Wywołanie takiej funkcji wywoła także metody emitujące
-                    zdarzenie wywołane wewnątrze tej funkcji.
+                    zdarzenie wywołane wewnątrz tej funkcji.
                 </li>
                 <li class="article__list-item">Metoda z wykorzystaniem klasy. Utworzenie nowej klasy poprzez
                     rozszerzenie klasy <i>EventEmitter</i>. Należy pamiętać, aby w konstruktorze wywołać <i>super</i> (w
@@ -827,7 +827,7 @@
                 kontekstu. Może być to:</p>
             <ul class="article__list">
                 <li class="article__list-item">Program, do którego łączy się klient (najczęściej przeglądarka).</li>
-                <li class="article__list-item">Fizyczne urządzenie, podłączone do sieci (internetu), które świadczy
+                <li class="article__list-item">Fizyczne urządzenie, podłączone do sieci (Internetu), które świadczy
                     usługi, np. udostępnia zasoby.</li>
             </ul>
             <p class="article__text">Zadanie web serwera:</p>
@@ -842,7 +842,7 @@
                 jest nim przeglądarka internetowa. Klientem może być także aplikacja mobilna lub serwer, np. gdy wysyła
                 żądanie do zewnętrznego <i>API</i>.</p>
             <p class="article__text"><strong>TCP/IP (Transmission Control Protocol)</strong> - protokół stanowiący
-                fundament internetu. Definiuje sposób w jaki komunikuje się klient z serwerem.</p>
+                fundament Internetu. Definiuje sposób w jaki komunikuje się klient z serwerem.</p>
             <p class="article__text"><strong>HTTP (HyperText Transfer Protocol)</strong> - zbiór reguł dla przesyłanych
                 danych i ich formatu. Obejmuje m.in. budowę zawartości żądania (<i>request</i>) i odpowiedzi
                 (<i>response</i>). Najpopularniejszy z protokołów, z którego korzysta <i>TCP/IP</i>. Inne popularne
@@ -854,6 +854,9 @@
                 korzystających np. z <i>HTTP</i>. Jeszcze dokładniejsze określenie tego co i kiedy przesyłać.</p>
             <p class="article__text"><strong>API</strong> - w przypadku serwerów jest to sposób, w jaki klient
                 porozumiewa się z serwerem.</p>
+            <p class="article__text"><strong>Endpoint</strong> - zdefiniowany <i>URL</i>, który robi różne rzeczy przy
+                żądaniach zawierających różne metody. Taki <i>endpoint</i> jest sposobem na udostępnienie <i>API</i>.
+            </p>
             <p class="article__text">W porównaniu do komunikacji międzyludzkiej, każdy z czterech powyższych elementów
                 komunikacji jest uściśleniem, ułatwiającym porozumiewanie się między dwoma osobami znającymi dane
                 pojęcia.</p>
@@ -957,17 +960,95 @@
                     ścieżki głównej).</li>
                 <li class="article__list-item"><strong>POST /user/name/exampleuser HTTP/1.1</strong>.</li>
             </ul>
+            <p class="article__text">Metody HTTP:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>GET</strong> - domyślna metoda w przeglądarce, używana do
+                    pobierania danych.</li>
+                <li class="article__list-item"><strong>HEAD</strong> - analogiczna do metody <i>GET</i>, lecz
+                    pobierająca jedynie nagłówki (bez odpowiedzi właściwej).</li>
+                <li class="article__list-item"><strong>POST</strong> - używana do przesyłania danych. W przypadku
+                    <i>REST API</i> pod przygotowany <i>URL</i> przesyłane są dane (<i>JSON</i>), które np. mogą
+                    zmieniać stan aplikacji/dodawać zasoby do bazy danych. Metoda wykorzystywana w formularzu w
+                    aplikacji (zawartość formularza przesyłana w żądaniu jako <i>body</i> oraz metoda <i>POST</i>).
+                </li>
+                <li class="article__list-item"><strong>PATCH</strong> - używana do aktualizacji danych.</li>
+                <li class="article__list-item"><strong>PUT</strong> - analogiczna do metody <i>PATCH</i>, lecz
+                    zastępuje aktualne zasoby/dane nowo przyjętymi.</li>
+                <li class="article__list-item"><strong>DELETE</strong> - używana do usuwania zasobów/danych.</li>
+            </ul>
             <p class="article__text">Zarówno w żądaniu jak i w odpowiedzi najpierw wysyłane są nagłówki a następnie
                 treść właściwa. Serwer generuje obiekt odpowiedzi i przekazuje go do funkcji zwrotnej jako drugi
                 argument. Wewnątrz funkcji możliwa jest edycja i zakończenie (wysłanie do klienta) takiego obiektu.
                 Należy pamiętać, aby wewnątrz funkcji tworzyć logikę asynchroniczną, aby uniknąć blokowania serwera.
                 Jest to kluczem do wydajnych serwerów Node.js.</p>
+            <p class="article__text"><strong>MIME (Multipurpose Internet Mail
+                    Extension)</strong>/<strong>Content-type</strong> - identyfikator odpowiedzi, który informuje
+                klienta o tym, co jest wysyłane:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>{ 'content-type': 'applcation/json' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'text/css' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'text/plain' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'text/html' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'text/html; charset=utf-8' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'video/mp4' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'image/png' }</strong>,</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'image/jpg' }</strong>.</li>
+            </ul>
+            <p class="article__text">Statusy odpowiedzi składają się z liczby trzycyfrowej. Pierwsza cyfra mówi o
+                grupie, do której należy dany status:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>1XX</strong> - kody informacyjne,</li>
+                <li class="article__list-item"><strong>2XX</strong> - kody sukcesu,</li>
+                <li class="article__list-item"><strong>3XX</strong> - kody przekierowania,</li>
+                <li class="article__list-item"><strong>4XX</strong> - kody błędu klienta,</li>
+                <li class="article__list-item"><strong>5XX</strong> - kody błędu serwera.</li>
+            </ul>
+            <p class="article__text">Lista <a class="article__link"
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types/">powszechnych</a>
+                oraz <a class="article__link"
+                    href="https://www.iana.org/assignments/media-types/media-types.xhtml">wszystkich
+                    oficjalnych</a> identyfikatorów formatu plików i treści przesyłanych w Internecie (<i>MIME</i>).
+                Przeglądarka jest najpopularniejszym z klientów, w związku z czym jest ona przystosowana zarówno do
+                przygotowania i wysłania żądania, jak również do odbioru i dostosowania odpowiedzi.
+            </p>
+            <p class="article__text">Szukanie adresu IP:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Po wpisaniu adresu strony (np. <i>example.com</i>) przeglądarka
+                    automatycznie uzupełni go o schemat <i>HTTP</i>.</li>
+                <li class="article__list-item">Później następuje analiza adresu <i>URL</i> i ustalenie jaki adres
+                    <i>IP</i> kryje się za daną domeną (np. 152.164.35.21:80). Przeglądarka robi to automatycznie (np.
+                    sprawdza w serwerach <i>DNS</i>).
+                </li>
+            </ul>
+            <p class="article__text">Nawiązanie połączenia (<i>socket</i>):</p>
+            <ul class="article__list">
+                <li class="article__list-item">Klient inicjalizuje połączenie. Serwer je akceptuje.</li>
+                <li class="article__list-item">Protokół TCP/IP (płytszy etap komunikacji klienta z serwerem).</li>
+                <li class="article__list-item">Tworzone jest gniazdo łączące (<i>socket</i>), które posiada adresy oraz
+                    określony protokół wymiany danych <i>HTTP</i> (głębszy etap komunikacji klienta z serwerem).</li>
+            </ul>
+            <p class="article__text">Odebranie i przetwarzanie żądania przez Node.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Następuje sprawdzenie czy host i port się zgadzają (z tymi ustawionymi na
+                    nasłuchiwaniu web serwera).</li>
+                <li class="article__list-item">Jeśli się zgadzają, tworzone są obiekty: żądania i odpowiedzi. Następnie
+                    uruchomiona zostaje funkcja <i>callback</i>.</li>
+                <li class="article__list-item">Aplikacja serwerowa zostaje uruchomiona, a w oparciu o mapowanie
+                    (<i>routing</i>) zostają przyporządkowane różne zasoby/logika do różnych zapytań (najczęściej w
+                    zależności od rodzaju metody w żądaniu (np. <i>GET</i> lub <i>POST</i>) oraz ścieżki (np.
+                    <i>article/291</i>)).
+                </li>
+            </ul>
+            <p class="article__text">Wysłanie odpowiedzi do klienta:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Do klienta wysłana zostaje odpowiedź, składająca się ze statusu,
+                    nagłówków oraz odpowiedzi właściwej.</li>
+                <li class="article__list-item">Przeglądarka przyjmuje odpowiedź, przetwarza ją oraz zamyka połączenie
+                    (nie zawsze).</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
-        <p class="footer__text">
-            Zawartość będzie aktualizowana na bieżąco.
-        </p>
         <p class="footer__text">Maciej Ryszka - 2021</p>
     </footer>
     <script src="../scripts/hamburger-menu.js"></script>
