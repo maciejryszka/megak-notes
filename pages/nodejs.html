@@ -902,11 +902,12 @@
                 zazwyczaj pod spodem korzystają właśnie z modułu <i>http</i>.</p>
             <p class="article__text">Metodą modułu <i>http</i> pozwalającą na stworzenie obiektu typu <i>Server</i> jest
                 <i>createServer</i>. Na obiekcie typu <i>Server</i> możliwe jest z kolei wywołanie metody <i>on</i>,
-                która jako argument przyjmuje funkcję <i>callback</i>, która z kolei przyjmuje dwa argumenty:
-                <i>request</i> i <i>response</i> oznaczające odpowiednio obiekt żądania klienta i obiekt odpowiedzi
-                serwera. Funkcja <i>callback</i> jest <i>listenerem</i>, czyli zostania wywołana przez jakieś zdarzenie,
-                np. w momencie wpisania adresu w przeglądarce przez użytkownika. Ile żądań, tyle razy wywoływana jest
-                funkcja <i>callback</i> (dla każdego żądania tworzony jest obiekt żądania (instancja klasy
+                która jako pierwszy argument przyjmuje łańcuch znaków reprezentujący nazwę zdarzenia, a jako drugi
+                argument - funkcję <i>callback</i>, która z kolei przyjmuje dwa argumenty: <i>request</i> i
+                <i>response</i> oznaczające odpowiednio obiekt żądania klienta i obiekt odpowiedzi serwera. Funkcja
+                <i>callback</i> jest <i>listenerem</i>, czyli zostania wywołana przez jakieś zdarzenie, np. w momencie
+                wpisania adresu w przeglądarce przez użytkownika. Ile żądań, tyle razy wywoływana jest funkcja
+                <i>callback</i> (dla każdego żądania tworzony jest obiekt żądania (instancja klasy
                 <i>IncomingMessage</i>) i obiekt odpowiedzi (instancja klasy <i>ServerResponse</i>), które zostają
                 przekazane do wywoływanej funkcji).
             </p>
