@@ -27,7 +27,7 @@
                         <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
                     </li>
                     <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">3: Express.js</a>
+                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
                     </li>
                     <li class="hamburger-menu__list-item">
                         <a class="hamburger-menu__link" href="#">4: bazy danych</a>
@@ -52,7 +52,7 @@
             <p class="header-navigation__text">mega kurs javascriptu</p>
         </nav>
     </header>
-    <main id="top" class="main theory-main">
+    <main class="main theory-main">
         <h1 class="theory-main__heading">node.js</h1>
         <nav class="theory-main__links">
             <a href="#fundaments" class="theory-main__link">fundamenty node.js</a>
@@ -259,28 +259,28 @@
                 na wykonywanie na nich operacji takich jak: odczyt, zapis, przegląd.</p>
             <p class="article__text">Funkcje modułu <i>fs</i> służące do współpracy z plikami w Node.js:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>readFile</strong> - umożliwia odczyt plików.</li>
-                <li class="article__list-item"><strong>writeFile</strong> - umożliwia zapis plików. W celu zapisu plików
-                    w sposób inny niż domyślny (np. dodawanie nowych elementów na koniec pliku, zamiast zastępowanie
-                    nimi poprzednich elementów), należy użyć odpowiednich flag jako argumentu funkcji.</li>
-                <li class="article__list-item"><strong>readdir</strong> - umożliwia listowanie plików i folderów
+                <li class="article__list-item"><strong>readFile</strong>() - umożliwia odczyt plików.</li>
+                <li class="article__list-item"><strong>writeFile</strong>() - umożliwia zapis plików. W celu zapisu
+                    plików w sposób inny niż domyślny (np. dodawanie nowych elementów na koniec pliku, zamiast
+                    zastępowanie nimi poprzednich elementów), należy użyć odpowiednich flag jako argumentu funkcji.</li>
+                <li class="article__list-item"><strong>readdir</strong>() - umożliwia listowanie plików i folderów
                     znajdujących się w danym katalogu.</li>
-                <li class="article__list-item"><strong>stat</strong> - umożliwia dostęp do szczegółowych informacji o
+                <li class="article__list-item"><strong>stat</strong>() - umożliwia dostęp do szczegółowych informacji o
                     elementach znajdujących się w danym katalogu.</li>
-                <li class="article__list-item"><strong>exists</strong> - umożliwia sprawdzenie czy plik istnieje
+                <li class="article__list-item"><strong>exists</strong>() - umożliwia sprawdzenie czy plik istnieje
                     (niezalecany sposób).</li>
-                <li class="article__list-item"><strong>access</strong> - umożliwia sprawdzenie czy plik istnieje
+                <li class="article__list-item"><strong>access</strong>() - umożliwia sprawdzenie czy plik istnieje
                     (lepszy, lecz również niezalecany sposób).</li>
-                <li class="article__list-item"><strong>mkdir</strong> - umożliwia tworzenie nowego katalogu. W celu
+                <li class="article__list-item"><strong>mkdir</strong>() - umożliwia tworzenie nowego katalogu. W celu
                     utworzenia zarówno katalogu/katalogów nadrzędnych oraz docelowego katalogu lub pliku, należy włączyć
                     rekursywność.
                 </li>
-                <li class="article__list-item"><strong>rmdir</strong> - umożliwia usuwanie katalogów.</li>
-                <li class="article__list-item"><strong>rm</strong> - umożliwia usuwanie plików oraz katalogów. W celu
+                <li class="article__list-item"><strong>rmdir</strong>() - umożliwia usuwanie katalogów.</li>
+                <li class="article__list-item"><strong>rm</strong>() - umożliwia usuwanie plików oraz katalogów. W celu
                     usunięcia elementów zagnieżdżonych, należy włączyć rekursywność.</li>
-                <li class="article__list-item"><strong>rename</strong> - umożliwia zmianę nazwy oraz przenoszenie
+                <li class="article__list-item"><strong>rename</strong>() - umożliwia zmianę nazwy oraz przenoszenie
                     elementu. </li>
-                <li class="article__list-item"><strong>unlink</strong> - umożliwia usuwanie niezagnieżdżonych plików.
+                <li class="article__list-item"><strong>unlink</strong>() - umożliwia usuwanie niezagnieżdżonych plików.
                 </li>
             </ul>
             <p class="article__text">Nie należy sprawdzać istnienia pliku próbą jego odczytu/zapisu, ponieważ
@@ -915,7 +915,7 @@
             <ul class="article__list">
                 <li class="article__list-item"><strong>req.url</strong> - ścieżka <i>URL</i> (sama domena to '/').</li>
                 <li class="article__list-item"><strong>req.method</strong> - metoda (domyślnie <i>GET</i>).</li>
-                <li class="article__list-item"><strong>req.headers</strong> - obiekt składający się z par klucz-wartość)
+                <li class="article__list-item"><strong>req.headers</strong> - obiekt składający się z par klucz-wartość.
                 </li>
             </ul>
             <p class="article__text">Własność i metody obiektu odpowiedzi:</p>
@@ -994,7 +994,7 @@
                 <li class="article__list-item"><strong>{ 'content-type': 'text/html; charset=utf-8' }</strong>,</li>
                 <li class="article__list-item"><strong>{ 'content-type': 'video/mp4' }</strong>,</li>
                 <li class="article__list-item"><strong>{ 'content-type': 'image/png' }</strong>,</li>
-                <li class="article__list-item"><strong>{ 'content-type': 'image/jpg' }</strong>.</li>
+                <li class="article__list-item"><strong>{ 'content-type': 'image/jpeg' }</strong>.</li>
             </ul>
             <p class="article__text">Statusy odpowiedzi składają się z liczby trzycyfrowej. Pierwsza cyfra mówi o
                 grupie, do której należy dany status:</p>

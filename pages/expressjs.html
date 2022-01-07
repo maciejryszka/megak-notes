@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaKurs - JavaScript</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-navigation">
+            <nav class="hamburger-menu hamburger-menu--js">
+                <ul class="hamburger-menu__list">
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">4: bazy danych</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header-navigation__button header-navigation__button--menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="header-navigation__button header-navigation__button--top">
+                <i class="fas fa-arrow-circle-up"></i>
+            </button>
+            <p class="header-navigation__text">mega kurs javascriptu</p>
+        </nav>
+    </header>
+    <main class="main theory-main">
+        <h1 class="theory-main__heading">express.js</h1>
+        <nav class="theory-main__links">
+            <a href="#fundaments" class="theory-main__link">fundamenty express.js</a>
+            <span class="theory-main__text">•</span>
+            <a href="#request" class="theory-main__link">request</a>
+            <span class="theory-main__text">•</span>
+        </nav>
+        <div class="theory-main__image"></div>
+        <article id="fundaments" class="article">
+            <h2 class="article__heading">fundamenty express.js</h2>
+            <p class="article__text">Express.js jest frameworkiem serwera webowego dla Node.js.</p>
+            <p class="article__text">Cechy Express.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Jest szybki - prawie tak szybki jak sam <i>HTTP server</i> Node.js.</li>
+                <li class="article__list-item">Jest minimalistyczny - zawiera tylko najważniejsze rzeczy, lecz może być
+                    rozszerzany o dodatkowe moduły.</li>
+                <li class="article__list-item">Nie wymusza określonego podejścia podczas pisania kodu.</li>
+            </ul>
+            <p class="article__text">Zalety Express.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Pozwala na wykonanie w sposób szybszy wielu rzeczy dostępnych w Node.js
+                    (dzięki dostarczasniu narzędzi pomagających pisać aplikacje webowe i mobilne od strony back-endu).
+                </li>
+                <li class="article__list-item">Ułatwia pisanie ścieżek, obsługę poszczególnych metod <i>HTTP</i> oraz
+                    tworzenie <i>API</i>.</li>
+                <li class="article__list-item">Korzysta z rzeczy zawartych w Node.js. Dodane są jedynie pewne
+                    możliwości, które przekładają się na szybsze działanie Express.js.</li>
+                <li class="article__list-item">Jest wykorzystywany jako podstawa innych, bardziej zaawansowanych
+                    frameworków webowych opartych na Node.js (np. <i>NestJS</i>, <i>Sails.js</i>, <i>LoopBack</i>).
+                    Frameworki takie stosowane są głównie do tworzenia rozbudowanych aplikacji.
+                </li>
+            </ul>
+            <p class="article__text">Sposób użycia Express.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>npm i express</strong> - instalacja za pośrednictwem dowolnego
+                    menadżera paczek (przykładowa komenda dla menadżera <i>npm</i>).</li>
+                <li class="article__list-item"><strong>require('express')</strong> - import modułu z wykorzystaniem
+                    metody <i>require</i> (należy pobrać cały moduł do jednej zmiennej bez stosowania destrukturyzacji).
+                </li>
+                <li class="article__list-item"><strong>const app = express()</strong> - importowany moduł <i>express</i>
+                    jest jedną, wielką funkcją, której wywołanie tworzy aplikację back-endową.
+                </li>
+                <li class="article__list-item"><strong>app.listen(portNumber)</strong> - uruchomienie nasłuchiwania
+                    poprzez wywołanie funkcji <i>listen</i> na obiekcie aplikacji. Argumentem jest łańcuch znaków
+                    zawierający numer portu, na którym wykonywane będzie nasłuchiwanie.
+                </li>
+                <li class="article__list-item"><strong>app.httpMethod(path, () => {})</strong> - wywołanie funkcji
+                    <i>callback</i> następuje w przypadku otrzymania określonego żądania dla określonej ścieżki.
+                </li>
+                <li class="article__list-item"><strong>app.all(path, () => {})</strong> - wywołanie funkcji
+                    <i>callback</i> następuje w przypadku otrzymania jakiegokolwiek żądania dla określonej ścieżki.
+                </li>
+            </ul>
+            <p class="article__text">Zasób jest jednak najczęściej definiowany na podstawie dwóch informacji: metody i
+                ścieżki (metoda <i>all</i> nie jest wykorzystywana zbyt często).
+            </p>
+        </article>
+        <article id="request" class="article">
+            <h2 class="article__heading">request</h2>
+            <p class="article__text">Obiekt typu <strong>Request</strong> występujący w funkcji <i>callback</i>
+                (wywoływanej w przypadku otrzymania żądania) reprezentuje każde żądanie <i>HTTP</i>. Najczęściej
+                przyjęło się nazywać ten parametr <i>req</i>.</p>
+            <p class="article__text">Własności obiektu typu <i>Request</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>hostname</strong> - nazwa hosta - serwera, na którym uruchomiona
+                    jest aplikacja.</li>
+                <li class="article__list-item"><strong>ip</strong> - adres <i>IP</i> klienta - najczęściej więc
+                    komputera lub urządzenia mobilnego, z którego przeglądarki wysłano zapytanie do serwera. Czasami
+                    serwer <i>proxy</i> ukrywa i nadpisuje informację o <i>IP</i>.</li>
+                <li class="article__list-item"><strong>ips</strong> - tablica adresów <i>IP</i>, z których przeglądarki
+                    wysłano zapytania do serwera. Przydatna własność ze względu na to, że w wielu przypadkach <i>IP</i>
+                    jest zakłamane przez <i>proxy</i>. Aby odzyskać oryginalne <i>IP</i>, należy szukać go w tablicy z
+                    adresami.</li>
+                <li class="article__list-item"><strong>method</strong> - metoda, za pomocą której klient próbuje
+                    połączyć się z serwerem.</li>
+                <li class="article__list-item"><strong>url</strong> - ścieżka. Nie pochodzi z Express.js, lecz z Node.js
+                </li>
+                <li class="article__list-item"><strong>originalUrl</strong> - ścieżka, która jest pierwotna i
+                    znormalizowana, nawet po przekierowaniach (zalecany sposób).</li>
+                <li class="article__list-item"><strong>path</strong> - ścieżka, która zawiera również parametry (jeśli
+                    zostały przekazane).</li>
+                <li class="article__list-item"><strong>protocol</strong> - protokół użyty do przesłania żądania.</li>
+                <li class="article__list-item"><strong>secure</strong> - wartość logiczna sprawdzająca czy użyto
+                    bezpiecznego protokołu do przesłania żądania.</li>
+            </ul>
+            <p class="article__text">Parametry mogą być przekazywane z użyciem adresu <i>URL</i> za pomocą tzw. <i>Query
+                    String</i> (np. <i>http://www.phoneshop.com/?product=phone&size=32gb&color=white</i>):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>?</strong> - początek <i>Query String</i> (żądanie zostanie
+                    przekierowane do ścieżki znajdującej się przed tym znakiem, niezależnie od tego co znajduje się po
+                    nim).</li>
+                <li class="article__list-item"><strong>&</strong> - separator <i>Query String</i>.</li>
+                <li class="article__list-item"><strong>product</strong>, <strong>size</strong>, <strong>color</strong> -
+                    nazwy parametrów.</li>
+                <li class="article__list-item"><strong>phone</strong>, <strong>32gb</strong>, <strong>white</strong> -
+                    wartości parametrów.</li>
+            </ul>
+            <p class="article__text">Sposoby generowania parametrów adresu <i>URL</i> na front-endzie (np. w celu:
+                przekierowania do konkretnego użytkownika, paginacji (przypisania kolejnych liczb do kolejnych stron),
+                zastosowania dynamicznych adresów wyszukiwania, zastosowania dynamicznych adresów filtrowania,
+                zastosowania dynamicznych adresów sortowania):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">Z użyciem <i>encodeURIComponent</i> (sposób ręczny) - przyjmuje wartość
+                    parametru będącą dowolnym łańcuchem znaków i zwraca łańcuch znaków poprawny do przesłania za pomocą
+                    <i>URL</i> (niezalecana metoda).
+                </li>
+                <li class="article__list-item">Z użyciem obiektu na bazie <i>URLSearchParams</i> - klasę należy
+                    importować z modułu <i>url</i> z Node.js.</li>
+            </ul>
+        </article>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Maciej Ryszka - 2021</p>
+    </footer>
+    <script src="../scripts/hamburger-menu.js"></script>
+    <script src="../scripts/top-button.js"></script>
+</body>
+
+</html>
