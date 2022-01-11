@@ -59,6 +59,8 @@
             <span class="theory-main__text">•</span>
             <a href="#request" class="theory-main__link">request</a>
             <span class="theory-main__text">•</span>
+            <a href="#routing" class="theory-main__link">routing</a>
+            <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -115,7 +117,7 @@
             <p class="article__text">Obiekt typu <strong>Request</strong> występujący w funkcji <i>callback</i>
                 (wywoływanej w przypadku otrzymania żądania) reprezentuje każde żądanie <i>HTTP</i>. Najczęściej
                 przyjęło się nazywać ten parametr <i>req</i>.</p>
-            <p class="article__text">Własności obiektu typu <i>Request</i>:</p>
+            <p class="article__text">Własności i metoda obiektu typu <i>Request</i>:</p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>hostname</strong> - nazwa hosta - serwera, na którym uruchomiona
                     jest aplikacja.</li>
@@ -137,6 +139,8 @@
                 <li class="article__list-item"><strong>protocol</strong> - protokół użyty do przesłania żądania.</li>
                 <li class="article__list-item"><strong>secure</strong> - wartość logiczna sprawdzająca czy użyto
                     bezpiecznego protokołu do przesłania żądania.</li>
+                <li class="article__list-item"><strong>get</strong>() - jako argument przyjmuje łańcuch znaków
+                    zawierający nazwę nagłówka żądania. Zwraca wartość konkretnego nagłówka.</li>
             </ul>
             <p class="article__text">Parametry mogą być przekazywane z użyciem adresu <i>URL</i> za pomocą tzw. <i>Query
                     String</i> (np. <i>http://www.phoneshop.com/?product=phone&size=32gb&color=white</i>):</p>
@@ -156,13 +160,28 @@
                 zastosowania dynamicznych adresów sortowania):
             </p>
             <ul class="article__list">
-                <li class="article__list-item">Z użyciem <i>encodeURIComponent</i> (sposób ręczny) - przyjmuje wartość
-                    parametru będącą dowolnym łańcuchem znaków i zwraca łańcuch znaków poprawny do przesłania za pomocą
-                    <i>URL</i> (niezalecana metoda).
+                <li class="article__list-item">Z użyciem <strong>encodeURIComponent</strong> (sposób ręczny) - przyjmuje
+                    wartość parametru będącą dowolnym łańcuchem znaków i zwraca łańcuch znaków poprawny do przesłania za
+                    pomocą <i>URL</i> (niezalecana metoda).
                 </li>
-                <li class="article__list-item">Z użyciem obiektu na bazie <i>URLSearchParams</i> - klasę należy
-                    importować z modułu <i>url</i> z Node.js.</li>
+                <li class="article__list-item">Z użyciem obiektu na bazie <strong>URLSearchParams</strong> - klasę
+                    należy importować z modułu <i>url</i> z Node.js.</li>
             </ul>
+            <p class="article__text">Spacja w nazwie lub wartości parametru przekazywana jest do adresu <i>URL</i> jako
+                <strong>+</strong> lub <strong>%20</strong>. Ze względu na problem z odczytem znaku <strong>+</strong> w
+                Express.js, wszystkie takie znaki należy zamienić na <strong>%20</strong> z użyciem funkcji
+                <i>replace(/\+/g, '%20')</i> na łańcuchu znaków reprezentującym <i>URL</i>.
+            </p>
+            <p class="article__text">Odbiór parametrów przekazanych z użyciem adresu <i>URL</i>, po stronie Express.js
+                odbywa się z użyciem obiektu <strong>req.query</strong>, gdzie klucze obiektu to nazwy parametrów, a
+                wartości obiektu to wartości parametrów. W przypadku braku przekazania parametrów wraz z adresem
+                <i>URL</i>, obiekt ten będzie pusty.
+            </p>
+        </article>
+        <article id="routing" class="article">
+            <h2 class="article__heading">routing</h2>
+            <p class="article__text"><strong>Routing</strong> mówi o tym, co należy wykonać w jakim zasobie (zasób -
+                konkretna metoda oraz ścieżka).</p>
         </article>
     </main>
     <footer class="footer">
