@@ -156,7 +156,7 @@
                 Przykład: <i>console.log()</i> nie jest częścią specyfikacji, lecz funkcjonalnością, która została
                 dostarczona zarówno przez Node.js jak i przez przeglądarkę pod tą samą nazwą, w celu ułatwienia
                 korzystania z obu środowisk.</p>
-            <p class="article__text"><strong>window.prompt</strong>() - metoda pozwalająca na pobranie danych od
+            <p class="article__text"><strong>window.prompt()</strong> - metoda pozwalająca na pobranie danych od
                 użytkownika.</p>
         </article>
         <article id="operations" class="article">
@@ -296,28 +296,28 @@
                     <strong>length</strong> - zwraca ilość elementów tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>push</strong>(<u>element</u>) - dodaje <u>element</u> na koniec tablicy,
+                    <strong>push(<u>element</u>)</strong> - dodaje <u>element</u> na koniec tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>pop</strong>() - usuwa element z końca tablicy,
+                    <strong>pop()</strong> - usuwa element z końca tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>unshift</strong>(<u>element</u>) - dodaje <u>element</u> na początek tablicy,
+                    <strong>unshift(<u>element</u>)</strong> - dodaje <u>element</u> na początek tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>shift</strong>() - usuwa element z początku tablicy,
+                    <strong>shift()</strong> - usuwa element z początku tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>indexOf</strong>(<u>element</u>) - zwraca indeks pierwszego napotkanego
+                    <strong>indexOf(<u>element</u>)</strong> - zwraca indeks pierwszego napotkanego
                     <u>element</u> lub wartość -1, gdy <u>element</u> nie zostanie
                     odnaleziony w tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>splice</strong>(<u>index</u>, <u>amount</u>) - rozpoczynając od elementu o indeksie
+                    <strong>splice(<u>index</u>, <u>amount</u>)</strong> - rozpoczynając od elementu o indeksie
                     <u>index</u>, usuwa <u>amount</u> elementów z tablicy,
                 </li>
                 <li class="article__list-item">
-                    <strong>slice</strong>(<u>startIndex</u>, <u>endIndex</u>) - rozpoczynając od elementu o
+                    <strong>slice(<u>startIndex</u>, <u>endIndex</u>)</strong> - rozpoczynając od elementu o
                     indeksie <u>startIndex</u> (włącznie), pobiera elementy z tablicy
                     kończąc na elemencie o indeksie <u>endIndex</u> (z wyłączeniem tego
                     elementu).
@@ -332,19 +332,19 @@
             <p class="article__text">Rodzaje pętli:</p>
             <ul class="article__list">
                 <li class="article__list-item">
-                    <strong>for</strong>(let <u>i=0</u>; <u>i&lt;10</u>; <u>i++</u>) {blockOfCode},
+                    <strong>for(let <u>i=0</u>; <u>i&lt;10</u>; <u>i++</u>) {blockOfCode}</strong>,
                 </li>
                 <li class="article__list-item">
-                    <strong>while</strong>(<u>i&lt;10</u>) {blockOfCode},
+                    <strong>while(<u>i&lt;10</u>) {blockOfCode}</strong>,
                 </li>
                 <li class="article__list-item">
-                    <strong>do</strong> {blockOfCode} <strong>while</strong>(<u>i&lt;10</u>),
+                    <strong>do {blockOfCode} <strong>while</strong>(<u>i&lt;10</u>)</strong>,
                 </li>
                 <li class="article__list-item">
-                    <strong>for</strong>(const <u>propertyName</u> <strong>in</strong> <u>object</u>),
+                    <strong>for(const <u>propertyName</u> <strong>in</strong> <u>object</u>)</strong>,
                 </li>
                 <li class="article__list-item">
-                    <strong>for</strong>(const <u>element</u> <strong>of</strong> <u>array</u>).
+                    <strong>for(const <u>element</u> <strong>of</strong> <u>array</u>)</strong>.
                 </li>
             </ul>
             <p class="article__text">
@@ -642,11 +642,11 @@
             </ul>
             <p class="article__text">Metody statyczne:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>object.keys</strong>() - jako argument przyjmuje obiekt.
+                <li class="article__list-item"><strong>object.keys()</strong> - jako argument przyjmuje obiekt.
                     Zwraca tablicę elementów typu <i>string</i> zawierającą nazwy kluczy obiektu.</li>
-                <li class="article__list-item"><strong>object.values</strong>() - jako argument przyjmuje obiekt.
+                <li class="article__list-item"><strong>object.values()</strong> - jako argument przyjmuje obiekt.
                     Zwraca tablicę zawierającą wartości obiektu.</li>
-                <li class="article__list-item"><strong>object.entries</strong>() - jako argument przyjmuje obiekt.
+                <li class="article__list-item"><strong>object.entries()</strong> - jako argument przyjmuje obiekt.
                     Zwraca tablicę tablic, w której każda zagnieżdżona tablica zawiera parę elementów - nazwę
                     klucza oraz odpowiadającą mu wartość.</li>
             </ul>
@@ -734,25 +734,25 @@
             <h2 class="article__heading">zaawansowane metody tablicowe</h2>
             <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>forEach</strong>() - jako argument przyjmuje funkcję, która z
+                <li class="article__list-item"><strong>forEach()</strong> - jako argument przyjmuje funkcję, która z
                     kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
                     element, indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez
                     każdy jej element.
                 </li>
-                <li class="article__list-item"><strong>map</strong>() - jako argument przyjmuje funkcję, która z kolei
+                <li class="article__list-item"><strong>map()</strong> - jako argument przyjmuje funkcję, która z kolei
                     może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
                     element, indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak
                     oryginalna tablica. Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej
                     tablicy i w każdej iteracji zwraca wartość, która trafia do nowej tablicy z takim samym indeksem.
                 </li>
-                <li class="article__list-item"><strong>filter</strong>() - jako argument przyjmuje funkcję, która z
+                <li class="article__list-item"><strong>filter()</strong> - jako argument przyjmuje funkcję, która z
                     kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
                     element, indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody
                     przechodzi przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość
                     <i>true</i> (wtedy element znajdujący się pod tym indeksem jest dodawany do nowej tablicy) lub
                     <i>false</i> (wtedy element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
                 </li>
-                <li class="article__list-item"><strong>reduce</strong>() - jako pierwszy argument przyjmuje funkcję,
+                <li class="article__list-item"><strong>reduce()</strong> - jako pierwszy argument przyjmuje funkcję,
                     która z kolei może przyjmować cztery argumenty (ich nazwa może być dowolna, natomiast kolejność ma
                     znaczenie): akumulator, wartość bieżącego elementu, indeks bieżącego elementu, oryginalna tablica.
                     Drugim argumentem metody jest wartość początkowa (jest to argument opcjonalny - w przypadku jego
@@ -763,14 +763,14 @@
                     niepożądany rezultat. Wartość początkowa powinna być to wartość neutralna dla wykonywanej operacji,
                     np. pusty <i>string</i> dla konkatenacji tekstu, 1 dla iloczynu, 0 dla sumy.
                 </li>
-                <li class="article__list-item"><strong>find</strong>() - jako argument przyjmuje funkcję, która z
+                <li class="article__list-item"><strong>find()</strong> - jako argument przyjmuje funkcję, która z
                     kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
                     element, indeks, oryginalna tablica. Funkcja <i>callback</i> przechodzi przez elementy oryginalnej
                     tablicy i w przypadku zwrócenia prawdy, metoda zwróci wartość bieżącego elementu. W przypadku gdy
                     funkcja <i>callback</i> po przejściu przez wszystkie elementy nie zwróci prawdy, metoda zwróci
                     wartość <i>undefined</i>.
                 </li>
-                <li class="article__list-item"><strong>sort</strong>() - jako argument przyjmuje funkcję sortującą,
+                <li class="article__list-item"><strong>sort()</strong> - jako argument przyjmuje funkcję sortującą,
                     która z kolei przyjmuje dwa argumenty: element pierwszy oraz element drugi. Funkcja <i>callback</i>
                     zwraca wartość 1, gdy element pierwszy ma mniejszą wartość od elementu drugiego, 0 gdy oba elementy
                     są równe lub -1 gdy element pierwszy ma większą wartość od elementu drugiego. Metoda zwraca nową
@@ -785,15 +785,15 @@
                 wykonuje się inne zadanie. Różni się od wielowątkowości pewnego rodzaju bezwładnością. Możemy reagować
                 na zakończenie danego zadania, ale nie mamy pełnej kontroli nad tym jak zadanie jest wykonywane w
                 środku (jak na przykład w języku C++).</p>
-            <p class="article__text">W JavaScript bardzo wiele API jest asynchronicznych, tzn. odbieranie danych polega
-                na reagowaniu np. na <i>callback</i>. Nawet podstawowy JavaScript zawiera asynchroniczne funkcje/metody.
-                Najprostszym przykładem są funkcje: <i>setTimeout</i> i <i>setInterval</i>:</p>
+            <p class="article__text">W JavaScript bardzo wiele <i>API</i> jest asynchronicznych, tzn. odbieranie danych
+                polega na reagowaniu np. na <i>callback</i>. Nawet podstawowy JavaScript zawiera asynchroniczne
+                funkcje/metody. Najprostszym przykładem są funkcje: <i>setTimeout</i> i <i>setInterval</i>:</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>setTimeout</strong>() - wykonuje funkcję przekazaną jako argument
+                <li class="article__list-item"><strong>setTimeout()</strong> - wykonuje funkcję przekazaną jako argument
                     (<i>callback</i>) z określonym opóźnieniem. W związku z tym, że <i>setTimeout</i> jest funkcją
                     asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej funkcji.
                 </li>
-                <li class="article__list-item"><strong>setInterval</strong>() - wykonuje funkcję przekazaną jako
+                <li class="article__list-item"><strong>setInterval()</strong> - wykonuje funkcję przekazaną jako
                     argument (<i>callback</i>) wielokrotnie z określonym interwałem. W związku z tym, że
                     <i>setInterval</i> jest funkcją asynchroniczną, kod znajdujący się po niej nie będzie czekał na
                     zakończenie działania tej funkcji.
@@ -802,9 +802,9 @@
             <p class="article__text">JavaScript jest jednak językiem jednowątkowym. Jeśli powyższe funkcje zostaną
                 wywołane z mniejszym opóźnieniem niż wynosi czas wykonania wyrażeń następujących po nich - funkcja
                 wykona się dopiero po zakończeniu wykonywania takich wyrażeń (kiedy będzie możliwe wejście w wątek).</p>
-            <p class="article__text">Większość aktualnie powstających API JavaScriptu opiera się w jakimś stopniu na
-                asynchroniczności. Nie blokuje to głównego wątku, np. strony internetowej podczas wykonywania zapytań do
-                sieci lub do serwera, kiedy obsługuje on zapytania/żądania.</p>
+            <p class="article__text">Większość aktualnie powstających <i>API</i> JavaScriptu opiera się w jakimś stopniu
+                na asynchroniczności. Nie blokuje to głównego wątku, np. strony internetowej podczas wykonywania zapytań
+                do sieci lub do serwera, kiedy obsługuje on zapytania/żądania.</p>
             <p class="article__text">Node.js czerpie jeszcze bardziej z asynchroniczności. Wprowadza tzw. <i>Async
                     I/O</i> dzięki bibliotece <i>libuv</i>. Pozwala ona na brak blokowania podczas m.in.: operacji
                 sieciowych, operacji na plikach, operacji na bazach danych. Jest to bardzo ważne od strony biznesowej,
@@ -857,7 +857,7 @@
             <p class="article__text">
                 Aby uruchomić kilka metod asynchronicznych i kontynuować działanie programu dopiero wtedy, kiedy
                 wykonywanie ostatniej z nich dobiegnie końca (czyli gdy każda z nich zwróci obiekt typu <i>promise</i>),
-                należy skorzystać z metody <strong>Promise.all</strong>(). Jest to metoda statyczna (nie wywoływana na
+                należy skorzystać z metody <strong>Promise.all()</strong>. Jest to metoda statyczna (nie wywoływana na
                 konkretnym obiekcie), która jako argument przyjmuje tablicę obiektów typu <i>promise</i> (zwracanych
                 przez te asynchroniczne metody), natomiast zwraca jeden wspólny obiekt tego samego typu, kiedy wszystkie
                 obiekty przekazane jako argument zostaną zwrócone. Użycie słowa kluczowego <i>await</i> przed takim
@@ -881,7 +881,8 @@
                 <li class="article__list-item">rodzeństwo,</li>
                 <li class="article__list-item">dzieci.</li>
             </ul>
-            <p class="article__text">API przeglądarki pozwala poruszać się po drzewie <i>DOM</i> używając tych nazw.</p>
+            <p class="article__text"><i>API</i> przeglądarki pozwala poruszać się po drzewie <i>DOM</i> używając tych
+                nazw.</p>
             <p class="article__text">Skrypty powinny być dodawane do pliku <i>HTML</i> na końcu znacznika <i>body</i>,
                 ponieważ operują one na elementach <i>DOM</i>, które są generowane w momencie otwarcia znacznika.
                 Dlatego ważne jest, aby po znacznikach dodających skrypty do strony nie było już żadnych innych
@@ -896,7 +897,7 @@
                     przeglądarki a następnie odwołanie się do niego w zakładce <i>Console</i> za pomocą <i>$0</i>.</li>
                 <li class="article__list-item">Odwołanie się poprzez element <i>document</i> (dotyczy jedynie niewielu
                     elementów strony, np. <i>document.head</i>, <i>document.body</i>, <i>document.links</i>).
-                <li class="article__list-item">Użycie metody <strong>querySelector</strong>() na obiekcie
+                <li class="article__list-item">Użycie metody <strong>querySelector()</strong> na obiekcie
                     <i>document</i> z parametrem odnoszącym się do <i>ID</i> (<i>#idName</i>), klasy (<i>.className</i>)
                     bądź znacznika (<i>tagName</i>). Selektory w JavaScript muszą być typu <i>string</i>. Zalecane jest
                     pobieranie elementów odwołując się do nazw klas (np. ze względu na ułatwienie identyfikacji
@@ -932,7 +933,7 @@
                 </li>
             </ul>
             <p class="article__text">Metoda służąca do nasłuchiwania w JavaScript to
-                <strong>addEventListener</strong>(), która wywoływana jest na konkretnym (pojedynczym) elemencie
+                <strong>addEventListener()</strong>, która wywoływana jest na konkretnym (pojedynczym) elemencie
                 <i>DOM</i> i przyjmuje jako argumenty: <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako
                 <i>string</i>) oraz <strong>nazwę wywoływanej funkcji</strong>. Opcjonalnie metoda
                 <i>addEventListener</i> może przyjąć również inne argumenty. Wywoływaną funkcją może być również funkcja
@@ -1120,7 +1121,7 @@
             <p class="article__text"><strong>JSON (JavaScript Object Notation)</strong> - lekki, tekstowy format wymiany
                 danych między różnymi programami, <i>API</i>, itd. Pozwala przechowywać liczby, tekst, wartości typu
                 <i>boolean</i>, <i>null</i>, tablice i obiekty w formie tekstowej. Aplikacja służąca do przeglądania,
-                edycji i formatowania danych typu JSON to <a class="article__link"
+                edycji i formatowania danych typu <i>JSON</i> to <a class="article__link"
                     href="https://jsoneditoronline.org">JSON Editor Online</a>.
             </p>
             <ul class="article__list">
@@ -1133,8 +1134,8 @@
                 </li>
             </ul>
             <p class="article__text">Podczas pracy na serwerze lub na przeglądarce klienta zazwyczaj korzysta się z
-                obiektów. Format JSON wykorzystywany jest głównie w celu przesyłania danych i może zostać odkodowany
-                niezależnie od języka programowania.</p>
+                obiektów. Format <i>JSON</i> wykorzystywany jest głównie w celu przesyłania danych i może zostać
+                odkodowany niezależnie od języka programowania.</p>
         </article>
         <article id="exceptions" class="article">
             <h2 class="article__heading">błędy i wyjątki</h2>

@@ -116,10 +116,11 @@
         </article>
         <article id="request" class="article">
             <h2 class="article__heading">request</h2>
-            <p class="article__text">Obiekt typu <strong>Request</strong> występujący w funkcji <i>callback</i>
-                (wywoływanej w przypadku otrzymania żądania) reprezentuje każde żądanie <i>HTTP</i>. Najczęściej
-                przyjęło się nazywać ten parametr <i>req</i>. Obiekt typu <i>Request</i> pochodzący z Express.js różni
-                się od swojego odpowiednika pochodzącego z Node.js.</p>
+            <p class="article__text">Obiekt typu <strong>Request</strong> występujący jako pierwszy parametr w funkcji
+                <i>callback</i> (wywoływanej w przypadku otrzymania żądania) reprezentuje każde żądanie <i>HTTP</i>.
+                Najczęściej przyjęło się nazywać ten parametr <i>req</i>. Obiekt typu <i>Request</i> pochodzący z
+                Express.js różni się od swojego odpowiednika pochodzącego z Node.js.
+            </p>
             <p class="article__text">Własności i metoda obiektu typu <i>Request</i>:</p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>hostname</strong> - nazwa hosta - serwera, na którym uruchomiona
@@ -183,11 +184,83 @@
         </article>
         <article id="response" class="article">
             <h2 class="article__heading">response</h2>
-            <p class="article__text">Obiekt typu <strong>Response</strong> występujący w funkcji callback (wywoływanej w
-                przypadku otrzymania żądania) reprezentuje każdą odpowiedź serwera na żądanie HTTP. Najczęściej przyjęło
-                się nazywać ten parametr <i>res</i>. Obiekt typu <i>Response</i> pochodzący z Express.js różni się od
-                swojego odpowiednika pochodzącego z Node.js.
+            <p class="article__text">Obiekt typu <strong>Response</strong> występujący jako drugi parametr w funkcji
+                <i>callback</i> (wywoływanej w przypadku otrzymania żądania) reprezentuje każdą odpowiedź serwera na
+                żądanie HTTP. Najczęściej przyjęło się nazywać ten parametr <i>res</i>. Obiekt typu <i>Response</i>
+                pochodzący z Express.js różni się od swojego odpowiednika pochodzącego z Node.js.
             </p>
+            <p class="article__text">Metody <i>write</i> oraz <i>end</i> wywoływane na obiekcie typu <i>Response</i> w
+                Node.js, mogą być również użyte w Express.js. Metody te nie są jednak częścią Express.js, lecz są
+                przekierowane bezpośrednio do serwera Node.js, który działa na niższym poziomie niż Express.js. Zamiast
+                dwóch powyższych metod warto korzystać z szybszej metody <strong>res.send()</strong>, będącej metodą
+                Express.js. Jest ona wygodniejsza do użycia, ponieważ wykonuje też szereg innych działań w tle.
+            </p>
+            <p class="article__text">Działania wykonywane przez metodę <i>send</i> wywołaną na obiekcie typu
+                <i>Response</i> w Express.js:
+            </p>
+            <ol class="article__list">
+                <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Type</i> w zależności od
+                    wysłanej zawartości.</li>
+                <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Length</i>.</li>
+                <li class="article__list-item">Ustawienie nagłówków związanych z podstawowym <i>cachingiem</i>.</li>
+                <li class="article__list-item">Konwersja danych (jeśli jest wymagana).</li>
+                <li class="article__list-item">Przesłanie danych.</li>
+                <li class="article__list-item">Zakończenie połączenia.</li>
+            </ol>
+            <p class="article__text">Dane możliwe do przesłania przez metodę <i>send</i> wywołaną na obiekcie typu
+                <i>Response</i> w Express.js:
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>string</strong> - przesyłany jest tekst, a nagłówek
+                    <i>Content-Type</i> przyjmuje wartość <i>text/hmtl</i>,
+                </li>
+                <li class="article__list-item"><strong>Buffer</strong> - przesyłane są dane binarne, a nagłówek
+                    <i>Content-Type</i> przyjmuje wartość <i>application-octet-stream</i>,
+                </li>
+                <li class="article__list-item"><strong>array/Object</strong> - przesyłana jest tablica lub obiekt, a
+                    nagłówek <i>Content-Type</i> przyjmuje wartość <i>application/json</i>.</li>
+            </ul>
+            <p class="article__text">Metoda <strong>res.json()</strong> działa podobnie jak metoda <i>send</i>, lecz
+                zawsze wysyła obiekt typu <i>JSON</i> oraz ustawia nagłówek <i>Content-Type</i> na
+                <i>application/json</i>. Metoda ta jest metodą pomocniczą - powstała za względu na fakt, że zdecydowana
+                większość <i>API</i> otrzymuje i przesyła obiekty typu <i>JSON</i>. Kiedy jako odpowiedź oczekiwany jest
+                obiekt typu <i>JSON</i>, zawsze powinno się używać metody <i>json</i>, ponieważ niezależnie od danych
+                wejściowych (nawet gdy jest to łańcuch znaków), wysłany zostanie obiekt typu <i>JSON</i>. Ponadto w
+                Express.js dostępne są specjalne opcje dla metody <i>json</i>, pozwalające m.in. na lepsze formatowanie
+                wysyłanego obiektu.
+            </p>
+            <p class="article__text">Metoda <strong>res.location()</strong> jako argument przyjmuje docelowy adres
+                <i>URL</i> i przekierowuje klienta na inny adres (w wewnętrznym lub zewnętrznym systemie). Aby wykonać
+                prawidłowe przekierowanie z użyciem metody <i>location</i>, należy na obiekcie typu <i>Response</i>
+                ustawić odpowiedni status przekierowania z wykorzystaniem własności <i>statusCode</i> a także zakończyć
+                wysyłanie odpowiedzi z wykorzystaniem metody <i>end</i>.
+            </p>
+            <p class="article__text">Metoda zalecana do tworzenia przekierowań to <strong>res.redirect()</strong>.
+                Jako argument przyjmuje docelowy adres <i>URL</i>. Tworzy ona całkowite przekierowanie: automatycznie
+                ustawia kod statusu odpowiedzi <i>HTTP</i> (domyślnie 302 - można go zmienić dodając numer kodu
+                odpowiedzi jako dodatkowy, pierwszy argument), automatycznie zakańcza wysyłanie odpowiedzi, a także
+                pozwala na używanie specjalnych ścieżek (względnych i cofających).</p>
+            <p class="article__text">Najczęściej używane kody statusów <i>HTTP</i> do przekierowania:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>301 - przekierowanie trwałe</strong> - przeglądarka (lub
+                    wyszukiwarka) zapamiętuje nowy adres i nie odpytuje już więcej przekierowującego adresu.</li>
+                <li class="article__list-item"><strong>302 - przekierowanie nietrwałe</strong> - w momencie żądania
+                    przeglądarka przechodzi na podany adres, ale niekoniecznie musi zachować się podobnie w przyszłości.
+                </li>
+                <li class="article__list-item"><strong>303 - zobacz gdzie indziej</strong> - działanie podobne jak dla
+                    kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>, mające za zadanie przekierować
+                    na metodę <i>GET</i>.</li>
+                <li class="article__list-item"><strong>307 - przekierowanie tymczasowe</strong> - działanie podobne jak
+                    dla kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>.</li>
+            </ul>
+            <p class="article__text">Rodzaje ścieżek dla funkcji <i>location</i>:</p>
+            <ol class="article__list">
+                <li class="article__list-item">Absolutne adresy <i>URL</i>.</li>
+                <li class="article__list-item">Wewnętrzne ścieżki.</li>
+                <li class="article__list-item">Ścieżki względne z użyciem (z użyciem <strong>..</strong>).</li>
+                <li class="article__list-item">"back" - odniesienie do nagłówka <i>Referer</i> lub jeśli taki nagłówek
+                    nie istnieje - do ścieżki głównej.</li>
+            </ol>
         </article>
         <article id="routing" class="article">
             <h2 class="article__heading">routing</h2>
