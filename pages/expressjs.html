@@ -134,7 +134,8 @@
                     adresami.</li>
                 <li class="article__list-item"><strong>method</strong> - metoda, za pomocą której klient próbuje
                     połączyć się z serwerem.</li>
-                <li class="article__list-item"><strong>url</strong> - ścieżka. Nie pochodzi z Express.js, lecz z Node.js
+                <li class="article__list-item"><strong>url</strong> - ścieżka. Nie pochodzi z Express.js, lecz z
+                    Node.js.
                 </li>
                 <li class="article__list-item"><strong>originalUrl</strong> - ścieżka, która jest pierwotna i
                     znormalizowana, nawet po przekierowaniach (zalecany sposób).</li>
@@ -215,7 +216,7 @@
                     <i>Content-Type</i> przyjmuje wartość <i>text/hmtl</i>,
                 </li>
                 <li class="article__list-item"><strong>Buffer</strong> - przesyłane są dane binarne, a nagłówek
-                    <i>Content-Type</i> przyjmuje wartość <i>application-octet-stream</i>,
+                    <i>Content-Type</i> przyjmuje wartość <i>application/octet-stream</i>,
                 </li>
                 <li class="article__list-item"><strong>array/Object</strong> - przesyłana jest tablica lub obiekt, a
                     nagłówek <i>Content-Type</i> przyjmuje wartość <i>application/json</i>.</li>
@@ -253,7 +254,7 @@
                 <li class="article__list-item"><strong>307 - przekierowanie tymczasowe</strong> - działanie podobne jak
                     dla kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>.</li>
             </ul>
-            <p class="article__text">Rodzaje ścieżek dla funkcji <i>location</i>:</p>
+            <p class="article__text">Rodzaje ścieżek dla funkcji <i>redirect</i>:</p>
             <ol class="article__list">
                 <li class="article__list-item">Absolutne adresy <i>URL</i>.</li>
                 <li class="article__list-item">Wewnętrzne ścieżki.</li>
@@ -261,6 +262,26 @@
                 <li class="article__list-item">"back" - odniesienie do nagłówka <i>Referer</i> lub jeśli taki nagłówek
                     nie istnieje - do ścieżki głównej.</li>
             </ol>
+            <p class="article__text">Metoda <strong>res.sendFile()</strong> jako pierwszy argument przyjmuje ścieżkę do
+                pliku (wymagana jest ścieżka absolutna lub zdefiniowanie elementu <i>root</i>), drugim argumentem może
+                być obiekt opcji. Metoda wysyła plik do klienta. Jest to znaczące ułatwienie ze strony Express.js,
+                ponieważ w Node.js konieczne jest ustalenie typu <i>MIME</i> pliku, następnie jego wczytanie oraz
+                przesłanie lub strumieniowanie do przeglądarki.</p>
+            <p class="article__text">Podstawowe opcje możliwe do przekazania w obiekcie opcji (jako drugi argument
+                metody <i>sendFile</i>):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>root</strong> - określa katalog główny dla względnych nazw
+                    plików (należy zwrócić szczególną uwagę, aby ze względów bezpieczeństwa pozwolić jedynie na dostęp
+                    do plików znajdujących się w specjalnie wyodrębnionym katalogu).</li>
+                <li class="article__list-item"><strong>lastModified</strong> - ustawia nagłówek zawierający datę
+                    ostatniej modyfikacji pliku w systemie.</li>
+                <li class="article__list-item"><strong>headers</strong> - pozwala na dodanie nagłówków.</li>
+                <li class="article__list-item"><strong>dotfiles</strong> - pozwala na ustawienie obsługi plików
+                    rozpoczynających się od kropki (które z założenia powinny być ukryte). Jako wartość przyjmuje
+                    łańcuch znaków: <i>allow</i>, <i>deny</i> lub <i>ignore</i> (wartość domyślna).
+                </li>
+            </ul>
         </article>
         <article id="routing" class="article">
             <h2 class="article__heading">routing</h2>
