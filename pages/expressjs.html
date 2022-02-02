@@ -282,6 +282,19 @@
                     łańcuch znaków: <i>allow</i>, <i>deny</i> lub <i>ignore</i> (wartość domyślna).
                 </li>
             </ul>
+            <p class="article__text">Metoda <strong>res.attachment()</strong> jako argument przyjmuje nazwę pliku.
+                Nagłówek odpowiedzi <i>Content-Disposition</i> zostanie ustawiony na wartość <i>attachment</i>, co
+                oznacza że plik powinien być odebrany jako załącznik a nie jako strona internetowa. W przypadku tej
+                metody Express.js nie zakończy automatycznie połączenia, dlatego należy pamiętać o wywołaniu metody
+                <i>end</i> na obiekcie odpowiedzi (chyba że po metodzie <i>attachment</i> wywołana zostanie metoda
+                <i>download</i> - wtedy metoda <i>end</i> nie będzie mogła zostać użyta).
+            </p>
+            <p class="article__text">Metoda <strong>res.download()</strong> jako pierwszy argument przyjmuje ścieżkę do
+                pliku, który zostanie przesłany jako załącznik.</p>
+            <p class="article__text">Metoda <strong>res.set()</strong> pozwala na ustawienie dowolnych nagłówków
+                odpowiedzi. Dla pojedynczego nagłówka jako argumenty przyjmuje dwa łańcuchy znaków - pierwszy
+                zawierający nazwę nagłówka i drugi zawierający jego wartość. Dla wielu nagłówków jako argument przyjmuje
+                obiekt zawierający nazwy i wartości nagłówków.</p>
         </article>
         <article id="routing" class="article">
             <h2 class="article__heading">routing</h2>
