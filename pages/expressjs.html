@@ -63,6 +63,8 @@
             <span class="theory-main__text">•</span>
             <a href="#routing" class="theory-main__link">routing</a>
             <span class="theory-main__text">•</span>
+            <a href="#cookies" class="theory-main__link">ciastka</a>
+            <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -295,6 +297,17 @@
                 odpowiedzi. Dla pojedynczego nagłówka jako argumenty przyjmuje dwa łańcuchy znaków - pierwszy
                 zawierający nazwę nagłówka i drugi zawierający jego wartość. Dla wielu nagłówków jako argument przyjmuje
                 obiekt zawierający nazwy i wartości nagłówków.</p>
+            <p class="article__text">Własność <strong>res.headersSent</strong> zwraca wartość logiczną informującą o tym
+                czy nagłówki w zostały już przesłane. Własność ta jest pomocna, ponieważ nie da się już wrócić do
+                ustawiania nagłówków, jeśli rozpoczęło się przesyłanie treści odpowiedzi. Należy zatem pamiętać, aby
+                najpierw ustawiać nagłówki, a dopiero później przesyłać treść odpowiedzi.</p>
+            <p class="article__text">Metoda <strong>res.cookie()</strong> pozwala na ustawienie ciastka, czyli małego
+                fragmentu teksu, służącego do zapamiętania pewnych krótkich informacji na urządzeniu klienta (np.
+                identyfikatorów, informacji na temat bycia zalogowanym). Przy każdym następnym zapytaniu do serwara,
+                klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
+                rozpoczęciem wysyłania treści odpowiedzi. Metoda ta ustawia ciastka a także jednocześnie nagłówki
+                <i>Set-Cookie</i> (których może być wiele, w przypadku wystąpienia więcej niż jednego ciastka).
+            </p>
         </article>
         <article id="routing" class="article">
             <h2 class="article__heading">routing</h2>
@@ -337,6 +350,24 @@
             </ul>
             <p class="article__text">Wszystkie przesłane parametry są dostępne w obiekcie <strong>req.params</strong>
                 pod takimi nazwami jakie zostały ustalone (lecz bez znaku <strong>:</strong>).</p>
+        </article>
+        <article id="cookies" class="article">
+            <h2 class="article__heading">ciastka</h2>
+            <p class="article__text"><strong>Ciastka</strong> wysłane domyślnie (gdzie jedyne argumenty to nazwa i
+                wartość) z użyciem metody <i>cookie</i> na obiekcie odpowiedzi to ciastka sesyjne. Zostają one usunięte
+                w przypadku zakończenia sesji (np. zamknięcia przeglądarki, restartu systemu).
+            </p>
+            <p class="article__text">W celu stworzenia bardziej zaawansowanych ciastek, jako trzeci argument metody
+                <i>cookie</i> należy przekazać obiekt opcji ciastek. Podstawowe właściwości obiektu opcji:
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>domain</strong> - domena, do której będą wysyłane ciastka.</li>
+                <li class="article__list-item"><strong>expires</strong> - czas, do kiedy ciastko ma być zapamiętane.
+                </li>
+                <li class="article__list-item"><strong>maxAge</strong> - czas istnienia ciastka (podany w ms).</li>
+                <li class="article__list-item"><strong>httpOnly</strong> - uniemożliwia front-endowi dostęp do ciastka.
+                </li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
