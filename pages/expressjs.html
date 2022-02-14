@@ -65,6 +65,8 @@
             <span class="theory-main__text">•</span>
             <a href="#cookies" class="theory-main__link">ciastka</a>
             <span class="theory-main__text">•</span>
+            <a href="#middleware" class="theory-main__link">middleware</a>
+            <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -303,8 +305,9 @@
                 najpierw ustawiać nagłówki, a dopiero później przesyłać treść odpowiedzi.</p>
             <p class="article__text">Metoda <strong>res.cookie()</strong> pozwala na ustawienie ciastka, czyli małego
                 fragmentu teksu, służącego do zapamiętania pewnych krótkich informacji na urządzeniu klienta (np.
-                identyfikatorów, informacji na temat bycia zalogowanym). Przy każdym następnym zapytaniu do serwara,
-                klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
+                identyfikatorów, informacji na temat bycia zalogowanym). Jako argumenty przyjmuje dwa łańcuchy znaków -
+                pierwszy zawierający nazwę ciastka i drugi zawierający jego wartość. Przy każdym następnym zapytaniu do
+                serwara, klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
                 rozpoczęciem wysyłania treści odpowiedzi. Metoda ta ustawia ciastka a także jednocześnie nagłówki
                 <i>Set-Cookie</i> (których może być wiele, w przypadku wystąpienia więcej niż jednego ciastka).
             </p>
@@ -365,8 +368,58 @@
                 <li class="article__list-item"><strong>expires</strong> - czas, do kiedy ciastko ma być zapamiętane.
                 </li>
                 <li class="article__list-item"><strong>maxAge</strong> - czas istnienia ciastka (podany w ms).</li>
-                <li class="article__list-item"><strong>httpOnly</strong> - uniemożliwia front-endowi dostęp do ciastka.
+                <li class="article__list-item"><strong>httpOnly</strong> - uniemożliwia front-endowi dostęp do ciastka
+                    (zalecane jest dodawanie tej opcji do wszystkich ciastek związanych z logowaniem).
                 </li>
+            </ul>
+            <p class="article__text">Nazwy, przeznaczenie oraz okres przechowywania ciastek muszą być zawarte w polityce
+                prywatności tworzonej strony internetowej/aplikacji webowej.</p>
+            <p class="article__text">Metoda <strong>res.clearCookie()</strong> pozwala na usunięcie ciastka (np. gdy
+                użytkownik został wylogowany). Jako pierwszy argument przyjmuje nazwę ciastka. Drugim argumentem może
+                być obiekt opcji ciastek (analogiczny jak dla metody <i>cookie</i>).</p>
+        </article>
+        <article id="middleware" class="article">
+            <h2 class="article__heading">middleware</h2>
+            <p class="article__text">Obiekt reprezentujący aplikację Express.js posiada zaawansowaną metodę
+                <strong>app.use()</strong>, która pozwala na wykonanie wielu działań. Jednym z nich jest umożliwienie
+                rejestracji <strong>middleware</strong>, które należy wykonać przed kodem właściwym (przed obsługą
+                ścieżek):<br>
+                <strong>app.use(middlewareExample())</strong>.
+            </p>
+            <p class="article__text"><strong>Middleware</strong> jest to oprogramowanie pośredniczące, umożliwiające
+                komunikację pomiędzy różnymi aplikacjami, usługami lub systemami. <i>Request</i> przed przejściiem do
+                zadania głównego może po drodze przejść przez różne <i>middleware</i>, które mogą dodawać, sprawdzać lub
+                modyfikować elementy w zapytaniu. Mogą również nie dopuścić zapytania do głównego zadania (np. gdy
+                użytkownik nie posiada autoryzacji) i przystąpić od razu do przesłania odpowiedzi.</p>
+            <p class="article__text">Rodzaje <i>middleware</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>express.json()</strong> - służy do łatwego odbierania i
+                    odczytywania danych wejściowych JSON od klienta. Jest to <i>middleware</i> wbudowany w Express.js.
+                    Domyślne działanie jest dla większości przypadków wystarczające, lecz opcjonalny argument to obiekt
+                    opcji (np. pozwalający na zmianę maksymalnej wielkości pliku <i>JSON</i> (gdzie domyślna wartość to
+                    100 kb)). Jeśli dane w zapytaniu zostaną określone jako <i>application/json</i>, to
+                    <i>middleware</i> automatycznie rozkoduje plik <i>JSON</i> do obiektu JavaScript. Po rejestracji
+                    tego <i>middleware</i> w obiekcie zapytania pojawi się nowy obiekt <strong>req.body</strong>, który
+                    będzie zawierać rozkodowane dane (o ile przybyły w zapytaniu z danymi o typie
+                    <i>application/json</i>). Dane takie można wykorzystać w dowolny sposób (np. odpowiedzieć na nie z
+                    wykorzystaniem <i>JSON</i>).
+                </li>
+                <li class="article__list-item"><strong>express.static()</strong> - służy do serwowania plików
+                    statycznych (identycznych dla każdego klienta pod danym adresem). Jest to <i>middleware</i>
+                    wbudowany w Express.js. Pierwszym argumentem jest łańcuch znaków zawierający folder plików
+                    statycznych. Domyślne działanie jest dla większości przypadków wystarczające, lecz opcjonalny, drugi
+                    argument to obiekt opcji (pozwalający na wybranie strony głównej, orgraniczenie widzialności plików
+                    z kropką na początku, sterowanie <i>cachem</i>, itp.). Zazwyczaj w ten sposób serwuje się cały
+                    front-end, który znajduje się w osobnym folderze. Aby na ścieżce głównej wyświetlić stronę główną,
+                    należy wybrany plik <i>HTML</i> nazwać <i>index.html</i> oraz umieścić go w głównym katalogu plików
+                    statycznych.</li>
+                <li class="article__list-item"><strong>cookie-parser</strong> - służy do odczytu ciastek w Express.js.
+                    Nie jest to <i>middleware</i> wbudowany w Express.js. Należy doinstalować dodatkowy moduł
+                    <i>cookie-parser</i> z wykorzystaniem komendy <strong>npm i cookie-parser</strong>. W celu użycia
+                    należy pobrać cały moduł do jednej zmiennej bez stosowania destrukturyzacji: <strong>const
+                        cookieParser = require('cookie-parser')</strong>. Moduł taki jest jedną wielką funkcją, którą
+                    należy wywołać jako argument metody <i>app.use()</i> w celu użycia <i>middleware</i>:
+                    <strong>app.use(cookieParser());</strong>.
             </ul>
         </article>
     </main>
