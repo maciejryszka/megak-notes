@@ -418,8 +418,13 @@
                     <i>cookie-parser</i> z wykorzystaniem komendy <strong>npm i cookie-parser</strong>. W celu użycia
                     należy pobrać cały moduł do jednej zmiennej bez stosowania destrukturyzacji: <strong>const
                         cookieParser = require('cookie-parser')</strong>. Moduł taki jest jedną wielką funkcją, którą
-                    należy wywołać jako argument metody <i>app.use()</i> w celu użycia <i>middleware</i>:
-                    <strong>app.use(cookieParser());</strong>.
+                    należy wywołać jako argument metody <strong>app.use()</strong> w celu użycia <i>middleware</i>:
+                    <strong>app.use(cookieParser());</strong>. Od momentu wywołania ciastka dostępne są w obiekcie
+                    żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane po
+                    <strong>req.signedCookies</strong>. W obiekcie tym klucze to nazwy ciastek, a wartości to ich
+                    wartości. Klient powinien automatycznie przesłać wszystkie ciastka do serwera przy każdym zapytaniu,
+                    a <i>cookie-parser</i> umowżliwi dostęp do nich.
+                </li>
             </ul>
         </article>
     </main>

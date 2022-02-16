@@ -742,17 +742,23 @@
                 danych (np. jednego pliku) oraz następnie przywrócenie ich pierwotnego rozmiaru.</p>
             <p class="article__text">Metody służące do kompresji plików:</p>
             <ul class="article__list">
-                <li class="article__list-item"><i>zlib.gzip(buffer)</i> - metoda dla obiektów typu <i>Buffer</i>. Jest
-                    prostsza w użyciu. Wystarczy podać wejściowy obiekt typu <i>Buffer</i>, aby otrzymać skompresowany.
+                <li class="article__list-item"><strong>zlib.gzip(buffer)</strong> - metoda dla obiektów typu
+                    <i>Buffer</i>. Jest prostsza w użyciu. Wystarczy podać wejściowy obiekt typu <i>Buffer</i>, aby
+                    otrzymać skompresowany.
                 </li>
-                <li class="article__list-item"><i>zlib.createGzip()</i> - metoda dla obiektów typu <i>Stream</i>. Może
-                    przetwarzać znaczne większe dane. Oszczędza również RAM, ponieważ obiekty typu <i>Buffer</i> zajmują
-                    tyle pamięci RAM, ile ważą dane.</li>
+                <li class="article__list-item"><strong>zlib.createGzip()</strong> - metoda dla obiektów typu
+                    <i>Stream</i>. Może przetwarzać znaczne większe dane. Oszczędza również RAM, ponieważ obiekty typu
+                    <i>Buffer</i> zajmują tyle pamięci RAM, ile ważą dane.
+                </li>
             </ul>
             <p class="article__text">Metody służące do dekompresji plików:</p>
             <ul class="article__list">
-                <li class="article__list-item"><i>zlib.gunzip(buffer)</i> - metoda dla obiektów typu <i>Buffer</i>.</li>
-                <li class="article__list-item"><i>zlib.createGunzip()</i> - metoda dla obiektów typu <i>Stream</i>.</li>
+                <li class="article__list-item"><strong>zlib.gunzip(buffer)</strong> - metoda dla obiektów typu
+                    <i>Buffer</i>.
+                </li>
+                <li class="article__list-item"><strong>zlib.createGunzip()</strong> - metoda dla obiektów typu
+                    <i>Stream</i>.
+                </li>
             </ul>
             <p class="article__text">W niektórych przypadkach kompresja skompresowanych danych może przynieść efekt
                 odwrotny do zamierzonego, np. plik graficzny o rozszerzeniu <i>webp</i> jest już domyślnie bardzo dobrze
