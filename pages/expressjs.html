@@ -307,7 +307,7 @@
                 fragmentu teksu, służącego do zapamiętania pewnych krótkich informacji na urządzeniu klienta (np.
                 identyfikatorów, informacji na temat bycia zalogowanym). Jako argumenty przyjmuje dwa łańcuchy znaków -
                 pierwszy zawierający nazwę ciastka i drugi zawierający jego wartość. Przy każdym następnym zapytaniu do
-                serwara, klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
+                serwera, klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
                 rozpoczęciem wysyłania treści odpowiedzi. Metoda ta ustawia ciastka a także jednocześnie nagłówki
                 <i>Set-Cookie</i> (których może być wiele, w przypadku wystąpienia więcej niż jednego ciastka).
             </p>
@@ -340,7 +340,7 @@
                 <li class="article__list-item"><strong>/hello/:name</strong> (ten <i>URL</i> powinien zostać obsłużony w
                     kodzie jako drugi).</li>
             </ul>
-            <p class="article__text">Parametry opcjonalne to parametry, które nie są wymagane. Czesto jednak dodawane są
+            <p class="article__text">Parametry opcjonalne to parametry, które nie są wymagane. Często jednak dodawane są
                 ze względu na <i>SEO (search engine optimization)</i>, ponieważ w systemie najczęściej istotne jest
                 <i>ID</i>, a nie tytuł czy nazwa. Nazwy parametrów opcjonalnych poprzedzone są znakiem
                 <strong>:</strong> a zakończone znakiem <strong>?</strong>.
@@ -387,7 +387,7 @@
                 <strong>app.use(middlewareExample())</strong>.
             </p>
             <p class="article__text"><strong>Middleware</strong> jest to oprogramowanie pośredniczące, umożliwiające
-                komunikację pomiędzy różnymi aplikacjami, usługami lub systemami. <i>Request</i> przed przejściiem do
+                komunikację pomiędzy różnymi aplikacjami, usługami lub systemami. <i>Request</i> przed przejściem do
                 zadania głównego może po drodze przejść przez różne <i>middleware</i>, które mogą dodawać, sprawdzać lub
                 modyfikować elementy w zapytaniu. Mogą również nie dopuścić zapytania do głównego zadania (np. gdy
                 użytkownik nie posiada autoryzacji) i przystąpić od razu do przesłania odpowiedzi.</p>
@@ -423,7 +423,7 @@
                     żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane po
                     <strong>req.signedCookies</strong>. W obiekcie tym klucze to nazwy ciastek, a wartości to ich
                     wartości. Klient powinien automatycznie przesłać wszystkie ciastka do serwera przy każdym zapytaniu,
-                    a <i>cookie-parser</i> umowżliwi dostęp do nich.
+                    a <i>cookie-parser</i> umożliwi dostęp do nich.
                 </li>
             </ul>
         </article>
