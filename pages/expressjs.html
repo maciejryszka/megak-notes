@@ -420,7 +420,7 @@
                         cookieParser = require('cookie-parser')</strong>. Moduł taki jest jedną wielką funkcją, którą
                     należy wywołać jako argument metody <strong>app.use()</strong> w celu użycia <i>middleware</i>:
                     <strong>app.use(cookieParser());</strong>. Od momentu wywołania ciastka dostępne są w obiekcie
-                    żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane po
+                    żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane pod
                     <strong>req.signedCookies</strong>. W obiekcie tym klucze to nazwy ciastek, a wartości to ich
                     wartości. Klient powinien automatycznie przesłać wszystkie ciastka do serwera przy każdym zapytaniu,
                     a <i>cookie-parser</i> umożliwi dostęp do nich.
