@@ -387,6 +387,7 @@ body {
 }
 .article__list-item {
   text-align: justify;
+  list-style-type: disc;
 }
 .article__text {
   text-align: justify;

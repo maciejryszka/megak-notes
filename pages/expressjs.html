@@ -67,6 +67,7 @@
             <span class="theory-main__text">•</span>
             <a href="#middleware" class="theory-main__link">middleware</a>
             <span class="theory-main__text">•</span>
+            <a href="#structure" class="theory-main__link">struktura aplikacji</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -426,6 +427,82 @@
                     a <i>cookie-parser</i> umożliwi dostęp do nich.
                 </li>
             </ul>
+        </article>
+        <article id="structure" class="article">
+            <h2 class="article__heading">struktura aplikacji</h2>
+            <p class="article__text">W celu uniknięcia chaosu oraz ułatwienia współpracy z innymi programistrami,
+                aplikacje posiadają najczęściej określoną strukturę.</p>
+            <p class="article__text">Przykładowa struktura aplikacji Express.js:</p>
+            <ul class="article__list">
+                <li class="article__list-item">app.js</li>
+                <li class="article__list-item">package.json</li>
+                <li class="article__list-item">public
+                    <ul class="article__list">
+                        <li class="article__list-item">index.html</li>
+                        <li class="article__list-item">imgages</li>
+                        <li class="article__list-item">javascripts</li>
+                        <li class="article__list-item">stylesheets
+                            <ul class="article__list">
+                                <li class="article__list-item">style.css</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="article__list-item">routes
+                    <ul class="article__list">
+                        <li class="article__list-item">index.js</li>
+                        <li class="article__list-item">users.js</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="article__text">W zaproponowanej powyżej strukturze plik główny aplikacji nazwano <i>app.js</i>. W
+                folderze <i>public</i> znajdują się pliki dostępne na front-endzie, takie jak pliki <i>HTML</i>, arkusze
+                stylów, skrypty czy obrazy. Folder <i>routes</i> zawiera skrypty obsługujące ścieżki.
+            </p>
+            <p class="article__text">Skrypty obsługujące ścieżki powinny być pogrupowane wg logicznej całości (np.
+                obsługa ścieżek związanych z edycją obiektu). Aby poprawnie obsłużyć ścieżki znajdujące się w innym
+                pliku niż plik główny aplikacji należy utworzyć nowy obiekt typu <i>Router</i>: <strong>const
+                    objectEditRouter = express.Router()</strong>. Na tak utworzonym obiekcie należy wywoływać
+                poszczególne metody <i>HTTP</i>: <strong>objectEditRouter.get('/', (req, res) => {})</strong>. Utworzony
+                <i>Router</i> należy wyeosportować: <strong>module.exports(objectEditRouter)</strong>. Kolejnym krokiem
+                jest jego import w pliku głównym aplikacji: <strong>const {objectEditRouter} =
+                    require("./routes/objectEdit")</strong> oraz użycie jako własnego
+                <i>middleware</i>: <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie
+                <i>chainingu</i> oraz wyciągnięcie części wspólnej ścieżek do miejsca, w którym <i>router</i> będzie
+                importowany. Pozwoli to uniknąć niepotrzebnego duplikowania kodu zwiększy jego czytelność.
+            </p>
+            <p class="article__text">Program pomagający stworzyć automatycznie strukturę aplikacji to
+                <strong>express-generator</strong>. Instalacja: <strong>npm i express-generator -g</strong>. Utworzenie
+                struktury podobnej do powyższej: <strong>express --no-view --git --project_and_folder_name</strong>.
+            </p>
+            <p class="article__text">Domyślnie uruchomiony serwer jest dostępny globalnie. Aby był dostępny jedynie
+                lokalnie, należy dodać przy wywołaniu funkcji nasłuchującej drugi argument ustawiający hosta:
+                <strong>app.listen('3000', 'localhost')</strong>. Zwiększa to bezpieczeństwo i jest także wykorzystywane
+                w aplikacjach, które mają działać wyłącznie na danym serwerze.
+            </p>
+            <p class="article__text">W praktyce nie stosuje się nigdy samego Node.js. Obsługa w nim, np. <i>SSL</i> jest
+                niewydajna, więc stosuje się tzw. <i>reverse-proxy</i>, które wymaga już gotowego serwera produkcyjnego.
+                Dzięki użyciu <i>reverse-proxy</i> aplikacja wykonuje część rzeczy (często bardzo obciążających, np.
+                negocjowanie <i>SSL</i>) poza Node.js i odwołuje się do niego dopiero w przypadku konieczności
+                skorzystania z logiki biznesowej. Informacje na temat dwóch popularnych konfiguracji
+                <i>reverse-proxy</i> (przekierowanie domeny na port): <a class="article__link"
+                    href="https://www.ionos.com/digitalguide/websites/web-development/nodejs-for-a-website-with-apache-on-ubuntu/#c313777">Apache</a>
+                oraz <a class="article__link"
+                    href="https://docs.nginx.com/nginx/deployment-guides/load-balance-third-party/node-js/#configuring-basic-load-balancing">nginx</a>.
+            </p>
+            <p class="article__text">Node.js jest również bardzo przepustowy, co z jednej strony jest jego wadą.
+                Aplikacja może być skanowana w poszukiwaniu dziur lub podjęte mogą zostać próby łamania haseł
+                użytkowników. Warto zatem panować nad liczbą zapytań i ograniczyć ją, np. z wykorzystaniem modułu <a
+                    class="article__link" href="https://www.npmjs.com/package/express-rate-limit">rate-limiter</a>.</p>
+            <p class="article__text">Narzędzie <a class="article__link"
+                    href="https://pm2.keymetrics.io/docs/usage/quick-start">pm2</a>:
+            <ul class="article__list">
+                <li class="article__list-item">dba o ciągłe uruchomienie procesu,</li>
+                <li class="article__list-item">pozwala pobierać logi aplikacji działających w tle,</li>
+                <li class="article__list-item">udostępnia <i>dashboard</i> aplikacji,</li>
+                <li class="article__list-item">umożliwia skalowanie aplikacji w prosty sposób.</li>
+            </ul>
+            </p>
         </article>
     </main>
     <footer class="footer">
