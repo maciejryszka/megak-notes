@@ -464,7 +464,7 @@
                 pliku niż plik główny aplikacji należy utworzyć nowy obiekt typu <i>Router</i>: <strong>const
                     objectEditRouter = express.Router()</strong>. Na tak utworzonym obiekcie należy wywoływać
                 poszczególne metody <i>HTTP</i>: <strong>objectEditRouter.get('/', (req, res) => {})</strong>. Utworzony
-                <i>Router</i> należy wyeosportować: <strong>module.exports(objectEditRouter)</strong>. Kolejnym krokiem
+                <i>Router</i> należy wyeksportować: <strong>module.exports(objectEditRouter)</strong>. Kolejnym krokiem
                 jest jego import w pliku głównym aplikacji: <strong>const {objectEditRouter} =
                     require("./routes/objectEdit")</strong> oraz użycie jako własnego
                 <i>middleware</i>: <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie
