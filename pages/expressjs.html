@@ -464,12 +464,12 @@
                 pliku niż plik główny aplikacji należy utworzyć nowy obiekt typu <i>Router</i>: <strong>const
                     objectEditRouter = express.Router()</strong>. Na tak utworzonym obiekcie należy wywoływać
                 poszczególne metody <i>HTTP</i>: <strong>objectEditRouter.get('/', (req, res) => {})</strong>. Utworzony
-                <i>Router</i> należy wyeksportować: <strong>module.exports(objectEditRouter)</strong>. Kolejnym krokiem
-                jest jego import w pliku głównym aplikacji: <strong>const {objectEditRouter} =
-                    require("./routes/objectEdit")</strong> oraz użycie jako własnego
-                <i>middleware</i>: <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie
-                <i>chainingu</i> oraz wyciągnięcie części wspólnej ścieżek do miejsca, w którym <i>router</i> będzie
-                importowany. Pozwoli to uniknąć niepotrzebnego duplikowania kodu zwiększy jego czytelność.
+                <i>Router</i> należy wyeksportować: <strong>module.exports = {objectEditRouter, }</strong>. Kolejnym
+                krokiem jest jego import w pliku głównym aplikacji: <strong>const {objectEditRouter} =
+                    require("./routes/objectEdit")</strong> oraz użycie jako własnego <i>middleware</i>:
+                <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie <i>chainingu</i>
+                oraz wyciągnięcie części wspólnej ścieżek do miejsca, w którym <i>router</i> będzie importowany. Pozwoli
+                to uniknąć niepotrzebnego duplikowania kodu zwiększy jego czytelność.
             </p>
             <p class="article__text">Program pomagający stworzyć automatycznie strukturę aplikacji to
                 <strong>express-generator</strong>. Instalacja: <strong>npm i express-generator -g</strong>. Utworzenie
@@ -480,7 +480,8 @@
                 <strong>app.listen('3000', 'localhost')</strong>. Zwiększa to bezpieczeństwo i jest także wykorzystywane
                 w aplikacjach, które mają działać wyłącznie na danym serwerze.
             </p>
-            <p class="article__text">W praktyce nie stosuje się nigdy samego Node.js. Obsługa w nim, np. <i>SSL</i> jest
+            <p class="article__text">W praktyce nie stosuje się nigdy samego Node.js. Obsługa w nim, np. <i>SSL</i>
+                jest
                 niewydajna, więc stosuje się tzw. <i>reverse-proxy</i>, które wymaga już gotowego serwera produkcyjnego.
                 Dzięki użyciu <i>reverse-proxy</i> aplikacja wykonuje część rzeczy (często bardzo obciążających, np.
                 negocjowanie <i>SSL</i>) poza Node.js i odwołuje się do niego dopiero w przypadku konieczności
