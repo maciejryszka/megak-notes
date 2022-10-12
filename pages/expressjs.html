@@ -68,6 +68,8 @@
             <a href="#middleware" class="theory-main__link">middleware</a>
             <span class="theory-main__text">•</span>
             <a href="#structure" class="theory-main__link">struktura aplikacji</a>
+            <span class="theory-main__text">•</span>
+            <a href="#layout-engines" class="theory-main__link">języki szablonów</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -426,6 +428,13 @@
                     wartości. Klient powinien automatycznie przesłać wszystkie ciastka do serwera przy każdym zapytaniu,
                     a <i>cookie-parser</i> umożliwi dostęp do nich.
                 </li>
+                <li class="article__list-item"><strong>express.urlencoded()</strong> - służy do odczytania zawartości
+                    formularza przesłanego w tradycyjny sposób (bez użycia metody <i>fetch</i>). Aby dostać się do
+                    danych przesłanych w zapytaniu, należy odwołać się do obiektu <strong>req.body</strong>. Jest to
+                    <i>middleware</i> wbudowany w Express.js. Opcjonalnym argumentem jest obiekt opcji. Wskazane jest
+                    jednak użycie obiektu opcji i określenie wartości (<i>true</i> lub <i>false</i>) dla własności
+                    <i>extended</i>.
+                </li>
             </ul>
         </article>
         <article id="structure" class="article">
@@ -516,6 +525,57 @@
                 konsoli frazę <i>Running my app...</i>, dzięki czemu pojawi się ona w terminalu po każdym przeładowaniu
                 zakończonym sukcesem.
             </p>
+        </article>
+        <article id="layout-engines" class="article">
+            <h2 class="article__heading">języki szablonów</h2>
+            <p class="article__text"><strong>Języki/silniki szablonów/widoków (layout engines)</strong> pozwalają na
+                generowanie po stronie serwera szablonów zawierających dane. Szablony te następnie przekazywane są do
+                aplikacji.</p>
+            <p class="article__text">Jednym z najpopularniejszych języków szablonów jest <strong>Handlebars.js</strong>,
+                który jest szybki, wygodny, bezpieczny i rozszerzalny, a także łatwo integruje się z Express.js.
+            </p>
+            <p class="article__text">Popularnym językiem szablonów wykorzystywanym w Express.js jest
+                <strong>express-handlebars</strong>. W celu jego instalacji, należy użyć komendy <strong>npm i
+                    express-handlebars</strong>. Moduł ten jest wydajny, ponieważ używa asynchronicznego odczytywania
+                plików oraz <i>cachuje</i> odpowiedzi na produkcji (szablony są generowane tylko raz). Jest także prosty
+                w użyciu oraz domyślnie układa aplikację w strukturę wysokiej jakości. <i>Express-handlebars</i> posiada
+                większość ważnych funkcjonalnośći <i>handlebars</i>.
+            </p>
+            <p class="article__text">Moduł <i>express-handlebars</i> wymaga w głównym katalogu projekt folderu
+                <strong>views</strong>, wewnątrz którego znaleźć się musi następująca struktura:
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item">views
+                    <ul class="article__list">
+                        <li class="article__list-item">home.hbs</li>
+                        <li class="article__list-item">layouts
+                            <ul class="article__list">
+                                <li class="article__list-item">main.hbs</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="article__text">W zaproponowanej powyżej strukturze folder <i>layouts</i> zawiera szablony
+                aplikacji (plik <i>main.hbs</i> zawiera główny szablon). W folderze <i>views</i> znajdują się widoki, do
+                których odnoszą się poszczególne ścieżki aplikacji. Plik szablonów powinien zawierać strukturę
+                <i>HTML</i>. Miejsca szablonów, zawierające zmienne wewnątrz potrójnych nawiasów klamrowych, np.
+                <strong>{{{body}}}</strong>, uzupełniane będą elementami plików z widokami.
+            </p>
+            <p class="article__text">W celu użycia <i>express-handlebars</i> należy pobrać cały moduł do jednej zmiennej
+                bez stosowania destrukturyzacji: <strong>const hbs = require('express-handlebars')</strong>. Następnie
+                na aplikacji Express.js należy wywołać metodę <i>engine</i>, aby wskazać że używany będzie silnik
+                szablonów (pierwszym argumentem jest łańcuch znaków zawierający rozszerzenie używanych plików z
+                szablonami, drugim argumentem jest wywołany pobrany wcześniej moduł <i>express-handlebars</i>, który z
+                kolei jako argument przyjmuje obietkt z własnością <i>extname</i>, której wartością jest łańcuch znaków
+                zawierający rozszerzenie używanych plików z szablonami): <strong>app.engine('.hbs', hbs({extname:
+                    '.hbs'}))</strong>. Następnie należy wskazać domyślny silnik widoków wywołując na aplikacji
+                Express.js metodę <i>set</i> (pierwszym argumentem jest łańcuch znaków <i>view engine</i>, natomiast
+                drugim łańcuch znaków zawierający rozszerzenie używanych plików z szablonami): <strong>app.set('view
+                    engine', '.hbs')</strong>.</p>
+            <p class="article__text">Metoda <strong>res.render('viewFile')</strong> wywołana na obiekcie odpowiedzi
+                (w miejscu innej metody przesyłającej dane, np. <i>send</i>) pozwala na renderowanie widoków w
+                aplikacji. Argumentem metody jest nazwa pliku z widokiem z folderu <i>views</i>.</p>
         </article>
     </main>
     <footer class="footer">
