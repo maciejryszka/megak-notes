@@ -553,29 +553,86 @@
                                 <li class="article__list-item">main.hbs</li>
                             </ul>
                         </li>
+                        <li class="article__list-item">partials
+                            <ul class="article__list">
+                                <li class="article__list-item">partial.hbs</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
+            <p class="article__text">W celu użycia <i>express-handlebars</i> należy pobrać z niego metodę <i>engine</i>
+                (najlepiej z użyciem destrukturyzacji): <strong>const {engine} = require('express-handlebars')</strong>.
+                Następnie na aplikacji Express.js należy wywołać metodę <i>engine</i>, aby wskazać, że używany będzie
+                silnik szablonów (pierwszym argumentem jest łańcuch znaków zawierający rozszerzenie używanych plików z
+                szablonami, drugim argumentem jest wywołana, pobrana wcześniej z modułu <i>express-handlebars</i>,
+                metoda <i>engine</i>, która z kolei jako argument przyjmuje obietkt z własnością <i>extname</i>, której
+                wartością jest łańcuch znaków zawierający rozszerzenie używanych plików z szablonami):
+                <strong>app.engine('.hbs', engine({extname: '.hbs'}))</strong>. Następnie należy wskazać domyślny silnik
+                widoków wywołując na aplikacji Express.js metodę <i>set</i> (pierwszym argumentem jest łańcuch znaków
+                <i>view engine</i>, natomiast drugim łańcuch znaków zawierający rozszerzenie używanych plików z
+                szablonami): <strong>app.set('view engine', '.hbs')</strong>.
+            </p>
+            <p class="article__text">Metoda <strong>res.render('viewFilename')</strong> wywołana na obiekcie odpowiedzi
+                (w miejscu innej metody przesyłającej dane, np. <i>send</i>) pozwala na renderowanie widoków w
+                aplikacji. Argumentem metody jest nazwa pliku z widokiem z folderu <i>views</i>.</p>
             <p class="article__text">W zaproponowanej powyżej strukturze folder <i>layouts</i> zawiera szablony
                 aplikacji (plik <i>main.hbs</i> zawiera główny szablon). W folderze <i>views</i> znajdują się widoki, do
                 których odnoszą się poszczególne ścieżki aplikacji. Plik szablonów powinien zawierać strukturę
                 <i>HTML</i>. Miejsca szablonów, zawierające zmienne wewnątrz potrójnych nawiasów klamrowych, np.
-                <strong>{{{body}}}</strong>, uzupełniane będą elementami plików z widokami.
+                <strong>{{{body}}}</strong>, uzupełniane będą elementami plików z widokami. Możliwe jest także
+                przesłanie <i>HTML</i> z użyciem potrójnych nawiasów klamrowych, jednak ze względów bezpieczeństwa nie
+                jest to zalecane.
             </p>
-            <p class="article__text">W celu użycia <i>express-handlebars</i> należy pobrać cały moduł do jednej zmiennej
-                bez stosowania destrukturyzacji: <strong>const hbs = require('express-handlebars')</strong>. Następnie
-                na aplikacji Express.js należy wywołać metodę <i>engine</i>, aby wskazać że używany będzie silnik
-                szablonów (pierwszym argumentem jest łańcuch znaków zawierający rozszerzenie używanych plików z
-                szablonami, drugim argumentem jest wywołany pobrany wcześniej moduł <i>express-handlebars</i>, który z
-                kolei jako argument przyjmuje obietkt z własnością <i>extname</i>, której wartością jest łańcuch znaków
-                zawierający rozszerzenie używanych plików z szablonami): <strong>app.engine('.hbs', hbs({extname:
-                    '.hbs'}))</strong>. Następnie należy wskazać domyślny silnik widoków wywołując na aplikacji
-                Express.js metodę <i>set</i> (pierwszym argumentem jest łańcuch znaków <i>view engine</i>, natomiast
-                drugim łańcuch znaków zawierający rozszerzenie używanych plików z szablonami): <strong>app.set('view
-                    engine', '.hbs')</strong>.</p>
-            <p class="article__text">Metoda <strong>res.render('viewFile')</strong> wywołana na obiekcie odpowiedzi
-                (w miejscu innej metody przesyłającej dane, np. <i>send</i>) pozwala na renderowanie widoków w
-                aplikacji. Argumentem metody jest nazwa pliku z widokiem z folderu <i>views</i>.</p>
+            <p class="article__text">Aby przekazać zmienną do pliku z widokiem, należy umieścić w takim pliku jej nazwę
+                wewnątrz podwójnych nawiasów klamrowych, np. <strong>{{variableName}}</strong>. Drugim argumentem metody
+                <i>render</i> jest obiekt, służący do przekazywania wartości tych zmiennych do widoków (elementami
+                takiego obiektu są nazwy zmiennych oraz ich wartości): <strong>res.render('viewFilename', {variableName:
+                    variableValue})</strong>.
+            </p>
+            <p class="article__text">Możliwe jest również przekazanie zagnieżdżonego obiektu:
+                <strong>res.render('viewFilename', {person: {firstName: 'Person'sFirstName', lastName:
+                    'Person'sLastName'}})</strong>. W takim przypadku możliwe jest dokonanie w pliku widoku
+                destrukturyzacji wszystkich pól z obiektu: <strong>{{#with person}} {{firstName}},
+                    {{lastName}} {{/with}}</strong>.
+            </p>
+            <p class="article__text">Możliwe jest również przekazanie tablicy: <strong>res.render('viewFilename',
+                    {arrayOfItems})</strong>. W takim przypadku możliwe jest dokonanie w pliku widoku iteracji po
+                wszystkich elementach tablicy: <strong>{{#each arrayOfItems}} {{this}} {{/each}}</strong> (gdzie
+                <i>this</i> to kolejny element tablicy). Jeśli tablica nie zawiera elementów, z użyciem
+                <strong>{{else}}</strong> możliwe jest uzupełnienie widoku alternatywną zawartością: <strong>{{#each
+                    arrayOfItems}} {{this}} {{else}}</strong> <i>no results</i> <strong>{{/each}}</strong>.
+            </p>
+            <p class="article__text">
+                W pliku widoku możliwe jest także używanie prostych warunków (sprawdzenie jaką wartość logiczną zwróci
+                zmienna, łańcuch znaków, obiekt czy tablica): <strong>{{#if condition}}</strong> <i>result if true</i>
+                <strong>{{/if}} {{#unless condition}}</strong> <i>result if false</i> <strong>{{/unless}}</strong>.
+                Alternatywna opcja z użyciem <strong>{{else}}</strong>: <strong>{{#if condition}}</strong> <i>result if
+                    true</i> <strong>{{else}}</strong> <i>result if false</i> <strong>{{/if}}</strong>. Warunki o
+                większej złożoności, (np. porównywanie liczb), należy sprawdzać w logice aplikacji a do widoku przekazać
+                jedynie wartość logiczną.
+            </p>
+            <p class="article__text">Zasady bezpieczeństwa podczas korzystania z <i>express-handlebars</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Atak <i>XSS</i> nie powinien zostać wykonany.</li>
+                <li class="article__list-item">Dynamicznie można generować jedynie pliki <i>HTML</i>. Generowanie w taki
+                    sposób plików JavaScript nie jest bezpieczne.</li>
+                <li class="article__list-item">Nie należy nigdy przekazywać wszystkich danych przesłanych przez
+                    użytkownika.</li>
+            </ul>
+            <p class="article__text"><strong>Partial</strong> służy do zautomatyzowania elementów, które nie są częścią
+                szablonu, lecz często się powtarzają (np. sekcja komentarzy, sekcja ocen). Pliki tego typu należy
+                umieścić w folerze <i>partials</i> (możliwe jest rozbudowanie struktury przez podfoldery), a następnie
+                użyć ich w konrtetnym pliku widoku z wykorzystaniem: <strong>{{> partialFileName}}</strong>.
+            </p>
+            <p class="article__text">Aby zakomentować tekst w pliku <i>.hbs</i>, należy wykorzytać nawiasy klamrowe,
+                wykrzyknik i myślniki: <strong>{{!--</strong> <i>commented text</i> <strong>--}}</strong>. Komentarz
+                taki w przeciwieństwie do komentarza <i>HTML</i> nie jest widoczny w źródle strony.
+            </p>
+            <p class="article__text">Aby za pośrednictwem pliku <i>.hbs</i> wyświetlać w informacje w konsoli, należy
+                użyć: <strong>{{log</strong> <i>'first name:' firstName 'last name:' lastName</i><strong>}}</strong>.
+                Argumenty należy oddzielać spacjami.
+            </p>
         </article>
     </main>
     <footer class="footer">
