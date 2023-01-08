@@ -70,6 +70,8 @@
             <a href="#structure" class="theory-main__link">struktura aplikacji</a>
             <span class="theory-main__text">•</span>
             <a href="#layout-engines" class="theory-main__link">języki szablonów</a>
+            <span class="theory-main__text">•</span>
+            <a href="#crud-rest" class="theory-main__link">crud & rest</a>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -643,6 +645,61 @@
                     href="https://github.com/express-handlebars/express-handlebars#helpers">dokumentacji</a>
                 <i>express-handlebars</i>.
             </p>
+        </article>
+        <article id="crud-rest" class="article">
+            <h2 class="article__heading">crud & rest</h2>
+            <p class="article__text"><strong>CRUD</strong> to najczęściej występujące akcje w najprostszych <i>API</i>:
+                dodawanie, odczytywanie, aktulaizowanie oraz usuwanie danych. <i>CRUD</i> jest to akronim od słów:
+                <i>create</i>, <i>read</i>, <i>update</i>, <i>delete</i>.
+            </p>
+            <p class="article__text"><strong>REST API</strong> jest stylem architektonicznym służącym do projektowania
+                interfejsów <i>API</i> za pomocą protokołu <i>HTTP</i>. Jego kluczową zaletą jest duża elastyczność.
+                <i>REST API</i> wykorzystywany jest wszędzie tam, gdzie istnieje potrzeba dostarczenia danych
+                użytkownikowi aplikacji internetowej lub witryny bezpośrednio z serwera.
+            </p>
+            <p class="article__text">Umowne zasady <i>REST API</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>Stateless (bezstanowość)</strong> - w przypadku serwisów
+                    <i>REST</i> oznacza, że stan konieczny do obsługi znajduje się w żądaniu klienta (jako część
+                    <i>URL</i>, parametr żądania, fragment nagłówka czy samej treści żądania). Zmodyfikowany stan może
+                    być przesłany przez serwer do klienta w odpowiedzi, jednak żadna informacja o stanie nie jest
+                    przechowywana przez serwer i musi być każdorazowo przesłana przez klienta, jeśli jest ona wymagana
+                    do jego obsługi.
+                </li>
+                <li class="article__list-item"><strong>Używanie odpowiednich metod</strong>:
+                    <ul class="article__list">
+                        <li class="article__list-item"><strong>GET</strong> - pobiera określony zasób na podstawie
+                            podanego indentyfikatora.</li>
+                        <li class="article__list-item"><strong>POST</strong> - tworzy nowy zasób; może służyć do
+                            pobierania danych w przypadku, kiedy w ramach <i>body</i> trzeba dostarczyć dodatkowe
+                            parametry; jest wykorzystywany do wszystkich innych operacji, które nie wpisują się w ramy
+                            innych metod.</li>
+                        <li class="article__list-item"><strong>PUT</strong> - aktualizuje określony zasób na podstawie
+                            podanego identyfikatora; może służyć do tworzenia nowego zasobu, jeżeli jego identyfikator
+                            jest znany.</li>
+                        <li class="article__list-item"><strong>PATCH</strong> - aktualizuje część określonego zasobu.
+                        </li>
+                        <li class="article__list-item"><strong>DELETE</strong> - usuwa określony zasób na podstawie
+                            podanego indentyfikatora.</li>
+                    </ul>
+                </li>
+                <li class="article__list-item"><strong>Metoda oraz ścieżka</strong> powinny opisywać działanie na
+                    konkretnym zasobie, np. <i>PATCH/PUT /base</i> zamiast <i>/set-base</i>.</li>
+                <li class="article__list-item"><strong>Możliwości <i>HTTP</i></strong> powinny być wykorzystane
+                    poprawnie, np. w przypadku błędu użytkownika, należy zwrócić kod 400.</li>
+                <li class="article__list-item"><strong>Korzystanie z nazw kolekcji</strong> - każda ścieżka powinna
+                    rozpoczynać się od takiej nazwy, np. <i>car</i> (lub <i>cars</i>) w przypadku samochodów.</li>
+            </ul>
+            <p class="article__text">Przykłady poprawnych ścieżek w <i>REST API</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>GET /user</strong> - odczyt listy użytkowników.</li>
+                <li class="article__list-item"><strong>GET /user/123</strong> - odczyt użytkownika o <i>ID</i> 123.</li>
+                <li class="article__list-item"><strong>POST /user</strong> - dodanie użytkownika.</li>
+                <li class="article__list-item"><strong>PUT/PATCH /user/123</strong> - zastąpienie/nadpisanie/zmiana
+                    użytkownika o <i>ID</i> 123.</li>
+                <li class="article__list-item"><strong>DELETE /user/123</strong> - usunięcie użytkownika o <i>ID</i>
+                    123.</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
