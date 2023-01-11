@@ -650,10 +650,18 @@
             <h2 class="article__heading">crud & rest</h2>
             <p class="article__text"><strong>CRUD</strong> to najczęściej występujące akcje w najprostszych <i>API</i>:
                 dodawanie, odczytywanie, aktulaizowanie oraz usuwanie danych. <i>CRUD</i> jest to akronim od słów:
-                <i>create</i>, <i>read</i>, <i>update</i>, <i>delete</i>. W celu stworzenia unikalnego identyfikatora
-                podczas tworzenia danych, pomocna może okazać się paczka <a class="article__link"
-                    href="https://www.npmjs.com/package/uuid">uuid</a>.
-            </p>
+                <i>create</i>, <i>read</i>, <i>update</i>, <i>delete</i>.
+            <p class="article__text">Paczki <i>npm</i> przydatne podczas tworzenia aplikacji
+                wykorzystujących <i>CRUD</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong><a class="article__link"
+                            href="https://www.npmjs.com/package/uuid">uuid</a></strong> - w celu stworzenia unikalnego
+                    identyfikatora podczas tworzenia danych.</li>
+                <li class="article__list-item"><strong><a class="article__link"
+                            href="https://www.npmjs.com/package/method-override">method-override</a></strong> - w celu
+                    umożliwienia przesyłania formularza metodami <i>PUT</i> oraz <i>DELETE</i> (domyślnie formularz może
+                    zostać przesłany jedynie z wykorzystaniem metod <i>GET</i> oraz <i>POST</i>)</li>
+            </ul>
             <p class="article__text"><strong>REST API</strong> jest stylem architektonicznym służącym do projektowania
                 interfejsów <i>API</i> za pomocą protokołu <i>HTTP</i>. Jego kluczową zaletą jest duża elastyczność.
                 <i>REST API</i> wykorzystywany jest wszędzie tam, gdzie istnieje potrzeba dostarczenia danych
