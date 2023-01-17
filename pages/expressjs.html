@@ -656,11 +656,14 @@
             <ul class="article__list">
                 <li class="article__list-item"><strong><a class="article__link"
                             href="https://www.npmjs.com/package/uuid">uuid</a></strong> - w celu stworzenia unikalnego
-                    identyfikatora podczas tworzenia danych.</li>
+                    identyfikatora podczas tworzenia danych,</li>
                 <li class="article__list-item"><strong><a class="article__link"
                             href="https://www.npmjs.com/package/method-override">method-override</a></strong> - w celu
                     umożliwienia przesyłania formularza metodami <i>PUT</i> oraz <i>DELETE</i> (domyślnie formularz może
                     zostać przesłany jedynie z wykorzystaniem metod <i>GET</i> oraz <i>POST</i>)</li>
+                <li class="article__list-item"><strong><a class="article__link"
+                            href="https://www.npmjs.com/package/date-fns">date-fns</a></strong> - w celu zarządzania
+                    datami oraz wykonywania na nich operacji.</li>
             </ul>
             <p class="article__text"><strong>REST API</strong> jest stylem architektonicznym służącym do projektowania
                 interfejsów <i>API</i> za pomocą protokołu <i>HTTP</i>. Jego kluczową zaletą jest duża elastyczność.
@@ -709,6 +712,17 @@
                     użytkownika o <i>ID</i> 123.</li>
                 <li class="article__list-item"><strong>DELETE /user/123</strong> - usunięcie użytkownika o <i>ID</i>
                     123.</li>
+            </ul>
+            <p class="article__text">Wskazówki przydatne podczas tworzenia walidacji dla <i>CRUD</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Implementacja walidacji w klasie pojedynczego rekordu.</li>
+                <li class="article__list-item">Obsługa błędów z wykorzystaniem słowa kluczowego <i>throw</i> oraz
+                    obiektu typu <i>Error</i>.</li>
+                <li class="article__list-item">Rozszerzenie klasy <i>Error</i> (z wykorzystaniem słowa kluczowego
+                    <i>extends</i>), w celu uniemożliwienia wyświetlenia błędów wewnętrznych. Błąd programistyczny nie
+                    może zostać zwrócony użytkownikowi.
+                </li>
+                <li class="article__list-item">Używanie odpowiednich kodów błędów.</li>
             </ul>
         </article>
     </main>
