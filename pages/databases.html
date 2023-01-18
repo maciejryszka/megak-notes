@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaKurs - JavaScript</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-navigation">
+            <nav class="hamburger-menu hamburger-menu--js">
+                <ul class="hamburger-menu__list">
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+                    </li>
+                    <li class="hamburger-menu__list-item">
+                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header-navigation__button header-navigation__button--menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="header-navigation__button header-navigation__button--top">
+                <i class="fas fa-arrow-circle-up"></i>
+            </button>
+            <p class="header-navigation__text">mega kurs javascriptu</p>
+        </nav>
+    </header>
+    <main class="main theory-main">
+        <h1 class="theory-main__heading">bazy danych</h1>
+        <nav class="theory-main__links">
+            <a href="#fundaments" class="theory-main__link">fundamenty baz danych</a>
+            <span class="theory-main__text">•</span>
+            <a href="#relational" class="theory-main__link">relacyjne bazy danych</a>
+            <span class="theory-main__text">•</span>
+        </nav>
+        <div class="theory-main__image"></div>
+        <article id="fundaments" class="article">
+            <h2 class="article__heading">fundamenty baz danych</h2>
+            <p class="article__text">Bazy danych to miejsca do stałego przechowywania danych. Umożliwiają łatwe
+                zarządzanie informacjami: dodawanie, pobieranie, aktualizowanie, usuwanie. Bazy danych posiadają
+                zazwyczaj serwer bazodanowy z którym łączy się klient (np. phpMyAdmin, Heidi lub inna aplikacja).
+                Aplikacja będąca serwerem webowym (dla którego klientem jest np. przeglądarka lub <i>Insomnia</i>), może
+                być jednocześnie klientem dla serwera bazodanowego.</p>
+            <p class="article__text">Zalety baz danych:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Przechowywanie danych na stałe (mogą przechowywać biliony informacji
+                    gromadzonych w petabajtach).</li>
+                <li class="article__list-item">Wyszukiwanie danych (mogą przeszukiwać miliony elementów w ułamkach
+                    sekundy).</li>
+                <li class="article__list-item">Wysoka przepustowość (mogą obsługiwać miliony klientów jednocześnie).
+                </li>
+            </ul>
+        </article>
+        <article id="relational" class="article">
+            <h2 class="article__heading">relacyjne bazy danych</h2>
+            <p class="article__text">Relacyjne bazy danych przechowują dane w postaci tabel, które mogą być ze sobą
+                powiązane (np. użytkownik może posiadać jeden lub więcej adresów wysyłki).</p>
+            <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik
+                dla arkusza kalkulacyjnego):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>Baza danych</strong> (plik).</li>
+                <li class="article__list-item"><strong>Tabela</strong> (arkusz).</li>
+                <li class="article__list-item"><strong>Kolumna</strong> (kolumna).</li>
+                <li class="article__list-item"><strong>Rekord/encja</strong> (wiersz).</li>
+                <li class="article__list-item"><strong>Pole/komórka</strong> (komórka).</li>
+            </ul>
+            <p class="article__text"><strong>SQL</strong> to najczęściej wykorzystywany język podczas pracy z
+                relacyjnymi bazami danych. Posiada wiele dialektów, w zależności od bazy danych która z niego korzysta,
+                np.: <i>Oracle Database</i>, <i>MySQL</i>, <i>Microsoft SQL Server</i>, <i>PostgreSQL</i>.</p>
+        </article>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Maciej Ryszka - 2023</p>
+    </footer>
+    <script src="../scripts/hamburger-menu.js"></script>
+    <script src="../scripts/top-button.js"></script>
+</body>
+
+</html>
