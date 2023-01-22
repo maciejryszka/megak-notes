@@ -57,7 +57,9 @@
         <nav class="theory-main__links">
             <a href="#fundaments" class="theory-main__link">fundamenty baz danych</a>
             <span class="theory-main__text">•</span>
-            <a href="#relational" class="theory-main__link">relacyjne bazy danych</a>
+            <a href="#relational-basics" class="theory-main__link">relacyjne bazy danych - podstawy</a>
+            <span class="theory-main__text">•</span>
+            <a href="#relational-concepts" class="theory-main__link">relacyjne bazy danych - pojęcia</a>
             <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
@@ -78,27 +80,18 @@
                 </li>
             </ul>
         </article>
-        <article id="relational" class="article">
-            <h2 class="article__heading">relacyjne bazy danych</h2>
+        <article id="relational-basics" class="article">
+            <h2 class="article__heading">relacyjne bazy danych - podstawy</h2>
             <p class="article__text">Relacyjne bazy danych przechowują dane w postaci tabel, które mogą być ze sobą
                 powiązane (np. użytkownik może posiadać jeden lub więcej adresów wysyłki).</p>
-            <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik
-                dla arkusza kalkulacyjnego):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>Baza danych</strong> (plik).</li>
-                <li class="article__list-item"><strong>Tabela</strong> (arkusz).</li>
-                <li class="article__list-item"><strong>Kolumna</strong> (kolumna).</li>
-                <li class="article__list-item"><strong>Rekord/encja</strong> (wiersz).</li>
-                <li class="article__list-item"><strong>Pole/komórka</strong> (komórka).</li>
-            </ul>
             <p class="article__text"><strong>SQL</strong> to najczęściej wykorzystywany język podczas pracy z
-                relacyjnymi bazami danych. Posiada wiele dialektów, w zależności od bazy danych która z niego korzysta,
-                np.: <i>Oracle Database</i>, <i>MySQL</i>, <i>Microsoft SQL Server</i>, <i>PostgreSQL</i>.
+                relacyjnymi bazami danych. Posiada wiele dialektów, w zależności od bazy danych która z niego korzysta.
             </p>
             <p class="article__text"><strong>Relational Database Management System (RDBMS)</strong> to system
                 zarządzania relacyjnymi bazami danych. Najpopularniejszym z nich jest <strong>MySQL</strong>, który
                 nadaje się zarówno do małych projektów jak i do dużych serwisów. Popularną odmianą <i>MySQL</i> jest
-                <strong>MariaDB</strong>.
+                <strong>MariaDB</strong>. Przykłady innych baz: <i>Oracle Database</i>, <i>Microsoft SQL
+                    Server</i>, <i>PostgreSQL</i>.
             </p>
             <p class="article__text">Sposoby instalacji <i>MySQL</i>:</p>
             <ul class="article__list">
@@ -117,14 +110,21 @@
             </ul>
             <p class="article__text">Narzędzia umożliwiające zarządzanie bazami danych:</p>
             <ul class="article__list">
-                <li class="article__list-item">oficjalny klient <i>MySQL</i>,</li>
+                <li class="article__list-item">Oficjalny klient <i>MySQL</i>.</li>
                 <li class="article__list-item"><strong>phpMyAdmin</strong> - udostępniany przez gotowe paczki (np.
-                    <i>XAMPP</i>, <i>MAMP</i>). Po instalacji, dostęp do narzędzia najprawdopodobniej znajduje się pod
-                    adresem <a class="article__link" href="http://localhost/phpMyAdmin">localhost/phpMyAdmin</a>.
+                    <i>XAMPP</i>, <i>MAMP</i>). Po instalacji i uruchomieniu, dostęp do narzędzia najprawdopodobniej
+                    znajduje się pod adresem <a class="article__link"
+                        href="http://localhost/phpmyadmin">localhost/phpmyadmin</a>.
                 </li>
                 <li class="article__list-item"><strong>HeidiSQL</strong> - wszyechstronne, szybkie i ergonomiczne
                     narzędzie, dostępne do pobrania za darmo pod adresem <a class="article__link"
-                        href="https://www.heidisql.com/">heidisql.com</a>.</li>
+                        href="https://www.heidisql.com/">heidisql.com</a>. Parametry połączenia z bazą danych:</li>
+                <ul class="article__list">
+                    <li class="article__list-item">Host: <i>localhost</i></li>
+                    <li class="article__list-item">Port: <i>3306</i></li>
+                    <li class="article__list-item">Nazwa użytkownika: <i>root</i> (domyślnie)</li>
+                    <li class="article__list-item">Hasło: (domyślnie jest puste)</li>
+                </ul>
             </ul>
             <p class="article__test">Trzy ważne zasady podczas doboru odpowiedniego kodowania:</p>
             <ol class="article__list">
@@ -134,6 +134,48 @@
                     identycznego nie jest możliwe.</li>
                 <li class="article__list-item">Użycie kodowania <strong>utf8mb4_unicode_ci</strong>.</li>
             </ol>
+            <p class="article__test">Kodowanie <i>utf8mb4_unicode_ci</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>utf8mb4</strong> - jest to poprawna implementacja <i>UTF8</i>,
+                    która używa 1-4 bajtów na znak.</li>
+                <li class="article__list-item"><strong>unicode</strong> - wskazuje na implementację <i>Unicode</i>.</li>
+                <li class="article__list-item"><strong>ci (case insensitive)</strong> - porównywanie odbywa się bez
+                    względu na wielkość liter, co jest zazwyczaj pożądane w bazach danych.</li>
+                <li class="article__list-item">Spacje wokół tekstu są traktowane jako nieistniejące podczas porównania.
+                </li>
+            </ul>
+        </article>
+        <article id="relational-concepts" class="article">
+            <h2 class="article__heading">relacyjne bazy danych - pojęcia</h2>
+            <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik
+                dla arkusza kalkulacyjnego):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>Baza danych</strong> (plik).</li>
+                <li class="article__list-item"><strong>Tabela</strong> (arkusz).</li>
+                <li class="article__list-item"><strong>Kolumna</strong> (kolumna).</li>
+                <li class="article__list-item"><strong>Rekord/encja</strong> (wiersz).</li>
+                <li class="article__list-item"><strong>Pole/komórka</strong> (komórka).</li>
+            </ul>
+            <p class="article__text">Pozostałe pojęcia:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>Typ kolumny</strong> - określa jakiego typu dane są przechowywane
+                    w kolumnie.</li>
+                <li class="article__list-item"><strong>Indeks</strong> - oznacza dane, po którch często następuje
+                    przeszukiwanie. Przyspiesza wyszukiwanie, kosztem większej ilości danych przechowywanych na dysku.
+                </li>
+                <li class="article__list-item"><strong>Klucz główny (primary key)</strong> - specjalny rodzaj indeksu,
+                    który zawsze istnieje. Jest unikalnym identyfikatorem rekordu.</li>
+                <li class="article__list-item"><strong>Klucze obce (foreign keys)</strong> - pozwalają na utworzenie
+                    relacji pomiędzy tabelami.</li>
+                <li class="article__list-item"><strong>AUTO_INCREMENT</strong> - inkrementuje klucz główny rekordu jeśli
+                    jest on liczbowy. Żadna wartość nigdy nie będzie powtórzona (nawet w przypadku usunięcia rekordu).
+                </li>
+                <li class="article__list-item"><strong>NULLABLE</strong> - określa czy wartość pola może przyjąć wartość
+                    <i>null</i>.
+                </li>
+            </ul>
+            <p class="article__text">Użwywa się różnych typów i długości danych, ponieważ baza danych musi być szybka. Z
+                drugiej strony nie może być też zbyt duża, lecz musi pomieścić wszystkie wymagane dane.</p>
         </article>
     </main>
     <footer class="footer">
