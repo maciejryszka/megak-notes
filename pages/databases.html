@@ -61,6 +61,8 @@
             <span class="theory-main__text">•</span>
             <a href="#relational-concepts" class="theory-main__link">relacyjne bazy danych - pojęcia</a>
             <span class="theory-main__text">•</span>
+            <a href="#sql" class="theory-main__link">sql</a>
+            <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -120,10 +122,10 @@
                     narzędzie, dostępne do pobrania za darmo pod adresem <a class="article__link"
                         href="https://www.heidisql.com/">heidisql.com</a>. Parametry połączenia z bazą danych:</li>
                 <ul class="article__list">
-                    <li class="article__list-item">Host: <i>localhost</i></li>
-                    <li class="article__list-item">Port: <i>3306</i></li>
-                    <li class="article__list-item">Nazwa użytkownika: <i>root</i> (domyślnie)</li>
-                    <li class="article__list-item">Hasło: (domyślnie jest puste)</li>
+                    <li class="article__list-item">host: <i>localhost</i>,</li>
+                    <li class="article__list-item">port: <i>3306</i>,</li>
+                    <li class="article__list-item">nazwa użytkownika: <i>root</i> (domyślnie),</li>
+                    <li class="article__list-item">hasło: (domyślnie jest puste).</li>
                 </ul>
             </ul>
             <p class="article__test">Trzy ważne zasady podczas doboru odpowiedniego kodowania:</p>
@@ -150,11 +152,11 @@
             <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik
                 dla arkusza kalkulacyjnego):</p>
             <ul class="article__list">
-                <li class="article__list-item"><strong>Baza danych</strong> (plik).</li>
-                <li class="article__list-item"><strong>Tabela</strong> (arkusz).</li>
-                <li class="article__list-item"><strong>Kolumna</strong> (kolumna).</li>
-                <li class="article__list-item"><strong>Rekord/encja</strong> (wiersz).</li>
-                <li class="article__list-item"><strong>Pole/komórka</strong> (komórka).</li>
+                <li class="article__list-item"><strong>baza danych</strong> (plik),</li>
+                <li class="article__list-item"><strong>tabela</strong> (arkusz),</li>
+                <li class="article__list-item"><strong>kolumna</strong> (kolumna),</li>
+                <li class="article__list-item"><strong>rekord/encja</strong> (wiersz),</li>
+                <li class="article__list-item"><strong>pole/komórka</strong> (komórka).</li>
             </ul>
             <p class="article__text">Pozostałe pojęcia:</p>
             <ul class="article__list">
@@ -171,11 +173,36 @@
                     jest on liczbowy. Żadna wartość nigdy nie będzie powtórzona (nawet w przypadku usunięcia rekordu).
                 </li>
                 <li class="article__list-item"><strong>NULLABLE</strong> - określa czy wartość pola może przyjąć wartość
-                    <i>null</i>.
+                    <i>null</i> (nie można zostawić pustego pola, kiedy jego wartość nie została określona).
                 </li>
             </ul>
-            <p class="article__text">Użwywa się różnych typów i długości danych, ponieważ baza danych musi być szybka. Z
-                drugiej strony nie może być też zbyt duża, lecz musi pomieścić wszystkie wymagane dane.</p>
+            <p class="article__text">Użwywa się różnych typów i długości danych. Jeśli długość danych będzie zbyt
+                krótka, baza skróci dane i nie przechowa ich w całości. Jeśli długość danych będzie zbyt długa, baza
+                będzie wolna oraz ze względu na istniejące limit (łącznej liczby znaków ze wszystkich kolumn), nie
+                będzie w stanie przechować wszystkich potrzebnych danych. Ważny jest zatem jak najlepszy dobór długości
+                danych.</p>
+            <p class="article__text">Najważniejsze typy kolumn:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>VARCHAR, CHAR</strong> - przechowują tekst (określenie
+                    maksymalnej ilości znaków jest wymagane).</li>
+                <li class="article__list-item"><strong>TEXT, LONGTEXT i inne</strong> - przechowują tekst (określenie
+                    maksymalnej ilości znaków nie jest wymagane).</li>
+                <li class="article__list-item"><strong>SMALLINT, INT, BIGINT i inne</strong> - przechowują liczby
+                    całkowite (określenie maksymalnej ilości cyfr jest wymagane, lecz przechowana liczba nie może być
+                    większa niż zakres danego typu).</li>
+                <li class="article__list-item"><strong>DECIMAL</strong> - przechowuje liczby zmiennoprzecinkowe
+                    (wymagane jest określenie precyzji (maksymalnej ilości cyfr ogółem) oraz skali (maksymalnej ilości
+                    cyfr po przecinku)).</li>
+                <li class="article__list-item"><strong>DATETIME, DATE, TIME i inne</strong> - przechowują datę, czas
+                    itp.</li>
+            </ul>
+            <p class="article__text">Nie jest możliwa zmiana nazwy bazy danych. Narzędzia do zarządzania bazami danych
+                umożliwiają utworzenie nowej bazy danych z takimi samymi danymi oraz usunięcie starej, lecz operacja ta
+                nie działa dla każdego przypadku.</p>
+        </article>
+        <article id="sql" class="article">
+            <h2 class="article__heading">sql</h2>
+            <p class="article__text">sikłel</p>
         </article>
     </main>
     <footer class="footer">
