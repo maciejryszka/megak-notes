@@ -385,8 +385,14 @@ body {
 .article__link--capital {
   text-transform: uppercase;
 }
+.article__list {
+  list-style-type: disc;
+}
 .article__list-item {
   text-align: justify;
+}
+.article__list--ordered {
+  list-style-type: decimal;
 }
 .article__text {
   text-align: justify;

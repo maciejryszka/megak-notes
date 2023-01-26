@@ -300,8 +300,16 @@ body {
     }
   }
 
-  &__list-item {
-    text-align: justify;
+  &__list {
+    list-style-type: disc;
+
+    &-item {
+      text-align: justify;
+    }
+
+    &--ordered {
+      list-style-type: decimal;
+    }
   }
 
   &__text {

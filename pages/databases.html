@@ -129,7 +129,7 @@
                 </ul>
             </ul>
             <p class="article__test">Trzy ważne zasady podczas doboru odpowiedniego kodowania:</p>
-            <ol class="article__list">
+            <ol class="article__list article__list--ordered">
                 <li class="article__list-item">Ustawienie takiego samego kodowaia w każdym parametrze, jeśli jest to
                     tylko możliwe.</li>
                 <li class="article__list-item">Ustawienie kodowania o takim samym początku nazwy, jeśli ustawienie
@@ -202,7 +202,93 @@
         </article>
         <article id="sql" class="article">
             <h2 class="article__heading">sql</h2>
-            <p class="article__text">sikłel</p>
+            <p class="article__text">Łańcuchy znaków w <i>SQL</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">nazwy baz, tabel czy kolumn należy pisać wewnątrz grawisów (`),</li>
+                <li class="article__list-item">pozostałe łańcuchy znaków należy pisać wewnątrz apostrofów (') lub
+                    cudzysłowów (").</li>
+            </ul>
+            <p class="article__text">Kolejność formułowania zapytań w <i>SQL</i>:</p>
+            <ol class="article__list article__list--ordered">
+                <li class="article__list-item"><strong>SELECT</strong>,</li>
+                <li class="article__list-item"><strong>FROM</strong>,</li>
+                <li class="article__list-item"><strong>WHERE</strong>,</li>
+                <li class="article__list-item"><strong>GROUP BY</strong>,</li>
+                <li class="article__list-item"><strong>HAVING</strong>,</li>
+                <li class="article__list-item"><strong>ORDER BY</strong>,</li>
+                <li class="article__list-item"><strong>LIMIT</strong>.</li>
+            </ol>
+            <p class="article__text">Kolejność wykonywania zapytań w <i>SQL</i>:</p>
+            <ol class="article__list article__list--ordered">
+                <li class="article__list-item"><strong>FROM, JOIN</strong> - najpierw serwer musi wiedzieć skąd pobrać
+                    dane,</li>
+                <li class="article__list-item"><strong>WHERE</strong> - następnie filtruje dane i bierze tylko te
+                    potrzebne,</li>
+                <li class="article__list-item"><strong>GROUP BY</strong> - kolejnym krokiem jest pogrupowanie danych,
+                </li>
+                <li class="article__list-item"><strong>HAVING</strong> - teraz silnik filtruje grupy,</li>
+                <li class="article__list-item"><strong>SELECT</strong> - dopiero w tym kroku wybierane są potrzebne nam
+                    dane i wyliczane są funkcje agregujące,</li>
+                <li class="article__list-item"><strong>ORDER BY (ASC/DESC)</strong> - na samym końcu wiersze zostaną
+                    posortowane,
+                </li>
+                <li class="article__list-item"><strong>TOP</strong> - i wybrane te w odpowiedniej ilości,</li>
+            </ol>
+            <p class="article__text">Optymalizacja <i>SQL</i> - wskazówki:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Należy unikać pobierania danych ze wszystkich kolumn i wybierać jedynie
+                    te wymagane (<i>FROM</i>).</li>
+                <li class="article__list-item">Należy wybierać konkretne dane (<i>WHERE</i>).</li>
+                <li class="article__list-item">Należy wyszukiwać daty, porównując je do łańcucha znaków w formacie
+                    <strong>'YYYY-MM-DD hh:mm:ss'</strong>.
+                </li>
+            </ul>
+            <p class="article__text">Operatory <i>SQL</i> dla <i>WHERE</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>=</strong> - równy,</li>
+                <li class="article__list-item"><strong>&lt;&gt;</strong> - różny niż,</li>
+                <li class="article__list-item"><strong>&lt;</strong> - mniejszy niż,</li>
+                <li class="article__list-item"><strong>&gt;</strong> - większy niż,</li>
+                <li class="article__list-item"><strong>&lt;=</strong> - mniejszy lub równy niż,</li>
+                <li class="article__list-item"><strong>&gt;=</strong> - większy lub równy niż,</li>
+                <li class="article__list-item"><strong>IS NULL</strong> - czy ma wartość równą <i>null</i>,</li>
+                <li class="article__list-item"><strong>IS NOT NULL</strong> - czy ma wartość różną niż <i>null</i>,</li>
+                <li class="article__list-item"><strong>OR</strong> - lub,</li>
+                <li class="article__list-item"><strong>AND</strong> - oraz,</li>
+                <li class="article__list-item"><strong>IN()</strong> - pozwala określić kilka wartości (alternatywa dla
+                    użytego wielokrotnie operatora <i>OR</i>),</li>
+                <li class="article__list-item"><strong>BETWEEN</strong> - pozwala zastąpić dwa wyrażenia jednocześnie
+                    (<strong>&lt;=</strong> oraz <strong>&gt;=</strong>) i ograniczyć zbiór obustronnie (wartości
+                    graniczne należy oddzielić słowem kluczowym <i>AND</i>).
+                </li>
+                <li class="article__list-item"><strong>LIKE</strong>
+                    <ul class="article__list">
+                        <li class="article__list-item"></li>
+                        <li class="article__list-item"></li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="article__text">Ograniczenie liczby wyników odbywa się z pomocą <i>LIMIT</i>. Jeśli podany zostanie
+                jeden argument, określi on liczbę wyników jakie zostaną zwrócone. Jeśli zostaną podane dwa argumenty,
+                pierwszy z nich określi po którym z kolei elemencie rozpocząć wyświetlanie (liczone od 0), a drugi z
+                nich określi liczbę wyników jakie zostaną zwrócone.</p>
+            <p class="article__text">Alias nadaje tabeli lub kolumnie tymczasową (najczęściej skróconą) nazwę. Po pełnej
+                nazwie należy użyć słowa kluczowego <i>AS</i>, a po nim zapisać nazwę skróconą. W kolejnej części
+                zapytania możliwe jest korzystanie ze skróconej nazwy.</p>
+            <p class="article__text"><strong>Funkcje agregujące</strong> zwracają podsumowania dla całej tabeli, grupy
+                wierszy w tabeli lub zbioru wynikowego. Przykłady:</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>AVG(columnName)</strong> - zwraca wartość średnią,</li>
+                <li class="article__list-item"><strong>COUNT(*)</strong> - zwraca liczbę wybranych wierszy,</li>
+                <li class="article__list-item"><strong>COUNT(columnName)</strong> - zwraca liczbę wierszy w zbiorze,
+                </li>
+                <li class="article__list-item"><strong>MAX(columnName)</strong> - zwraca największą wartość w zbiorze,
+                </li>
+                <li class="article__list-item"><strong>MIN(columnName)</strong> - zwraca najmniejszą wartość w zbiorze,
+                </li>
+                <li class="article__list-item"><strong>SUM(columnName)</strong> - zwraca sumę kolumn ze zbioru wierszy.
+                </li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
