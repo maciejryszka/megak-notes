@@ -208,7 +208,7 @@
                 <li class="article__list-item">pozostałe łańcuchy znaków należy pisać wewnątrz apostrofów (') lub
                     cudzysłowów (").</li>
             </ul>
-            <p class="article__text">Kolejność formułowania zapytań w <i>SQL</i>:</p>
+            <p class="article__text">Kolejność formułowania kwerend w <i>SQL</i>:</p>
             <ol class="article__list article__list--ordered">
                 <li class="article__list-item"><strong>SELECT</strong>,</li>
                 <li class="article__list-item"><strong>FROM</strong>,</li>
@@ -218,7 +218,7 @@
                 <li class="article__list-item"><strong>ORDER BY</strong>,</li>
                 <li class="article__list-item"><strong>LIMIT</strong>.</li>
             </ol>
-            <p class="article__text">Kolejność wykonywania zapytań w <i>SQL</i>:</p>
+            <p class="article__text">Kolejność wykonywania kwerend w <i>SQL</i>:</p>
             <ol class="article__list article__list--ordered">
                 <li class="article__list-item"><strong>FROM, JOIN</strong> - najpierw serwer musi wiedzieć skąd pobrać
                     dane,</li>
@@ -259,12 +259,13 @@
                     użytego wielokrotnie operatora <i>OR</i>),</li>
                 <li class="article__list-item"><strong>BETWEEN</strong> - pozwala zastąpić dwa wyrażenia jednocześnie
                     (<strong>&lt;=</strong> oraz <strong>&gt;=</strong>) i ograniczyć zbiór obustronnie (wartości
-                    graniczne należy oddzielić słowem kluczowym <i>AND</i>).
+                    graniczne należy oddzielić słowem kluczowym <i>AND</i>),
                 </li>
-                <li class="article__list-item"><strong>LIKE</strong>
+                <li class="article__list-item"><strong>LIKE</strong> - pozwala wyszukać określony wzorzec w kolumnie:
                     <ul class="article__list">
-                        <li class="article__list-item"></li>
-                        <li class="article__list-item"></li>
+                        <li class="article__list-item"><strong>%</strong> - reprezentuje zero, jeden lub wiele znaków,
+                        </li>
+                        <li class="article__list-item"><strong>_</strong> - reprezentuje jeden, pojedynczy znak.</li>
                     </ul>
                 </li>
             </ul>
@@ -274,7 +275,7 @@
                 nich określi liczbę wyników jakie zostaną zwrócone.</p>
             <p class="article__text">Alias nadaje tabeli lub kolumnie tymczasową (najczęściej skróconą) nazwę. Po pełnej
                 nazwie należy użyć słowa kluczowego <i>AS</i>, a po nim zapisać nazwę skróconą. W kolejnej części
-                zapytania możliwe jest korzystanie ze skróconej nazwy.</p>
+                kwerendy możliwe jest korzystanie ze skróconej nazwy.</p>
             <p class="article__text"><strong>Funkcje agregujące</strong> zwracają podsumowania dla całej tabeli, grupy
                 wierszy w tabeli lub zbioru wynikowego. Przykłady:</p>
             <ul class="article__list">
@@ -289,6 +290,70 @@
                 <li class="article__list-item"><strong>SUM(columnName)</strong> - zwraca sumę kolumn ze zbioru wierszy.
                 </li>
             </ul>
+            <p class="article__text">Wstawianie danych do tabeli odbywa się z użyciem <i>INSERT INTO</i> (można wstawić
+                kilka rekordów jedocześnie, odzielając kolejne nawiasy z wartościami pól przecinkiem):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>INSERT INTO `tableName` (column1, column2, column3, ...) VALUES
+                        (value1, value2, value3, ...)</strong> - jeśli dodawane są wartośći dla wybranych kolumn, należy
+                    podać nazwy tych kolumn w kwerendzie,</li>
+                <li class="article__list-item"><strong>INSERT INTO `tableName` VALUES (value1, value2, value3,
+                        ...)</strong> - jeśli dodawane są wartości dla wszystkich kolumn tabeli, można pominąć nazwy
+                    kolumn w kwerendzie, lecz należy pamiętać o takiej samej kolejności podawania danych jak kolejność
+                    kolumn w tabeli.</li>
+            </ul>
+            <p class="article__text">Najczęstsze rodzaje aktualizacji i usuwania danych:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Po <i>id</i> - bezpieczne,</li>
+                <li class="article__list-item">Po danych - wymaga ostrożności,</li>
+                <li class="article__list-item">Bez klauzuli <i>WHERE</i> - niebezpieczne.</li>
+            </ul>
+            <p class="article__text">Podczas aktualizacji lub usuwania danych należy pamiętać o klauzuli <i>WHERE</i>
+                (bez niej wszystkie rekordy zostaną zaktualizowane/usunięte):</p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>UPDATE `tableName` SET column1 = value1, column2 = value2, ...
+                        WHERE condition</strong> - aktualizuje rekord w danej tabeli,</li>
+                <li class="article__list-item"><strong>DELETE FROM `tableName` WHERE condition</strong> - usuwa rekord z
+                    danej tabeli.</li>
+            </ul>
+            <p class="article__text"><i>Id</i> generowane automatycznie z wykorzystaniem <i>AUTO_INCREMENT</i> są
+                problematyczne, ponieważ są przewidywalne. Rozwiązaniem jest użycie wbudowanej funkcji <i>UUID</i>
+                zamiast kolejnych liczb. Jako typ danych należy wybrać <i>VARCHAR</i> o długości 36 znaków, a jako
+                domyślną wartość - wyrażenie <i>UUID()</i>.
+            </p>
+            <p class="article__text">Możliwe jest ustawienie aktualnej daty i czasu (np. aby posortować rekordy od
+                najwcześniej dodanego). Należy utworzyć kolumnę przechowującą takie dane i jako typ wybrać
+                <i>DATETIME</i>, a jako domyślną wartość - wyrażenie <i>CURRENT_TIMESTAMP()</i>.
+            </p>
+            <p class="article__text"><strong>Relacja</strong> to powiązanie ze sobą dwóch tabel. Rodzaje relacji:</p>
+            <ul class="article__list">
+                <li class="article__list-item">jeden do jednego,</li>
+                <li class="article__list-item">jeden do wielu (a po drugiej stronie - wiele do jednego),</li>
+                <li class="article__list-item">wiele do wielu (wymaga tabeli pośredniej).</li>
+            </ul>
+            <p class="article__text"><strong>Unified Modeling Language (UML)</strong> to pół-formalny język
+                wykorzystywany do modelowania różnego rodzaju systemów. Aplikacja pozwalająca stworzyć <i>UML</i> to <a
+                    class="article__link" href="https://www.diagrams.net/">diagrams.net</a>.</p>
+            <p class="article__text">Tworzenie relacji między tabelami:</p>
+            <ol class="article__list article__list--ordered">
+                <li class=" article__list-item">Utworzenie kolumny w tabeli (o nazwie będącej połączeniem nazwy tabeli
+                    referencyjnej oraz nazwy jej klucza głównego).</li>
+                <li class="article__list-item">Nadanie utworzonej kolumnie identycznego typu danych i długości, jakie ma
+                    kolumna w tabeli referencyjnej.</li>
+                <li class="article__list-item">Pozwolenie na przyjęcie wartości <i>null</i> przez kolumnę.</li>
+                <li class="article__list-item">Utworzenie klucza obcego.</li>
+                <li class="article__list-item">Przypisanie do utworzonego klucza: utworzonej kolumny, referencyjnej
+                    tabeli oraz referencyjnej kolumny z tej tabeli.</li>
+            </ol>
+            <p class="article__text">Relacja utworzona powyższym sposobem jest typu "jeden do wielu". Aby utworzyć
+                relację typu "jeden do jednego", należy powtórzyć wymienione czynności w drugą stronę (utworzyć nową
+                kolumnę w tabeli, będącej poprzednio tabelą referencyjną).</p>
+            <p class="article__text">
+                Aby utworzyć relację typu "wiele do wielu", należy utworzyć tabelę pośrednią (o nazwie będącej
+                oddzielonymi podkreślnikiem nazwami obu tabel, między którymi wystąpi relacja). Klucz główny w takiej
+                tabeli może być generowany z wykorzystaniem <i>AUTO_INCREMENT</i>, ponieważ nie będzie nigdzie
+                wykorzystywany. Utworzoną tabelę pośrednią należy połączyć (zgodnie z powyższymi krokami) relacjami typu
+                "jeden do wielu" z obiema tabelami, pomiędzy którymi tworzona jest relacja "wiele do wielu".
+            </p>
         </article>
     </main>
     <footer class="footer">
