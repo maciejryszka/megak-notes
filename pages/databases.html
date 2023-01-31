@@ -69,9 +69,10 @@
             <h2 class="article__heading">fundamenty baz danych</h2>
             <p class="article__text">Bazy danych to miejsca do stałego przechowywania danych. Umożliwiają łatwe
                 zarządzanie informacjami: dodawanie, pobieranie, aktualizowanie, usuwanie. Bazy danych posiadają
-                zazwyczaj serwer bazodanowy z którym łączy się klient (np. phpMyAdmin, Heidi lub inna aplikacja).
-                Aplikacja będąca serwerem webowym (dla którego klientem jest np. przeglądarka lub <i>Insomnia</i>), może
-                być jednocześnie klientem dla serwera bazodanowego.</p>
+                zazwyczaj serwer bazodanowy z którym łączy się klient (np. <i>phpMyAdmin</i>, <i>Heidi</i> lub inna
+                aplikacja). Aplikacja będąca serwerem webowym (dla którego klientem jest np. przeglądarka lub
+                <i>Insomnia</i>), może być jednocześnie klientem dla serwera bazodanowego.
+            </p>
             <p class="article__text">Zalety baz danych:</p>
             <ul class="article__list">
                 <li class="article__list-item">Przechowywanie danych na stałe (mogą przechowywać biliony informacji
@@ -268,6 +269,7 @@
                         <li class="article__list-item"><strong>_</strong> - reprezentuje jeden, pojedynczy znak.</li>
                     </ul>
                 </li>
+                <li class="article__list-item"><strong>()</strong> - pozwalają kontrolować pierwszeństwo wyrażeń.
             </ul>
             <p class="article__text">Ograniczenie liczby wyników odbywa się z pomocą <i>LIMIT</i>. Jeśli podany zostanie
                 jeden argument, określi on liczbę wyników jakie zostaną zwrócone. Jeśli zostaną podane dwa argumenty,
@@ -332,7 +334,9 @@
             </ul>
             <p class="article__text"><strong>Unified Modeling Language (UML)</strong> to pół-formalny język
                 wykorzystywany do modelowania różnego rodzaju systemów. Aplikacja pozwalająca stworzyć <i>UML</i> to <a
-                    class="article__link" href="https://www.diagrams.net/">diagrams.net</a>.</p>
+                    class="article__link" href="https://www.diagrams.net/">diagrams.net</a>. W <i>phpMyAdmin</i> możliwe
+                jest tworzenie <i>UML</i> w narzędziu <i>Designer</i> (należy je otworzyć z poziomu widoku bazy danych).
+            </p>
             <p class="article__text">Tworzenie relacji między tabelami:</p>
             <ol class="article__list article__list--ordered">
                 <li class=" article__list-item">Utworzenie kolumny w tabeli (o nazwie będącej połączeniem nazwy tabeli
@@ -354,6 +358,21 @@
                 wykorzystywany. Utworzoną tabelę pośrednią należy połączyć (zgodnie z powyższymi krokami) relacjami typu
                 "jeden do wielu" z obiema tabelami, pomiędzy którymi tworzona jest relacja "wiele do wielu".
             </p>
+            <p class="article__text">
+                Łączenie wierszy z dwóch lub więcej tabel na podstawie powiązanej między nimi kolumny odbywa się z
+                wykorzystaniem klauzuli <i>JOIN</i> (lewa tabela, to wymieniona w kwerendzie po słowie kluczowym
+                <i>FROM</i>, prawa tabela, to wymieniona w kwerendzie po słowie kluczowym <i>JOIN</i>):
+            </p>
+            <ul class="article__list">
+                <li class="article__list-item"><strong>(INNER) JOIN</strong> - zwraca rekordy, które występują w obu
+                    tabelach,</li>
+                <li class="article__list-item"><strong>LEFT (OUTER) JOIN</strong> - zwraca rekordy, które występują w
+                    lewej tabeli (wraz z rekordami z prawej tabeli, które wystąpiły jednocześnie w lewej tabeli),</li>
+                <li class="article__list-item"><strong>RIGHT (OUTER) JOIN</strong> - zwraca rekordy, które występują w
+                    prawej tabeli (wraz z rekordami z lewej tabeli, które wystąpiły jednocześnie w prawej tabeli),</li>
+                <li class="article__list-item"><strong>FULL (OUTER) JOIN</strong> - zwraca rekordy, które wysąpiły w
+                    lewej lub prawej tabeli.</li>
+            </ul>
         </article>
     </main>
     <footer class="footer">
