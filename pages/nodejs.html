@@ -222,7 +222,7 @@
                         &emsp;&emsp;console.log(`Something went wrong! ${error}`);<br>
                         &emsp;}<br>
                         });</strong>
-                </li>
+                </li><br>
                 <li class="article__list-item">W celu przekształcenia <i>callback</i> w obiekt typu <i>promise</i>
                     należy skorzystać z <strong>util.promisify</strong> (należy również importować metodę
                     <i>promisify</i> z modułu <i>util</i>), np.:<br>
@@ -231,7 +231,7 @@
                         }).catch((error) => {<br>
                         &emsp;console.log(`Something went wrong! ${error}`);<br>
                         });</strong>
-                </li>
+                </li><br>
                 <li class="article__list-item">Deklaracja i jednoczesne wywołanie (<i>IIFE - Immediately Invoked
                         Function Expression</i>) funkcji asynchronicznej (należy również importować metodę
                     <i>promisify</i> z modułu <i>util</i>), np.:<br>
@@ -243,7 +243,7 @@
                         &emsp;&emsp;console.log(`Something went wrong! ${error}`);<br>
                         &emsp;}<br>
                         })();</strong>
-                </li>
+                </li><br>
                 <li class="article__list-item">Najbardziej poprawnym sposobem jest skorzystanie z ulepszonej wersji
                     <i>API fs</i> używając własności <i>promises</i> na obiekcie zwróconym przez funkcję <i>require</i>
                     podczas przypisywania funkcjonalności modułu do zmiennej, np.:<br>

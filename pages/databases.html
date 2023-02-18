@@ -63,6 +63,8 @@
             <span class="theory-main__text">•</span>
             <a href="#sql" class="theory-main__link">sql</a>
             <span class="theory-main__text">•</span>
+            <a href="#databases-in-code" class="theory-main__link">bazy danych w kodzie</a>
+            <span class="theory-main__text">•</span>
         </nav>
         <div class="theory-main__image"></div>
         <article id="fundaments" class="article">
@@ -373,6 +375,108 @@
                 <li class="article__list-item"><strong>FULL (OUTER) JOIN</strong> - zwraca rekordy, które wysąpiły w
                     lewej lub prawej tabeli.</li>
             </ul>
+            <p class="article__text">W przypadku wyszukiwania danych z wielu tabel, nazwę kolumny należy poprzedzić
+                nazwą tabeli oraz kropką. Uniemożliwi to ewentualny konflikt nazw: <strong>SELECT `table1`.`columnName`,
+                    `table2`.`columnName` </strong>.</p>
+        </article>
+        <article id="databases-in-code" class="article">
+            <h2 class="article__heading">bazy danych w kodzie</h2>
+            <p class="article__text">Paczka umożliwiająca korzystanie z baz danych w kodzie to <a class="article__link"
+                    href="https://www.npmjs.com/package/mysql2">mysql2</a>. Dostępna jest także w wersji używającej
+                obiektów typu <i>promise</i>. Paczka w tej wersji charakteryzuje się dużą szybkością działania oraz
+                szerokim zakresem oferowanych możliwości. Jej pobranie możliwe jest za pośrednictwem menadżera
+                <i>npm</i>.
+            </p>
+            <p class="article__text">Sposób pracy z bazą danych w kodzie:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Import wersji używającej obiektów typu <i>promise</i>:<br>
+                    <strong>const mysql = require('mysql2/promise');</strong>
+                </li><br>
+                <li class="article__list-item">Uwtorzenie połączenia z bazą danych:<br>
+                    <strong>(async () => {<br>
+                        &emsp;const conn = await mysql.createConnection({<br>
+                        &emsp;&emsp;host: 'localhost',<br>
+                        &emsp;&emsp;user: 'root',<br>
+                        &emsp;&emsp;password: '',<br>
+                        &emsp;&emsp;database: 'test',<br>
+                        &emsp;&emsp;decimalNumbers: true,<br>
+                        &emsp;&emsp;namedPlaceholders: true,<br>
+                        &emsp;});<br>
+                        })();</strong>
+                </li><br>
+                <li class="article__list-item">Wykonanie kwerendy <i>SQL</i> zawierającej instrukcję <i>SELECT</i>
+                    (wykonano destrukturyzację, ponieważ funkcja <i>execute</i> dla takiej kwerendy zwraca tablicę dwóch
+                    tablic, z których pierwsza zawiera właściwe rekordy, a druga informacje o kolumnach):<br>
+                    <strong>const [results] = await conn.execute('SELECT * FROM `table`;');</strong>
+                </li><br>
+                <li class="article__list-item">Wykonanie kwerend <i>SQL</i> zawierających instrukcje <i>UPDATE</i>,
+                    <i>DELETE</i> lub <i>INSERT</i> (funkcja <i>execute</i> dla takich kwerend zwraca pojedynczą
+                    tablicę, zawierającą informacje dotyczące aktualizacji, usunięcia lub wstawienia rekordu):<br>
+                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = "X" WHERE `id` =
+                        1;'))[0];</strong><br>
+                    <strong>const { insertId } = (await conn.execute('INSERT INTO `table` VALUES(NULL, 1,
+                        "X")'))[0];</strong>
+                </li><br>
+            </ul>
+            <p class="article__text">W przypadku pracy z bazami danych nie należy używać narzędzi automatycznie
+                uruchamiających projekt (np. <i>nodemon</i>), ponieważ możliwa jest niepożądana modyfikacja lub
+                usunięcie elementów bazy danych.</p>
+            <p class="article__text">Należy uważać na <strong>SQL Injection</strong>, czyli jeden z najpoważniejszych
+                błędów bezpieczeństwa w IT. Nie wolno w sposób bezpośredni wykorzystywać danych wprowadzonych przez
+                użytkownika do tworzenia zapytań. Należy również używać funkcji <i>execute</i> zamiast
+                <i>query</i> do wykonywania kwerend a także wyłączyć właściwość <i>multipleStatements</i> podczas
+                konfigurowania połączenia z bazą danych.
+            </p>
+            <p class="article__text">Bezpieczne oraz szybsze wykonywanie zapytań z wykorzystaniem danych wprowadzonych
+                przez użytkownika odbywa się dzięki funkcjonalności <strong>prepared statements</strong>. Pozwala ona
+                również na wielokrotne używanie tych danych. Dzięki <i>prepared statements</i> wprowadzone dane są
+                interpretowane jedynie jako zmienne i nigdy nie zostaną zinterpretowane jako kwerenda.</p>
+            <p class="article__text">Przykłady użycia <i>prepared statements</i>:</p>
+            <ul class="article__list">
+                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest tablica
+                    wartości. Wartości te w kwerendzie oznaczone są przez znaki zapytania (<strong>?</strong>), których
+                    kolejność jest taka sama jak kolejność wartości w tablicy:<br>
+                    <strong>const affectedId = 1000</strong>;<br>
+                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = ? WHERE `id` =
+                        ?;', ['new value', affectedId]))[0];</strong>
+                </li>
+                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest obiekt.
+                    Kluczami w tym obiekcie są nazwy użyte w kwerendzie (nazwa w kwerendzie poprzedzona jest dwukropkiem
+                    (<strong>:</strong>)), a wartościami dane, które zostaną wstawione do kwerendy:<br>
+                    <strong>const affectedId = 2000</strong>;<br>
+                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = :myValue WHERE
+                        `id` = :affectedId;', {myValue: 'new value', affectedId}))[0];</strong>
+                </li>
+            </ul>
+            <p class="article__text">Przygotowanie zapytania do późniejszego wykonania (operacja zwiększająca
+                wydajność, należy pamiętać o zamknięciu <i>statement</i> w bloku <i>finally</i>):</p>
+            <strong>
+                const newCars = [{registrationNo: 'NO 1',brand: 'CarOne',},{registrationNo: 'NO 2',brand:
+                'CarTwo',},];<br>
+                const statement = await conn.prepare('INSERT INTO `cars` VALUES (?,?)');<br>
+                try {<br>
+                &emsp;for (const car of cars) {<br>
+                &emsp;&emsp;await statement.execute(Object.values(car));<br>
+                &emsp;}<br>
+                } finally {<br>
+                &emsp;statement.close();<br>
+                }
+            </strong>
+            <p class="article__text">W celu zwiększenia przepustowości aplikacji należy tworzyć połączenie z bazą danych
+                z użyciem metody <i>createPool</i>. W przypadku wielu klientów odpytujących bazę, liczba połączeń
+                również wzrośnie. Konfiguracja połączenia jest analogiczna jak w przypadku metody
+                <i>createConnection</i>:
+            </p>
+            <strong>(async () => {<br>
+                &emsp;const pool = await mysql.createPool({<br>
+                &emsp;&emsp;host: 'localhost',<br>
+                &emsp;&emsp;user: 'root',<br>
+                &emsp;&emsp;password: '',<br>
+                &emsp;&emsp;database: 'test',<br>
+                &emsp;&emsp;decimalNumbers: true,<br>
+                &emsp;&emsp;namedPlaceholders: true,<br>
+                &emsp;});<br>
+                })();</strong>
         </article>
     </main>
     <footer class="footer">
