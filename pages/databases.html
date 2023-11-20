@@ -334,7 +334,7 @@
                 <li class="article__list-item">jeden do wielu (a po drugiej stronie - wiele do jednego),</li>
                 <li class="article__list-item">wiele do wielu (wymaga tabeli pośredniej).</li>
             </ul>
-            <p class="article__text"><strong>Unified Modeling Language (UML)</strong> to pół-formalny język
+            <p class="article__text"><strong>Unified Modeling Language (UML)</strong> to półNformalny język
                 wykorzystywany do modelowania różnego rodzaju systemów. Aplikacja pozwalająca stworzyć <i>UML</i> to <a
                     class="article__link" href="https://www.drawio.com/">drawio.com</a>. W <i>phpMyAdmin</i> możliwe
                 jest tworzenie <i>UML</i> w narzędziu <i>Designer</i> (należy je otworzyć z poziomu widoku bazy danych).
@@ -410,9 +410,9 @@
                     <strong>const [results] = await conn.execute('SELECT * FROM `table`;');</strong>
                 </li><br>
                 <li class="article__list-item">Wykonanie kwerend <i>SQL</i> zawierających instrukcje <i>UPDATE</i>,
-                    <i>DELETE</i> lub <i>INSERT</i> (funkcja <i>execute</i> dla takich kwerend zwraca pojedynczą
-                    tablicę, zawierającą informacje dotyczące aktualizacji, usunięcia lub wstawienia rekordu):<br>
-                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = "X" WHERE `id` =
+                    <i>DELETE</i> lub <i>INSERT</i> (funkcja <i>execute</i> dla takich kwerend zwraca pojedynczy obiekt,
+                    zawierający informacje dotyczące aktualizacji, usunięcia lub wstawienia rekordu):<br><strong>const
+                        { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = "X" WHERE `id` =
                         1;'))[0];</strong><br>
                     <strong>const { insertId } = (await conn.execute('INSERT INTO `table` VALUES(NULL, 1,
                         "X")'))[0];</strong>
@@ -455,7 +455,7 @@
                     'CarTwo',},];<br>
                     const statement = await conn.prepare('INSERT INTO `cars` VALUES (?,?)');<br>
                     try {<br>
-                    &emsp;for (const car of cars) {<br>
+                    &emsp;for (const car of newCars) {<br>
                     &emsp;&emsp;await statement.execute(Object.values(car));<br>
                     &emsp;}<br>
                     } finally {<br>
