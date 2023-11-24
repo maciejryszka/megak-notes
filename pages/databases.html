@@ -361,10 +361,13 @@
                 "jeden do wielu" z obiema tabelami, pomiędzy którymi tworzona jest relacja "wiele do wielu".
             </p>
             <p class="article__text">
-                Łączenie wierszy z dwóch lub więcej tabel na podstawie powiązanej między nimi kolumny odbywa się z
-                wykorzystaniem klauzuli <i>JOIN</i> (lewa tabela, to wymieniona w kwerendzie po słowie kluczowym
-                <i>FROM</i>, prawa tabela, to wymieniona w kwerendzie po słowie kluczowym <i>JOIN</i>):
+                Łączenie wierszy z dwóch lub więcej tabel na podstawie powiązanej między nimi kolumny, odbywa się z
+                wykorzystaniem klauzuli <i>JOIN</i> (lewa tabela, to wymieniona w kwerendzie przed słowem kluczowym
+                <i>JOIN</i>, prawa tabela, to wymieniona w kwerendzie po słowie kluczowym <i>JOIN</i>). Przy każdym
+                takim połączeniu należy po słowie kluczowym <i>ON</i>, określić kolumny łączącą obie tabele:
+                <strong>SELECT * FROM `table1` JOIN `table2` ON `table1`.`column1` = `table2`.`column2`</strong>.
             </p>
+            <p class="article__text">Rodzaje połączeń pomiędzy tabelami:</p>
             <ul class="article__list">
                 <li class="article__list-item"><strong>(INNER) JOIN</strong> - zwraca rekordy, które występują w obu
                     tabelach,</li>
@@ -418,14 +421,19 @@
                         "X")'))[0];</strong>
                 </li><br>
             </ul>
+            <p class="article__text">Domyślnie liczby zmiennoprzecinkowe odczytywane są z bazy danych jako łańcuchy
+                znaków. Aby odczytać je jako liczby, należy podczas tworzenia połączenia z bazą danych ustawić
+                właściwość <i>decimalNumbers</i> jako <i>true</i>. Jednak w przypadku wielu miejsc po przecinku, należy
+                upewnić się ,czy dokładność nie została utracona.
+            </p>
             <p class="article__text">W przypadku pracy z bazami danych nie należy używać narzędzi automatycznie
                 uruchamiających projekt (np. <i>nodemon</i>), ponieważ możliwa jest niepożądana modyfikacja lub
                 usunięcie elementów bazy danych.</p>
             <p class="article__text">Należy uważać na <strong>SQL Injection</strong>, czyli jeden z najpoważniejszych
                 błędów bezpieczeństwa w IT. Nie wolno w sposób bezpośredni wykorzystywać danych wprowadzonych przez
-                użytkownika do tworzenia zapytań. Należy również używać funkcji <i>execute</i> zamiast
-                <i>query</i> do wykonywania kwerend a także wyłączyć właściwość <i>multipleStatements</i> podczas
-                konfigurowania połączenia z bazą danych.
+                użytkownika do tworzenia zapytań. Należy również używać funkcji <i>execute</i> zamiast <i>query</i> do
+                wykonywania kwerend a także upewnić się podczas konfigurowania połączenia z bazą danych, że właściwość
+                <i>multipleStatements</i> nie została włączona (domyślnie jest wyłączona).
             </p>
             <p class="article__text">Bezpieczne oraz szybsze wykonywanie zapytań z wykorzystaniem danych wprowadzonych
                 przez użytkownika odbywa się dzięki funkcjonalności <strong>prepared statements</strong>. Pozwala ona
@@ -440,9 +448,11 @@
                     <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = ? WHERE `id` =
                         ?;', ['new value', affectedId]))[0];</strong>
                 </li>
-                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest obiekt.
-                    Kluczami w tym obiekcie są nazwy użyte w kwerendzie (nazwa w kwerendzie poprzedzona jest dwukropkiem
-                    (<strong>:</strong>)), a wartościami dane, które zostaną wstawione do kwerendy:<br>
+                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest obiekt
+                    (wariant ten, podczas tworzenia połączenia z bazą danych, wymaga ustawienia właściwości
+                    <i>namedPlaceholders</i> jako <i>true</i>). Kluczami w tym obiekcie są nazwy użyte w kwerendzie
+                    (nazwa w kwerendzie poprzedzona jest dwukropkiem (<strong>:</strong>)), a wartościami dane, które
+                    zostaną wstawione do kwerendy:<br>
                     <strong>const affectedId = 2000</strong>;<br>
                     <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = :myValue WHERE
                         `id` = :affectedId;', {myValue: 'new value', affectedId}))[0];</strong>
