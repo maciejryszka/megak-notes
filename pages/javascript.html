@@ -1,1332 +1,1234 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MegaKurs - JavaScript</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="header-navigation">
-            <nav class="hamburger-menu hamburger-menu--js">
-                <ul class="hamburger-menu__list">
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header-navigation__button header-navigation__button--menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <button class="header-navigation__button header-navigation__button--top">
-                <i class="fas fa-arrow-circle-up"></i>
-            </button>
-            <p class="header-navigation__text">mega kurs javascriptu</p>
+      <nav class="header-navigation">
+        <nav class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+            </li>
+          </ul>
         </nav>
+        <button class="header-navigation__button header-navigation__button--menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="header-navigation__button header-navigation__button--top">
+          <i class="fas fa-arrow-circle-up"></i>
+        </button>
+        <p class="header-navigation__text">mega kurs javascriptu</p>
+      </nav>
     </header>
     <main class="main theory-main">
-        <h1 class="theory-main__heading">javascript</h1>
-        <nav class="theory-main__links">
-            <a href="#fundaments" class="theory-main__link">fundamenty javascriptu</a>
-            <span class="theory-main__text">•</span>
-            <a href="#operations" class="theory-main__link">operacje i operatory</a>
-            <span class="theory-main__text">•</span>
-            <a href="#variables" class="theory-main__link">zmienne</a>
-            <span class="theory-main__text">•</span>
-            <a href="#arrays" class="theory-main__link">tablice</a>
-            <span class="theory-main__text">•</span>
-            <a href="#loops" class="theory-main__link">pętle</a>
-            <span class="theory-main__text">•</span>
-            <a href="#conditional-statements" class="theory-main__link">instrukcje warunkowe</a>
-            <span class="theory-main__text">•</span>
-            <a href="#data-types" class="theory-main__link">typy danych</a>
-            <span class="theory-main__text">•</span>
-            <a href="#functions" class="theory-main__link">funkcje</a>
-            <span class="theory-main__text">•</span>
-            <a href="#object-orientation" class="theory-main__link">obiektowość</a>
-            <span class="theory-main__text">•</span>
-            <a href="#ecmascript-6" class="theory-main__link">ecmascript 6</a>
-            <span class="theory-main__text">•</span>
-            <a href="#classes" class="theory-main__link">klasy</a>
-            <span class="theory-main__text">•</span>
-            <a href="#advanced-arrays" class="theory-main__link">zaawansowane metody tablicowe</a>
-            <span class="theory-main__text">•</span>
-            <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
-            <span class="theory-main__text">•</span>
-            <a href="#dom" class="theory-main__link">dom</a>
-            <span class="theory-main__text">•</span>
-            <a href="#local-storage" class="theory-main__link">local storage</a>
-            <span class="theory-main__text">•</span>
-            <a href="#json" class="theory-main__link">json</a>
-            <span class="theory-main__text">•</span>
-            <a href="#exceptions" class="theory-main__link">błędy i wyjątki</a>
-            <span class="theory-main__text">•</span>
-            <a href="#debugging" class="theory-main__link">debugowanie</a>
-            <span class="theory-main__text">•</span>
-            <a href="#collections" class="theory-main__link">kolekcje</a>
-            <span class="theory-main__text">•</span>
-            <a href="#eslint" class="theory-main__link">eslint</a>
-        </nav>
-        <div class="theory-main__image"></div>
-        <article id="fundaments" class="article">
-            <h2 class="article__heading">fundamenty javascriptu</h2>
-            <p class="article__text">Cechy JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>Język wysokiego poziomu</strong> - wiele rzeczy dziejących się na niższym
-                    poziomie wykonuje się automatycznie, z dala od kodu maszynowego.
-                </li>
-                <li class="article__list-item">
-                    <strong>Słabo typowany</strong> - brak konieczności wskazywania typów zmiennych
-                    podczas deklaracji, typ zostanie nadany automatycznie przez
-                    JavaScript.
-                </li>
-                <li class="article__list-item">
-                    <strong>Dynamicznie typowany</strong> - podczas działania programu do konkretnej
-                    zmiennej może zostać przypisany inny typ danych.
-                </li>
-                <li class="article__list-item">
-                    <strong>Język interpretowany</strong> - odczytywany linijka po linijce przez
-                    przeglądarkę i przekształcany na kod maszynowy w czasie działania
-                    programu, lecz ze względu na zwiększenie szybkości działania może
-                    być również kompilowany (zamieniony przed uruchomieniem programu na kod maszynowy rozumiany przez
-                    komputer). Możliwa jest także opcja łącząca obie metody.
-                </li>
-            </ul>
-            <p class="article__text">Niektóre typy danych:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>string</strong> - tekst,</li>
-                <li class="article__list-item"><strong>integer</strong> - liczba całkowita,</li>
-                <li class="article__list-item"><strong>boolean</strong> - prawda lub fałsz.</li>
-            </ul>
-            <p class="article__text">Jak uruchomić JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">narzędzia w internecie, np. <a class="article__link"
-                        href="https://codepen.io">codepen.io</a> (zalecany dla front-endu), <a class="article__link"
-                        href="https://replit.com/">replit.com</a> (zalecany dla back-endu),
-                </li>
-                <li class="article__list-item">środowisko uruchomieniowe Node.js,</li>
-                <li class="article__list-item">przeglądarka internetowa.</li>
-            </ul>
-            <p class="article__text">Strony przydatne podczas pracy w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><a class="article__link" href="https://caniuse.com/">caniuse.com</a> -
-                    wykaz wsparcia poszczególnych funkcji w przeglądarce,</li>
-                <li class="article__list-item"><a class="article__link" href="https://node.green/">node.green</a> -
-                    wykaz wspracia poszczególnych funkcji w Node.js.</li>
-                <li class="article__list-item"><a class="article__link" href="https://babeljs.io/">babeljs.io</a> -
-                    transpilator do starszej wersji JavaScript. Umożliwia na korzystanie z funkcji języka, które pojawią
-                    się dopiero w przyszłości.</li>
-            </ul>
-            <p class="article__text"><strong>Interpreterem</strong> JavaScript w przeglądarce (zarówno Chrome jak i
-                Edge) jest stworzony
-                przez Google <strong>silnik V8</strong>.
-            </p>
-            <p class="article__text"><strong>API</strong> - dodatkowe funkcjonalności (nie są częścią specyfikacji
-                JavaScript)
-                dostarczone przez Node.js lub przez przeglądarkę (mogą być różne dla obu środowisk).
-                Przykład: <strong>console.log()</strong> nie jest częścią specyfikacji, lecz funkcjonalnością, która
-                została dostarczona zarówno przez Node.js jak i przez przeglądarkę pod tą samą nazwą, w celu ułatwienia
-                korzystania z obu środowisk.</p>
-            <p class="article__text"><strong>window.prompt()</strong> - metoda pozwalająca na pobranie danych od
-                użytkownika.</p>
-        </article>
-        <article id="operations" class="article">
-            <h2 class="article__heading">operacje i operatory</h2>
-            <p class="article__text">Operatory arytmetyczne:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>+</strong> - dodawanie,</li>
-                <li class="article__list-item"><strong>-</strong> - odejmowanie,</li>
-                <li class="article__list-item"><strong>/</strong> - dzielenie,</li>
-                <li class="article__list-item"><strong>*</strong> - mnożenie,</li>
-                <li class="article__list-item"><strong>**</strong> - potęgowanie,</li>
-                <li class="article__list-item"><strong>Inkrementacja</strong> - zwiększenie wartości o 1,</li>
-                <li class="article__list-item"><strong>Dekrementacja</strong> - zmniejszenie wartości o 1.</li>
-            </ul>
-            <p class="article__text">Wyrażenia matematyczne wykonywane są zgodnie z zasadami wykonywania działań
-                (możliwe jest użycie nawiasów). Podczas wykonywania takich wyrażeń zwracany jest ich wynik.</p>
-            <a class="article__link" href=""></a>
-            <p class="article__text">Operatory porównania:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>></strong> - większy,</li>
-                <li class="article__list-item"><strong>>=</strong> - większy bądź równy,</li>
-                <li class="article__list-item"><strong>&lt;</strong> - mniejszy,</li>
-                <li class="article__list-item"><strong>&lt;=</strong> - mniejszy bądź równy,</li>
-                <li class="article__list-item"><strong>==</strong> - równy (bez porównania typu zmiennej),</li>
-                <li class="article__list-item"><strong>===</strong> - równy (z porównaniem typu zmiennej),</li>
-                <li class="article__list-item"><strong>!=</strong> - różny (bez porównania typu zmiennej),</li>
-                <li class="article__list-item"><strong>!==</strong> - różny (z porównaniem typu zmiennej).</li>
-            </ul>
-            <p class="article__text">Dobrą praktyką jest używanie <i>===</i> podczas wykonywania porównań. <a
-                    class="article__link" href="https://dorey.github.io/JavaScript-Equality-Table/unified/">Tabela</a>
-                obrazująca różnice w porównaniach z użyciem różnych operatorów równości.</p>
-            <p class="article__text">Operatory logiczne:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>&&</strong> - wszystkie warunki muszą być
-                    prawdziwe, żeby wyrażenie zwróciło prawdę (logiczne "i"),</li>
-                <li class="article__list-item">
-                    <strong>||</strong> - przynajmniej jeden warunek musi być
-                    prawdziwy, żeby wyrażenie zwróciło prawdę (logiczne "lub"),
-                </li>
-                <li class="article__list-item"><strong>!</strong> - odwraca wartość wyrażenia logicznego (negacja).</li>
-            </ul>
-            <p class="article__text">Wartości zwracane przez operatory logiczne, kiedy nie są używane w odniesieniu do
-                wartości logicznych:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>&&</strong> - zwraca pierwszy element, który po konwersji do typu
-                    <i>boolean</i> zwraca wartość <i>false</i>. Kiedy nie ma takiego elementu, zwraca ostatni element.
-                </li>
-                <li class="article__list-item"><strong>||</strong> - zwraca pierwszy element, który po konwersji do typu
-                    <i>boolean</i> zwraca wartość <i>true</i>. Kiedy nie ma takiego elementu, zwraca ostatni element.
-                </li>
-            </ul>
-            <p class="article__text">Podwójna negacja (<strong>!!</strong>) pozwala na sprawdzenie jaką wartość logiczną
-                przyjmie operand po konwersji do typu <i>boolean</i>.</p>
-            <p class="article__text">Operatory przypisania:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>=</strong> - przypisanie operandu z prawej strony operatora do
-                    operandu z lewej strony operatora,</li>
-                <li class="article__list-item"><strong>*=</strong> - nadpisanie operandu z lewej strony operatora przez
-                    pomnożenie go przez operand z prawej strony operatora,</li>
-                <li class="article__list-item"><strong>/=</strong> - nadpisanie operandu z lewej strony operatora przez
-                    podzielenie go przez operand z prawej strony operatora,</li>
-                <li class="article__list-item"><strong>%=</strong> - nadpisanie operandu z lewej strony operatora przez
-                    resztę z dzielenia go przez operand z prawej strony operatora,</li>
-                <li class="article__list-item"><strong>+=</strong> - nadpisanie operandu z lewej strony operatora przez
-                    dodanie do niego operandu z prawej strony operatora,</li>
-                <li class="article__list-item"><strong>-=</strong> - nadpisanie operandu z lewej strony operatora przez
-                    odjęcie od niego operandu z prawej strony operatora.</li>
-            </ul>
-            <p class="article__text"><a class="article__link"
-                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table">Tabela</a>
-                pierwszeństwa
-                operatorów.</p>
-        </article>
-        <article id="variables" class="article">
-            <h2 class="article__heading">zmienne</h2>
-            <p class="article__text"><strong>Zmienna</strong> - miejsce w pamięci, przechowujące pewne informacje.
-                Precyzyjniej jest to połączenie między zadeklarowaną nazwą a miejscem w pamięci przechowującym pewną
-                wartość. Wartość posiada typ, natomiast zmienna - nie. </p>
-            <p class="article__text">Koncept <i>immutability</i> polega na tym, że nie można zmieniać
-                wartości <i>primitive values</i> (wartości typów prostych, do których podłączamy się za pomocą
-                zmiennych) w JavaScript. To co zmieniamy, to połączenia między nimi a zmiennymi. Wartości już istnieją,
-                są niezmienne. Na przykład nie można zmienić <i>true</i> na <i>false</i> lub na odwrót.
-            </p>
-            <p class="article__text">
-                Słowa kluczowe służące do deklaracji zmiennych w JavaScript (możliwa jest również deklaracja bez
-                poprzedzenia nazwy zmiennej słowem kluczowym, lecz nie należy stosować takiej praktyki):
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>const</strong> - deklaruje zmienną, lecz połączenie między nią i jej
-                    wartością nie może być zmieniane w trakcie działania programu;
-                </li>
-                <li class="article__list-item">
-                    <strong>let</strong> - deklaruje zmienną, a połączenie między nią i jej
-                    wartością może być zmieniane w trakcie działania programu;
-                </li>
-                <li class="article__list-item">
-                    <strong>var</strong> - używany do deklaracji we wcześniejszych wersjach
-                    JavaScriptu (obecnie do deklaracji zmiennych należy używać słowa
-                    kluczowego <i>const</i>, a jeśli połączenie między zmienną i jej
-                    wartością będzie edytowane w trakcie działania programu -
-                    <i>let</i>).
-                </li>
-            </ul>
-            <p class="article__text">
-                Inicjalizacja zmiennej to nadanie jej wartości. Możliwa jest inicjalizacja zmiennej podczas
-                deklaracji. Jeśli w czasie deklaracji żadna wartość nie zostanie przypisana do zmiennej, automatycznie
-                przyjmie ona wartość <i>undefined</i>.
-            </p>
-        </article>
-        <article id="arrays" class="article">
-            <h2 class="article__heading">tablice</h2>
-            <p class="article__text">Tablica (<i>array</i>):</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    Jest niejednorodną strukturą danych, ponieważ może przechowywać
-                    różne typy danych jednocześnie (np. liczby, łańcuchy znaków,
-                    obiekty).
-                </li>
-                <li class="article__list-item">
-                    Aby zadeklarować tablicę, należy użyć nawiasów kwadratowych.
-                    Elementy tablicy można zdefiniować już podczas deklaracji tablicy
-                    (poprzez umieszczenie ich wewnątrz nawiasów kwadratowych i
-                    oddzielenie od siebie przecinkiem) lub dodać je później (z
-                    wykorzystaniem odpowiednich metod).
-                </li>
-                <li class="article__list-item">
-                    Każdy z elementów tablicy posiada indeks, czyli swoją pozycję w
-                    tablicy. Pierwszy element tablicy ma indeks 0. Aby odwołać się do
-                    elementu o danym indeksie, należy podać indeks w nawiasach
-                    kwadratowych po nazwie zmiennej, do której przypisana jest tablica.
-                </li>
-            </ul>
-            <p class="article__text">Wybrane własności i funkcje tablic:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>length</strong> - zwraca ilość elementów tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>push(<u>element</u>)</strong> - dodaje <u>element</u> na koniec tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>pop()</strong> - usuwa element z końca tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>unshift(<u>element</u>)</strong> - dodaje <u>element</u> na początek tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>shift()</strong> - usuwa element z początku tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>indexOf(<u>element</u>)</strong> - zwraca indeks pierwszego napotkanego
-                    <u>element</u> lub wartość -1, gdy <u>element</u> nie zostanie
-                    odnaleziony w tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>splice(<u>index</u>, <u>amount</u>)</strong> - rozpoczynając od elementu o indeksie
-                    <u>index</u>, usuwa <u>amount</u> elementów z tablicy,
-                </li>
-                <li class="article__list-item">
-                    <strong>slice(<u>startIndex</u>, <u>endIndex</u>)</strong> - rozpoczynając od elementu o
-                    indeksie <u>startIndex</u> (włącznie), pobiera elementy z tablicy
-                    kończąc na elemencie o indeksie <u>endIndex</u> (z wyłączeniem tego
-                    elementu).
-                </li>
-            </ul>
-        </article>
-        <article id="loops" class="article">
-            <h2 class="article__heading">pętle</h2>
-            <p class="article__text">
-                Pętla (<i>loop</i>) wykonuje blok kodu określoną liczbę razy.
-            </p>
-            <p class="article__text">Rodzaje pętli:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>for(let <u>i=0</u>; <u>i&lt;10</u>; <u>i++</u>) {blockOfCode}</strong>,
-                </li>
-                <li class="article__list-item">
-                    <strong>while(<u>i&lt;10</u>) {blockOfCode}</strong>,
-                </li>
-                <li class="article__list-item">
-                    <strong>do {blockOfCode} <strong>while</strong>(<u>i&lt;10</u>)</strong>,
-                </li>
-                <li class="article__list-item">
-                    <strong>for(const <u>propertyName</u> <strong>in</strong> <u>object</u>)</strong>,
-                </li>
-                <li class="article__list-item">
-                    <strong>for(const <u>element</u> <strong>of</strong> <u>array</u>)</strong>.
-                </li>
-            </ul>
-            <p class="article__text">
-                Pętla <strong>for</strong> składa się z inicjalizacji <u>iteratora</u>,
-                <u>warunku</u> oraz <u>wyrażenia zmiany iteratora</u>. Blok
-                kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość
-                prawdziwą.
-            </p>
-            <p class="article__text">
-                Pętla <strong>while</strong> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli
-                zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
-                najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli
-                początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani
-                razu.
-            </p>
-            <p class="article__text">
-                Pętla <strong>do ... while</strong> zawiera <u>warunek</u>. Blok kodu wewnątrz
-                pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
-                najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli
-                początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
-            </p>
-            <p class="article__text">
-                Pętla <strong>for ... in</strong> składa się z inicjalizacji
-                <u>zmiennej określającej własność obiektu</u>
-                oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
-                własnościach przekazanego obiektu.
-            </p>
-            <p class="article__text">
-                Pętla <strong>for ... of</strong> składa się z inicjalizacji
-                <u>zmiennej określającej element tablicy</u>
-                oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach
-                tablicy. Może działać z <i>async/await</i>.
-            </p>
-            <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>preinkrementacja</strong> (++i) - zwiększa wartość wyrażenia o 1 przed
-                    wykonaniem pozostałych operacji,
-                </li>
-                <li class="article__list-item">
-                    <strong>predekrementacja</strong> (--i) - zmniejsza wartość wyrażenia o 1 przed
-                    wykonaniem pozostałych operacji,
-                </li>
-                <li class="article__list-item">
-                    <strong>postinkrementacja</strong> (i++) - zwiększa wartość wyrażenia o 1 po
-                    wykonaniu pozostałych operacji,
-                </li>
-                <li class="article__list-item">
-                    <strong>postdekrementacja</strong> (i--) - zmniejsza wartość wyrażenia o 1 po
-                    wykonaniu pozostałych operacji.
-                </li>
-            </ul>
-        </article>
-        <article id="conditional-statements" class="article">
-            <h2 class="article__heading">instrukcje warunkowe</h2>
-            <p class="article__text">Instrukcje warunkowe:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>if</strong>(<u>condition</u>) - kod w klamrach następujących po instrukcji <i>if</i>
-                    wykona się, jeśli <u>warunek</u> w nawiasie zwróci prawdę.
-                </li>
-                <li class="article__list-item">
-                    <strong>else if</strong>(<u>condition</u>) - kod w klamrach następujących po instrukcji
-                    <i>if else</i> wykona się, jeśli <u>warunek</u> w nawiasie zwróci prawdę oraz
-                    jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
-                </li>
-                <li class="article__list-item">
-                    <strong>else</strong> - kod w klamrach następujących po instrukcji <i>else</i> wykona
-                    się, jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
-                </li>
-                <li class="article__list-item">
-                    <strong>switch</strong>(<u>variable</u>) - wykona kod dla przypadku odpowiadającego
-                    wartości <u>zmiennej</u> znajdującej się w nawiasie (w przypadku braku
-                    takiego przypadku zwróci wartość domyślną, która jest zdefiniowana
-                    na końcu instrukcji. Przy porównaniu sprawdzana jest również
-                    zgodność typów.
-                </li>
-                <li class="article__list-item">
-                    <u>condition</u> <strong>?</strong> <u>ifTrue</u> <strong>:</strong> <u>ifFalse</u> - <i>ternary
-                        operator</i> - jeśli <u>warunek</u> podany przed znakiem zapytania jest spełniony, zwracana jest
-                    <u>wartość</u> znajdująca się między znakiem zapytania a dwukropkiem. W przeciwnym razie zwracana
-                    jest <u>wartość</u> znajdująca się po dwukropku.
-                </li>
-                <li class="article__list-item">
-                    <u>leftOperand</u> <strong>??</strong> <u>rightOperand</u> - <i>nullish coalescing operator</i> -
-                    jeśli <u>lewy operand</u> zwraca wartość <i>null</i> lub <i>undefined</i>, zwracany jest
-                    <u>prawy operand</u>. W przeciwnym razie zwracany jest <u>lewy operand</u> (nawet jeśli są to inne
-                    wartości, które po konwersji do typu <i>boolean</i> zwracają <i>false</i>, np.: 0, pusty
-                    <i>string</i>).
-                </li>
-            </ul>
-        </article>
-        <article id="data-types" class="article">
-            <h2 class="article__heading">typy danych</h2>
-            <p class="article__text">Typy proste w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>string</strong> - tekst. Należy podać go w apostrofach (zalecany jest pojedynczy).
-                </li>
-                <li class="article__list-item"><strong>number</strong> - liczba.</li>
-                <li class="article__list-item"><strong>bigint</strong> - duża liczba (większa niż 2^53).</li>
-                <li class="article__list-item"><strong>boolean</strong> - <i>true</i> lub <i>false</i>.</li>
-                <li class="article__list-item">
-                    <strong>null</strong> - wartość celowo niezdefiniowana (na etapie deklaracji
-                    jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo że zmienna będzie wykorzystana w trakcie
-                    działania programu). Przez niektóre źródła zaliczany jako typ złożony (operator <i>typeof</i> zwraca
-                    dla <i>null</i> wartość <i>object</i> ze względu na to, że JavaScript jest kompatybilny wstecz i
-                    zmiana tego mogłaby spowodować nieprawidłowe działanie istniejących programów).
-                </li>
-                <li class="article__list-item">
-                    <strong>undefined</strong> - brak definicji. Podczas próby odwołania do
-                    nieistniejącej zmiennej występuje błąd.
-                </li>
-                <li class="article__list-item">
-                    <strong>*symbol</strong> - tworzy tzw. "unikalne opakowanie".
-                </li>
-            </ul>
-            <p class="article__text">Typy złożone w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>object</strong> - służy do przechowywania bardziej złożonych informacji niż te, które można
-                    przedstawić za pomocą typów prostych.
-                </li>
-            </ul>
-            <p class="article__text">Dodatkowe informacje o typach danych:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Do nazywania zmiennych należy używać schematu <i>camelCase</i>.</li>
-                <li class="article__list-item">Do sprawdzenia typu zmiennej służy słowo kluczowe <i>typeof</i>.</li>
-                <li class="article__list-item">Operator przypisania <i>=</i> nie tworzy nowych zmiennych, lecz tworzy i
-                    zwraca połączenie.</li>
-                <li class="article__list-item">W przypadku połączenia zmiennej <i>a</i> ze zmienną <i>b</i>, występuje
-                    połączenie z wartością zmiennej <i>b</i> a nie bez<i></i>pośrednio z samą zmienną
-                    <i>b</i>.
-                </li>
-                <li class="article__list-item">Wywoływanie metod na typach prostych jest możliwe, ponieważ przed
-                    wykonaniem metody dokonuje się zamiana wartości prostej na obiekt (konwersja niejawna), a po
-                    wykonaniu metody dokonuje się taka sama zamiana w przeciwnym kierunku.</li>
-            </ul>
-        </article>
-        <article id="functions" class="article">
-            <h2 class="article__heading">funkcje</h2>
-            <p class="article__text">Składowe funkcji w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">deklaracja;</li>
-                <li class="article__list-item">parametr (opcjonalnie) - podczas wywołania funkcji określany mianem
-                    argumentu;
-                </li>
-                <li class="article__list-item">
-                    słowo kluczowe <i>return</i> (opcjonalnie);
-                </li>
-                <li class="article__list-item">wynik (opcjonalnie) - jeśli po słowie kluczowym <i>return</i> nie będzie
-                    wyniku do
-                    zwrócenia - funkcja zwróci wartość <i>undefined</i>.</li>
-            </ul>
-            <p class="article__text">Sposoby deklaracji funkcji:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    <strong>function functionName (parameter) {functionBody}</strong> - funkcja nazwana (możliwe jest
-                    jej nadpisanie poprzez nadanie takiej samej nazwy innej funkcji; z racji tego że nie jest przypisana
-                    do zmiennej, jej wywołanie może nastąpić wcześniej w kodzie niż jej deklaracja);
-                </li>
-                <li class="article__list-item">
-                    <strong>const name = function (parameter) {functionBody}</strong> - funkcja anonimowa (przypisana
-                    do zmiennej zadeklarowanej z wykorzystaniem <i>const</i> lub <i>let</i>, nie może zostać ponownie
-                    przypisana do takiej samej nazwy);
-                </li>
-                <li class="article__list-item">
-                    <strong>const functionName = (parameter) => {functionBody}</strong> - funkcja strzałkowa.
-                </li>
-            </ul>
-            <p class="article__text">Dodatkowe informacje o funkcjach:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Wynikiem funkcji, która nie posiada słowa kluczowego jest
-                    <i>undefined</i>.
-                </li>
-                <li class="article__list-item">Funkcja może przyjmować dowolną ilość argumentów (może również nie
-                    przyjmować żadnego).</li>
-                <li class="article__list-item">Typ zwracanej wartości może być inny niż typ argumentu/argumentów
-                    przyjmowanych przez funkcję.</li>
-                <li class="article__list-item">Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w
-                    wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego
-                    czytelność oraz ułatwia wyszukiwanie i poprawę błędów.</li>
-                <li class="article__list-item">Dobrą praktyką jest nazywanie funkcji podczas deklaracji.</li>
-                <li class="article__list-item">Wewnątrz funkcji wykowywane są obliczenia/zadania.</li>
-            </ul>
-            <p class="article__text">Własności funkcji strzałkowej:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Jeśli w ciele funkcji znajduje się tylko <i>return</i> oraz zwracana
-                    wartość, można zapisać tę wartość bezpośrednio po strzałce z pominięciem słowa kluczowego
-                    <i>return</i> oraz nawiasów klamrowych.
-                </li>
-                <li class="article__list-item">Jeśli funkcja przyjmuje tylko jeden parametr, można pominąć nawiasy
-                    okrągłe w
-                    których jest on zawarty (w przypadku większej ilości parametrów lub ich braku nawiasy są wymagane).
-                </li>
-                <li class="article__list-item">Nawiasy okrągłe umożliwiają napisanie zwracanej wartości w kolejnej linii
-                    (jeśli nie użyto nawiasów klamrowych).</li>
-                <li class="article__list-item">Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa czytelność.
-                </li>
-                <li class="article__list-item">Funkcja strzałkowa nie tworzy nowego kontekstu <i>this</i> oraz nie ma
-                    dostępu
-                    do <i>arguments</i> i <i>super</i>, a więc nie jest zamiennikiem tradycyjnej funkcji.</li>
-            </ul>
-        </article>
-        <article id="object-orientation" class="article">
-            <h2 class="article__heading">obiektowość</h2>
-            <p class="article__text">Nawiasy klamrowe tworzą izolowany blok kodu. Zmienne i funkcje zadeklarowane
-                w bloku są dostępne tylko w nim (a także w zakresach niższego poziomu zagnieżdżonych w tym bloku).</p>
-            <p class="article__text">Obiekt w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    Jest strukturą danych ułatwiającą odwzorowanie świata rzeczywistego
-                    w świecie programowania.
-                </li>
-                <li class="article__list-item">
-                    Aby go zadeklarować, należy użyć nawiasów klamrowych.
-                </li>
-                <li class="article__list-item">
-                    Do sprawdzenia czy obiekt jest instancją danej klasy (obiektem danego konstruktora, obiektem danego
-                    typu) służy słowo kluczowe <i>instanceof</i>.
-                </li>
-                <li class="article__list-item">
-                    Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu)
-                    oraz metody (funkcje wewnątrz obiektu).
-                </li>
-                <li class="article__list-item">
-                    Własności/metody składają się z unikalnego w ramach obiektu klucza
-                    oraz podanej po dwukropku wartości, którą może być typ prymitywny,
-                    funkcja lub zagnieżdżenie.
-                </li>
-                <li class="article__list-item">
-                    Aby dostać się do konkretnej własności obiektu, należy po jego
-                    nazwie i kropce odwołać się do konkretnego klucza (w przypadku kiedy
-                    w obiekcie występują zagnieżdżenia, można dostać się do kolejnych
-                    poziomów własności z wykorzystaniem kolejnych kropek).
-                </li>
-                <li class="article__list-item">
-                    Aby dostać się do konkretnej metody obiektu, należy po jego nazwie i
-                    kropce odwołać się do konkretnego klucza oraz użyć nawiasów
-                    okrągłych (i opcjonalnie argumentów) w celu wywołania metody. W przypadku braku użycia nawiasów
-                    okrągłych wyświetlona zostanie informacja, że obiekt posiada funkcję pod tą nazwą.
-                </li>
-                <li class="article__list-item">
-                    Alternatywną opcją dostania się do własności obiektu jest
-                    skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
-                    wewnątrz nich konkretnego klucza (w apostrofach). Sposób wykorzystywany głównie w przypadku klucza
-                    zdefiniowanego w apostrofach (np. wielowyrazowy klucz zawierający spacje).
-                </li>
-                <li class="article__list-item">
-                    Własności/metody obiektu można edytować. Wystarczy dostać się do nich z wykorzystaniem klucza, użyć
-                    operatora przypisania
-                    oraz podać nową wartość (odwołanie z użyciem nieistniejącego klucza spowoduje dodanie obiektowi
-                    nowej własności/metody).
-                </li>
-                <li class="article__list-item">Kiedy podczas tworzenia obiektu nadawana jest mu własność, której wartość
-                    pochodzi ze zmiennej, a klucz tej własności ma taką samą nazwę jak ta zmienna - wystarczy wpisać sam
-                    klucz w obiekcie i pominąć dwukropek oraz wartość. Zostanie ona przypisana automatycznie ze
-                    zmiennej.</li>
-                <li class="article__list-item">
-                    Na własnościach obiektu możliwe jest wykonywanie metod.
-                </li>
-            </ul>
-            <p class="article__text">Mutowanie obiektów:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Kontekst <i>this</i> powstaje w momencie wywołania metody. W przypadku
-                    funkcji strzałkowej jest pobierany z zewnętrznego zakresu (z zakresu wyższego poziomu), natomiast w
-                    przypadku innej funkcji kontekst ten jest tworzony (odnosi się do obiektu, na którym wywołano
-                    metodę).</li>
-                <li class="article__list-item">Jeśli obiekt został stworzony z użyciem słowa kluczowego <i>const</i>,
-                    jedynie
-                    połączenie między nazwą zmiennej a obiektem jest stałe i nie może zostać zmienione. Połączenia
-                    między własnościami obiektu i wartościami na jakie wskazują mogą być jednak w dalszym ciągu
-                    edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie. Cecha ta odróżnia typy złożone
-                    (obiekty) od typów prostych, które nie mogą być mutowane.</li>
-                <li class="article__list-item">Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do danej
-                    wartości, dopóki nie zmienimy dokładnie tego przypięcia.</li>
-                <li class="article__list-item">Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy zmienione
-                    zostanie przypięcie dla którejś z jego własności. Zmiana takiego przypięcia może nastąpić z
-                    "inicjatywy" innego elementu wskazującego na ten obiekt.</li>
-            </ul>
-            <p class="article__text">Konstruktory:</p>
-            <ul class="article__list">
-                <li class="article__list-item">To szablony służące do tworzenia nowych, podobnych obiektów.</li>
-                <li class="article__list-item">Jest to funkcja pozwalająca na tworzenie nowych obiektów (dla odróżnienia
-                    od standardowej funkcji, jej nazwę należy pisać wielką literą).</li>
-                <li class="article__list-item">Musi być to funkcja nazwana, ponieważ funkcja strzałkowa posiada kontekst
-                    <i>this</i> wyższego poziomu.
-                </li>
-                <li class="article__list-item">Konstruktory należy wywoływać z użyciem słowa kluczowego <i>new</i>,
-                    które tworzy nowy obiekt, dzięki czemu kontekst <i>this</i> dotyczy tego utworzonego obiektu,
-                    zamiast zakresu wyższego poziomu.</li>
-                <li class="article__list-item">Obiekt utworzony za pomocą konstruktora należy przypisać do zmiennej. W
-                    przeciwnym razie zostanie stworzony, lecz natychmiast zniknie ze względu na brak możliwości
-                    odwołania się do niego.</li>
-            </ul>
-            <p class="article__text">Metody statyczne:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>Object.keys()</strong> - jako argument przyjmuje obiekt.
-                    Zwraca tablicę elementów typu <i>string</i> zawierającą nazwy kluczy obiektu.</li>
-                <li class="article__list-item"><strong>Object.values()</strong> - jako argument przyjmuje obiekt.
-                    Zwraca tablicę zawierającą wartości obiektu.</li>
-                <li class="article__list-item"><strong>Object.entries()</strong> - jako argument przyjmuje obiekt.
-                    Zwraca tablicę tablic, w której każda zagnieżdżona tablica zawiera parę elementów - nazwę
-                    klucza oraz odpowiadającą mu wartość.</li>
-            </ul>
-        </article>
-        <article id="ecmascript-6" class="article">
-            <h2 class="article__heading">ecmascript 6</h2>
-            <p class="article__text">ECMAScript 6 to specyfikacja/standard JavaScript wprowadzony w 2015 roku.</p>
-            <p class="article__text">Najistotniejsze zmiany wprowadzone wraz z ES 6:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>Parametry domyślne funkcji</strong> - parametry, które zostaną
-                    użyte automatycznie jako argument w czasie wywołania funkcji, jeżeli jako argument zostanie
-                    przekazana wartość <i>undefined</i> (lub jeśli nie zostanie przekazany żaden argument). Jeżeli
-                    argument inny niż <i>undefined</i> zostanie przekazany podczas wywołania funkcji, parametr domyślny
-                    nie zostanie użyty. Wartości parametrów domyślnych należy podać podczas deklaracji funkcji z użyciem
-                    operatora przypisania. Parametry domyślne należy definiować jako ostatnie w funkcji, ponieważ jeśli
-                    podczas wywołania funkcji zostanie przekazana mniejsza liczba argumentów niż liczba zdefiniowanych
-                    parametrów, to argumenty te będą przyporządkowywane do zdefiniowanych parametrów po kolei od lewej
-                    strony.
-                </li>
-                <li class="article__list-item"><strong>Destrukturyzacja w tablicach</strong> - pozwala na przypisanie
-                    początkowych elementów tablicy do zmiennych (z wykorzystaniem dodatkowych przecinków pomiędzy
-                    elementami można także przypisać elementy inne niż początkowe, jednak nie jest to zalecane ze
-                    względu na brak czytelności): <strong>const [element0ConstName, element1ConstName] =
-                        arrayName</strong>.
-                </li>
-                <li class="article__list-item"><strong>Destrukturyzacja w obiektach</strong> - pozwala na przypisanie do
-                    zmiennych własności/metod obiektów (jeśli po dwukropku nie zostaną podane nazwy zmiennych, będą one
-                    takie same jak klucze danej własności/metody w obiekcie): <strong>const {propertyKey, methodKey:
-                        methodConstName} = objectName</strong>.
-                </li>
-                <li class="article__list-item"><strong>Spread operator</strong> - pozwala na pobranie wszystkich
-                    elementów tablicy/własności i metod obiektu. Najczęściej wykorzystywany do tworzenia kopii
-                    tablicy/obiektu przez przypisanie go do innej zmiennej. W celu użycia operatora należy poprzedzić
-                    trzema kropkami nazwę tablicy/obiektu: <strong>...arrayName</strong>.
-                </li>
-                <li class="article__list-item"><strong>Rest operator</strong> - pozwala na przyjęcie przez funkcję
-                    nieograniczonej liczby argumentów (przed operatorem mogą zostać przekazane także inne argumenty).
-                    Argumenty przekazane z użyciem operatora są przekazywane do funkcji w formie tablicy. W celu użycia
-                    operatora należy przy deklaracji funkcji podać jako ostatni parametr nazwę tablicy poprzedzoną
-                    trzema kropkami: <strong>const functionName = (optionalParameter, ...arrayName) =>
-                        {functionBody}</strong>.</li>
-                <li class="article__list-item"><strong>String templates</strong> - pozwala na używanie wewnątrz
-                    <i>stringa</i> wyrażeń JavaScript, tabulatorów oraz enterów. <i>String</i> taki musi zawierać się
-                    wewnątrz grawisów (`). Nie zadziała w przypadku apostrofów (') i cudzysłowów ("). Wyrażenia
-                    JavaScript wewnątrz takiego <i>Stringa</i> należy przekazać wewnątrz nawiasów klamrowych
-                    poprzedzonych znakiem dolara: <strong>`Text ${JavaScript expression} text.`</strong>.
-                </li>
-            </ul>
-        </article>
-        <article id="classes" class="article">
-            <h2 class="article__heading">klasy</h2>
-            <p class="article__text">Klasy są elementem programowania zorientowanego obiektowo i podobnie jak
-                konstrutrory są szablonami służącymi do tworzenia obiektów. </p>
-            <p class="article__text">Właściwości klas:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Typem klasy jest <i>function</i>, ponieważ operator <i>typeof</i> odnosi
-                    się do jej konstruktora.</li>
-                <li class="article__list-item">W momencie wywołania klasy, tak naprawdę wywoływana jest metoda
-                    <i>constructor</i>. Dzieje się tak nawet w przypadku braku zdefiniowania tej metody w klasie,
-                    ponieważ wtedy pusty konstruktor zostanie zdefiniowany domyślnie (wywołanie go nie wymaga podania
-                    jego nazwy przed nawiasami). Zdefiniowanie tej metody w klasie pozwala na utworzenie własnego
-                    konstruktora.
-                </li>
-                <li class="article__list-item">Wywołanie metody <i>constructor</i> zdefiniowanej w klasie działa
-                    analogicznie jak (używana głównie przed wprowadzeniem standardu ES 6) funkcja konstruktora. Oba te
-                    sposoby tworzą kopię danej własności/metody dla każdego utworzonego obiektu (co jest mniej wydajne i
-                    zajmuje dodatkowe miejsce w pamięci RAM).<br />
-                    Metoda <i>constructor</i> zdefiniowana w klasie: <strong>class ClassName {constructor()
-                        {}}</strong>.<br />
-                    Funkcja konstruktora: <strong>function ConstructorFunctionName() {}</strong>.
-                </li>
-                <li class="article__list-item">Zdefiniowanie metody obiektu bezpośrednio w klasie (poza konstruktorem)
-                    działa analogicznie jak zdefiniowanie jej z wykorzystaniem (używanego głównie przed wprowadzeniem
-                    standardu ES 6) <i>prototype</i>. Oba te sposoby podczas utworzenia nowego obiektu tworzą
-                    odniesienie do danej metody, zamiast kopiować ją dla każdego utworzonego obiektu (co jest
-                    bardziej wydajne i nie zajmuje dodatkowego miejsca w pamięci RAM).<br />
-                    Metoda zdefiniowana bezpośrednio w klasie: <strong>class ClassName {methodName()
-                        {methodBody}}</strong>.<br />
-                    Metoda zdefiniowana z wykorzystaniem <i>prototype</i>:
-                    <strong>ConstructorFunctionName.prototype.methodName = function() {methodBody}</strong>.
-                </li>
-            </ul>
-        </article>
-        <article id="advanced-arrays" class="article">
-            <h2 class="article__heading">zaawansowane metody tablicowe</h2>
-            <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>forEach()</strong> - jako argument przyjmuje funkcję, która z
-                    kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
-                    element, indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez
-                    każdy jej element.
-                </li>
-                <li class="article__list-item"><strong>map()</strong> - jako argument przyjmuje funkcję, która z kolei
-                    może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
-                    element, indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak
-                    oryginalna tablica. Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej
-                    tablicy i w każdej iteracji zwraca wartość, która trafia do nowej tablicy z takim samym indeksem.
-                </li>
-                <li class="article__list-item"><strong>filter()</strong> - jako argument przyjmuje funkcję, która z
-                    kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
-                    element, indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody
-                    przechodzi przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość
-                    <i>true</i> (wtedy element znajdujący się pod tym indeksem jest dodawany do nowej tablicy) lub
-                    <i>false</i> (wtedy element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
-                </li>
-                <li class="article__list-item"><strong>reduce()</strong> - jako pierwszy argument przyjmuje funkcję,
-                    która z kolei może przyjmować cztery argumenty (ich nazwa może być dowolna, natomiast kolejność ma
-                    znaczenie): akumulator, wartość bieżącego elementu, indeks bieżącego elementu, oryginalna tablica.
-                    Drugim argumentem metody jest wartość początkowa (jest to argument opcjonalny - w przypadku jego
-                    braku pierwsza iteracja wykona się z pominięciem pierwszego elementu tablicy, który będzie pełnił
-                    rolę akumulatora). Metoda redukuje tablicę do pojedynczej wartości (która zostaje zwrócona w
-                    ostatniej iteracji przez funkcję <i>callback</i>). Warto dodawać wartość początkową w metodzie
-                    <i>reduce</i>, ponieważ nie używając jej, np. w przypadku działania na obiektach - można uzyskać
-                    niepożądany rezultat. Wartość początkowa powinna być to wartość neutralna dla wykonywanej operacji,
-                    np. pusty <i>string</i> dla konkatenacji tekstu, 1 dla iloczynu, 0 dla sumy.
-                </li>
-                <li class="article__list-item"><strong>find()</strong> - jako argument przyjmuje funkcję, która z
-                    kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast kolejność ma znaczenie):
-                    element, indeks, oryginalna tablica. Funkcja <i>callback</i> przechodzi przez elementy oryginalnej
-                    tablicy i w przypadku zwrócenia prawdy, metoda zwróci wartość bieżącego elementu. W przypadku gdy
-                    funkcja <i>callback</i> po przejściu przez wszystkie elementy nie zwróci prawdy, metoda zwróci
-                    wartość <i>undefined</i>.
-                </li>
-                <li class="article__list-item"><strong>sort()</strong> - jako argument przyjmuje funkcję sortującą,
-                    która z kolei przyjmuje dwa argumenty: element pierwszy oraz element drugi. Funkcja <i>callback</i>
-                    zwraca wartość 1, gdy element pierwszy ma mniejszą wartość od elementu drugiego, 0 gdy oba elementy
-                    są równe lub -1 gdy element pierwszy ma większą wartość od elementu drugiego. Metoda zwraca nową
-                    tablicę z posortowanymi wartościami (domyślnie operuje na elementach typu <i>string</i>), a także
-                    dokonuje zmian w oryginalnej tablicy.
-                </li>
-            </ul>
-        </article>
-        <article id="asynchrony" class="article">
-            <h2 class="article__heading">asynchroniczność</h2>
-            <p class="article__text">Asynchroniczność to brak oczekiwania na zakończenie jednego zadania, podczas gdy
-                wykonuje się inne zadanie. Różni się od wielowątkowości pewnego rodzaju bezwładnością. Możemy reagować
-                na zakończenie danego zadania, ale nie mamy pełnej kontroli nad tym jak zadanie jest wykonywane w
-                środku (jak na przykład w języku C++).</p>
-            <p class="article__text">W JavaScript bardzo wiele <i>API</i> jest asynchronicznych, tzn. odbieranie danych
-                polega na reagowaniu np. na <i>callback</i>. Nawet podstawowy JavaScript zawiera asynchroniczne
-                funkcje/metody. Najprostszym przykładem są funkcje: <i>setTimeout</i> i <i>setInterval</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>setTimeout()</strong> - wykonuje funkcję przekazaną jako argument
-                    (<i>callback</i>) z określonym opóźnieniem. W związku z tym, że <i>setTimeout</i> jest funkcją
-                    asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej funkcji.
-                </li>
-                <li class="article__list-item"><strong>setInterval()</strong> - wykonuje funkcję przekazaną jako
-                    argument (<i>callback</i>) wielokrotnie z określonym interwałem. W związku z tym, że
-                    <i>setInterval</i> jest funkcją asynchroniczną, kod znajdujący się po niej nie będzie czekał na
-                    zakończenie działania tej funkcji.
-                </li>
-            </ul>
-            <p class="article__text">JavaScript jest jednak językiem jednowątkowym. Jeśli powyższe funkcje zostaną
-                wywołane z mniejszym opóźnieniem niż wynosi czas wykonania wyrażeń następujących po nich - funkcja
-                wykona się dopiero po zakończeniu wykonywania takich wyrażeń (kiedy będzie możliwe wejście w wątek).</p>
-            <p class="article__text">Większość aktualnie powstających <i>API</i> JavaScriptu opiera się w jakimś stopniu
-                na asynchroniczności. Nie blokuje to głównego wątku, np. strony internetowej podczas wykonywania zapytań
-                do sieci lub do serwera, kiedy obsługuje on zapytania/żądania.</p>
-            <p class="article__text">Node.js czerpie jeszcze bardziej z asynchroniczności. Wprowadza tzw. <i>Async
-                    I/O</i> dzięki bibliotece <i>libuv</i>. Pozwala ona na brak blokowania podczas m.in.: operacji
-                sieciowych, operacji na plikach, operacji na bazach danych. Jest to bardzo ważne od strony biznesowej,
-                ponieważ pozwala to w praktyce bardzo łatwo obsługiwać wiele operacji jednocześnie.</p>
-            <p class="article__text">Sposoby obsługi asynchroniczności w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>callback</strong> - przekazywanie jako argumentu funkcji, która
-                    zostanie uruchomiona pod pewnym warunkiem (np. po upływie określonego czasu). Minusem tego
-                    rozwiązania jest tzw. <i>callback hell</i> - zbyt rozbudowana struktura zagnieżdżeń funkcji.</li>
-                <li class="article__list-item"><strong>promises</strong> - warstwa abstrakcji na zadania asynchroniczne
-                    w JavaScript. W tym przypadku potencjalnym problemem może być tzw. <i>promise hell</i> - zbyt
-                    rozbudowana struktura zagnieżdżeń zwracanych obiektów typu <i>promise</i>. Można go jednak uniknąć
-                    wywołując kolejne funkcje <i>then</i> bezpośrednio po sobie oraz funkcję <i>catch</i> na końcu
-                    (zostanie ona wywołana w przypadku niezwrócenia obiektu <i>promise</i> przez którąś z
-                    wcześniejszych funkcji). Użycie <i>promise</i> można rozważać z dwóch stron: jako
-                    <strong>wykonawca</strong> lub jako <strong>oczekujący na wynik</strong>. <i>Promise</i> może
-                    znajdować się w jednym z trzech stanów: <strong>pending</strong> (oczekujący),
-                    <strong>fulfilled</strong> (spełniony), <strong>rejected</strong> (odrzucony).
-                </li>
-                <li class="article__list-item"><strong>async/await</strong> - słowa kluczowe pozwalające na obsługę
-                    asynchroniczności. Metoda ta charakteryzuje się wysoką czytelnością kodu (jest on niemal identyczny
-                    jak synchroniczny) a także dużą jego przepustowością (główny wątek nie jest blokowany, kiedy nie
-                    jest to konieczne). Współpracuje z obiektami typu <i>promise</i>. Słowo kluczowe <i>async</i>,
-                    poprzedzające deklarację funkcji, oznacza ją jako asynchroniczną oraz tworzy ukryty obiekt
-                    <i>promise</i>. Natomiast <i>await</i> wskazuje w którym miejscu należy oczekiwać na rezultat i
-                    zwolnić wątek dla innych operacji. Funkcja typu <i>async</i> może sama się wywoływać, wystarczy jej
-                    deklarację umieścić w nawiasach, a po niej użyć dwóch kolejnych oznaczających wywołanie.
-                </li>
-            </ul>
-            <p class="article__text">Wbudowana funkcja przeglądarkowa pozwalająca na wysłanie żądania w celu otrzymania
-                informacji zwrotnej to <strong>fetch()</strong>. Wywołanie tej funkcji tworzy asynchroniczną obietnicę,
-                której rozwiązaniem będzie informacja zwrotna z serwera. Funkcja <i>fetch</i> przyjmuje jako argument
-                adres <i>URL</i>, pod który zostanie wysłane żądanie, natomiast zwraca obiekt typu <i>promise</i>, na
-                którym
-                można wywołać m.in. metody: <strong>then()</strong> (która jako argument może przyjąć odpowiedź na
-                <i>promise</i>, a jej <i>callback</i> wykona się w przypadku spełnienia obietnicy),
-                <strong>catch()</strong> (która jako argument może przyjąć błąd, a jej <i>callback</i> wykona się w
-                przypadku niespełnienia obietnicy). Odpowiedź zwracana przez obiekt <i>promise</i> musi zostać
-                rozkodowana poprzez wywołanie na niej metody <i>json</i>, która zwraca kolejny obiekt <i>promise</i>
-                (zawierający właściwe dane). Ze względu na to, że rozkodowanie danych również może zajmować czas, który
-                przeglądarka mogłaby poświęcić na wykonywanie innych czynności - zarówno metodę <i>then</i> jak i
-                <i>catch</i> można wywołać bezpośrednio po sobie na jednym obiekcie (w większości przypadków zostanie
-                wykonana jedynie jedna z nich, w zależności od tego czy obietnica została spełniona).
-            </p>
-            <p class="article__text">Funkcje asynchroniczne <i>setTimeout</i> i <i>setInterval</i> domyślnie
-                opierały się na sposobie z wykorzystaniem <i>callback</i>, jednak Node.js od wersji 16 umożliwia ich
-                użycie z wykorzystaniem <i>promise</i>. Należy skorzystać z modułu <i>timers/promisies</i>, importując
-                go za pomocą funkcji <i>require</i>.
-            </p>
-            <p class="article__text">
-                Aby uruchomić kilka metod asynchronicznych i kontynuować działanie programu dopiero wtedy, kiedy
-                wykonywanie ostatniej z nich dobiegnie końca (czyli gdy każda z nich zwróci obiekt typu <i>promise</i>),
-                należy skorzystać z metody <strong>Promise.all()</strong>. Jest to metoda statyczna (nie wywoływana na
-                konkretnym obiekcie), która jako argument przyjmuje tablicę obiektów typu <i>promise</i> (zwracanych
-                przez te asynchroniczne metody), natomiast zwraca jeden wspólny obiekt tego samego typu, kiedy wszystkie
-                obiekty przekazane jako argument zostaną zwrócone. Użycie słowa kluczowego <i>await</i> przed takim
-                wspólnym obiektem, pozwala na uruchomienie grupy metod w sposób asynchroniczny.
-            </p>
-        </article>
-        <article id="dom" class="article">
-            <h2 class="article__heading">dom</h2>
-            <p class="article__text">
-                <strong>HTML</strong> zmieniany jest przez przeglądarkę w reprezentację zwaną <strong>Document Object
-                    Model</strong> (Model obiektowy dokumentu) - <strong>DOM</strong>.
-            </p>
-            <p class="article__text"><i>DOM</i> to zbiór obiektów (węzłów) tworzonych przede wszystkim przez znaczniki,
-                atrybuty i zawartość tekstową. <i>DOM</i> ustawia węzły w strukturze typu drzewo, co tworzy między nimi
-                relacje i zagnieżdżenia.
-            </p>
-            <p class="article__text">Elementy <i>DOM</i> mogą posiadać:</p>
-            <ul class="article__list">
-                <li class="article__list-item">rodzica,</li>
-                <li class="article__list-item">rodzeństwo,</li>
-                <li class="article__list-item">dzieci.</li>
-            </ul>
-            <p class="article__text"><i>API</i> przeglądarki pozwala poruszać się po drzewie <i>DOM</i> używając tych
-                nazw.</p>
-            <p class="article__text">Skrypty powinny być dodawane do pliku <i>HTML</i> na końcu znacznika <i>body</i>,
-                ponieważ operują one na elementach <i>DOM</i>, które są generowane w momencie otwarcia znacznika.
-                Dlatego ważne jest, aby po znacznikach dodających skrypty do strony nie było już żadnych innych
-                znaczników otwierających. Skrypty wykonywane są po kolei, więc kolejność ich dodania do pliku
-                <i>HTML</i> ma znaczenie.
-            </p>
-            <p class="article__text">Sposoby na pobranie konkretnego elementu DOM (które mogą zostać zapisane do
-                zmiennej):
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">Zaznaczenie go w zakładce <i>Elements</i> w narzędziach deweloperskich
-                    przeglądarki a następnie odwołanie się do niego w zakładce <i>Console</i> za pomocą <i>$0</i>.</li>
-                <li class="article__list-item">Odwołanie się poprzez element <i>document</i> (dotyczy jedynie niewielu
-                    elementów strony, np. <i>document.head</i>, <i>document.body</i>, <i>document.links</i>).
-                <li class="article__list-item">Użycie metody <strong>querySelector()</strong> na obiekcie
-                    <i>document</i> z parametrem odnoszącym się do <i>id</i> (<i>#idName</i>), klasy (<i>.className</i>)
-                    bądź znacznika (<i>tagName</i>). Selektory w JavaScript muszą być typu <i>string</i>. Zalecane jest
-                    pobieranie elementów odwołując się do nazw klas (np. ze względu na ułatwienie identyfikacji
-                    poszczególnych elementów przy wykorzystaniu metodologii nazewnictwa klas <i>BEM</i>).
-                </li>
-            </ul>
-            <p class="article__text">Dodawanie nowych elementów <i>DOM</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    Utworzenie nowego elementu <i>DOM</i>:
-                    <strong>document.createElement('tag-name')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Usunięcie nowego tekstowego elementu <i>DOM</i>:
-                    <strong>document.createTextNode('text')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Dodanie utworzonego elementu/tekstowego elementu <i>DOM</i> do rodzica:
-                    <strong>parentElement.appendChild(newElement)</strong>.
-                </li>
-            </ul>
-            <p class="article__text">Operacje na klasach elementów <i>DOM</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">
-                    Dodanie nowej klasy: <strong>element.classList.add('className')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Usunięcie klasy: <strong>element.classList.remove('className')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Dodanie klasy jeśli element jej nie posiada lub usunięcie klasy jeśli element ją posiada:
-                    <strong>element.classList.toggle('className')</strong>.
-                </li>
-            </ul>
-            <p class="article__text">Metoda służąca do nasłuchiwania w JavaScript to
-                <strong>addEventListener()</strong>, która wywoływana jest na konkretnym (pojedynczym) elemencie
-                <i>DOM</i> i przyjmuje jako argumenty: <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako
-                <i>string</i>) oraz <strong>nazwę wywoływanej funkcji</strong>. Opcjonalnie metoda
-                <i>addEventListener</i> może przyjąć również inne argumenty. Wywoływaną funkcją może być również funkcja
-                strzałkowa, przyjmująca jako argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić się do
-                <i>eventu</i> (reprezentacji zdarzenia, które wystąpiło). W celu odwołania się do elementu, na którym
-                wykonywane jest nasłuchiwanie, należy skorzystać z właściwości <i>target</i> konkretnego <i>eventu</i>.
-            </p>
-            <p class="article__text">Nie wszystkie atrybuty znaczników <i>HTML</i> muszą posiadać wartość. Przykładem
-                jest atrybut <i>disabled</i>, który powoduje deaktywację elementu, na którym został użyty. Atrybut ten
-                może zostać użyty jedynie dla części tagów (np. dla znacznika <i>button</i>).</p>
-            <p class="article__text">Praca z atrybutami <i>HTML</i> w JavaScript:</p>
-            <ul class="article__list">
-                <li class="article__list-item">JavaScript podczas pracy z elementami <i>DOM</i> może odwoływać się
-                    również do innych atrybutów tych elementów niż <i>id</i> i <i>class</i>. Atrybuty dotyczące danych
-                    elementów <i>HTML</i> składają się z dwuczłonowych nazw oddzielonych myślnikiem (gdzie pierwszy
-                    człon to <i>data</i>): <strong>data-name</strong>.
-                </li>
-                <li class="article__list-item">Aby dostać się do atrybutów dotyczących danych z poziomu JavaScript
-                    należy na konkretnym elemencie odwołać się do właściwości <i>dataset</i>, a po niej do drugiego
-                    członu nazwy atrybutu: <strong>element.dataset.name</strong>.
-                </li>
-                <li class="article__list-item">Aby pobrać wszystkie elementy posiadające dany atrybut należy w metodzie
-                    <i>querySelectorAll</i> przekazać jako argument klucz tego atrybutu w nawiasach kwadratowych:
-                    <strong>document.querySelectorAll('[data-name]')</strong>.
-                </li>
-                <li class="article__list-item">Metoda <i>querySelectorAll</i> zwraca obiekt <i>NodeList</i>, na którym
-                    nie można wywołać wszystkich metod tablicowych. Aby przekonwertować taki obiekt na tablicę, należy
-                    skorzystać z operatora rozproszenia (<i>spread</i>) oraz nawiasów kwadratowych:
-                    <strong>[...<i>NodeList</i>]</strong>.
-                </li>
-                <li class="article__list-item">
-                    Dodanie nowego atrybutu/edycja wartości istniejącego atrybutu elementu <i>DOM</i>:
-                    <strong>element.setAttribute('attribute-key', 'attribute-value')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Pobranie wartości atrybutu elementu <i>DOM</i>:
-                    <strong>element.getAttribute('attribute-key')</strong>.
-                </li>
-                <li class="article__list-item">
-                    Usunięcie atrybutu elementu <i>DOM</i>:
-                    <strong>element.removeAttribute('attribute-key')</strong>.
-                </li>
-            </ul>
-            <p class="article__text">Znaczniki dotyczące formularzy:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>&lt;form></strong> - opakowanie dla formularza.</li>
-                <li class="article__list-item"><strong>&lt;input id="" name="" type="" value="" placeholder=""
-                        required></strong> - podstawowy element budujący formularz. Zgodnie z dokumentacją znacznik
-                    <i>input</i> powinien być opakowany w paragraf wraz z opisującym go znacznikiem <i>label</i>.
-                    <i>Id</i> służy do odniesienia się do etykiety i może posiadać wartość taką jak nazwa. <i>Name</i>
-                    służy do identyfikacji wartości w miejscu, do którego wysyłamy dane za pomocą formularza.
-                    <i>Type</i> określa typ pola. <i>Value</i> to domyślna wartość pola, wyświetlana zanim wpiszemy tam
-                    cokolwiek. <i>Placeholder</i> przechowuje podpowieź dotyczącą pola, która wyświetlana jest, kiedy
-                    pole jest puste. Właściwość <i>placeholder</i> nie zastępuje znacznika <i>label</i>, ponieważ
-                    czytniki jako opis pola zawsze odczytują etykietę. <i>Required</i> wymaga uzupełnienia danego pola.
-                </li>
-                <li class="article__list-item"><strong>&lt;label for=""></strong> - etykieta tworząca opis pola. Aby
-                    przypiąć ją do konkretnego pola, atrybut <i>for</i> musi przyjąć wartość atrybutu <i>id</i> tego
-                    pola. Jeśli znacznik <i>input</i> znajduje się zaś wewnątrz znacznika <i>label</i>, takie przypięcie
-                    nie jest konieczne.</li>
-                <li class="article__list-item"><strong>&lt;fieldset></strong> - grupa pól.</li>
-                <li class="article__list-item"><strong>&lt;legend></strong> - opis grupy pól znajdującej się wewnątrz
-                    znacznika <i>fieldset</i>.</li>
-                <li class="article__list-item"><strong>&lt;select></strong> - umożliwia wybór elementu z rozwijanej
-                    listy.</li>
-                <li class="article__list-item"><strong>&lt;option></strong> - element rozwijanej listy. Znajduje się
-                    wewnątrz znacznika <i>select</i>. Można zdefiniować wartość pola w atrybucie <i>value</i> w
-                    przypadku gdy ma być ona inna niż wyświetlana w polu.</li>
-                <li class="article__list-item"><strong>&lt;textarea></strong> - służy do wprowadzania dłuższej treści.
-                    Nie posiada atrybutu <i>value</i>, w związku z czym jego wartość należy umieścić jako treść
-                    znacznika.</li>
-            </ul>
-            <p class="article__text">Typy pól formularza:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>text</strong> - służy do wpisywania widocznego tekstu.</li>
-                <li class="article__list-item"><strong>radio</strong> - służy do wyboru jednej wartości z grupy.
-                    Wszystkie pola danej grupy muszą posiadać taką samą wartość znacznika <i>name</i>. Dodanie
-                    nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje domyślny wybór tego
-                    pola.</li>
-                <li class="article__list-item"><strong>checkbox</strong> - służy do wyboru większej ilości wartości. Gdy
-                    pole nie będzie posiadało parametru <i>value</i>, w momencie przesłania formularza zostanie
-                    przesłana wartość <i>on</i>, kiedy pole było zaznaczone lub brak tej wartości, kiedy pole nie było
-                    zaznaczone. Dodanie nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje
-                    domyślny wybór tego pola.</li>
-                <li class="article__list-item"><strong>number</strong> - umożliwia wpisywanie jedynie cyfr do pola.</li>
-                <li class="article__list-item"><strong>tel</strong> - sygnalizuje, że podane pole zawiera numer
-                    telefonu. Ze względu na różne formaty numerów telefonicznych, nie posiada ograniczeń.</li>
-                <li class="article__list-item"><strong>email</strong> - sygnalizuje, że podane pole zawiera adres
-                    e-mail.</li>
-                <li class="article__list-item"><strong>range</strong> - służy do wyboru konkretnej wartości z danego
-                    zakresu za pomocą suwaka. Wartość minimalną, maksymalną oraz skok określają odpowiednio atrybuty
-                    pola: <i>min</i>, <i>max</i> oraz <i>step</i>. Do aktualnie wskazywanej wartości można dostać się z
-                    poziomu JavaScript, odwołując się do własności <i>value</i> znacznika <i>input</i>.</li>
-                <li class="article__list-item"><strong>password</strong> - służy do wpisywania hasła. Wpisywane znaki są
-                    ukryte na ekranie.</li>
-                <li class="article__list-item"><strong>file</strong> - służy do wyboru pliku (z pamięci urządzenia) do
-                    przesłania.</li>
-                <li class="article__list-item"><strong>submit</strong> - służy do wysyłania formularza. Nie posiada
-                    etykiety, a jego nazwa jest zdefiniowana w atrybucie <i>value</i>.</li>
-            </ul>
-            <p class="article__text">Atrybuty formularza:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>action</strong> - jako wartość przyjmuje adres URL miejsca, gdzie
-                    wysłąny będzie formularz. Domyślnie jest wysyłany do strony, na której się znajduje.</li>
-                <li class="article__list-item"><strong>enctype</strong> - mówi o tym czy jest to zwykły formularz
-                    (domyślna wartość: <i>application/x-www-form-urlencoded</i>) czy zawiera inne treści poza
-                    tekstowymi, np. kiedy wysyłane są pliki (wartość: <i>multipart/form-data</i>).</li>
-                <li class="article__list-item"><strong>method</strong> - pozwala na wybór metody wysłania żądania (GET
-                    lub POST).</li>
-            </ul>
-            <p class="article__text">Metody wysłania żądania:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>GET</strong> - domyślna metoda. Przekazuje parametry i wartości w
-                    adresie URL strony. Wysyłane są wartości atrybutu <i>value</i> pola, niezależnie od tego co znajduje
-                    się w etykiecie pola. Ze względu na limitowaną liczbę znaków w adresie, plików nie wysyła się tą
-                    metodą. Używa <i>Query String Parameters</i> (zakładka <i>Network</i> w przeglądarce). Metoda służy
-                    zazwyczaj do pobierania danych.
-                </li>
-                <li class="article__list-item"><strong>POST</strong> - nie umieszcza w adresie URL żadnych dodatkowych
-                    znaków. Jest metodą bezpieczniejszą. Używa <i>Form Data</i> (zakładka <i>Network</i> w
-                    przeglądarce). Metoda służy zazwyczaj do wysyłania danych.</li>
-            </ul>
-            <p class="article__text">Podczas przesyłania danych za pomocą formularza należy obsługiwać zdarzenie
-                wysłania formularza, zamiast zdarzenia kliknięcia w przycisk (ponieważ można wysłać formularz na różne
-                sposoby, np. klawiszem <strong>enter</strong>). Metoda <i>addEventListener</i> powinna zostać wykonana
-                na obiekcie
-                formularza oraz nasłuchiwać zdarzenia typu <i>submit</i>. Aby uniknąć domyślnego zachowania
-                przeglądarki, jakim jest odświeżenie strony podczas wysyłania formularza, należy w funkcji
-                <i>callback</i> na obiekcie <i>event</i> wywołać metodę <strong>preventDefault()</strong>.
-            </p>
-            <p class="article__text">Sposoby na odwołanie się do danych przesłanych przez dany element formularza
-                (należy ich używać w trakcie przesłania formularza - wewnątrz fukcji <i>callback</i> zdarzenia
-                <i>submit</i>):
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>event.target.elements['name-property-value'].value</strong> -
-                    poprzez odwołanie się do konkretnego elementu <i>input</i> z wykorzystaniem wartości jego atrybutu
-                    <i>name</i> , a następnie wywołanie na nim własności <i>value</i>.
-                </li>
-                <li class="article__list-item"><strong>inputElement.value</strong> - poprzez pobranie konretnego
-                    elementu <i>input</i>, a następnie wywołanie na nim własności <i>value</i>.</li>
-            </ul>
-        </article>
-        <article id="local-storage" class="article">
-            <h2 class="article__heading">local storage</h2>
-            <p class="article__text"><strong>Local storage</strong> to jeden z prostszych sposobów zapisywania na
-                urządzeniu lokalnym (m.in. w przeglądarce) pewnych informacji tekstowych. Wyglądają one jak zmienne typu
-                <i>string</i>. Każda informacja posiada nazwę i wartość tekstową. Dane są przechowywane do momentu
-                ręcznego wyczyszczenia.
-            </p>
-            <p class="article__text">Zalety:</p>
-            <ul class="article__list">
-                <li class="article__list-item">szybkie przechowanie informacji na czyimś komputerze,</li>
-                <li class="article__list-item">niewymagana zgoda właściciela urządzenia (stan na 07.2021.),</li>
-                <li class="article__list-item">prostota obsługi.</li>
-            </ul>
-            <p class="article__text">Wady:</p>
-            <ul class="article__list">
-                <li class="article__list-item">ograniczona wielkość przechowywanych danych,</li>
-                <li class="article__list-item">możliwość przechowywania jedynie danych tekstowych (przechowywania innych
-                    typów danych wymaga używania różnych metod),</li>
-                <li class="article__list-item">synchroniczność,</li>
-                <li class="article__list-item">działanie lokalne na urządzeniu klienta (nie na serwerze).</li>
-            </ul>
-            <p class="article__text">Operacje na <i>local storage</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">możliwości interakcji z zawartością <i>local storage</i> na stronie:
-                    zakładka <i>Application</i> w narzędziach deweloperskich lub polecenie <i>localStorage</i> w
-                    konsoli,
-                </li>
-                <li class="article__list-item">dodawanie nowego przechowywanego elementu:
-                    <strong>localStorage.setItem(key, value)</strong>,
-                </li>
-                <li class="article__list-item">pobieranie przechowywanego elementu (w przypadku podania
-                    nieistniejącego klucza, zwrócona zostanie wartość <i>null</i>):
-                    <strong>localStorage.getItem(key)</strong>,
-                </li>
-                <li class="article__list-item">usuwanie przechowywanego elementu:
-                    <strong>localStorage.removeItem(key)</strong>.
-                </li>
-            </ul>
-        </article>
-        <article id="json" class="article">
-            <h2 class="article__heading">json</h2>
-            <p class="article__text"><strong>JSON (JavaScript Object Notation)</strong> - lekki, tekstowy format wymiany
-                danych między różnymi programami, <i>API</i>, itd. Pozwala przechowywać liczby, tekst, wartości typu
-                <i>boolean</i>, <i>null</i>, tablice i obiekty w formie tekstowej. Aplikacja służąca do przeglądania,
-                edycji i formatowania danych typu <i>JSON</i> to <a class="article__link"
-                    href="https://jsoneditoronline.org">JSON Editor Online</a>.
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">W celu dodania obiektu do <i>local storage</i>, należy go najpierw
-                    przekształcić na <i>JSONString</i> z wykorzystaniem metody: <strong>JSON.stringify(object)</strong>.
-                </li>
-                <li class="article__list-item">W celu pobrania z <i>local storage</i> obiektu przechowywanego
-                    jako <i>JSONString</i>, należy go najpierw przekształcić na obiekt z wykorzystaniem metody:
-                    <strong>JSON.parse(JSONString)</strong>.
-                </li>
-            </ul>
-            <p class="article__text">Podczas pracy na serwerze lub na przeglądarce klienta zazwyczaj korzysta się z
-                obiektów. Format <i>JSON</i> wykorzystywany jest głównie w celu przesyłania danych i może zostać
-                odkodowany niezależnie od języka programowania.</p>
-        </article>
-        <article id="exceptions" class="article">
-            <h2 class="article__heading">błędy i wyjątki</h2>
-            <p class="article__text">W każdym potencjalnm miejscu, gdzie w programie może wystąpić błąd, należy wykonać
-                jego obsługę (aby błąd był zrozumiały dla użytkownika). W celu przechwycenia błędu należy skorzystać ze
-                słowa kluczowego <i>throw</i> oraz obiektu typu <i>Error</i>. Sposób ten domyślnie przerywa działanie
-                programu oraz pozwala na prostą identyfikację miejsca wystąpienia błędu (poprzez wyświetlenie
-                odpowiednich danych w konsoli). Umożliwia także obsługę tego błędu.
-            </p>
-            <p class="article__text">Sposoby obsługi błędów:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>try{functionWithThrowKeyword()} catch(errorObjectVariableName)
-                        {handlingInstruction}</strong> - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele
-                    słowo kluczowe <i>throw</i>. Jeśli zostanie wywołany fragment funkcji z błędem, błąd ten zostanie
-                    obsłużony zgodnie z instrukcją z bloku <i>catch</i>.
-                </li>
-                <li class="article__list-item"><strong>try{functionWithThrowKeyword()} finally
-                        {handlingInstruction}</strong> - instrukcja z bloku <i>finally</i> (umieszczana jako ostatni
-                    blok) zostanie wykonana niezależnie od tego czy w programie wystąpił błąd.
-                </li>
-                <li class="article__list-item"><strong>try{functionWithAwaitKeyword()} catch(errorObjectVariableName)
-                        {handlingInstruction}</strong> - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele
-                    słowo kluczowe <i>await</i>. Jeśli wystąpi błąd, zostanie on obsłużony zgodnie z instrukcją z bloku
-                    <i>catch</i>.
-                </li>
-            </ul>
-            <p class="article__text">Obiekt typu <i>Error</i> posiada wiele typów oraz własności ułatwiających obsługę
-                błędów.</p>
-        </article>
-        <article id="debugging" class="article">
-            <h2 class="article__heading">debugowanie</h2>
-            <p class="article__text">
-                Tryb ścisły wprowadza zmiany w semantyce JavaScript:
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">Eliminuje niektóre niedoskonałości języka, zmieniając je tak, aby
-                    wyświtlały błędy.
-                </li>
-                <li class="article__list-item">Naprawia błędy, które utrudniają silnikom przeprowadzanie
-                    optymalizacji (czasami kod w trybie ścisłym może działać szybciej niż identyczny kod, który nie jest
-                    w trybie ścisłym).</li>
-                <li class="article__list-item">Zabrania niektórych składni, które prawdopodobnie zostaną zdefiniowane w
-                    przyszłych wersjach ECMAScript.</li>
-            </ul>
-            <p class="article__text">Niektóre właściwości trybu ścisłego:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Uniemożliwia deklarację zmiennych bez poprzedzenia ich nazwy słowem
-                    kluczowym <i>let</i>, <i>const</i> lub <i>var</i>.
-                </li>
-                <li class="article__list-item">
-                    Uniemożliwia deklarację zmiennych z użyciem słów zastrzeżonych jako nazwy (np. <i>undefined</i>).
-                </li>
-                <li class="article__list-item">Kontekst <i>this</i> podczas wywołania funkcji nazwanej oraz anonimowej
-                    nie dotyczny obiektu globalnego, lecz przyjmuje wartość <i>undefined</i>.</li>
-            </ul>
-            <p class="article__list">Aby rozpocząć pracę w trybie ścisłym, należy na początku pliku JavaScript umieścić
-                <i>string</i>: <strong>'use strict'</strong>. Tryb działa od wersji <i>ECMAScript 5</i>. Wiele
-                mechanizmów (od wersji <i>ECMAScript 6</i>) nie wymaga stosowania trybu ścisłego, ponieważ ma
-                zaimplementowane różnego rodzaju zabezpieczenia.
-            </p>
-            <p class="article__list">Debugowanie w Chrome:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Dostęp do plików źródłowych możliwy jest z poziomu zakładki
-                    <i>Sources</i>. Widoczna jest tu także zawartość używanych zmiennych, stos wywołań funkcji -
-                    <i>callstack</i>, aktualny obiekt <i>this</i>.
-                </li>
-                <li class="article__list-item">Słowo kluczowe <strong>debugger</strong> umożliwia zatrzymanie
-                    wykonywania programu w miejscu, w którym zostało użyte w kodzie. <i>Debugger</i> zatrzymuje się w
-                    czasie wywołania funkcji, a nie w czasie jej deklaracji.</li>
-                <li class="article__list-item">Możliwe jest również ustalenie punktu zatrzymania poprzez kliknięcie
-                    odpowiedniej linijki w kodzie źródłowym w zakładce <i>Sources</i>.
-                </li>
-                <li class="article__list-item">Panel służący do sterowania przepływem programu umożliwia akcje takie
-                    jak: wznowienie/zatrzymanie wykonywania skryptu, przejście do kolejnego wywołania funkcji, wejście
-                    do wywoływanej funkcji, wyjście z wywoływanej funkcji, przejście do następnego kroku.
-                </li>
-            </ul>
-        </article>
-        <article id="collections" class="article">
-            <h2 class="article__heading">kolekcje</h2>
-            <p class="article__text">Kolekcje danych to iterowalne obiekty, przechowujące unikalne dane. Iteracja w
-                kolekcjach przebiega w kolejności dodania do nich danych. Wyróżnia się dwa typy kolekcji: zbiór
-                (<strong>set</strong>) oraz mapę (<strong>map</strong>).
-            </p>
-            <p class="article__text">Zbiór pozwala na przechowywanie ukikalnych wartości (zarówno typu prostego jak i
-                referencji do obiektów). Najważniejsze metody:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>new Set(array)</strong> - utworzenie zbioru z tablicy.</li>
-                <li class="article__list-item"><strong>new Array(...set)</strong> - utworzenie tablicy ze zbioru.</li>
-                <li class="article__list-item"><strong>set.add(element)</strong> - dodanie elementu do zbioru.</li>
-                <li class="article__list-item"><strong>set.delete(element)</strong> - usunięcie elementu ze zbioru.</li>
-                <li class="article__list-item"><strong>set.has(element)</strong> - sprawdzenie czy zbiór posiada
-                    element.</li>
-                <li class="article__list-item"><strong>set.clear()</strong> - usunięcie wszystkich elementów zbioru.
-                </li>
-            </ul>
-            <p class="article__text">Mapa pozwala na przechowywanie par klucz-wartość. Zarówno wartość typu
-                prostego jak i obiekt mogą zostać użyte jako klucz lub jako wartość mapy. Najważniejsze metody:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>new Map(Object.entries(object))</strong> - utworzenie mapy z
-                    obiektu.</li>
-                <li class="article__list-item"><strong>new Map(arrayOfKeyValueArrays)</strong> - utworzenie mapy z
-                    dwuwymiarowej tablicy przechowującej tablice zawierające pary klucz-wartość.</li>
-                <li class="article__list-item"><strong>map.get(key)</strong> - pobranie wartości o danym kluczu z mapy.
-                </li>
-                <li class="article__list-item"><strong>map.set(key, value)</strong> - ustawienie pary klucz-wartość w
-                    mapie.</li>
-                <li class="article__list-item"><strong>map.delete(key)</strong> - usunięcie elementu o danym kluczu z
-                    mapy.</li>
-                <li class="article__list-item"><strong>map.has(key)</strong> - sprawdzenie czy mapa posiada element o
-                    danym kluczu.</li>
-                <li class="article__list-item"><strong>map.clear()</strong> - usunięcie wszystkich elementów mapy.</li>
-                <li class="article__list-item"><strong>map.entries()</strong> - pobranie z mapy dwuwymiarowej tablicy
-                    zawierającej tablice z parami klucz-wartość.</li>
-            </ul>
-            <p class="article__text">Kolekcje wykorzystywane są głównie kiedy wymagana jest unikalność danych lub duża
-                szybkość pracy na danych.</p>
-        </article>
-        <article id="eslint" class="article">
-            <h2 class="article__heading">eslint</h2>
-            <p class="article__text"><strong>ESLint</strong> to narzędzie do statycznej analizy kodu oraz identyfikacji
-                problematycznych fragmentów w kodzie JavaScript. Pozwala pisać coraz lepszy, zgodny dobrymi praktykami
-                kod. Często ujednolica również styl pisania kodu w całym zespole/całej firmie.
-            </p>
-            <p class="article__text"><i>Linter</i> pomaga otrzymywać jednolity styl kodu. <i>Style guide</i> to zestaw
-                reguł <i>Lintera</i>. <a class="article__link" href="https://github.com/airbnb/javascript">Airbnb
-                    JavaScript Style Guide</a> to popularny <i>style guide</i> stworzony przez firmę <i>Airbnb</i>.
-            </p>
-            <p class="article__text">Przygotowanie <i>ESLint</i> i włączenie <i>style guide</i> (instrukcje należy
-                wykonać dla każdego projektu osobno):</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item"><strong>npm init -y</strong>.</li>
-                <li class="article__list-item"><strong>npm i -D eslint babel-eslint eslint-config-airbnb</strong>.</li>
-                <li class="article__list-item">Utworzenie pliku <strong>.eslintrc</strong> w głównym folderze projektu z
-                    zawartością: <strong>{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true, "node":
-                        true}, "parser": "babel-eslint", "extends": "airbnb", "rules": {}}</strong>.</li>
-                <li class="article__list-item">Ustawienia <i>ESLint</i> w <i>WebStorm</i>: <strong>Automatic ESLint
-                        configuration</strong>.</li>
-            </ol>
-            <p class="article__text">Sposoby naprawy niedoskonałości w kodzie:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy katalogu projektu i wybranie opcji
-                    <i>Fix ESLint Problems</i> (działa na cały projekt).
-                </li>
-                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy pliku i wybranie opcji <i>Fix ESLint
-                        Problems</i> (działa na wybrany plik).
-                </li>
-                <li class="article__list-item">Użycie skrótu klawiaturowego <strong>alt</strong> +
-                    <strong>enter</strong> podczas gdy kursor edyora znajduje się na danej niedoskonałości (poprawia
-                    wybraną niedoskonałość).
-                </li>
-                <li class="article__list-item">Kliknięcie prawym przyciskiem myszy konkretnego elementu kodu
-                    i wybranie sugerowanego sposobu naprawy.</li>
-            </ul>
-            <p class="article__text">Sposób użycia innego stylu niż sugerowany w pojedynczym pliku:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element
-                    kodu.</li>
-                <li class="article__list-item">Wyszukanie w <a class="article__link"
-                        href="https://eslint.org/">dokumentacji</a> <i>ESLint</i> tej właściwości.</li>
-                <li class="article__list-item">Skopiowanie wybranej reguły (np. <strong>/*eslint quotes: ["error",
-                        "double"]*/</strong>) i wklejenie jej (jako komentarza) na początku pliku, który będzie używał
-                    innych stylów <i>ESLint</i>.
-                </li>
-            </ol>
-            <p class="article__text">Sposób użycia innego stylu niż sugerowany w całym projekcie:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element
-                    kodu.</li>
-                <li class="article__list-item">Wyszukanie w <a class="article__link"
-                        href="https://eslint.org/">dokumentacji</a> <i>ESLint</i> tej właściwości.</li>
-                <li class="article__list-item">Skopiowanie wybranej reguły (np. <strong>/*eslint quotes: ["error",
-                        "double"]*/</strong>) i wklejenie jej jako jednej z własności obietktu <i>rules</i>
-                    w pliku <i>.eslintrc</i> (np. <strong>"rules": {"quotes": ["error", "double"]}</strong>).
-                </li>
-            </ol>
-            <p class="article__text"><i>ESLint</i> może wyświelać niedoskonałości kodu jako błąd lub jako ostrzeżenie
-                (pełna lista błędów i ostrzeżeń znajduje się w zakładce <i>Problems</i> w <i>WebStorm</i>). Aby zmienić
-                domyślny sposób ich wyświetlania, należy wybrać typ w nadpisywanej regule pomiędzy <i>error</i> i
-                <i>warn</i> (np. <strong>"quotes": ["warn", "double"]</strong>).
-            </p>
-            <p class="article__text">W celu automatycznego korygowania niedoskonałości pliku, podczas jego zapisu
-                należy wybrać opcję <strong>Run eslint --fix on save</strong> w ustawieniach <i>ESLint</i> w
-                <i>WebStorm</i>.
-            </p>
-        </article>
+      <h1 class="theory-main__heading">javascript</h1>
+      <nav class="theory-main__links">
+        <a href="#fundaments" class="theory-main__link">fundamenty javascriptu</a>
+        <span class="theory-main__text">•</span>
+        <a href="#operations" class="theory-main__link">operacje i operatory</a>
+        <span class="theory-main__text">•</span>
+        <a href="#variables" class="theory-main__link">zmienne</a>
+        <span class="theory-main__text">•</span>
+        <a href="#arrays" class="theory-main__link">tablice</a>
+        <span class="theory-main__text">•</span>
+        <a href="#loops" class="theory-main__link">pętle</a>
+        <span class="theory-main__text">•</span>
+        <a href="#conditional-statements" class="theory-main__link">instrukcje warunkowe</a>
+        <span class="theory-main__text">•</span>
+        <a href="#data-types" class="theory-main__link">typy danych</a>
+        <span class="theory-main__text">•</span>
+        <a href="#functions" class="theory-main__link">funkcje</a>
+        <span class="theory-main__text">•</span>
+        <a href="#object-orientation" class="theory-main__link">obiektowość</a>
+        <span class="theory-main__text">•</span>
+        <a href="#ecmascript-6" class="theory-main__link">ecmascript 6</a>
+        <span class="theory-main__text">•</span>
+        <a href="#classes" class="theory-main__link">klasy</a>
+        <span class="theory-main__text">•</span>
+        <a href="#advanced-arrays" class="theory-main__link">zaawansowane metody tablicowe</a>
+        <span class="theory-main__text">•</span>
+        <a href="#asynchrony" class="theory-main__link">asynchroniczność</a>
+        <span class="theory-main__text">•</span>
+        <a href="#dom" class="theory-main__link">dom</a>
+        <span class="theory-main__text">•</span>
+        <a href="#local-storage" class="theory-main__link">local storage</a>
+        <span class="theory-main__text">•</span>
+        <a href="#json" class="theory-main__link">json</a>
+        <span class="theory-main__text">•</span>
+        <a href="#exceptions" class="theory-main__link">błędy i wyjątki</a>
+        <span class="theory-main__text">•</span>
+        <a href="#debugging" class="theory-main__link">debugowanie</a>
+        <span class="theory-main__text">•</span>
+        <a href="#collections" class="theory-main__link">kolekcje</a>
+        <span class="theory-main__text">•</span>
+        <a href="#eslint" class="theory-main__link">eslint</a>
+      </nav>
+      <div class="theory-main__image"></div>
+      <article id="fundaments" class="article">
+        <h2 class="article__heading">fundamenty javascriptu</h2>
+        <p class="article__text">Cechy JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>Język wysokiego poziomu</strong> - wiele rzeczy dziejących się na niższym poziomie wykonuje się automatycznie, z dala od kodu maszynowego.
+          </li>
+          <li class="article__list-item">
+            <strong>Słabo typowany</strong> - brak konieczności wskazywania typów zmiennych podczas deklaracji, typ zostanie nadany automatycznie przez
+            JavaScript.
+          </li>
+          <li class="article__list-item">
+            <strong>Dynamicznie typowany</strong> - podczas działania programu do konkretnej zmiennej może zostać przypisany inny typ danych.
+          </li>
+          <li class="article__list-item">
+            <strong>Język interpretowany</strong> - odczytywany linijka po linijce przez przeglądarkę i przekształcany na kod maszynowy w czasie działania
+            programu, lecz ze względu na zwiększenie szybkości działania może być również kompilowany (zamieniony przed uruchomieniem programu na kod maszynowy
+            rozumiany przez komputer). Możliwa jest także opcja łącząca obie metody.
+          </li>
+        </ul>
+        <p class="article__text">Niektóre typy danych:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>string</strong> - tekst,</li>
+          <li class="article__list-item"><strong>integer</strong> - liczba całkowita,</li>
+          <li class="article__list-item"><strong>boolean</strong> - prawda lub fałsz.</li>
+        </ul>
+        <p class="article__text">Jak uruchomić JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            narzędzia w internecie, np.
+            <a class="article__link" href="https://codepen.io">codepen.io</a>
+            (zalecany dla front-endu),
+            <a class="article__link" href="https://replit.com/">replit.com</a>
+            (zalecany dla back-endu),
+          </li>
+          <li class="article__list-item">środowisko uruchomieniowe Node.js,</li>
+          <li class="article__list-item">przeglądarka internetowa.</li>
+        </ul>
+        <p class="article__text">Strony przydatne podczas pracy w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <a class="article__link" href="https://caniuse.com/">caniuse.com</a>
+            - wykaz wsparcia poszczególnych funkcji w przeglądarce,
+          </li>
+          <li class="article__list-item">
+            <a class="article__link" href="https://node.green/">node.green</a> - wykaz wspracia poszczególnych funkcji w Node.js.
+          </li>
+          <li class="article__list-item">
+            <a class="article__link" href="https://babeljs.io/">babeljs.io</a> - transpilator do starszej wersji JavaScript. Umożliwia na korzystanie z funkcji
+            języka, które pojawią się dopiero w przyszłości.
+          </li>
+        </ul>
+        <p class="article__text">
+          <strong>Interpreterem</strong> JavaScript w przeglądarce (zarówno Chrome jak i Edge) jest stworzony przez Google <strong>silnik V8</strong>.
+        </p>
+        <p class="article__text">
+          <strong>API</strong> - dodatkowe funkcjonalności (nie są częścią specyfikacji JavaScript) dostarczone przez Node.js lub przez przeglądarkę (mogą być
+          różne dla obu środowisk). Przykład: <strong>console.log()</strong> nie jest częścią specyfikacji, lecz funkcjonalnością, która została dostarczona
+          zarówno przez Node.js jak i przez przeglądarkę pod tą samą nazwą, w celu ułatwienia korzystania z obu środowisk.
+        </p>
+        <p class="article__text"><strong>window.prompt()</strong> - metoda pozwalająca na pobranie danych od użytkownika.</p>
+      </article>
+      <article id="operations" class="article">
+        <h2 class="article__heading">operacje i operatory</h2>
+        <p class="article__text">Operatory arytmetyczne:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>+</strong> - dodawanie,</li>
+          <li class="article__list-item"><strong>-</strong> - odejmowanie,</li>
+          <li class="article__list-item"><strong>/</strong> - dzielenie,</li>
+          <li class="article__list-item"><strong>*</strong> - mnożenie,</li>
+          <li class="article__list-item"><strong>**</strong> - potęgowanie,</li>
+          <li class="article__list-item"><strong>Inkrementacja</strong> - zwiększenie wartości o 1,</li>
+          <li class="article__list-item"><strong>Dekrementacja</strong> - zmniejszenie wartości o 1.</li>
+        </ul>
+        <p class="article__text">
+          Wyrażenia matematyczne wykonywane są zgodnie z zasadami wykonywania działań (możliwe jest użycie nawiasów). Podczas wykonywania takich wyrażeń
+          zwracany jest ich wynik.
+        </p>
+        <a class="article__link" href=""></a>
+        <p class="article__text">Operatory porównania:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>></strong> - większy,</li>
+          <li class="article__list-item"><strong>>=</strong> - większy bądź równy,</li>
+          <li class="article__list-item"><strong>&lt;</strong> - mniejszy,</li>
+          <li class="article__list-item"><strong>&lt;=</strong> - mniejszy bądź równy,</li>
+          <li class="article__list-item"><strong>==</strong> - równy (bez porównania typu zmiennej),</li>
+          <li class="article__list-item"><strong>===</strong> - równy (z porównaniem typu zmiennej),</li>
+          <li class="article__list-item"><strong>!=</strong> - różny (bez porównania typu zmiennej),</li>
+          <li class="article__list-item"><strong>!==</strong> - różny (z porównaniem typu zmiennej).</li>
+        </ul>
+        <p class="article__text">
+          Dobrą praktyką jest używanie <i>===</i> podczas wykonywania porównań.
+          <a class="article__link" href="https://dorey.github.io/JavaScript-Equality-Table/unified/">Tabela</a>
+          obrazująca różnice w porównaniach z użyciem różnych operatorów równości.
+        </p>
+        <p class="article__text">Operatory logiczne:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>&&</strong> - wszystkie warunki muszą być prawdziwe, żeby wyrażenie zwróciło prawdę (logiczne "i"),</li>
+          <li class="article__list-item">
+            <strong>||</strong> - przynajmniej jeden warunek musi być prawdziwy, żeby wyrażenie zwróciło prawdę (logiczne "lub"),
+          </li>
+          <li class="article__list-item"><strong>!</strong> - odwraca wartość wyrażenia logicznego (negacja).</li>
+        </ul>
+        <p class="article__text">Wartości zwracane przez operatory logiczne, kiedy nie są używane w odniesieniu do wartości logicznych:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>&&</strong> - zwraca pierwszy element, który po konwersji do typu <i>boolean</i> zwraca wartość <i>false</i>. Kiedy nie ma takiego elementu,
+            zwraca ostatni element.
+          </li>
+          <li class="article__list-item">
+            <strong>||</strong> - zwraca pierwszy element, który po konwersji do typu <i>boolean</i> zwraca wartość <i>true</i>. Kiedy nie ma takiego elementu,
+            zwraca ostatni element.
+          </li>
+        </ul>
+        <p class="article__text">
+          Podwójna negacja (<strong>!!</strong>) pozwala na sprawdzenie jaką wartość logiczną przyjmie operand po konwersji do typu <i>boolean</i>.
+        </p>
+        <p class="article__text">Operatory przypisania:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>=</strong> - przypisanie operandu z prawej strony operatora do operandu z lewej strony operatora,</li>
+          <li class="article__list-item">
+            <strong>*=</strong> - nadpisanie operandu z lewej strony operatora przez pomnożenie go przez operand z prawej strony operatora,
+          </li>
+          <li class="article__list-item">
+            <strong>/=</strong> - nadpisanie operandu z lewej strony operatora przez podzielenie go przez operand z prawej strony operatora,
+          </li>
+          <li class="article__list-item">
+            <strong>%=</strong> - nadpisanie operandu z lewej strony operatora przez resztę z dzielenia go przez operand z prawej strony operatora,
+          </li>
+          <li class="article__list-item">
+            <strong>+=</strong> - nadpisanie operandu z lewej strony operatora przez dodanie do niego operandu z prawej strony operatora,
+          </li>
+          <li class="article__list-item">
+            <strong>-=</strong> - nadpisanie operandu z lewej strony operatora przez odjęcie od niego operandu z prawej strony operatora.
+          </li>
+        </ul>
+        <p class="article__text">
+          <a class="article__link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table">Tabela</a>
+          pierwszeństwa operatorów.
+        </p>
+      </article>
+      <article id="variables" class="article">
+        <h2 class="article__heading">zmienne</h2>
+        <p class="article__text">
+          <strong>Zmienna</strong> - miejsce w pamięci, przechowujące pewne informacje. Precyzyjniej jest to połączenie między zadeklarowaną nazwą a miejscem w
+          pamięci przechowującym pewną wartość. Wartość posiada typ, natomiast zmienna - nie.
+        </p>
+        <p class="article__text">
+          Koncept <i>immutability</i> polega na tym, że nie można zmieniać wartości <i>primitive values</i> (wartości typów prostych, do których podłączamy się
+          za pomocą zmiennych) w JavaScript. To co zmieniamy, to połączenia między nimi a zmiennymi. Wartości już istnieją, są niezmienne. Na przykład nie można
+          zmienić <i>true</i> na <i>false</i> lub na odwrót.
+        </p>
+        <p class="article__text">
+          Słowa kluczowe służące do deklaracji zmiennych w JavaScript (możliwa jest również deklaracja bez poprzedzenia nazwy zmiennej słowem kluczowym, lecz
+          nie należy stosować takiej praktyki):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>const</strong> - deklaruje zmienną, lecz połączenie między nią i jej wartością nie może być zmieniane w trakcie działania programu;
+          </li>
+          <li class="article__list-item">
+            <strong>let</strong> - deklaruje zmienną, a połączenie między nią i jej wartością może być zmieniane w trakcie działania programu;
+          </li>
+          <li class="article__list-item">
+            <strong>var</strong> - używany do deklaracji we wcześniejszych wersjach JavaScriptu (obecnie do deklaracji zmiennych należy używać słowa kluczowego
+            <i>const</i>, a jeśli połączenie między zmienną i jej wartością będzie edytowane w trakcie działania programu - <i>let</i>).
+          </li>
+        </ul>
+        <p class="article__text">
+          Inicjalizacja zmiennej to nadanie jej wartości. Możliwa jest inicjalizacja zmiennej podczas deklaracji. Jeśli w czasie deklaracji żadna wartość nie
+          zostanie przypisana do zmiennej, automatycznie przyjmie ona wartość <i>undefined</i>.
+        </p>
+      </article>
+      <article id="arrays" class="article">
+        <h2 class="article__heading">tablice</h2>
+        <p class="article__text">Tablica (<i>array</i>):</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Jest niejednorodną strukturą danych, ponieważ może przechowywać różne typy danych jednocześnie (np. liczby, łańcuchy znaków, obiekty).
+          </li>
+          <li class="article__list-item">
+            Aby zadeklarować tablicę, należy użyć nawiasów kwadratowych. Elementy tablicy można zdefiniować już podczas deklaracji tablicy (poprzez umieszczenie
+            ich wewnątrz nawiasów kwadratowych i oddzielenie od siebie przecinkiem) lub dodać je później (z wykorzystaniem odpowiednich metod).
+          </li>
+          <li class="article__list-item">
+            Każdy z elementów tablicy posiada indeks, czyli swoją pozycję w tablicy. Pierwszy element tablicy ma indeks 0. Aby odwołać się do elementu o danym
+            indeksie, należy podać indeks w nawiasach kwadratowych po nazwie zmiennej, do której przypisana jest tablica.
+          </li>
+        </ul>
+        <p class="article__text">Wybrane własności i funkcje tablic:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>length</strong> - zwraca ilość elementów tablicy,</li>
+          <li class="article__list-item"><strong>push(<u>element</u>)</strong> - dodaje <u>element</u> na koniec tablicy,</li>
+          <li class="article__list-item"><strong>pop()</strong> - usuwa element z końca tablicy,</li>
+          <li class="article__list-item"><strong>unshift(<u>element</u>)</strong> - dodaje <u>element</u> na początek tablicy,</li>
+          <li class="article__list-item"><strong>shift()</strong> - usuwa element z początku tablicy,</li>
+          <li class="article__list-item">
+            <strong>indexOf(<u>element</u>)</strong> - zwraca indeks pierwszego napotkanego <u>element</u> lub wartość -1, gdy <u>element</u> nie zostanie
+            odnaleziony w tablicy,
+          </li>
+          <li class="article__list-item">
+            <strong>splice(<u>index</u>, <u>amount</u>)</strong> - rozpoczynając od elementu o indeksie <u>index</u>, usuwa <u>amount</u> elementów z tablicy,
+          </li>
+          <li class="article__list-item">
+            <strong>slice(<u>startIndex</u>, <u>endIndex</u>)</strong> - rozpoczynając od elementu o indeksie <u>startIndex</u> (włącznie), pobiera elementy z
+            tablicy kończąc na elemencie o indeksie <u>endIndex</u> (z wyłączeniem tego elementu).
+          </li>
+        </ul>
+      </article>
+      <article id="loops" class="article">
+        <h2 class="article__heading">pętle</h2>
+        <p class="article__text">Pętla (<i>loop</i>) wykonuje blok kodu określoną liczbę razy.</p>
+        <p class="article__text">Rodzaje pętli:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>for(let <u>i=0</u>; <u>i&lt;10</u>; <u>i++</u>) {blockOfCode}</strong>,
+          </li>
+          <li class="article__list-item"><strong>while(<u>i&lt;10</u>) {blockOfCode}</strong>,</li>
+          <li class="article__list-item">
+            <strong>do {blockOfCode} <strong>while</strong>(<u>i&lt;10</u>)</strong>,
+          </li>
+          <li class="article__list-item">
+            <strong>for(const <u>propertyName</u> <strong>in</strong> <u>object</u>)</strong>,
+          </li>
+          <li class="article__list-item">
+            <strong>for(const <u>element</u> <strong>of</strong> <u>array</u>)</strong>.
+          </li>
+        </ul>
+        <p class="article__text">
+          Pętla <strong>for</strong> składa się z inicjalizacji <u>iteratora</u>, <u>warunku</u> oraz <u>wyrażenia zmiany iteratora</u>. Blok kodu wewnątrz
+          pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą.
+        </p>
+        <p class="article__text">
+          Pętla <strong>while</strong> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+          najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani razu.
+        </p>
+        <p class="article__text">
+          Pętla <strong>do ... while</strong> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+          najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
+        </p>
+        <p class="article__text">
+          Pętla <strong>for ... in</strong> składa się z inicjalizacji
+          <u>zmiennej określającej własność obiektu</u>
+          oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich własnościach przekazanego obiektu.
+        </p>
+        <p class="article__text">
+          Pętla <strong>for ... of</strong> składa się z inicjalizacji
+          <u>zmiennej określającej element tablicy</u>
+          oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach tablicy. Może działać z <i>async/await</i>.
+        </p>
+        <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>preinkrementacja</strong> (++i) - zwiększa wartość wyrażenia o 1 przed wykonaniem pozostałych operacji,</li>
+          <li class="article__list-item"><strong>predekrementacja</strong> (--i) - zmniejsza wartość wyrażenia o 1 przed wykonaniem pozostałych operacji,</li>
+          <li class="article__list-item"><strong>postinkrementacja</strong> (i++) - zwiększa wartość wyrażenia o 1 po wykonaniu pozostałych operacji,</li>
+          <li class="article__list-item"><strong>postdekrementacja</strong> (i--) - zmniejsza wartość wyrażenia o 1 po wykonaniu pozostałych operacji.</li>
+        </ul>
+      </article>
+      <article id="conditional-statements" class="article">
+        <h2 class="article__heading">instrukcje warunkowe</h2>
+        <p class="article__text">Instrukcje warunkowe:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>if</strong>(<u>condition</u>) - kod w klamrach następujących po instrukcji <i>if</i> wykona się, jeśli <u>warunek</u> w nawiasie zwróci
+            prawdę.
+          </li>
+          <li class="article__list-item">
+            <strong>else if</strong>(<u>condition</u>) - kod w klamrach następujących po instrukcji <i>if else</i> wykona się, jeśli <u>warunek</u> w nawiasie
+            zwróci prawdę oraz jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
+          </li>
+          <li class="article__list-item">
+            <strong>else</strong> - kod w klamrach następujących po instrukcji <i>else</i> wykona się, jeśli żaden z wcześniejszych warunków instrukcji nie
+            zwrócił prawdy.
+          </li>
+          <li class="article__list-item">
+            <strong>switch</strong>(<u>variable</u>) - wykona kod dla przypadku odpowiadającego wartości <u>zmiennej</u> znajdującej się w nawiasie (w przypadku
+            braku takiego przypadku zwróci wartość domyślną, która jest zdefiniowana na końcu instrukcji. Przy porównaniu sprawdzana jest również zgodność
+            typów.
+          </li>
+          <li class="article__list-item">
+            <u>condition</u> <strong>?</strong> <u>ifTrue</u> <strong>:</strong> <u>ifFalse</u> - <i>ternary operator</i> - jeśli <u>warunek</u> podany przed
+            znakiem zapytania jest spełniony, zwracana jest <u>wartość</u> znajdująca się między znakiem zapytania a dwukropkiem. W przeciwnym razie zwracana
+            jest <u>wartość</u> znajdująca się po dwukropku.
+          </li>
+          <li class="article__list-item">
+            <u>leftOperand</u> <strong>??</strong> <u>rightOperand</u> - <i>nullish coalescing operator</i> - jeśli <u>lewy operand</u> zwraca wartość
+            <i>null</i> lub <i>undefined</i>, zwracany jest <u>prawy operand</u>. W przeciwnym razie zwracany jest <u>lewy operand</u> (nawet jeśli są to inne
+            wartości, które po konwersji do typu <i>boolean</i> zwracają <i>false</i>, np.: 0, pusty <i>string</i>).
+          </li>
+        </ul>
+      </article>
+      <article id="data-types" class="article">
+        <h2 class="article__heading">typy danych</h2>
+        <p class="article__text">Typy proste w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>string</strong> - tekst. Należy podać go w apostrofach (zalecany jest pojedynczy).</li>
+          <li class="article__list-item"><strong>number</strong> - liczba.</li>
+          <li class="article__list-item"><strong>bigint</strong> - duża liczba (większa niż 2^53).</li>
+          <li class="article__list-item"><strong>boolean</strong> - <i>true</i> lub <i>false</i>.</li>
+          <li class="article__list-item">
+            <strong>null</strong> - wartość celowo niezdefiniowana (na etapie deklaracji jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo że zmienna
+            będzie wykorzystana w trakcie działania programu). Przez niektóre źródła zaliczany jako typ złożony (operator <i>typeof</i> zwraca dla
+            <i>null</i> wartość <i>object</i> ze względu na to, że JavaScript jest kompatybilny wstecz i zmiana tego mogłaby spowodować nieprawidłowe działanie
+            istniejących programów).
+          </li>
+          <li class="article__list-item"><strong>undefined</strong> - brak definicji. Podczas próby odwołania do nieistniejącej zmiennej występuje błąd.</li>
+          <li class="article__list-item"><strong>*symbol</strong> - tworzy tzw. "unikalne opakowanie".</li>
+        </ul>
+        <p class="article__text">Typy złożone w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>object</strong> - służy do przechowywania bardziej złożonych informacji niż te, które można przedstawić za pomocą typów prostych.
+          </li>
+        </ul>
+        <p class="article__text">Dodatkowe informacje o typach danych:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Do nazywania zmiennych należy używać schematu <i>camelCase</i>.</li>
+          <li class="article__list-item">Do sprawdzenia typu zmiennej służy słowo kluczowe <i>typeof</i>.</li>
+          <li class="article__list-item">Operator przypisania <i>=</i> nie tworzy nowych zmiennych, lecz tworzy i zwraca połączenie.</li>
+          <li class="article__list-item">
+            W przypadku połączenia zmiennej <i>a</i> ze zmienną <i>b</i>, występuje połączenie z wartością zmiennej <i>b</i> a nie bez<i></i>pośrednio z samą
+            zmienną <i>b</i>.
+          </li>
+          <li class="article__list-item">
+            Wywoływanie metod na typach prostych jest możliwe, ponieważ przed wykonaniem metody dokonuje się zamiana wartości prostej na obiekt (konwersja
+            niejawna), a po wykonaniu metody dokonuje się taka sama zamiana w przeciwnym kierunku.
+          </li>
+        </ul>
+      </article>
+      <article id="functions" class="article">
+        <h2 class="article__heading">funkcje</h2>
+        <p class="article__text">Składowe funkcji w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">deklaracja;</li>
+          <li class="article__list-item">parametr (opcjonalnie) - podczas wywołania funkcji określany mianem argumentu;</li>
+          <li class="article__list-item">słowo kluczowe <i>return</i> (opcjonalnie);</li>
+          <li class="article__list-item">
+            wynik (opcjonalnie) - jeśli po słowie kluczowym <i>return</i> nie będzie wyniku do zwrócenia - funkcja zwróci wartość <i>undefined</i>.
+          </li>
+        </ul>
+        <p class="article__text">Sposoby deklaracji funkcji:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>function functionName (parameter) {functionBody}</strong> - funkcja nazwana (możliwe jest jej nadpisanie poprzez nadanie takiej samej nazwy
+            innej funkcji; z racji tego że nie jest przypisana do zmiennej, jej wywołanie może nastąpić wcześniej w kodzie niż jej deklaracja);
+          </li>
+          <li class="article__list-item">
+            <strong>const name = function (parameter) {functionBody}</strong> - funkcja anonimowa (przypisana do zmiennej zadeklarowanej z wykorzystaniem
+            <i>const</i> lub <i>let</i>, nie może zostać ponownie przypisana do takiej samej nazwy);
+          </li>
+          <li class="article__list-item">
+            <strong>const functionName = (parameter) => {functionBody}</strong>
+            - funkcja strzałkowa.
+          </li>
+        </ul>
+        <p class="article__text">Dodatkowe informacje o funkcjach:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Wynikiem funkcji, która nie posiada słowa kluczowego jest
+            <i>undefined</i>.
+          </li>
+          <li class="article__list-item">Funkcja może przyjmować dowolną ilość argumentów (może również nie przyjmować żadnego).</li>
+          <li class="article__list-item">Typ zwracanej wartości może być inny niż typ argumentu/argumentów przyjmowanych przez funkcję.</li>
+          <li class="article__list-item">
+            Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego czytelność
+            oraz ułatwia wyszukiwanie i poprawę błędów.
+          </li>
+          <li class="article__list-item">Dobrą praktyką jest nazywanie funkcji podczas deklaracji.</li>
+          <li class="article__list-item">Wewnątrz funkcji wykowywane są obliczenia/zadania.</li>
+        </ul>
+        <p class="article__text">Własności funkcji strzałkowej:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Jeśli w ciele funkcji znajduje się tylko <i>return</i> oraz zwracana wartość, można zapisać tę wartość bezpośrednio po strzałce z pominięciem słowa
+            kluczowego <i>return</i> oraz nawiasów klamrowych.
+          </li>
+          <li class="article__list-item">
+            Jeśli funkcja przyjmuje tylko jeden parametr, można pominąć nawiasy okrągłe w których jest on zawarty (w przypadku większej ilości parametrów lub
+            ich braku nawiasy są wymagane).
+          </li>
+          <li class="article__list-item">Nawiasy okrągłe umożliwiają napisanie zwracanej wartości w kolejnej linii (jeśli nie użyto nawiasów klamrowych).</li>
+          <li class="article__list-item">Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa czytelność.</li>
+          <li class="article__list-item">
+            Funkcja strzałkowa nie tworzy nowego kontekstu <i>this</i> oraz nie ma dostępu do <i>arguments</i> i <i>super</i>, a więc nie jest zamiennikiem
+            tradycyjnej funkcji.
+          </li>
+        </ul>
+      </article>
+      <article id="object-orientation" class="article">
+        <h2 class="article__heading">obiektowość</h2>
+        <p class="article__text">
+          Nawiasy klamrowe tworzą izolowany blok kodu. Zmienne i funkcje zadeklarowane w bloku są dostępne tylko w nim (a także w zakresach niższego poziomu
+          zagnieżdżonych w tym bloku).
+        </p>
+        <p class="article__text">Obiekt w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Jest strukturą danych ułatwiającą odwzorowanie świata rzeczywistego w świecie programowania.</li>
+          <li class="article__list-item">Aby go zadeklarować, należy użyć nawiasów klamrowych.</li>
+          <li class="article__list-item">
+            Do sprawdzenia czy obiekt jest instancją danej klasy (obiektem danego konstruktora, obiektem danego typu) służy słowo kluczowe
+            <i>instanceof</i>.
+          </li>
+          <li class="article__list-item">Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu) oraz metody (funkcje wewnątrz obiektu).</li>
+          <li class="article__list-item">
+            Własności/metody składają się z unikalnego w ramach obiektu klucza oraz podanej po dwukropku wartości, którą może być typ prymitywny, funkcja lub
+            zagnieżdżenie.
+          </li>
+          <li class="article__list-item">
+            Aby dostać się do konkretnej własności obiektu, należy po jego nazwie i kropce odwołać się do konkretnego klucza (w przypadku kiedy w obiekcie
+            występują zagnieżdżenia, można dostać się do kolejnych poziomów własności z wykorzystaniem kolejnych kropek).
+          </li>
+          <li class="article__list-item">
+            Aby dostać się do konkretnej metody obiektu, należy po jego nazwie i kropce odwołać się do konkretnego klucza oraz użyć nawiasów okrągłych (i
+            opcjonalnie argumentów) w celu wywołania metody. W przypadku braku użycia nawiasów okrągłych wyświetlona zostanie informacja, że obiekt posiada
+            funkcję pod tą nazwą.
+          </li>
+          <li class="article__list-item">
+            Alternatywną opcją dostania się do własności obiektu jest skorzystanie z nawiasów kwadratowych po jego nazwie i podanie wewnątrz nich konkretnego
+            klucza (w apostrofach). Sposób wykorzystywany głównie w przypadku klucza zdefiniowanego w apostrofach (np. wielowyrazowy klucz zawierający spacje).
+          </li>
+          <li class="article__list-item">
+            Własności/metody obiektu można edytować. Wystarczy dostać się do nich z wykorzystaniem klucza, użyć operatora przypisania oraz podać nową wartość
+            (odwołanie z użyciem nieistniejącego klucza spowoduje dodanie obiektowi nowej własności/metody).
+          </li>
+          <li class="article__list-item">
+            Kiedy podczas tworzenia obiektu nadawana jest mu własność, której wartość pochodzi ze zmiennej, a klucz tej własności ma taką samą nazwę jak ta
+            zmienna - wystarczy wpisać sam klucz w obiekcie i pominąć dwukropek oraz wartość. Zostanie ona przypisana automatycznie ze zmiennej.
+          </li>
+          <li class="article__list-item">Na własnościach obiektu możliwe jest wykonywanie metod.</li>
+        </ul>
+        <p class="article__text">Mutowanie obiektów:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Kontekst <i>this</i> powstaje w momencie wywołania metody. W przypadku funkcji strzałkowej jest pobierany z zewnętrznego zakresu (z zakresu wyższego
+            poziomu), natomiast w przypadku innej funkcji kontekst ten jest tworzony (odnosi się do obiektu, na którym wywołano metodę).
+          </li>
+          <li class="article__list-item">
+            Jeśli obiekt został stworzony z użyciem słowa kluczowego
+            <i>const</i>, jedynie połączenie między nazwą zmiennej a obiektem jest stałe i nie może zostać zmienione. Połączenia między własnościami obiektu i
+            wartościami na jakie wskazują mogą być jednak w dalszym ciągu edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie. Cecha ta odróżnia
+            typy złożone (obiekty) od typów prostych, które nie mogą być mutowane.
+          </li>
+          <li class="article__list-item">
+            Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do danej wartości, dopóki nie zmienimy dokładnie tego przypięcia.
+          </li>
+          <li class="article__list-item">
+            Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy zmienione zostanie przypięcie dla którejś z jego własności. Zmiana takiego przypięcia
+            może nastąpić z "inicjatywy" innego elementu wskazującego na ten obiekt.
+          </li>
+        </ul>
+        <p class="article__text">Konstruktory:</p>
+        <ul class="article__list">
+          <li class="article__list-item">To szablony służące do tworzenia nowych, podobnych obiektów.</li>
+          <li class="article__list-item">
+            Jest to funkcja pozwalająca na tworzenie nowych obiektów (dla odróżnienia od standardowej funkcji, jej nazwę należy pisać wielką literą).
+          </li>
+          <li class="article__list-item">Musi być to funkcja nazwana, ponieważ funkcja strzałkowa posiada kontekst <i>this</i> wyższego poziomu.</li>
+          <li class="article__list-item">
+            Konstruktory należy wywoływać z użyciem słowa kluczowego <i>new</i>, które tworzy nowy obiekt, dzięki czemu kontekst <i>this</i> dotyczy tego
+            utworzonego obiektu, zamiast zakresu wyższego poziomu.
+          </li>
+          <li class="article__list-item">
+            Obiekt utworzony za pomocą konstruktora należy przypisać do zmiennej. W przeciwnym razie zostanie stworzony, lecz natychmiast zniknie ze względu na
+            brak możliwości odwołania się do niego.
+          </li>
+        </ul>
+        <p class="article__text">Metody statyczne:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>Object.keys()</strong> - jako argument przyjmuje obiekt. Zwraca tablicę elementów typu <i>string</i> zawierającą nazwy kluczy obiektu.
+          </li>
+          <li class="article__list-item"><strong>Object.values()</strong> - jako argument przyjmuje obiekt. Zwraca tablicę zawierającą wartości obiektu.</li>
+          <li class="article__list-item">
+            <strong>Object.entries()</strong> - jako argument przyjmuje obiekt. Zwraca tablicę tablic, w której każda zagnieżdżona tablica zawiera parę
+            elementów - nazwę klucza oraz odpowiadającą mu wartość.
+          </li>
+        </ul>
+      </article>
+      <article id="ecmascript-6" class="article">
+        <h2 class="article__heading">ecmascript 6</h2>
+        <p class="article__text">ECMAScript 6 to specyfikacja/standard JavaScript wprowadzony w 2015 roku.</p>
+        <p class="article__text">Najistotniejsze zmiany wprowadzone wraz z ES 6:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>Parametry domyślne funkcji</strong> - parametry, które zostaną użyte automatycznie jako argument w czasie wywołania funkcji, jeżeli jako
+            argument zostanie przekazana wartość <i>undefined</i> (lub jeśli nie zostanie przekazany żaden argument). Jeżeli argument inny niż
+            <i>undefined</i> zostanie przekazany podczas wywołania funkcji, parametr domyślny nie zostanie użyty. Wartości parametrów domyślnych należy podać
+            podczas deklaracji funkcji z użyciem operatora przypisania. Parametry domyślne należy definiować jako ostatnie w funkcji, ponieważ jeśli podczas
+            wywołania funkcji zostanie przekazana mniejsza liczba argumentów niż liczba zdefiniowanych parametrów, to argumenty te będą przyporządkowywane do
+            zdefiniowanych parametrów po kolei od lewej strony.
+          </li>
+          <li class="article__list-item">
+            <strong>Destrukturyzacja w tablicach</strong> - pozwala na przypisanie początkowych elementów tablicy do zmiennych (z wykorzystaniem dodatkowych
+            przecinków pomiędzy elementami można także przypisać elementy inne niż początkowe, jednak nie jest to zalecane ze względu na brak czytelności):
+            <strong>const [element0ConstName, element1ConstName] = arrayName</strong>.
+          </li>
+          <li class="article__list-item">
+            <strong>Destrukturyzacja w obiektach</strong> - pozwala na przypisanie do zmiennych własności/metod obiektów (jeśli po dwukropku nie zostaną podane
+            nazwy zmiennych, będą one takie same jak klucze danej własności/metody w obiekcie):
+            <strong>const {propertyKey, methodKey: methodConstName} = objectName</strong>.
+          </li>
+          <li class="article__list-item">
+            <strong>Spread operator</strong> - pozwala na pobranie wszystkich elementów tablicy/własności i metod obiektu. Najczęściej wykorzystywany do
+            tworzenia kopii tablicy/obiektu przez przypisanie go do innej zmiennej. W celu użycia operatora należy poprzedzić trzema kropkami nazwę
+            tablicy/obiektu: <strong>...arrayName</strong>.
+          </li>
+          <li class="article__list-item">
+            <strong>Rest operator</strong> - pozwala na przyjęcie przez funkcję nieograniczonej liczby argumentów (przed operatorem mogą zostać przekazane także
+            inne argumenty). Argumenty przekazane z użyciem operatora są przekazywane do funkcji w formie tablicy. W celu użycia operatora należy przy
+            deklaracji funkcji podać jako ostatni parametr nazwę tablicy poprzedzoną trzema kropkami:
+            <strong>const functionName = (optionalParameter, ...arrayName) => {functionBody}</strong>.
+          </li>
+          <li class="article__list-item">
+            <strong>String templates</strong> - pozwala na używanie wewnątrz <i>stringa</i> wyrażeń JavaScript, tabulatorów oraz enterów. <i>String</i> taki
+            musi zawierać się wewnątrz grawisów (`). Nie zadziała w przypadku apostrofów (') i cudzysłowów ("). Wyrażenia JavaScript wewnątrz takiego
+            <i>Stringa</i> należy przekazać wewnątrz nawiasów klamrowych poprzedzonych znakiem dolara: <strong>`Text ${JavaScript expression} text.`</strong>.
+          </li>
+        </ul>
+      </article>
+      <article id="classes" class="article">
+        <h2 class="article__heading">klasy</h2>
+        <p class="article__text">
+          Klasy są elementem programowania zorientowanego obiektowo i podobnie jak konstrutrory są szablonami służącymi do tworzenia obiektów.
+        </p>
+        <p class="article__text">Właściwości klas:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Typem klasy jest <i>function</i>, ponieważ operator <i>typeof</i> odnosi się do jej konstruktora.</li>
+          <li class="article__list-item">
+            W momencie wywołania klasy, tak naprawdę wywoływana jest metoda
+            <i>constructor</i>. Dzieje się tak nawet w przypadku braku zdefiniowania tej metody w klasie, ponieważ wtedy pusty konstruktor zostanie zdefiniowany
+            domyślnie (wywołanie go nie wymaga podania jego nazwy przed nawiasami). Zdefiniowanie tej metody w klasie pozwala na utworzenie własnego
+            konstruktora.
+          </li>
+          <li class="article__list-item">
+            Wywołanie metody <i>constructor</i> zdefiniowanej w klasie działa analogicznie jak (używana głównie przed wprowadzeniem standardu ES 6) funkcja
+            konstruktora. Oba te sposoby tworzą kopię danej własności/metody dla każdego utworzonego obiektu (co jest mniej wydajne i zajmuje dodatkowe miejsce
+            w pamięci RAM).<br />
+            Metoda <i>constructor</i> zdefiniowana w klasie: <strong>class ClassName {constructor() {}}</strong>.<br />
+            Funkcja konstruktora:
+            <strong>function ConstructorFunctionName() {}</strong>.
+          </li>
+          <li class="article__list-item">
+            Zdefiniowanie metody obiektu bezpośrednio w klasie (poza konstruktorem) działa analogicznie jak zdefiniowanie jej z wykorzystaniem (używanego
+            głównie przed wprowadzeniem standardu ES 6) <i>prototype</i>. Oba te sposoby podczas utworzenia nowego obiektu tworzą odniesienie do danej metody,
+            zamiast kopiować ją dla każdego utworzonego obiektu (co jest bardziej wydajne i nie zajmuje dodatkowego miejsca w pamięci RAM).<br />
+            Metoda zdefiniowana bezpośrednio w klasie:
+            <strong>class ClassName {methodName() {methodBody}}</strong>.<br />
+            Metoda zdefiniowana z wykorzystaniem <i>prototype</i>: <strong>ConstructorFunctionName.prototype.methodName = function() {methodBody}</strong>.
+          </li>
+        </ul>
+      </article>
+      <article id="advanced-arrays" class="article">
+        <h2 class="article__heading">zaawansowane metody tablicowe</h2>
+        <p class="article__text">Metody ułatwiające wykonywanie operacji na tablicach:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>forEach()</strong> - jako argument przyjmuje funkcję, która z kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast
+            kolejność ma znaczenie): element, indeks, oryginalna tablica. Metoda nie tworzy nowej tablicy, lecz jedynie przechodzi przez każdy jej element.
+          </li>
+          <li class="article__list-item">
+            <strong>map()</strong> - jako argument przyjmuje funkcję, która z kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast
+            kolejność ma znaczenie): element, indeks, oryginalna tablica. Metoda tworzy nową tablicę z taką samą ilością elementów jak oryginalna tablica.
+            Funkcja będąca argumentem metody przechodzi przez wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość, która trafia do nowej
+            tablicy z takim samym indeksem.
+          </li>
+          <li class="article__list-item">
+            <strong>filter()</strong> - jako argument przyjmuje funkcję, która z kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast
+            kolejność ma znaczenie): element, indeks, oryginalna tablica. Metoda tworzy nową tablicę. Funkcja będąca argumentem metody przechodzi przez
+            wszystkie elementy oryginalnej tablicy i w każdej iteracji zwraca wartość <i>true</i> (wtedy element znajdujący się pod tym indeksem jest dodawany
+            do nowej tablicy) lub <i>false</i> (wtedy element znajdujący się pod tym indeksem nie jest dodawany do nowej tablicy).
+          </li>
+          <li class="article__list-item">
+            <strong>reduce()</strong> - jako pierwszy argument przyjmuje funkcję, która z kolei może przyjmować cztery argumenty (ich nazwa może być dowolna,
+            natomiast kolejność ma znaczenie): akumulator, wartość bieżącego elementu, indeks bieżącego elementu, oryginalna tablica. Drugim argumentem metody
+            jest wartość początkowa (jest to argument opcjonalny - w przypadku jego braku pierwsza iteracja wykona się z pominięciem pierwszego elementu
+            tablicy, który będzie pełnił rolę akumulatora). Metoda redukuje tablicę do pojedynczej wartości (która zostaje zwrócona w ostatniej iteracji przez
+            funkcję <i>callback</i>). Warto dodawać wartość początkową w metodzie <i>reduce</i>, ponieważ nie używając jej, np. w przypadku działania na
+            obiektach - można uzyskać niepożądany rezultat. Wartość początkowa powinna być to wartość neutralna dla wykonywanej operacji, np. pusty
+            <i>string</i> dla konkatenacji tekstu, 1 dla iloczynu, 0 dla sumy.
+          </li>
+          <li class="article__list-item">
+            <strong>find()</strong> - jako argument przyjmuje funkcję, która z kolei może przyjmować trzy argumenty (ich nazwa może być dowolna, natomiast
+            kolejność ma znaczenie): element, indeks, oryginalna tablica. Funkcja <i>callback</i> przechodzi przez elementy oryginalnej tablicy i w przypadku
+            zwrócenia prawdy, metoda zwróci wartość bieżącego elementu. W przypadku gdy funkcja <i>callback</i> po przejściu przez wszystkie elementy nie zwróci
+            prawdy, metoda zwróci wartość <i>undefined</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>sort()</strong> - jako argument przyjmuje funkcję sortującą, która z kolei przyjmuje dwa argumenty: element pierwszy oraz element drugi.
+            Funkcja <i>callback</i> zwraca wartość 1, gdy element pierwszy ma mniejszą wartość od elementu drugiego, 0 gdy oba elementy są równe lub -1 gdy
+            element pierwszy ma większą wartość od elementu drugiego. Metoda zwraca nową tablicę z posortowanymi wartościami (domyślnie operuje na elementach
+            typu <i>string</i>), a także dokonuje zmian w oryginalnej tablicy.
+          </li>
+        </ul>
+      </article>
+      <article id="asynchrony" class="article">
+        <h2 class="article__heading">asynchroniczność</h2>
+        <p class="article__text">
+          Asynchroniczność to brak oczekiwania na zakończenie jednego zadania, podczas gdy wykonuje się inne zadanie. Różni się od wielowątkowości pewnego
+          rodzaju bezwładnością. Możemy reagować na zakończenie danego zadania, ale nie mamy pełnej kontroli nad tym jak zadanie jest wykonywane w środku (jak
+          na przykład w języku C++).
+        </p>
+        <p class="article__text">
+          W JavaScript bardzo wiele <i>API</i> jest asynchronicznych, tzn. odbieranie danych polega na reagowaniu np. na <i>callback</i>. Nawet podstawowy
+          JavaScript zawiera asynchroniczne funkcje/metody. Najprostszym przykładem są funkcje: <i>setTimeout</i> i <i>setInterval</i>:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>setTimeout()</strong> - wykonuje funkcję przekazaną jako argument (<i>callback</i>) z określonym opóźnieniem. W związku z tym, że
+            <i>setTimeout</i> jest funkcją asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej funkcji.
+          </li>
+          <li class="article__list-item">
+            <strong>setInterval()</strong> - wykonuje funkcję przekazaną jako argument (<i>callback</i>) wielokrotnie z określonym interwałem. W związku z tym,
+            że <i>setInterval</i> jest funkcją asynchroniczną, kod znajdujący się po niej nie będzie czekał na zakończenie działania tej funkcji.
+          </li>
+        </ul>
+        <p class="article__text">
+          JavaScript jest jednak językiem jednowątkowym. Jeśli powyższe funkcje zostaną wywołane z mniejszym opóźnieniem niż wynosi czas wykonania wyrażeń
+          następujących po nich - funkcja wykona się dopiero po zakończeniu wykonywania takich wyrażeń (kiedy będzie możliwe wejście w wątek).
+        </p>
+        <p class="article__text">
+          Większość aktualnie powstających <i>API</i> JavaScriptu opiera się w jakimś stopniu na asynchroniczności. Nie blokuje to głównego wątku, np. strony
+          internetowej podczas wykonywania zapytań do sieci lub do serwera, kiedy obsługuje on zapytania/żądania.
+        </p>
+        <p class="article__text">
+          Node.js czerpie jeszcze bardziej z asynchroniczności. Wprowadza tzw.
+          <i>Async I/O</i> dzięki bibliotece <i>libuv</i>. Pozwala ona na brak blokowania podczas m.in.: operacji sieciowych, operacji na plikach, operacji na
+          bazach danych. Jest to bardzo ważne od strony biznesowej, ponieważ pozwala to w praktyce bardzo łatwo obsługiwać wiele operacji jednocześnie.
+        </p>
+        <p class="article__text">Sposoby obsługi asynchroniczności w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>callback</strong> - przekazywanie jako argumentu funkcji, która zostanie uruchomiona pod pewnym warunkiem (np. po upływie określonego
+            czasu). Minusem tego rozwiązania jest tzw. <i>callback hell</i> - zbyt rozbudowana struktura zagnieżdżeń funkcji.
+          </li>
+          <li class="article__list-item">
+            <strong>promises</strong> - warstwa abstrakcji na zadania asynchroniczne w JavaScript. W tym przypadku potencjalnym problemem może być tzw.
+            <i>promise hell</i> - zbyt rozbudowana struktura zagnieżdżeń zwracanych obiektów typu <i>promise</i>. Można go jednak uniknąć wywołując kolejne
+            funkcje <i>then</i> bezpośrednio po sobie oraz funkcję <i>catch</i> na końcu (zostanie ona wywołana w przypadku niezwrócenia obiektu
+            <i>promise</i> przez którąś z wcześniejszych funkcji). Użycie <i>promise</i> można rozważać z dwóch stron: jako <strong>wykonawca</strong> lub jako
+            <strong>oczekujący na wynik</strong>. <i>Promise</i> może znajdować się w jednym z trzech stanów: <strong>pending</strong> (oczekujący),
+            <strong>fulfilled</strong> (spełniony), <strong>rejected</strong> (odrzucony).
+          </li>
+          <li class="article__list-item">
+            <strong>async/await</strong> - słowa kluczowe pozwalające na obsługę asynchroniczności. Metoda ta charakteryzuje się wysoką czytelnością kodu (jest
+            on niemal identyczny jak synchroniczny) a także dużą jego przepustowością (główny wątek nie jest blokowany, kiedy nie jest to konieczne).
+            Współpracuje z obiektami typu <i>promise</i>. Słowo kluczowe <i>async</i>, poprzedzające deklarację funkcji, oznacza ją jako asynchroniczną oraz
+            tworzy ukryty obiekt <i>promise</i>. Natomiast <i>await</i> wskazuje w którym miejscu należy oczekiwać na rezultat i zwolnić wątek dla innych
+            operacji. Funkcja typu <i>async</i> może sama się wywoływać, wystarczy jej deklarację umieścić w nawiasach, a po niej użyć dwóch kolejnych
+            oznaczających wywołanie.
+          </li>
+        </ul>
+        <p class="article__text">
+          Wbudowana funkcja przeglądarkowa pozwalająca na wysłanie żądania w celu otrzymania informacji zwrotnej to <strong>fetch()</strong>. Wywołanie tej
+          funkcji tworzy asynchroniczną obietnicę, której rozwiązaniem będzie informacja zwrotna z serwera. Funkcja <i>fetch</i> przyjmuje jako argument adres
+          <i>URL</i>, pod który zostanie wysłane żądanie, natomiast zwraca obiekt typu <i>promise</i>, na którym można wywołać m.in. metody:
+          <strong>then()</strong> (która jako argument może przyjąć odpowiedź na <i>promise</i>, a jej <i>callback</i> wykona się w przypadku spełnienia
+          obietnicy), <strong>catch()</strong> (która jako argument może przyjąć błąd, a jej <i>callback</i> wykona się w przypadku niespełnienia obietnicy).
+          Odpowiedź zwracana przez obiekt <i>promise</i> musi zostać rozkodowana poprzez wywołanie na niej metody <i>json</i>, która zwraca kolejny obiekt
+          <i>promise</i> (zawierający właściwe dane). Ze względu na to, że rozkodowanie danych również może zajmować czas, który przeglądarka mogłaby poświęcić
+          na wykonywanie innych czynności - zarówno metodę <i>then</i> jak i <i>catch</i> można wywołać bezpośrednio po sobie na jednym obiekcie (w większości
+          przypadków zostanie wykonana jedynie jedna z nich, w zależności od tego czy obietnica została spełniona).
+        </p>
+        <p class="article__text">
+          Funkcje asynchroniczne <i>setTimeout</i> i <i>setInterval</i> domyślnie opierały się na sposobie z wykorzystaniem <i>callback</i>, jednak Node.js od
+          wersji 16 umożliwia ich użycie z wykorzystaniem <i>promise</i>. Należy skorzystać z modułu <i>timers/promisies</i>, importując go za pomocą funkcji
+          <i>require</i>.
+        </p>
+        <p class="article__text">
+          Aby uruchomić kilka metod asynchronicznych i kontynuować działanie programu dopiero wtedy, kiedy wykonywanie ostatniej z nich dobiegnie końca (czyli
+          gdy każda z nich zwróci obiekt typu <i>promise</i>), należy skorzystać z metody <strong>Promise.all()</strong>. Jest to metoda statyczna (nie
+          wywoływana na konkretnym obiekcie), która jako argument przyjmuje tablicę obiektów typu <i>promise</i> (zwracanych przez te asynchroniczne metody),
+          natomiast zwraca jeden wspólny obiekt tego samego typu, kiedy wszystkie obiekty przekazane jako argument zostaną zwrócone. Użycie słowa kluczowego
+          <i>await</i> przed takim wspólnym obiektem, pozwala na uruchomienie grupy metod w sposób asynchroniczny.
+        </p>
+      </article>
+      <article id="dom" class="article">
+        <h2 class="article__heading">dom</h2>
+        <p class="article__text">
+          <strong>HTML</strong> zmieniany jest przez przeglądarkę w reprezentację zwaną <strong>Document Object Model</strong> (Model obiektowy dokumentu) -
+          <strong>DOM</strong>.
+        </p>
+        <p class="article__text">
+          <i>DOM</i> to zbiór obiektów (węzłów) tworzonych przede wszystkim przez znaczniki, atrybuty i zawartość tekstową. <i>DOM</i> ustawia węzły w
+          strukturze typu drzewo, co tworzy między nimi relacje i zagnieżdżenia.
+        </p>
+        <p class="article__text">Elementy <i>DOM</i> mogą posiadać:</p>
+        <ul class="article__list">
+          <li class="article__list-item">rodzica,</li>
+          <li class="article__list-item">rodzeństwo,</li>
+          <li class="article__list-item">dzieci.</li>
+        </ul>
+        <p class="article__text"><i>API</i> przeglądarki pozwala poruszać się po drzewie <i>DOM</i> używając tych nazw.</p>
+        <p class="article__text">
+          Skrypty powinny być dodawane do pliku <i>HTML</i> na końcu znacznika <i>body</i>, ponieważ operują one na elementach <i>DOM</i>, które są generowane w
+          momencie otwarcia znacznika. Dlatego ważne jest, aby po znacznikach dodających skrypty do strony nie było już żadnych innych znaczników otwierających.
+          Skrypty wykonywane są po kolei, więc kolejność ich dodania do pliku <i>HTML</i> ma znaczenie.
+        </p>
+        <p class="article__text">Sposoby na pobranie konkretnego elementu DOM (które mogą zostać zapisane do zmiennej):</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Zaznaczenie go w zakładce <i>Elements</i> w narzędziach deweloperskich przeglądarki a następnie odwołanie się do niego w zakładce <i>Console</i> za
+            pomocą <i>$0</i>.
+          </li>
+          <li class="article__list-item">
+            Odwołanie się poprzez element <i>document</i> (dotyczy jedynie niewielu elementów strony, np. <i>document.head</i>, <i>document.body</i>,
+            <i>document.links</i>).
+          </li>
+
+          <li class="article__list-item">
+            Użycie metody <strong>querySelector()</strong> na obiekcie <i>document</i> z parametrem odnoszącym się do <i>id</i> (<i>#idName</i>), klasy
+            (<i>.className</i>) bądź znacznika (<i>tagName</i>). Selektory w JavaScript muszą być typu <i>string</i>. Zalecane jest pobieranie elementów
+            odwołując się do nazw klas (np. ze względu na ułatwienie identyfikacji poszczególnych elementów przy wykorzystaniu metodologii nazewnictwa klas
+            <i>BEM</i>).
+          </li>
+        </ul>
+        <p class="article__text">Dodawanie nowych elementów <i>DOM</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Utworzenie nowego elementu <i>DOM</i>: <strong>document.createElement('tag-name')</strong>.</li>
+          <li class="article__list-item">Usunięcie nowego tekstowego elementu <i>DOM</i>: <strong>document.createTextNode('text')</strong>.</li>
+          <li class="article__list-item">
+            Dodanie utworzonego elementu/tekstowego elementu <i>DOM</i> do rodzica: <strong>parentElement.appendChild(newElement)</strong>.
+          </li>
+        </ul>
+        <p class="article__text">Operacje na klasach elementów <i>DOM</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Dodanie nowej klasy:
+            <strong>element.classList.add('className')</strong>.
+          </li>
+          <li class="article__list-item">
+            Usunięcie klasy:
+            <strong>element.classList.remove('className')</strong>.
+          </li>
+          <li class="article__list-item">
+            Dodanie klasy jeśli element jej nie posiada lub usunięcie klasy jeśli element ją posiada:
+            <strong>element.classList.toggle('className')</strong>.
+          </li>
+        </ul>
+        <p class="article__text">
+          Metoda służąca do nasłuchiwania w JavaScript to
+          <strong>addEventListener()</strong>, która wywoływana jest na konkretnym (pojedynczym) elemencie <i>DOM</i> i przyjmuje jako argumenty:
+          <strong>typ zdarzenia jakiego nasłuchuje</strong> (jako <i>string</i>) oraz <strong>nazwę wywoływanej funkcji</strong>. Opcjonalnie metoda
+          <i>addEventListener</i> może przyjąć również inne argumenty. Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca jako argument dowolną
+          nazwę. W takim przypadku nazwa ta będzie odnosić się do <i>eventu</i> (reprezentacji zdarzenia, które wystąpiło). W celu odwołania się do elementu, na
+          którym wykonywane jest nasłuchiwanie, należy skorzystać z właściwości <i>target</i> konkretnego <i>eventu</i>.
+        </p>
+        <p class="article__text">
+          Nie wszystkie atrybuty znaczników <i>HTML</i> muszą posiadać wartość. Przykładem jest atrybut <i>disabled</i>, który powoduje deaktywację elementu, na
+          którym został użyty. Atrybut ten może zostać użyty jedynie dla części tagów (np. dla znacznika <i>button</i>).
+        </p>
+        <p class="article__text">Praca z atrybutami <i>HTML</i> w JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            JavaScript podczas pracy z elementami <i>DOM</i> może odwoływać się również do innych atrybutów tych elementów niż <i>id</i> i <i>class</i>.
+            Atrybuty dotyczące danych elementów <i>HTML</i> składają się z dwuczłonowych nazw oddzielonych myślnikiem (gdzie pierwszy człon to <i>data</i>):
+            <strong>data-name</strong>.
+          </li>
+          <li class="article__list-item">
+            Aby dostać się do atrybutów dotyczących danych z poziomu JavaScript należy na konkretnym elemencie odwołać się do właściwości
+            <i>dataset</i>, a po niej do drugiego członu nazwy atrybutu: <strong>element.dataset.name</strong>.
+          </li>
+          <li class="article__list-item">
+            Aby pobrać wszystkie elementy posiadające dany atrybut należy w metodzie <i>querySelectorAll</i> przekazać jako argument klucz tego atrybutu w
+            nawiasach kwadratowych: <strong>document.querySelectorAll('[data-name]')</strong>.
+          </li>
+          <li class="article__list-item">
+            Metoda <i>querySelectorAll</i> zwraca obiekt <i>NodeList</i>, na którym nie można wywołać wszystkich metod tablicowych. Aby przekonwertować taki
+            obiekt na tablicę, należy skorzystać z operatora rozproszenia (<i>spread</i>) oraz nawiasów kwadratowych: <strong>[...<i>NodeList</i>]</strong>.
+          </li>
+          <li class="article__list-item">
+            Dodanie nowego atrybutu/edycja wartości istniejącego atrybutu elementu <i>DOM</i>:
+            <strong>element.setAttribute('attribute-key', 'attribute-value')</strong>.
+          </li>
+          <li class="article__list-item">Pobranie wartości atrybutu elementu <i>DOM</i>: <strong>element.getAttribute('attribute-key')</strong>.</li>
+          <li class="article__list-item">Usunięcie atrybutu elementu <i>DOM</i>: <strong>element.removeAttribute('attribute-key')</strong>.</li>
+        </ul>
+        <p class="article__text">Znaczniki dotyczące formularzy:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>&lt;form></strong> - opakowanie dla formularza.</li>
+          <li class="article__list-item">
+            <strong>&lt;input id="" name="" type="" value="" placeholder="" required></strong>
+            - podstawowy element budujący formularz. Zgodnie z dokumentacją znacznik <i>input</i> powinien być opakowany w paragraf wraz z opisującym go
+            znacznikiem <i>label</i>. <i>Id</i> służy do odniesienia się do etykiety i może posiadać wartość taką jak nazwa.
+            <i>Name</i>
+            służy do identyfikacji wartości w miejscu, do którego wysyłamy dane za pomocą formularza.
+            <i>Type</i> określa typ pola. <i>Value</i> to domyślna wartość pola, wyświetlana zanim wpiszemy tam cokolwiek. <i>Placeholder</i> przechowuje
+            podpowieź dotyczącą pola, która wyświetlana jest, kiedy pole jest puste. Właściwość <i>placeholder</i> nie zastępuje znacznika <i>label</i>,
+            ponieważ czytniki jako opis pola zawsze odczytują etykietę. <i>Required</i> wymaga uzupełnienia danego pola.
+          </li>
+          <li class="article__list-item">
+            <strong>&lt;label for=""></strong> - etykieta tworząca opis pola. Aby przypiąć ją do konkretnego pola, atrybut <i>for</i> musi przyjąć wartość
+            atrybutu <i>id</i> tego pola. Jeśli znacznik <i>input</i> znajduje się zaś wewnątrz znacznika <i>label</i>, takie przypięcie nie jest konieczne.
+          </li>
+          <li class="article__list-item"><strong>&lt;fieldset></strong> - grupa pól.</li>
+          <li class="article__list-item"><strong>&lt;legend></strong> - opis grupy pól znajdującej się wewnątrz znacznika <i>fieldset</i>.</li>
+          <li class="article__list-item"><strong>&lt;select></strong> - umożliwia wybór elementu z rozwijanej listy.</li>
+          <li class="article__list-item">
+            <strong>&lt;option></strong> - element rozwijanej listy. Znajduje się wewnątrz znacznika <i>select</i>. Można zdefiniować wartość pola w atrybucie
+            <i>value</i> w przypadku gdy ma być ona inna niż wyświetlana w polu.
+          </li>
+          <li class="article__list-item">
+            <strong>&lt;textarea></strong> - służy do wprowadzania dłuższej treści. Nie posiada atrybutu <i>value</i>, w związku z czym jego wartość należy
+            umieścić jako treść znacznika.
+          </li>
+        </ul>
+        <p class="article__text">Typy pól formularza:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>text</strong> - służy do wpisywania widocznego tekstu.</li>
+          <li class="article__list-item">
+            <strong>radio</strong> - służy do wyboru jednej wartości z grupy. Wszystkie pola danej grupy muszą posiadać taką samą wartość znacznika <i>name</i>.
+            Dodanie nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje domyślny wybór tego pola.
+          </li>
+          <li class="article__list-item">
+            <strong>checkbox</strong> - służy do wyboru większej ilości wartości. Gdy pole nie będzie posiadało parametru <i>value</i>, w momencie przesłania
+            formularza zostanie przesłana wartość <i>on</i>, kiedy pole było zaznaczone lub brak tej wartości, kiedy pole nie było zaznaczone. Dodanie
+            nieposiadającego wartości atrybutu <i>checked</i> dla pola tego typu, spowoduje domyślny wybór tego pola.
+          </li>
+          <li class="article__list-item"><strong>number</strong> - umożliwia wpisywanie jedynie cyfr do pola.</li>
+          <li class="article__list-item">
+            <strong>tel</strong> - sygnalizuje, że podane pole zawiera numer telefonu. Ze względu na różne formaty numerów telefonicznych, nie posiada
+            ograniczeń.
+          </li>
+          <li class="article__list-item"><strong>email</strong> - sygnalizuje, że podane pole zawiera adres e-mail.</li>
+          <li class="article__list-item">
+            <strong>range</strong> - służy do wyboru konkretnej wartości z danego zakresu za pomocą suwaka. Wartość minimalną, maksymalną oraz skok określają
+            odpowiednio atrybuty pola: <i>min</i>, <i>max</i> oraz <i>step</i>. Do aktualnie wskazywanej wartości można dostać się z poziomu JavaScript,
+            odwołując się do własności <i>value</i> znacznika <i>input</i>.
+          </li>
+          <li class="article__list-item"><strong>password</strong> - służy do wpisywania hasła. Wpisywane znaki są ukryte na ekranie.</li>
+          <li class="article__list-item"><strong>file</strong> - służy do wyboru pliku (z pamięci urządzenia) do przesłania.</li>
+          <li class="article__list-item">
+            <strong>submit</strong> - służy do wysyłania formularza. Nie posiada etykiety, a jego nazwa jest zdefiniowana w atrybucie <i>value</i>.
+          </li>
+        </ul>
+        <p class="article__text">Atrybuty formularza:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>action</strong> - jako wartość przyjmuje adres URL miejsca, gdzie wysłąny będzie formularz. Domyślnie jest wysyłany do strony, na której się
+            znajduje.
+          </li>
+          <li class="article__list-item">
+            <strong>enctype</strong> - mówi o tym czy jest to zwykły formularz (domyślna wartość: <i>application/x-www-form-urlencoded</i>) czy zawiera inne
+            treści poza tekstowymi, np. kiedy wysyłane są pliki (wartość: <i>multipart/form-data</i>).
+          </li>
+          <li class="article__list-item"><strong>method</strong> - pozwala na wybór metody wysłania żądania (GET lub POST).</li>
+        </ul>
+        <p class="article__text">Metody wysłania żądania:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>GET</strong> - domyślna metoda. Przekazuje parametry i wartości w adresie URL strony. Wysyłane są wartości atrybutu <i>value</i> pola,
+            niezależnie od tego co znajduje się w etykiecie pola. Ze względu na limitowaną liczbę znaków w adresie, plików nie wysyła się tą metodą. Używa
+            <i>Query String Parameters</i> (zakładka <i>Network</i> w przeglądarce). Metoda służy zazwyczaj do pobierania danych.
+          </li>
+          <li class="article__list-item">
+            <strong>POST</strong> - nie umieszcza w adresie URL żadnych dodatkowych znaków. Jest metodą bezpieczniejszą. Używa <i>Form Data</i> (zakładka
+            <i>Network</i> w przeglądarce). Metoda służy zazwyczaj do wysyłania danych.
+          </li>
+        </ul>
+        <p class="article__text">
+          Podczas przesyłania danych za pomocą formularza należy obsługiwać zdarzenie wysłania formularza, zamiast zdarzenia kliknięcia w przycisk (ponieważ
+          można wysłać formularz na różne sposoby, np. klawiszem
+          <strong>enter</strong>). Metoda <i>addEventListener</i> powinna zostać wykonana na obiekcie formularza oraz nasłuchiwać zdarzenia typu <i>submit</i>.
+          Aby uniknąć domyślnego zachowania przeglądarki, jakim jest odświeżenie strony podczas wysyłania formularza, należy w funkcji <i>callback</i> na
+          obiekcie <i>event</i> wywołać metodę <strong>preventDefault()</strong>.
+        </p>
+        <p class="article__text">
+          Sposoby na odwołanie się do danych przesłanych przez dany element formularza (należy ich używać w trakcie przesłania formularza - wewnątrz fukcji
+          <i>callback</i> zdarzenia <i>submit</i>):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>event.target.elements['name-property-value'].value</strong>
+            - poprzez odwołanie się do konkretnego elementu <i>input</i> z wykorzystaniem wartości jego atrybutu <i>name</i> , a następnie wywołanie na nim
+            własności <i>value</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>inputElement.value</strong> - poprzez pobranie konretnego elementu <i>input</i>, a następnie wywołanie na nim własności <i>value</i>.
+          </li>
+        </ul>
+      </article>
+      <article id="local-storage" class="article">
+        <h2 class="article__heading">local storage</h2>
+        <p class="article__text">
+          <strong>Local storage</strong> to jeden z prostszych sposobów zapisywania na urządzeniu lokalnym (m.in. w przeglądarce) pewnych informacji tekstowych.
+          Wyglądają one jak zmienne typu <i>string</i>. Każda informacja posiada nazwę i wartość tekstową. Dane są przechowywane do momentu ręcznego
+          wyczyszczenia.
+        </p>
+        <p class="article__text">Zalety:</p>
+        <ul class="article__list">
+          <li class="article__list-item">szybkie przechowanie informacji na czyimś komputerze,</li>
+          <li class="article__list-item">niewymagana zgoda właściciela urządzenia (stan na 07.2021.),</li>
+          <li class="article__list-item">prostota obsługi.</li>
+        </ul>
+        <p class="article__text">Wady:</p>
+        <ul class="article__list">
+          <li class="article__list-item">ograniczona wielkość przechowywanych danych,</li>
+          <li class="article__list-item">
+            możliwość przechowywania jedynie danych tekstowych (przechowywania innych typów danych wymaga używania różnych metod),
+          </li>
+          <li class="article__list-item">synchroniczność,</li>
+          <li class="article__list-item">działanie lokalne na urządzeniu klienta (nie na serwerze).</li>
+        </ul>
+        <p class="article__text">Operacje na <i>local storage</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            możliwości interakcji z zawartością <i>local storage</i> na stronie: zakładka <i>Application</i> w narzędziach deweloperskich lub polecenie
+            <i>localStorage</i> w konsoli,
+          </li>
+          <li class="article__list-item">
+            dodawanie nowego przechowywanego elementu:
+            <strong>localStorage.setItem(key, value)</strong>,
+          </li>
+          <li class="article__list-item">
+            pobieranie przechowywanego elementu (w przypadku podania nieistniejącego klucza, zwrócona zostanie wartość <i>null</i>):
+            <strong>localStorage.getItem(key)</strong>,
+          </li>
+          <li class="article__list-item">
+            usuwanie przechowywanego elementu:
+            <strong>localStorage.removeItem(key)</strong>.
+          </li>
+        </ul>
+      </article>
+      <article id="json" class="article">
+        <h2 class="article__heading">json</h2>
+        <p class="article__text">
+          <strong>JSON (JavaScript Object Notation)</strong> - lekki, tekstowy format wymiany danych między różnymi programami, <i>API</i>, itd. Pozwala
+          przechowywać liczby, tekst, wartości typu <i>boolean</i>, <i>null</i>, tablice i obiekty w formie tekstowej. Aplikacja służąca do przeglądania, edycji
+          i formatowania danych typu <i>JSON</i> to <a class="article__link" href="https://jsoneditoronline.org">JSON Editor Online</a>.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            W celu dodania obiektu do <i>local storage</i>, należy go najpierw przekształcić na <i>JSONString</i> z wykorzystaniem metody:
+            <strong>JSON.stringify(object)</strong>.
+          </li>
+          <li class="article__list-item">
+            W celu pobrania z <i>local storage</i> obiektu przechowywanego jako <i>JSONString</i>, należy go najpierw przekształcić na obiekt z wykorzystaniem
+            metody: <strong>JSON.parse(JSONString)</strong>.
+          </li>
+        </ul>
+        <p class="article__text">
+          Podczas pracy na serwerze lub na przeglądarce klienta zazwyczaj korzysta się z obiektów. Format <i>JSON</i> wykorzystywany jest głównie w celu
+          przesyłania danych i może zostać odkodowany niezależnie od języka programowania.
+        </p>
+      </article>
+      <article id="exceptions" class="article">
+        <h2 class="article__heading">błędy i wyjątki</h2>
+        <p class="article__text">
+          W każdym potencjalnm miejscu, gdzie w programie może wystąpić błąd, należy wykonać jego obsługę (aby błąd był zrozumiały dla użytkownika). W celu
+          przechwycenia błędu należy skorzystać ze słowa kluczowego
+          <i>throw</i> oraz obiektu typu <i>Error</i>. Sposób ten domyślnie przerywa działanie programu oraz pozwala na prostą identyfikację miejsca wystąpienia
+          błędu (poprzez wyświetlenie odpowiednich danych w konsoli). Umożliwia także obsługę tego błędu.
+        </p>
+        <p class="article__text">Sposoby obsługi błędów:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>try{functionWithThrowKeyword()} catch(errorObjectVariableName) {handlingInstruction}</strong>
+            - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele słowo kluczowe <i>throw</i>. Jeśli zostanie wywołany fragment funkcji z błędem,
+            błąd ten zostanie obsłużony zgodnie z instrukcją z bloku <i>catch</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>try{functionWithThrowKeyword()} finally {handlingInstruction}</strong>
+            - instrukcja z bloku <i>finally</i> (umieszczana jako ostatni blok) zostanie wykonana niezależnie od tego czy w programie wystąpił błąd.
+          </li>
+          <li class="article__list-item">
+            <strong>try{functionWithAwaitKeyword()} catch(errorObjectVariableName) {handlingInstruction}</strong>
+            - w bloku <i>try</i> wywoływana jest funkcja posiadająca w ciele słowo kluczowe <i>await</i>. Jeśli wystąpi błąd, zostanie on obsłużony zgodnie z
+            instrukcją z bloku <i>catch</i>.
+          </li>
+        </ul>
+        <p class="article__text">Obiekt typu <i>Error</i> posiada wiele typów oraz własności ułatwiających obsługę błędów.</p>
+      </article>
+      <article id="debugging" class="article">
+        <h2 class="article__heading">debugowanie</h2>
+        <p class="article__text">Tryb ścisły wprowadza zmiany w semantyce JavaScript:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Eliminuje niektóre niedoskonałości języka, zmieniając je tak, aby wyświtlały błędy.</li>
+          <li class="article__list-item">
+            Naprawia błędy, które utrudniają silnikom przeprowadzanie optymalizacji (czasami kod w trybie ścisłym może działać szybciej niż identyczny kod,
+            który nie jest w trybie ścisłym).
+          </li>
+          <li class="article__list-item">Zabrania niektórych składni, które prawdopodobnie zostaną zdefiniowane w przyszłych wersjach ECMAScript.</li>
+        </ul>
+        <p class="article__text">Niektóre właściwości trybu ścisłego:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Uniemożliwia deklarację zmiennych bez poprzedzenia ich nazwy słowem kluczowym <i>let</i>, <i>const</i> lub <i>var</i>.
+          </li>
+          <li class="article__list-item">Uniemożliwia deklarację zmiennych z użyciem słów zastrzeżonych jako nazwy (np. <i>undefined</i>).</li>
+          <li class="article__list-item">
+            Kontekst <i>this</i> podczas wywołania funkcji nazwanej oraz anonimowej nie dotyczny obiektu globalnego, lecz przyjmuje wartość <i>undefined</i>.
+          </li>
+        </ul>
+        <p class="article__list">
+          Aby rozpocząć pracę w trybie ścisłym, należy na początku pliku JavaScript umieścić <i>string</i>: <strong>'use strict'</strong>. Tryb działa od wersji
+          <i>ECMAScript 5</i>. Wiele mechanizmów (od wersji <i>ECMAScript 6</i>) nie wymaga stosowania trybu ścisłego, ponieważ ma zaimplementowane różnego
+          rodzaju zabezpieczenia.
+        </p>
+        <p class="article__list">Debugowanie w Chrome:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Dostęp do plików źródłowych możliwy jest z poziomu zakładki
+            <i>Sources</i>. Widoczna jest tu także zawartość używanych zmiennych, stos wywołań funkcji - <i>callstack</i>, aktualny obiekt <i>this</i>.
+          </li>
+          <li class="article__list-item">
+            Słowo kluczowe <strong>debugger</strong> umożliwia zatrzymanie wykonywania programu w miejscu, w którym zostało użyte w kodzie.
+            <i>Debugger</i> zatrzymuje się w czasie wywołania funkcji, a nie w czasie jej deklaracji.
+          </li>
+          <li class="article__list-item">
+            Możliwe jest również ustalenie punktu zatrzymania poprzez kliknięcie odpowiedniej linijki w kodzie źródłowym w zakładce <i>Sources</i>.
+          </li>
+          <li class="article__list-item">
+            Panel służący do sterowania przepływem programu umożliwia akcje takie jak: wznowienie/zatrzymanie wykonywania skryptu, przejście do kolejnego
+            wywołania funkcji, wejście do wywoływanej funkcji, wyjście z wywoływanej funkcji, przejście do następnego kroku.
+          </li>
+        </ul>
+      </article>
+      <article id="collections" class="article">
+        <h2 class="article__heading">kolekcje</h2>
+        <p class="article__text">
+          Kolekcje danych to iterowalne obiekty, przechowujące unikalne dane. Iteracja w kolekcjach przebiega w kolejności dodania do nich danych. Wyróżnia się
+          dwa typy kolekcji: zbiór (<strong>set</strong>) oraz mapę (<strong>map</strong>).
+        </p>
+        <p class="article__text">
+          Zbiór pozwala na przechowywanie ukikalnych wartości (zarówno typu prostego jak i referencji do obiektów). Najważniejsze metody:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>new Set(array)</strong> - utworzenie zbioru z tablicy.</li>
+          <li class="article__list-item"><strong>new Array(...set)</strong> - utworzenie tablicy ze zbioru.</li>
+          <li class="article__list-item"><strong>set.add(element)</strong> - dodanie elementu do zbioru.</li>
+          <li class="article__list-item"><strong>set.delete(element)</strong> - usunięcie elementu ze zbioru.</li>
+          <li class="article__list-item"><strong>set.has(element)</strong> - sprawdzenie czy zbiór posiada element.</li>
+          <li class="article__list-item"><strong>set.clear()</strong> - usunięcie wszystkich elementów zbioru.</li>
+        </ul>
+        <p class="article__text">
+          Mapa pozwala na przechowywanie par klucz-wartość. Zarówno wartość typu prostego jak i obiekt mogą zostać użyte jako klucz lub jako wartość mapy.
+          Najważniejsze metody:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>new Map(Object.entries(object))</strong> - utworzenie mapy z obiektu.</li>
+          <li class="article__list-item">
+            <strong>new Map(arrayOfKeyValueArrays)</strong> - utworzenie mapy z dwuwymiarowej tablicy przechowującej tablice zawierające pary klucz-wartość.
+          </li>
+          <li class="article__list-item"><strong>map.get(key)</strong> - pobranie wartości o danym kluczu z mapy.</li>
+          <li class="article__list-item"><strong>map.set(key, value)</strong> - ustawienie pary klucz-wartość w mapie.</li>
+          <li class="article__list-item"><strong>map.delete(key)</strong> - usunięcie elementu o danym kluczu z mapy.</li>
+          <li class="article__list-item"><strong>map.has(key)</strong> - sprawdzenie czy mapa posiada element o danym kluczu.</li>
+          <li class="article__list-item"><strong>map.clear()</strong> - usunięcie wszystkich elementów mapy.</li>
+          <li class="article__list-item">
+            <strong>map.entries()</strong> - pobranie z mapy dwuwymiarowej tablicy zawierającej tablice z parami klucz-wartość.
+          </li>
+        </ul>
+        <p class="article__text">Kolekcje wykorzystywane są głównie kiedy wymagana jest unikalność danych lub duża szybkość pracy na danych.</p>
+      </article>
+      <article id="eslint" class="article">
+        <h2 class="article__heading">eslint</h2>
+        <p class="article__text">
+          <strong>ESLint</strong> to narzędzie do statycznej analizy kodu oraz identyfikacji problematycznych fragmentów w kodzie JavaScript. Pozwala pisać
+          coraz lepszy, zgodny dobrymi praktykami kod. Często ujednolica również styl pisania kodu w całym zespole/całej firmie.
+        </p>
+        <p class="article__text">
+          <i>Linter</i> pomaga otrzymywać jednolity styl kodu. <i>Style guide</i> to zestaw reguł <i>Lintera</i>.
+          <a class="article__link" href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a>
+          to popularny <i>style guide</i> stworzony przez firmę <i>Airbnb</i>.
+        </p>
+        <p class="article__text">Przygotowanie <i>ESLint</i> i włączenie <i>style guide</i> (instrukcje należy wykonać dla każdego projektu osobno):</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item"><strong>npm init -y</strong>.</li>
+          <li class="article__list-item"><strong>npm i -D eslint babel-eslint eslint-config-airbnb</strong>.</li>
+          <li class="article__list-item">
+            Utworzenie pliku <strong>.eslintrc</strong> w głównym folderze projektu z zawartością:
+            <strong
+              >{"parserOptions": {"ecmaVersion": 2021}, "env": {"browser": true, "node": true}, "parser": "babel-eslint", "extends": "airbnb", "rules":
+              {}}</strong
+            >.
+          </li>
+          <li class="article__list-item">Ustawienia <i>ESLint</i> w <i>WebStorm</i>: <strong>Automatic ESLint configuration</strong>.</li>
+        </ol>
+        <p class="article__text">Sposoby naprawy niedoskonałości w kodzie:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Kliknięcie prawym przyciskiem myszy katalogu projektu i wybranie opcji <i>Fix ESLint Problems</i> (działa na cały projekt).
+          </li>
+          <li class="article__list-item">
+            Kliknięcie prawym przyciskiem myszy pliku i wybranie opcji
+            <i>Fix ESLint Problems</i> (działa na wybrany plik).
+          </li>
+          <li class="article__list-item">
+            Użycie skrótu klawiaturowego <strong>alt</strong> + <strong>enter</strong> podczas gdy kursor edyora znajduje się na danej niedoskonałości (poprawia
+            wybraną niedoskonałość).
+          </li>
+          <li class="article__list-item">Kliknięcie prawym przyciskiem myszy konkretnego elementu kodu i wybranie sugerowanego sposobu naprawy.</li>
+        </ul>
+        <p class="article__text">Sposób użycia innego stylu niż sugerowany w pojedynczym pliku:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element kodu.</li>
+          <li class="article__list-item">
+            Wyszukanie w
+            <a class="article__link" href="https://eslint.org/">dokumentacji</a>
+            <i>ESLint</i> tej właściwości.
+          </li>
+          <li class="article__list-item">
+            Skopiowanie wybranej reguły (np.
+            <strong>/*eslint quotes: ["error", "double"]*/</strong>) i wklejenie jej (jako komentarza) na początku pliku, który będzie używał innych stylów
+            <i>ESLint</i>.
+          </li>
+        </ol>
+        <p class="article__text">Sposób użycia innego stylu niż sugerowany w całym projekcie:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">Sprawdzenie nazwy właściwości przez najechanie na problematyczny element kodu.</li>
+          <li class="article__list-item">
+            Wyszukanie w
+            <a class="article__link" href="https://eslint.org/">dokumentacji</a>
+            <i>ESLint</i> tej właściwości.
+          </li>
+          <li class="article__list-item">
+            Skopiowanie wybranej reguły (np.
+            <strong>/*eslint quotes: ["error", "double"]*/</strong>) i wklejenie jej jako jednej z własności obietktu <i>rules</i> w pliku <i>.eslintrc</i> (np.
+            <strong>"rules": {"quotes": ["error", "double"]}</strong>).
+          </li>
+        </ol>
+        <p class="article__text">
+          <i>ESLint</i> może wyświelać niedoskonałości kodu jako błąd lub jako ostrzeżenie (pełna lista błędów i ostrzeżeń znajduje się w zakładce
+          <i>Problems</i> w <i>WebStorm</i>). Aby zmienić domyślny sposób ich wyświetlania, należy wybrać typ w nadpisywanej regule pomiędzy <i>error</i> i
+          <i>warn</i> (np. <strong>"quotes": ["warn", "double"]</strong>).
+        </p>
+        <p class="article__text">
+          W celu automatycznego korygowania niedoskonałości pliku, podczas jego zapisu należy wybrać opcję <strong>Run eslint --fix on save</strong> w
+          ustawieniach <i>ESLint</i> w <i>WebStorm</i>.
+        </p>
+      </article>
     </main>
     <footer class="footer">
-        <p class="footer__text">Maciej Ryszka - 2021</p>
+      <p class="footer__text">Maciej Ryszka - 2021</p>
     </footer>
     <script src="../scripts/hamburger-menu.js"></script>
     <script src="../scripts/top-button.js"></script>
-</body>
-
+  </body>
 </html>

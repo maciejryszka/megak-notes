@@ -1,736 +1,750 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MegaKurs - JavaScript</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="header-navigation">
-            <nav class="hamburger-menu hamburger-menu--js">
-                <ul class="hamburger-menu__list">
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header-navigation__button header-navigation__button--menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <button class="header-navigation__button header-navigation__button--top">
-                <i class="fas fa-arrow-circle-up"></i>
-            </button>
-            <p class="header-navigation__text">mega kurs javascriptu</p>
+      <nav class="header-navigation">
+        <nav class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+            </li>
+          </ul>
         </nav>
+        <button class="header-navigation__button header-navigation__button--menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="header-navigation__button header-navigation__button--top">
+          <i class="fas fa-arrow-circle-up"></i>
+        </button>
+        <p class="header-navigation__text">mega kurs javascriptu</p>
+      </nav>
     </header>
     <main class="main theory-main">
-        <h1 class="theory-main__heading">express.js</h1>
-        <nav class="theory-main__links">
-            <a href="#fundaments" class="theory-main__link">fundamenty express.js</a>
-            <span class="theory-main__text">•</span>
-            <a href="#request" class="theory-main__link">request</a>
-            <span class="theory-main__text">•</span>
-            <a href="#response" class="theory-main__link">response</a>
-            <span class="theory-main__text">•</span>
-            <a href="#routing" class="theory-main__link">routing</a>
-            <span class="theory-main__text">•</span>
-            <a href="#cookies" class="theory-main__link">ciastka</a>
-            <span class="theory-main__text">•</span>
-            <a href="#middleware" class="theory-main__link">middleware</a>
-            <span class="theory-main__text">•</span>
-            <a href="#structure" class="theory-main__link">struktura aplikacji</a>
-            <span class="theory-main__text">•</span>
-            <a href="#layout-engines" class="theory-main__link">języki szablonów</a>
-            <span class="theory-main__text">•</span>
-            <a href="#crud-rest" class="theory-main__link">crud & rest</a>
-        </nav>
-        <div class="theory-main__image"></div>
-        <article id="fundaments" class="article">
-            <h2 class="article__heading">fundamenty express.js</h2>
-            <p class="article__text">Express.js jest frameworkiem serwera webowego dla Node.js.</p>
-            <p class="article__text">Cechy Express.js:</p>
+      <h1 class="theory-main__heading">express.js</h1>
+      <nav class="theory-main__links">
+        <a href="#fundaments" class="theory-main__link">fundamenty express.js</a>
+        <span class="theory-main__text">•</span>
+        <a href="#request" class="theory-main__link">request</a>
+        <span class="theory-main__text">•</span>
+        <a href="#response" class="theory-main__link">response</a>
+        <span class="theory-main__text">•</span>
+        <a href="#routing" class="theory-main__link">routing</a>
+        <span class="theory-main__text">•</span>
+        <a href="#cookies" class="theory-main__link">ciastka</a>
+        <span class="theory-main__text">•</span>
+        <a href="#middleware" class="theory-main__link">middleware</a>
+        <span class="theory-main__text">•</span>
+        <a href="#structure" class="theory-main__link">struktura aplikacji</a>
+        <span class="theory-main__text">•</span>
+        <a href="#layout-engines" class="theory-main__link">języki szablonów</a>
+        <span class="theory-main__text">•</span>
+        <a href="#crud-rest" class="theory-main__link">crud & rest</a>
+      </nav>
+      <div class="theory-main__image"></div>
+      <article id="fundaments" class="article">
+        <h2 class="article__heading">fundamenty express.js</h2>
+        <p class="article__text">Express.js jest frameworkiem serwera webowego dla Node.js.</p>
+        <p class="article__text">Cechy Express.js:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Jest szybki - prawie tak szybki jak sam <i>HTTP server</i> Node.js.</li>
+          <li class="article__list-item">Jest minimalistyczny - zawiera tylko najważniejsze rzeczy, lecz może być rozszerzany o dodatkowe moduły.</li>
+          <li class="article__list-item">Nie wymusza określonego podejścia podczas pisania kodu.</li>
+        </ul>
+        <p class="article__text">Zalety Express.js:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Pozwala na wykonanie w sposób szybszy wielu rzeczy dostępnych w Node.js (dzięki dostarczasniu narzędzi pomagających pisać aplikacje webowe i mobilne
+            od strony back-endu).
+          </li>
+          <li class="article__list-item">
+            Ułatwia pisanie ścieżek, obsługę poszczególnych metod
+            <i>HTTP</i> oraz tworzenie <i>API</i>.
+          </li>
+          <li class="article__list-item">
+            Korzysta z rzeczy zawartych w Node.js. Dodane są jedynie pewne możliwości, które przekładają się na szybsze działanie Express.js.
+          </li>
+          <li class="article__list-item">
+            Jest wykorzystywany jako podstawa innych, bardziej zaawansowanych frameworków webowych opartych na Node.js (np. <i>NestJS</i>, <i>Sails.js</i>,
+            <i>LoopBack</i>). Frameworki takie stosowane są głównie do tworzenia rozbudowanych aplikacji.
+          </li>
+        </ul>
+        <p class="article__text">Sposób użycia Express.js:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>npm i express</strong> - instalacja za pośrednictwem dowolnego menadżera paczek (przykładowa komenda dla menadżera <i>npm</i>).
+          </li>
+          <li class="article__list-item">
+            <strong>require('express')</strong> - import modułu z wykorzystaniem metody <i>require</i> (należy pobrać cały moduł do jednej zmiennej bez
+            stosowania destrukturyzacji).
+          </li>
+          <li class="article__list-item">
+            <strong>const app = express()</strong> - importowany moduł
+            <i>express</i>
+            jest jedną, wielką funkcją, której wywołanie tworzy aplikację back-endową.
+          </li>
+          <li class="article__list-item">
+            <strong>app.listen(portNumber)</strong> - uruchomienie nasłuchiwania poprzez wywołanie funkcji <i>listen</i> na obiekcie aplikacji. Argumentem jest
+            łańcuch znaków zawierający numer portu, na którym wykonywane będzie nasłuchiwanie.
+          </li>
+          <li class="article__list-item">
+            <strong>app.httpMethod(path, () => {})</strong> - wywołanie funkcji <i>callback</i> następuje w przypadku otrzymania określonego żądania dla
+            określonej ścieżki.
+          </li>
+          <li class="article__list-item">
+            <strong>app.all(path, () => {})</strong> - wywołanie funkcji <i>callback</i> następuje w przypadku otrzymania jakiegokolwiek żądania dla określonej
+            ścieżki.
+          </li>
+        </ul>
+        <p class="article__text">
+          Zasób jest jednak najczęściej definiowany na podstawie dwóch informacji: metody i ścieżki (metoda <i>all</i> nie jest wykorzystywana zbyt często).
+        </p>
+      </article>
+      <article id="request" class="article">
+        <h2 class="article__heading">request</h2>
+        <p class="article__text">
+          Obiekt typu <strong>Request</strong> występujący jako pierwszy parametr w funkcji <i>callback</i> (wywoływanej w przypadku otrzymania żądania)
+          reprezentuje każde żądanie <i>HTTP</i>. Najczęściej przyjęło się nazywać ten parametr <i>req</i>. Obiekt typu <i>Request</i> pochodzący z Express.js
+          różni się od swojego odpowiednika pochodzącego z Node.js.
+        </p>
+        <p class="article__text">Własności i metoda obiektu typu <i>Request</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>hostname</strong> - nazwa hosta - serwera, na którym uruchomiona jest aplikacja.</li>
+          <li class="article__list-item">
+            <strong>ip</strong> - adres <i>IP</i> klienta - najczęściej więc komputera lub urządzenia mobilnego, z którego przeglądarki wysłano zapytanie do
+            serwera. Czasami serwer <i>proxy</i> ukrywa i nadpisuje informację o <i>IP</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>ips</strong> - tablica adresów <i>IP</i>, z których przeglądarki wysłano zapytania do serwera. Przydatna własność ze względu na to, że w
+            wielu przypadkach <i>IP</i> jest zakłamane przez <i>proxy</i>. Aby odzyskać oryginalne <i>IP</i>, należy szukać go w tablicy z adresami.
+          </li>
+          <li class="article__list-item"><strong>method</strong> - metoda, za pomocą której klient próbuje połączyć się z serwerem.</li>
+          <li class="article__list-item"><strong>url</strong> - ścieżka. Nie pochodzi z Express.js, lecz z Node.js.</li>
+          <li class="article__list-item">
+            <strong>originalUrl</strong> - ścieżka, która jest pierwotna i znormalizowana, nawet po przekierowaniach (zalecany sposób).
+          </li>
+          <li class="article__list-item"><strong>path</strong> - ścieżka, która zawiera również parametry (jeśli zostały przekazane).</li>
+          <li class="article__list-item"><strong>protocol</strong> - protokół użyty do przesłania żądania.</li>
+          <li class="article__list-item"><strong>secure</strong> - wartość logiczna sprawdzająca czy użyto bezpiecznego protokołu do przesłania żądania.</li>
+          <li class="article__list-item">
+            <strong>get</strong>() - jako argument przyjmuje łańcuch znaków zawierający nazwę nagłówka żądania. Zwraca wartość konkretnego nagłówka.
+          </li>
+        </ul>
+        <p class="article__text">
+          Parametry mogą być przekazywane z użyciem adresu <i>URL</i> za pomocą tzw. <i>Query String</i> (np.
+          <i>http://www.phoneshop.com/?product=phone&size=32gb&color=white</i>):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>?</strong> - początek <i>Query String</i> (żądanie zostanie przekierowane do ścieżki znajdującej się przed tym znakiem, niezależnie od tego
+            co znajduje się po nim).
+          </li>
+          <li class="article__list-item"><strong>&</strong> - separator <i>Query String</i>.</li>
+          <li class="article__list-item"><strong>product</strong>, <strong>size</strong>, <strong>color</strong> - nazwy parametrów.</li>
+          <li class="article__list-item"><strong>phone</strong>, <strong>32gb</strong>, <strong>white</strong> - wartości parametrów.</li>
+        </ul>
+        <p class="article__text">
+          Sposoby generowania parametrów adresu <i>URL</i> na front-endzie (np. w celu: przekierowania do konkretnego użytkownika, paginacji (przypisania
+          kolejnych liczb do kolejnych stron), zastosowania dynamicznych adresów wyszukiwania, zastosowania dynamicznych adresów filtrowania, zastosowania
+          dynamicznych adresów sortowania):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Z użyciem <strong>encodeURIComponent</strong> (sposób ręczny) - przyjmuje wartość parametru będącą dowolnym łańcuchem znaków i zwraca łańcuch znaków
+            poprawny do przesłania za pomocą <i>URL</i> (niezalecana metoda).
+          </li>
+          <li class="article__list-item">
+            Z użyciem obiektu na bazie <strong>URLSearchParams</strong> - klasę należy importować z modułu <i>url</i> z Node.js.
+          </li>
+        </ul>
+        <p class="article__text">
+          Spacja w nazwie lub wartości parametru przekazywana jest do adresu
+          <i>URL</i> jako <strong>+</strong> lub <strong>%20</strong>. Ze względu na problem z odczytem znaku <strong>+</strong> w Express.js, wszystkie takie
+          znaki należy zamienić na <strong>%20</strong> z użyciem funkcji <i>replace(/\+/g, '%20')</i> na łańcuchu znaków reprezentującym <i>URL</i>.
+        </p>
+        <p class="article__text">
+          Odbiór parametrów przekazanych z użyciem adresu <i>URL</i> (z wykorzystaniem <i>Query String</i>), po stronie Express.js odbywa się z użyciem obiektu
+          <strong>req.query</strong>, gdzie klucze obiektu to nazwy parametrów, a wartości obiektu to wartości parametrów. W przypadku braku przekazania
+          parametrów wraz z adresem <i>URL</i>, obiekt ten będzie pusty.
+        </p>
+      </article>
+      <article id="response" class="article">
+        <h2 class="article__heading">response</h2>
+        <p class="article__text">
+          Obiekt typu <strong>Response</strong> występujący jako drugi parametr w funkcji <i>callback</i> (wywoływanej w przypadku otrzymania żądania)
+          reprezentuje każdą odpowiedź serwera na żądanie HTTP. Najczęściej przyjęło się nazywać ten parametr <i>res</i>. Obiekt typu
+          <i>Response</i>
+          pochodzący z Express.js różni się od swojego odpowiednika pochodzącego z Node.js.
+        </p>
+        <p class="article__text">
+          Metody <i>write</i> oraz <i>end</i> wywoływane na obiekcie typu <i>Response</i> w Node.js, mogą być również użyte w Express.js. Metody te nie są
+          jednak częścią Express.js, lecz są przekierowane bezpośrednio do serwera Node.js, który działa na niższym poziomie niż Express.js. Zamiast dwóch
+          powyższych metod warto korzystać z szybszej metody <strong>res.send()</strong>, będącej metodą Express.js. Jest ona wygodniejsza do użycia, ponieważ
+          wykonuje też szereg innych działań w tle.
+        </p>
+        <p class="article__text">Działania wykonywane przez metodę <i>send</i> wywołaną na obiekcie typu <i>Response</i> w Express.js:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Type</i> w zależności od wysłanej zawartości.</li>
+          <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Length</i>.</li>
+          <li class="article__list-item">Ustawienie nagłówków związanych z podstawowym <i>cachingiem</i>.</li>
+          <li class="article__list-item">Konwersja danych (jeśli jest wymagana).</li>
+          <li class="article__list-item">Przesłanie danych.</li>
+          <li class="article__list-item">Zakończenie połączenia.</li>
+        </ol>
+        <p class="article__text">Dane możliwe do przesłania przez metodę <i>send</i> wywołaną na obiekcie typu <i>Response</i> w Express.js:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>string</strong> - przesyłany jest tekst, a nagłówek <i>Content-Type</i> przyjmuje wartość <i>text/hmtl</i>,
+          </li>
+          <li class="article__list-item">
+            <strong>Buffer</strong> - przesyłane są dane binarne, a nagłówek <i>Content-Type</i> przyjmuje wartość <i>application/octet-stream</i>,
+          </li>
+          <li class="article__list-item">
+            <strong>array/Object</strong> - przesyłana jest tablica lub obiekt, a nagłówek <i>Content-Type</i> przyjmuje wartość <i>application/json</i>.
+          </li>
+        </ul>
+        <p class="article__text">
+          Metoda <strong>res.json()</strong> działa podobnie jak metoda <i>send</i>, lecz zawsze wysyła obiekt typu <i>JSON</i> oraz ustawia nagłówek
+          <i>Content-Type</i> na <i>application/json</i>. Metoda ta jest metodą pomocniczą - powstała za względu na fakt, że zdecydowana większość
+          <i>API</i> otrzymuje i przesyła obiekty typu <i>JSON</i>. Kiedy jako odpowiedź oczekiwany jest obiekt typu <i>JSON</i>, zawsze powinno się używać
+          metody <i>json</i>, ponieważ niezależnie od danych wejściowych (nawet gdy jest to łańcuch znaków), wysłany zostanie obiekt typu <i>JSON</i>. Ponadto w
+          Express.js dostępne są specjalne opcje dla metody <i>json</i>, pozwalające m.in. na lepsze formatowanie wysyłanego obiektu.
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.location()</strong> jako argument przyjmuje docelowy adres <i>URL</i> i przekierowuje klienta na inny adres (w wewnętrznym lub
+          zewnętrznym systemie). Aby wykonać prawidłowe przekierowanie z użyciem metody <i>location</i>, należy na obiekcie typu <i>Response</i> ustawić
+          odpowiedni status przekierowania z wykorzystaniem własności <i>statusCode</i> a także zakończyć wysyłanie odpowiedzi z wykorzystaniem metody
+          <i>end</i>.
+        </p>
+        <p class="article__text">
+          Metoda zalecana do tworzenia przekierowań to
+          <strong>res.redirect()</strong>. Jako argument przyjmuje docelowy adres <i>URL</i>. Tworzy ona całkowite przekierowanie: automatycznie ustawia kod
+          statusu odpowiedzi <i>HTTP</i> (domyślnie 302 - można go zmienić dodając numer kodu odpowiedzi jako dodatkowy, pierwszy argument), automatycznie
+          zakańcza wysyłanie odpowiedzi, a także pozwala na używanie specjalnych ścieżek (względnych i cofających).
+        </p>
+        <p class="article__text">Najczęściej używane kody statusów <i>HTTP</i> do przekierowania:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>301 - przekierowanie trwałe</strong> - przeglądarka (lub wyszukiwarka) zapamiętuje nowy adres i nie odpytuje już więcej przekierowującego
+            adresu.
+          </li>
+          <li class="article__list-item">
+            <strong>302 - przekierowanie nietrwałe</strong> - w momencie żądania przeglądarka przechodzi na podany adres, ale niekoniecznie musi zachować się
+            podobnie w przyszłości.
+          </li>
+          <li class="article__list-item">
+            <strong>303 - zobacz gdzie indziej</strong> - działanie podobne jak dla kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>, mające
+            za zadanie przekierować na metodę <i>GET</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>307 - przekierowanie tymczasowe</strong> - działanie podobne jak dla kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>.
+          </li>
+        </ul>
+        <p class="article__text">Rodzaje ścieżek dla funkcji <i>redirect</i>:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">Absolutne adresy <i>URL</i>.</li>
+          <li class="article__list-item">Wewnętrzne ścieżki.</li>
+          <li class="article__list-item">Ścieżki względne z użyciem (z użyciem <strong>..</strong>).</li>
+          <li class="article__list-item"><i>back</i> - odniesienie do nagłówka <i>Referer</i> lub jeśli taki nagłówek nie istnieje - do ścieżki głównej.</li>
+        </ol>
+        <p class="article__text">
+          Metoda <strong>res.sendFile()</strong> jako pierwszy argument przyjmuje ścieżkę do pliku (wymagana jest ścieżka absolutna lub zdefiniowanie elementu
+          <i>root</i>), drugim argumentem może być obiekt opcji. Metoda wysyła plik do klienta. Jest to znaczące ułatwienie ze strony Express.js, ponieważ w
+          Node.js konieczne jest ustalenie typu <i>MIME</i> pliku, następnie jego wczytanie oraz przesłanie lub strumieniowanie do przeglądarki.
+        </p>
+        <p class="article__text">Podstawowe opcje możliwe do przekazania w obiekcie opcji (jako drugi argument metody <i>sendFile</i>):</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>root</strong> - określa katalog główny dla względnych nazw plików (należy zwrócić szczególną uwagę, aby ze względów bezpieczeństwa pozwolić
+            jedynie na dostęp do plików znajdujących się w specjalnie wyodrębnionym katalogu).
+          </li>
+          <li class="article__list-item"><strong>lastModified</strong> - ustawia nagłówek zawierający datę ostatniej modyfikacji pliku w systemie.</li>
+          <li class="article__list-item"><strong>headers</strong> - pozwala na dodanie nagłówków.</li>
+          <li class="article__list-item">
+            <strong>dotfiles</strong> - pozwala na ustawienie obsługi plików rozpoczynających się od kropki (które z założenia powinny być ukryte). Jako wartość
+            przyjmuje łańcuch znaków: <i>allow</i>, <i>deny</i> lub <i>ignore</i> (wartość domyślna).
+          </li>
+        </ul>
+        <p class="article__text">
+          Metoda <strong>res.attachment()</strong> jako argument przyjmuje nazwę pliku. Nagłówek odpowiedzi <i>Content-Disposition</i> zostanie ustawiony na
+          wartość <i>attachment</i>, co oznacza że plik powinien być odebrany jako załącznik a nie jako strona internetowa. W przypadku tej metody Express.js
+          nie zakończy automatycznie połączenia, dlatego należy pamiętać o wywołaniu metody <i>end</i> na obiekcie odpowiedzi (chyba że po metodzie
+          <i>attachment</i> wywołana zostanie metoda <i>download</i> - wtedy metoda <i>end</i> nie będzie mogła zostać użyta).
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.download()</strong> jako pierwszy argument przyjmuje ścieżkę do pliku, który zostanie przesłany jako załącznik.
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.set()</strong> pozwala na ustawienie dowolnych nagłówków odpowiedzi. Dla pojedynczego nagłówka jako argumenty przyjmuje dwa
+          łańcuchy znaków - pierwszy zawierający nazwę nagłówka i drugi zawierający jego wartość. Dla wielu nagłówków jako argument przyjmuje obiekt zawierający
+          nazwy i wartości nagłówków.
+        </p>
+        <p class="article__text">
+          Własność <strong>res.headersSent</strong> zwraca wartość logiczną informującą o tym czy nagłówki w zostały już przesłane. Własność ta jest pomocna,
+          ponieważ nie da się już wrócić do ustawiania nagłówków, jeśli rozpoczęło się przesyłanie treści odpowiedzi. Należy zatem pamiętać, aby najpierw
+          ustawiać nagłówki, a dopiero później przesyłać treść odpowiedzi.
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.cookie()</strong> pozwala na ustawienie ciastka, czyli małego fragmentu teksu, służącego do zapamiętania pewnych krótkich
+          informacji na urządzeniu klienta (np. identyfikatorów, informacji na temat bycia zalogowanym). Jako argumenty przyjmuje dwa łańcuchy znaków - pierwszy
+          zawierający nazwę ciastka i drugi zawierający jego wartość. Przy każdym następnym zapytaniu do serwera, klient wyśle także zapisane ciastka. Ciastka
+          są nagłówkami - muszą więc zostać przesłane przed rozpoczęciem wysyłania treści odpowiedzi. Metoda ta ustawia ciastka a także jednocześnie nagłówki
+          <i>Set-Cookie</i> (których może być wiele, w przypadku wystąpienia więcej niż jednego ciastka).
+        </p>
+      </article>
+      <article id="routing" class="article">
+        <h2 class="article__heading">routing</h2>
+        <p class="article__text"><strong>Routing</strong> mówi o tym, co należy wykonać w jakim zasobie (zasób - konkretna metoda oraz ścieżka).</p>
+        <p class="article__text">
+          Parametry (zmienne części) ścieżek pozwalają na przesyłanie dowolnych danych w konkretnym miejscu, dzięki czemu nie jest konieczne tworzenie
+          <i>routingu</i> dla każdego zasobu z osobna. Poszczególne elementy ścieżki oddzielone są od siebie za pomocą: <strong>/</strong> (najczęściej),
+          <strong>.</strong> lub <strong>-</strong>. Nazwy parametrów poprzedzone są znakiem <strong>:</strong>, a reguły dotyczące ich nazywania są takie same
+          jak reguły dotyczące nazywania zmiennych.
+        </p>
+        <p class="article__text">Przykłady:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>/const1/const2/:variable</strong>,</li>
+          <li class="article__list-item"><strong>/const1/const2/:variable1/const3/:variable2</strong>.</li>
+        </ul>
+        <p class="article__text">
+          Należy uważać na podobne ścieżki korzystające z tej samej metody, w której tylko jedna z nich korzysta ze zmiennych. W takim wypadku, tworząc
+          <i>routing</i>, ścieżki korzystające wyłącznie ze stałych należy umieszczać przed ścieżkami wykorzystującymi zmienne. Kod jest interpretowany od góry
+          do dołu i jeśli w pierwszej kolejności zostanie napisany kod obsługujący ścieżkę wykorzysującą zmienną - stała w adresie <i>URL</i> zostanie
+          potraktowana jako ta zmienna.
+        </p>
+        <p class="article__text">Przykłady (oba wykorzystujące tę samą metodę <i>HTTP</i>):</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>/hello/new-user</strong> (ten <i>URL</i> powinien zostać obsłużony w kodzie jako pierwszy),</li>
+          <li class="article__list-item"><strong>/hello/:name</strong> (ten <i>URL</i> powinien zostać obsłużony w kodzie jako drugi).</li>
+        </ul>
+        <p class="article__text">
+          Parametry opcjonalne to parametry, które nie są wymagane. Często jednak dodawane są ze względu na
+          <i>SEO (search engine optimization)</i>, ponieważ w systemie najczęściej istotne jest <i>id</i>, a nie tytuł czy nazwa. Nazwy parametrów opcjonalnych
+          poprzedzone są znakiem <strong>:</strong> a zakończone znakiem <strong>?</strong>.
+        </p>
+        <p class="article__text">
+          Dzięki parametrom opcjonalnym ścieżka
+          <strong>/article/:id/:title?</strong> pasuje do obu poniższych adresów:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>.../article/123</strong>,</li>
+          <li class="article__list-item"><strong>.../article/123/article-title</strong>.</li>
+        </ul>
+        <p class="article__text">
+          Wszystkie przesłane parametry są dostępne w obiekcie
+          <strong>req.params</strong> pod takimi nazwami jakie zostały ustalone (lecz bez znaku <strong>:</strong>).
+        </p>
+      </article>
+      <article id="cookies" class="article">
+        <h2 class="article__heading">ciastka</h2>
+        <p class="article__text">
+          <strong>Ciastka</strong> wysłane domyślnie (gdzie jedyne argumenty to nazwa i wartość) z użyciem metody <i>cookie</i> na obiekcie odpowiedzi to
+          ciastka sesyjne. Zostają one usunięte w przypadku zakończenia sesji (np. zamknięcia przeglądarki, restartu systemu).
+        </p>
+        <p class="article__text">
+          W celu stworzenia bardziej zaawansowanych ciastek, jako trzeci argument metody <i>cookie</i> należy przekazać obiekt opcji ciastek. Podstawowe
+          właściwości obiektu opcji:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>domain</strong> - domena, do której będą wysyłane ciastka.</li>
+          <li class="article__list-item"><strong>expires</strong> - czas, do kiedy ciastko ma być zapamiętane.</li>
+          <li class="article__list-item"><strong>maxAge</strong> - czas istnienia ciastka (podany w ms).</li>
+          <li class="article__list-item">
+            <strong>httpOnly</strong> - uniemożliwia front-endowi dostęp do ciastka (zalecane jest dodawanie tej opcji do wszystkich ciastek związanych z
+            logowaniem).
+          </li>
+        </ul>
+        <p class="article__text">
+          Nazwy, przeznaczenie oraz okres przechowywania ciastek muszą być zawarte w polityce prywatności tworzonej strony internetowej/aplikacji webowej.
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.clearCookie()</strong> pozwala na usunięcie ciastka (np. gdy użytkownik został wylogowany). Jako pierwszy argument przyjmuje nazwę
+          ciastka. Drugim argumentem może być obiekt opcji ciastek (analogiczny jak dla metody <i>cookie</i>).
+        </p>
+      </article>
+      <article id="middleware" class="article">
+        <h2 class="article__heading">middleware</h2>
+        <p class="article__text">
+          Obiekt reprezentujący aplikację Express.js posiada zaawansowaną metodę
+          <strong>app.use()</strong>, która pozwala na wykonanie wielu działań. Jednym z nich jest umożliwienie rejestracji <strong>middleware</strong>, które
+          należy wykonać przed kodem właściwym (przed obsługą ścieżek):<br />
+          <strong>app.use(middlewareExample())</strong>.
+        </p>
+        <p class="article__text">
+          <strong>Middleware</strong> jest to oprogramowanie pośredniczące, umożliwiające komunikację pomiędzy różnymi aplikacjami, usługami lub systemami.
+          <i>Request</i> przed przejściem do zadania głównego może po drodze przejść przez różne <i>middleware</i>, które mogą dodawać, sprawdzać lub
+          modyfikować elementy w zapytaniu. Mogą również nie dopuścić zapytania do głównego zadania (np. gdy użytkownik nie posiada autoryzacji) i przystąpić od
+          razu do przesłania odpowiedzi.
+        </p>
+        <p class="article__text">Rodzaje <i>middleware</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>express.json()</strong> - służy do łatwego odbierania i odczytywania danych wejściowych JSON od klienta. Jest to <i>middleware</i> wbudowany
+            w Express.js. Domyślne działanie jest dla większości przypadków wystarczające, lecz opcjonalny argument to obiekt opcji (np. pozwalający na zmianę
+            maksymalnej wielkości pliku <i>JSON</i> (gdzie domyślna wartość to 100 kb)). Jeśli dane w zapytaniu zostaną określone jako <i>application/json</i>,
+            to <i>middleware</i> automatycznie rozkoduje plik <i>JSON</i> do obiektu JavaScript. Po rejestracji tego <i>middleware</i> w obiekcie zapytania
+            pojawi się nowy obiekt <strong>req.body</strong>, który będzie zawierać rozkodowane dane (o ile przybyły w zapytaniu z danymi o typie
+            <i>application/json</i>). Dane takie można wykorzystać w dowolny sposób (np. odpowiedzieć na nie z wykorzystaniem <i>JSON</i>).
+          </li>
+          <li class="article__list-item">
+            <strong>express.static()</strong> - służy do serwowania plików statycznych (identycznych dla każdego klienta pod danym adresem). Jest to
+            <i>middleware</i> wbudowany w Express.js. Pierwszym argumentem jest łańcuch znaków zawierający folder plików statycznych. Domyślne działanie jest
+            dla większości przypadków wystarczające, lecz opcjonalny, drugi argument to obiekt opcji (pozwalający na wybranie strony głównej, orgraniczenie
+            widzialności plików z kropką na początku, sterowanie <i>cachem</i>, itp.). Zazwyczaj w ten sposób serwuje się cały front-end, który znajduje się w
+            osobnym folderze. Aby na ścieżce głównej wyświetlić stronę główną, należy wybrany plik <i>HTML</i> nazwać <i>index.html</i> oraz umieścić go w
+            głównym katalogu plików statycznych.
+          </li>
+          <li class="article__list-item">
+            <strong>cookie-parser</strong> - służy do odczytu ciastek w Express.js. Nie jest to <i>middleware</i> wbudowany w Express.js. Należy doinstalować
+            dodatkowy moduł <i>cookie-parser</i> z wykorzystaniem komendy <strong>npm i cookie-parser</strong>. W celu użycia należy pobrać cały moduł do jednej
+            zmiennej bez stosowania destrukturyzacji: <strong>const cookieParser = require('cookie-parser')</strong>. Moduł taki jest jedną wielką funkcją,
+            którą należy wywołać jako argument metody <strong>app.use()</strong> w celu użycia <i>middleware</i>: <strong>app.use(cookieParser());</strong>. Od
+            momentu wywołania ciastka dostępne są w obiekcie żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane pod
+            <strong>req.signedCookies</strong>. W obiekcie tym klucze to nazwy ciastek, a wartości to ich wartości. Klient powinien automatycznie przesłać
+            wszystkie ciastka do serwera przy każdym zapytaniu, a <i>cookie-parser</i> umożliwi dostęp do nich.
+          </li>
+          <li class="article__list-item">
+            <strong>express.urlencoded()</strong> - służy do odczytania zawartości formularza przesłanego w tradycyjny sposób (bez użycia metody <i>fetch</i>).
+            Aby dostać się do danych przesłanych w zapytaniu, należy odwołać się do obiektu <strong>req.body</strong>. Jest to <i>middleware</i> wbudowany w
+            Express.js. Opcjonalnym argumentem jest obiekt opcji. Wskazane jest jednak użycie obiektu opcji i określenie wartości (<i>true</i> lub <i>false</i>)
+            dla własności <i>extended</i>.
+          </li>
+        </ul>
+      </article>
+      <article id="structure" class="article">
+        <h2 class="article__heading">struktura aplikacji</h2>
+        <p class="article__text">
+          W celu uniknięcia chaosu oraz ułatwienia współpracy z innymi programistrami, aplikacje posiadają najczęściej określoną strukturę.
+        </p>
+        <p class="article__text">Przykładowa struktura aplikacji Express.js:</p>
+        <ul class="article__list">
+          <li class="article__list-item">app.js</li>
+          <li class="article__list-item">package.json</li>
+          <li class="article__list-item">
+            public
             <ul class="article__list">
-                <li class="article__list-item">Jest szybki - prawie tak szybki jak sam <i>HTTP server</i> Node.js.</li>
-                <li class="article__list-item">Jest minimalistyczny - zawiera tylko najważniejsze rzeczy, lecz może być
-                    rozszerzany o dodatkowe moduły.</li>
-                <li class="article__list-item">Nie wymusza określonego podejścia podczas pisania kodu.</li>
+              <li class="article__list-item">index.html</li>
+              <li class="article__list-item">imgages</li>
+              <li class="article__list-item">javascripts</li>
+              <li class="article__list-item">
+                stylesheets
+                <ul class="article__list">
+                  <li class="article__list-item">style.css</li>
+                </ul>
+              </li>
             </ul>
-            <p class="article__text">Zalety Express.js:</p>
+          </li>
+          <li class="article__list-item">
+            routes
             <ul class="article__list">
-                <li class="article__list-item">Pozwala na wykonanie w sposób szybszy wielu rzeczy dostępnych w Node.js
-                    (dzięki dostarczasniu narzędzi pomagających pisać aplikacje webowe i mobilne od strony back-endu).
-                </li>
-                <li class="article__list-item">Ułatwia pisanie ścieżek, obsługę poszczególnych metod <i>HTTP</i> oraz
-                    tworzenie <i>API</i>.</li>
-                <li class="article__list-item">Korzysta z rzeczy zawartych w Node.js. Dodane są jedynie pewne
-                    możliwości, które przekładają się na szybsze działanie Express.js.</li>
-                <li class="article__list-item">Jest wykorzystywany jako podstawa innych, bardziej zaawansowanych
-                    frameworków webowych opartych na Node.js (np. <i>NestJS</i>, <i>Sails.js</i>, <i>LoopBack</i>).
-                    Frameworki takie stosowane są głównie do tworzenia rozbudowanych aplikacji.
-                </li>
+              <li class="article__list-item">index.js</li>
+              <li class="article__list-item">users.js</li>
             </ul>
-            <p class="article__text">Sposób użycia Express.js:</p>
+          </li>
+        </ul>
+        <p class="article__text">
+          W zaproponowanej powyżej strukturze plik główny aplikacji nazwano
+          <i>app.js</i>. W folderze <i>public</i> znajdują się pliki dostępne na front-endzie, takie jak pliki <i>HTML</i>, arkusze stylów, skrypty czy obrazy.
+          Folder <i>routes</i> zawiera skrypty obsługujące ścieżki.
+        </p>
+        <p class="article__text">
+          Skrypty obsługujące ścieżki powinny być pogrupowane wg logicznej całości (np. obsługa ścieżek związanych z edycją obiektu). Aby poprawnie obsłużyć
+          ścieżki znajdujące się w innym pliku niż plik główny aplikacji należy utworzyć nowy obiekt typu <i>Router</i>:
+          <strong>const objectEditRouter = express.Router()</strong>. Na tak utworzonym obiekcie należy wywoływać poszczególne metody <i>HTTP</i>:
+          <strong>objectEditRouter.get('/', (req, res) => {})</strong>. Utworzony <i>Router</i> należy wyeksportować:
+          <strong>module.exports = {objectEditRouter, }</strong>. Kolejnym krokiem jest jego import w pliku głównym aplikacji:
+          <strong>const {objectEditRouter} = require("./routes/objectEdit")</strong>
+          oraz użycie jako własnego <i>middleware</i>: <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie
+          <i>chainingu</i> oraz wyciągnięcie części wspólnej ścieżek do miejsca, w którym <i>router</i> będzie importowany. Pozwoli to uniknąć niepotrzebnego
+          duplikowania kodu zwiększy jego czytelność.
+        </p>
+        <p class="article__text">
+          Program pomagający stworzyć automatycznie strukturę aplikacji to
+          <strong>express-generator</strong>. Instalacja: <strong>npm i express-generator -g</strong>. Utworzenie struktury podobnej do powyższej:
+          <strong>express --no-view --git --project_and_folder_name</strong>.
+        </p>
+        <p class="article__text">
+          Domyślnie uruchomiony serwer jest dostępny globalnie. Aby był dostępny jedynie lokalnie, należy dodać przy wywołaniu funkcji nasłuchującej drugi
+          argument ustawiający hosta:
+          <strong>app.listen('3000', 'localhost')</strong>. Zwiększa to bezpieczeństwo i jest także wykorzystywane w aplikacjach, które mają działać wyłącznie
+          na danym serwerze.
+        </p>
+        <p class="article__text">
+          W praktyce nie stosuje się nigdy samego Node.js. Obsługa w nim, np.
+          <i>SSL</i> jest niewydajna, więc stosuje się tzw. <i>reverse-proxy</i>, które wymaga już gotowego serwera produkcyjnego. Dzięki użyciu
+          <i>reverse-proxy</i> aplikacja wykonuje część rzeczy (często bardzo obciążających, np. negocjowanie <i>SSL</i>) poza Node.js i odwołuje się do niego
+          dopiero w przypadku konieczności skorzystania z logiki biznesowej. Informacje na temat dwóch popularnych konfiguracji
+          <i>reverse-proxy</i> (przekierowanie domeny na port):
+          <a class="article__link" href="https://www.ionos.com/digitalguide/websites/web-development/nodejs-for-a-website-with-apache-on-ubuntu/#c313777"
+            >Apache</a
+          >
+          oraz
+          <a class="article__link" href="https://docs.nginx.com/nginx/deployment-guides/load-balance-third-party/node-js/#configuring-basic-load-balancing"
+            >nginx</a
+          >.
+        </p>
+        <p class="article__text">
+          Node.js jest również bardzo przepustowy, co z jednej strony jest jego wadą. Aplikacja może być skanowana w poszukiwaniu dziur lub podjęte mogą zostać
+          próby łamania haseł użytkowników. Warto zatem panować nad liczbą zapytań i ograniczyć ją, np. z wykorzystaniem modułu
+          <a class="article__link" href="https://www.npmjs.com/package/express-rate-limit">rate-limiter</a>.
+        </p>
+        <p class="article__text">
+          Narzędzie
+          <a class="article__link" href="https://pm2.keymetrics.io/docs/usage/quick-start">pm2</a>:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">dba o ciągłe uruchomienie procesu,</li>
+          <li class="article__list-item">pozwala pobierać logi aplikacji działających w tle,</li>
+          <li class="article__list-item">udostępnia <i>dashboard</i> aplikacji,</li>
+          <li class="article__list-item">umożliwia skalowanie aplikacji w prosty sposób.</li>
+        </ul>
+        <p class="article__text">
+          Fraza <i>@TODO</i> zawarta w komentarzu edytora <i>WebStorm</i>, spowoduje dodanie zadania do wykonania, które będzie widoczne w zakładce <i>TODO</i>.
+        </p>
+        <p class="article__text">
+          Narzędzie <i>nodemon</i> pozwala na automatyczne ponowne uruchomienie projektu po każdej zmianie dokonanej po stronie back-endu. Może zostać
+          uruchomione z użyciem komendy <strong>npx nodemon 'filename'</strong> (<i>filename</i> - plik główny aplikacji wraz z rozszerzeniem). Komenda
+          <i>npx</i> w przeciwieństwie do <i>npm</i> nie instaluje aplikacji a jedynie je uruchamia. Aby mieć pewność, że aplikacja została przeładowana, można
+          na początku pliku głównego aplikacji wyświetlić w konsoli frazę <i>Running my app...</i>, dzięki czemu pojawi się ona w terminalu po każdym
+          przeładowaniu zakończonym sukcesem.
+        </p>
+      </article>
+      <article id="layout-engines" class="article">
+        <h2 class="article__heading">języki szablonów</h2>
+        <p class="article__text">
+          <strong>Języki/silniki szablonów/widoków (layout engines)</strong>
+          pozwalają na generowanie po stronie serwera szablonów zawierających dane. Szablony te następnie przekazywane są do aplikacji.
+        </p>
+        <p class="article__text">
+          W przeszłości silniki takie były wbudowane w Express.js, lecz zrezygnowano z nich ze względu na duży rozmiar oraz fakt, że każdy może używać innych
+          silników (należy skonfigurować je ręcznie w projekcie). Kolejnym powodem jest to, że często preferowanym podejściem jest tworzenie <i>API</i>, gdzie
+          logika oraz widoki są od siebie oddzielone.
+        </p>
+        <p class="article__text">
+          Jednym z najpopularniejszych języków szablonów jest
+          <strong>Handlebars.js</strong>, który jest szybki, wygodny, bezpieczny i rozszerzalny, a także łatwo integruje się z Express.js.
+        </p>
+        <p class="article__text">
+          Popularnym językiem szablonów wykorzystywanym w Express.js jest
+          <strong>express-handlebars</strong>. W celu jego instalacji, należy użyć komendy <strong>npm i express-handlebars</strong>. Moduł ten jest wydajny,
+          ponieważ używa asynchronicznego odczytywania plików oraz <i>cachuje</i> odpowiedzi na produkcji (szablony są generowane tylko raz). Jest także prosty
+          w użyciu oraz domyślnie układa aplikację w strukturę wysokiej jakości. <i>Express-handlebars</i> posiada większość ważnych funkcjonalnośći
+          <i>handlebars</i>.
+        </p>
+        <p class="article__text">
+          Moduł <i>express-handlebars</i> wymaga w głównym katalogu projekt folderu <strong>views</strong>, wewnątrz którego znaleźć się musi następująca
+          struktura:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            views
             <ul class="article__list">
-                <li class="article__list-item"><strong>npm i express</strong> - instalacja za pośrednictwem dowolnego
-                    menadżera paczek (przykładowa komenda dla menadżera <i>npm</i>).</li>
-                <li class="article__list-item"><strong>require('express')</strong> - import modułu z wykorzystaniem
-                    metody <i>require</i> (należy pobrać cały moduł do jednej zmiennej bez stosowania destrukturyzacji).
-                </li>
-                <li class="article__list-item"><strong>const app = express()</strong> - importowany moduł <i>express</i>
-                    jest jedną, wielką funkcją, której wywołanie tworzy aplikację back-endową.
-                </li>
-                <li class="article__list-item"><strong>app.listen(portNumber)</strong> - uruchomienie nasłuchiwania
-                    poprzez wywołanie funkcji <i>listen</i> na obiekcie aplikacji. Argumentem jest łańcuch znaków
-                    zawierający numer portu, na którym wykonywane będzie nasłuchiwanie.
-                </li>
-                <li class="article__list-item"><strong>app.httpMethod(path, () => {})</strong> - wywołanie funkcji
-                    <i>callback</i> następuje w przypadku otrzymania określonego żądania dla określonej ścieżki.
-                </li>
-                <li class="article__list-item"><strong>app.all(path, () => {})</strong> - wywołanie funkcji
-                    <i>callback</i> następuje w przypadku otrzymania jakiegokolwiek żądania dla określonej ścieżki.
-                </li>
+              <li class="article__list-item">home.hbs</li>
+              <li class="article__list-item">
+                layouts
+                <ul class="article__list">
+                  <li class="article__list-item">main.hbs</li>
+                </ul>
+              </li>
+              <li class="article__list-item">
+                partials
+                <ul class="article__list">
+                  <li class="article__list-item">partial.hbs</li>
+                </ul>
+              </li>
             </ul>
-            <p class="article__text">Zasób jest jednak najczęściej definiowany na podstawie dwóch informacji: metody i
-                ścieżki (metoda <i>all</i> nie jest wykorzystywana zbyt często).
-            </p>
-        </article>
-        <article id="request" class="article">
-            <h2 class="article__heading">request</h2>
-            <p class="article__text">Obiekt typu <strong>Request</strong> występujący jako pierwszy parametr w funkcji
-                <i>callback</i> (wywoływanej w przypadku otrzymania żądania) reprezentuje każde żądanie <i>HTTP</i>.
-                Najczęściej przyjęło się nazywać ten parametr <i>req</i>. Obiekt typu <i>Request</i> pochodzący z
-                Express.js różni się od swojego odpowiednika pochodzącego z Node.js.
-            </p>
-            <p class="article__text">Własności i metoda obiektu typu <i>Request</i>:</p>
+          </li>
+        </ul>
+        <p class="article__text">
+          W celu użycia <i>express-handlebars</i> należy pobrać z niego metodę <i>engine</i> (najlepiej z użyciem destrukturyzacji):
+          <strong>const {engine} = require('express-handlebars')</strong>. Następnie na aplikacji Express.js należy wywołać metodę <i>engine</i>, aby wskazać,
+          że używany będzie silnik szablonów (pierwszym argumentem jest łańcuch znaków zawierający rozszerzenie używanych plików z szablonami, drugim argumentem
+          jest wywołana, pobrana wcześniej z modułu <i>express-handlebars</i>, metoda <i>engine</i>, która z kolei jako argument przyjmuje obietkt z własnością
+          <i>extname</i>, której wartością jest łańcuch znaków zawierający rozszerzenie używanych plików z szablonami):
+          <strong>app.engine('.hbs', engine({extname: '.hbs'}))</strong>. Następnie należy wskazać domyślny silnik widoków wywołując na aplikacji Express.js
+          metodę <i>set</i> (pierwszym argumentem jest łańcuch znaków <i>view engine</i>, natomiast drugim łańcuch znaków zawierający rozszerzenie używanych
+          plików z szablonami): <strong>app.set('view engine', '.hbs')</strong>.
+        </p>
+        <p class="article__text">
+          Metoda <strong>res.render('viewFilename')</strong> wywołana na obiekcie odpowiedzi (w miejscu innej metody przesyłającej dane, np. <i>send</i>)
+          pozwala na renderowanie widoków w aplikacji. Argumentem metody jest nazwa pliku z widokiem z folderu <i>views</i>.
+        </p>
+        <p class="article__text">
+          W zaproponowanej powyżej strukturze folder <i>layouts</i> zawiera szablony aplikacji (plik <i>main.hbs</i> zawiera główny szablon). W folderze
+          <i>views</i> znajdują się widoki, do których odnoszą się poszczególne ścieżki aplikacji. Plik szablonów powinien zawierać strukturę <i>HTML</i>.
+          Miejsca szablonów, zawierające zmienne wewnątrz potrójnych nawiasów klamrowych, np. <strong>{{{body}}}</strong>, uzupełniane będą elementami plików z
+          widokami. Możliwe jest także przesłanie <i>HTML</i> z użyciem potrójnych nawiasów klamrowych, jednak ze względów bezpieczeństwa nie jest to zalecane.
+        </p>
+        <p class="article__text">
+          Aby przekazać zmienną do pliku z widokiem, należy umieścić w takim pliku jej nazwę wewnątrz podwójnych nawiasów klamrowych, np.
+          <strong>{{variableName}}</strong>. Drugim argumentem metody <i>render</i> jest obiekt, służący do przekazywania wartości tych zmiennych do widoków
+          (elementami takiego obiektu są nazwy zmiennych oraz ich wartości): <strong>res.render('viewFilename', {variableName: variableValue})</strong>.
+        </p>
+        <p class="article__text">
+          Możliwe jest również przekazanie zagnieżdżonego obiektu:
+          <strong>res.render('viewFilename', {person: {firstName: 'Person'sFirstName', lastName: 'Person'sLastName'}})</strong>. W takim przypadku możliwe jest
+          dokonanie w pliku widoku destrukturyzacji wszystkich pól z obiektu: <strong>{{#with person}} {{firstName}}, {{lastName}} {{/with}}</strong>.
+        </p>
+        <p class="article__text">
+          Możliwe jest również przekazanie tablicy:
+          <strong>res.render('viewFilename', {arrayOfItems})</strong>. W takim przypadku możliwe jest dokonanie w pliku widoku iteracji po wszystkich elementach
+          tablicy: <strong>{{#each arrayOfItems}} {{this}} {{/each}}</strong> (gdzie <i>this</i> to kolejny element tablicy). Jeśli tablica nie zawiera
+          elementów, z użyciem <strong>{{else}}</strong> możliwe jest uzupełnienie widoku alternatywną zawartością:
+          <strong>{{#each arrayOfItems}} {{this}} {{else}}</strong>
+          <i>no results</i> <strong>{{/each}}</strong>.
+        </p>
+        <p class="article__text">
+          W pliku widoku możliwe jest także używanie prostych warunków (sprawdzenie jaką wartość logiczną zwróci zmienna, łańcuch znaków, obiekt czy tablica):
+          <strong>{{#if condition}}</strong> <i>result if true</i> <strong>{{/if}} {{#unless condition}}</strong> <i>result if false</i>
+          <strong>{{/unless}}</strong>. Alternatywna opcja z użyciem <strong>{{else}}</strong>: <strong>{{#if condition}}</strong> <i>result if true</i>
+          <strong>{{else}}</strong> <i>result if false</i> <strong>{{/if}}</strong>. Warunki o większej złożoności, (np. porównywanie liczb), należy sprawdzać w
+          logice aplikacji a do widoku przekazać jedynie wartość logiczną.
+        </p>
+        <p class="article__text">Zasady bezpieczeństwa podczas korzystania z <i>express-handlebars</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Atak <i>XSS</i> nie powinien zostać wykonany.</li>
+          <li class="article__list-item">
+            Dynamicznie można generować jedynie pliki <i>HTML</i>. Generowanie w taki sposób plików JavaScript nie jest bezpieczne.
+          </li>
+          <li class="article__list-item">Nie należy nigdy przekazywać wszystkich danych przesłanych przez użytkownika.</li>
+        </ul>
+        <p class="article__text">
+          <strong>Partial</strong> służy do zautomatyzowania elementów, które nie są częścią szablonu, lecz często się powtarzają (np. sekcja komentarzy, sekcja
+          ocen). Pliki tego typu należy umieścić w folerze <i>partials</i> (możliwe jest rozbudowanie struktury przez podfoldery), a następnie użyć ich w
+          konrtetnym pliku widoku z wykorzystaniem: <strong>{{> partialFileName}}</strong>.
+        </p>
+        <p class="article__text">
+          Aby zakomentować tekst w pliku <i>.hbs</i>, należy wykorzytać nawiasy klamrowe, wykrzyknik i myślniki: <strong>{{!--</strong> <i>commented text</i>
+          <strong>--}}</strong>. Komentarz taki w przeciwieństwie do komentarza <i>HTML</i> nie jest widoczny w źródle strony.
+        </p>
+        <p class="article__text">
+          Aby za pośrednictwem pliku <i>.hbs</i> wyświetlać w informacje w konsoli, należy użyć: <strong>{{log</strong>
+          <i>'first name:' firstName 'last name:' lastName</i><strong>}}</strong>. Argumenty należy oddzielać spacjami.
+        </p>
+        <p class="article__text">
+          Możliwe jest także tworzenie własnych funkcji pomocniczych, tzw.
+          <i>helpers</i>, które opisane zostały w
+          <a class="article__link" href="https://github.com/express-handlebars/express-handlebars#helpers">dokumentacji</a>
+          <i>express-handlebars</i>.
+        </p>
+      </article>
+      <article id="crud-rest" class="article">
+        <h2 class="article__heading">crud & rest</h2>
+        <p class="article__text">
+          <strong>CRUD</strong> to najczęściej występujące akcje w najprostszych <i>API</i>: dodawanie, odczytywanie, aktulaizowanie oraz usuwanie danych.
+          <i>CRUD</i> jest to akronim od słów: <i>create</i>, <i>read</i>, <i>update</i>, <i>delete</i>.
+        </p>
+
+        <p class="article__text">Paczki <i>npm</i> przydatne podczas tworzenia aplikacji wykorzystujących <i>CRUD</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong><a class="article__link" href="https://www.npmjs.com/package/uuid">uuid</a></strong>
+            - w celu stworzenia unikalnego identyfikatora podczas tworzenia danych,
+          </li>
+          <li class="article__list-item">
+            <strong><a class="article__link" href="https://www.npmjs.com/package/method-override">method-override</a></strong>
+            - w celu umożliwienia przesyłania formularza metodami
+            <i>PUT</i> oraz <i>DELETE</i> (domyślnie formularz może zostać przesłany jedynie z wykorzystaniem metod <i>GET</i> oraz <i>POST</i>)
+          </li>
+          <li class="article__list-item">
+            <strong><a class="article__link" href="https://www.npmjs.com/package/date-fns">date-fns</a></strong>
+            - w celu zarządzania datami oraz wykonywania na nich operacji.
+          </li>
+        </ul>
+        <p class="article__text">
+          <strong>REST API</strong> jest stylem architektonicznym służącym do projektowania interfejsów <i>API</i> za pomocą protokołu <i>HTTP</i>. Jego
+          kluczową zaletą jest duża elastyczność. <i>REST API</i> wykorzystywany jest wszędzie tam, gdzie istnieje potrzeba dostarczenia danych użytkownikowi
+          aplikacji internetowej lub witryny bezpośrednio z serwera.
+        </p>
+        <p class="article__text">Umowne zasady <i>REST API</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>Stateless (bezstanowość)</strong> - w przypadku serwisów <i>REST</i> oznacza, że stan konieczny do obsługi znajduje się w żądaniu klienta
+            (jako część <i>URL</i>, parametr żądania, fragment nagłówka czy samej treści żądania). Zmodyfikowany stan może być przesłany przez serwer do klienta
+            w odpowiedzi, jednak żadna informacja o stanie nie jest przechowywana przez serwer i musi być każdorazowo przesłana przez klienta, jeśli jest ona
+            wymagana do jego obsługi.
+          </li>
+          <li class="article__list-item">
+            <strong>Używanie odpowiednich metod</strong>:
             <ul class="article__list">
-                <li class="article__list-item"><strong>hostname</strong> - nazwa hosta - serwera, na którym uruchomiona
-                    jest aplikacja.</li>
-                <li class="article__list-item"><strong>ip</strong> - adres <i>IP</i> klienta - najczęściej więc
-                    komputera lub urządzenia mobilnego, z którego przeglądarki wysłano zapytanie do serwera. Czasami
-                    serwer <i>proxy</i> ukrywa i nadpisuje informację o <i>IP</i>.</li>
-                <li class="article__list-item"><strong>ips</strong> - tablica adresów <i>IP</i>, z których przeglądarki
-                    wysłano zapytania do serwera. Przydatna własność ze względu na to, że w wielu przypadkach <i>IP</i>
-                    jest zakłamane przez <i>proxy</i>. Aby odzyskać oryginalne <i>IP</i>, należy szukać go w tablicy z
-                    adresami.</li>
-                <li class="article__list-item"><strong>method</strong> - metoda, za pomocą której klient próbuje
-                    połączyć się z serwerem.</li>
-                <li class="article__list-item"><strong>url</strong> - ścieżka. Nie pochodzi z Express.js, lecz z
-                    Node.js.
-                </li>
-                <li class="article__list-item"><strong>originalUrl</strong> - ścieżka, która jest pierwotna i
-                    znormalizowana, nawet po przekierowaniach (zalecany sposób).</li>
-                <li class="article__list-item"><strong>path</strong> - ścieżka, która zawiera również parametry (jeśli
-                    zostały przekazane).</li>
-                <li class="article__list-item"><strong>protocol</strong> - protokół użyty do przesłania żądania.</li>
-                <li class="article__list-item"><strong>secure</strong> - wartość logiczna sprawdzająca czy użyto
-                    bezpiecznego protokołu do przesłania żądania.</li>
-                <li class="article__list-item"><strong>get</strong>() - jako argument przyjmuje łańcuch znaków
-                    zawierający nazwę nagłówka żądania. Zwraca wartość konkretnego nagłówka.</li>
+              <li class="article__list-item"><strong>GET</strong> - pobiera określony zasób na podstawie podanego indentyfikatora.</li>
+              <li class="article__list-item">
+                <strong>POST</strong> - tworzy nowy zasób; może służyć do pobierania danych w przypadku, kiedy w ramach <i>body</i> trzeba dostarczyć dodatkowe
+                parametry; jest wykorzystywany do wszystkich innych operacji, które nie wpisują się w ramy innych metod.
+              </li>
+              <li class="article__list-item">
+                <strong>PUT</strong> - aktualizuje określony zasób na podstawie podanego identyfikatora; może służyć do tworzenia nowego zasobu, jeżeli jego
+                identyfikator jest znany.
+              </li>
+              <li class="article__list-item"><strong>PATCH</strong> - aktualizuje część określonego zasobu.</li>
+              <li class="article__list-item"><strong>DELETE</strong> - usuwa określony zasób na podstawie podanego indentyfikatora.</li>
             </ul>
-            <p class="article__text">Parametry mogą być przekazywane z użyciem adresu <i>URL</i> za pomocą tzw. <i>Query
-                    String</i> (np. <i>http://www.phoneshop.com/?product=phone&size=32gb&color=white</i>):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>?</strong> - początek <i>Query String</i> (żądanie zostanie
-                    przekierowane do ścieżki znajdującej się przed tym znakiem, niezależnie od tego co znajduje się po
-                    nim).</li>
-                <li class="article__list-item"><strong>&</strong> - separator <i>Query String</i>.</li>
-                <li class="article__list-item"><strong>product</strong>, <strong>size</strong>, <strong>color</strong> -
-                    nazwy parametrów.</li>
-                <li class="article__list-item"><strong>phone</strong>, <strong>32gb</strong>, <strong>white</strong> -
-                    wartości parametrów.</li>
-            </ul>
-            <p class="article__text">Sposoby generowania parametrów adresu <i>URL</i> na front-endzie (np. w celu:
-                przekierowania do konkretnego użytkownika, paginacji (przypisania kolejnych liczb do kolejnych stron),
-                zastosowania dynamicznych adresów wyszukiwania, zastosowania dynamicznych adresów filtrowania,
-                zastosowania dynamicznych adresów sortowania):
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">Z użyciem <strong>encodeURIComponent</strong> (sposób ręczny) - przyjmuje
-                    wartość parametru będącą dowolnym łańcuchem znaków i zwraca łańcuch znaków poprawny do przesłania za
-                    pomocą <i>URL</i> (niezalecana metoda).
-                </li>
-                <li class="article__list-item">Z użyciem obiektu na bazie <strong>URLSearchParams</strong> - klasę
-                    należy importować z modułu <i>url</i> z Node.js.</li>
-            </ul>
-            <p class="article__text">Spacja w nazwie lub wartości parametru przekazywana jest do adresu <i>URL</i> jako
-                <strong>+</strong> lub <strong>%20</strong>. Ze względu na problem z odczytem znaku <strong>+</strong> w
-                Express.js, wszystkie takie znaki należy zamienić na <strong>%20</strong> z użyciem funkcji
-                <i>replace(/\+/g, '%20')</i> na łańcuchu znaków reprezentującym <i>URL</i>.
-            </p>
-            <p class="article__text">Odbiór parametrów przekazanych z użyciem adresu <i>URL</i> (z wykorzystaniem
-                <i>Query String</i>), po stronie Express.js odbywa się z użyciem obiektu <strong>req.query</strong>,
-                gdzie klucze obiektu to nazwy parametrów, a wartości obiektu to wartości parametrów. W przypadku braku
-                przekazania parametrów wraz z adresem <i>URL</i>, obiekt ten będzie pusty.
-            </p>
-        </article>
-        <article id="response" class="article">
-            <h2 class="article__heading">response</h2>
-            <p class="article__text">Obiekt typu <strong>Response</strong> występujący jako drugi parametr w funkcji
-                <i>callback</i> (wywoływanej w przypadku otrzymania żądania) reprezentuje każdą odpowiedź serwera na
-                żądanie HTTP. Najczęściej przyjęło się nazywać ten parametr <i>res</i>. Obiekt typu <i>Response</i>
-                pochodzący z Express.js różni się od swojego odpowiednika pochodzącego z Node.js.
-            </p>
-            <p class="article__text">Metody <i>write</i> oraz <i>end</i> wywoływane na obiekcie typu <i>Response</i> w
-                Node.js, mogą być również użyte w Express.js. Metody te nie są jednak częścią Express.js, lecz są
-                przekierowane bezpośrednio do serwera Node.js, który działa na niższym poziomie niż Express.js. Zamiast
-                dwóch powyższych metod warto korzystać z szybszej metody <strong>res.send()</strong>, będącej metodą
-                Express.js. Jest ona wygodniejsza do użycia, ponieważ wykonuje też szereg innych działań w tle.
-            </p>
-            <p class="article__text">Działania wykonywane przez metodę <i>send</i> wywołaną na obiekcie typu
-                <i>Response</i> w Express.js:
-            </p>
-            <ol class="article__list  article__list--ordered">
-                <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Type</i> w zależności od
-                    wysłanej zawartości.</li>
-                <li class="article__list-item">Automatyczne ustawienie nagłówka <i>Content-Length</i>.</li>
-                <li class="article__list-item">Ustawienie nagłówków związanych z podstawowym <i>cachingiem</i>.</li>
-                <li class="article__list-item">Konwersja danych (jeśli jest wymagana).</li>
-                <li class="article__list-item">Przesłanie danych.</li>
-                <li class="article__list-item">Zakończenie połączenia.</li>
-            </ol>
-            <p class="article__text">Dane możliwe do przesłania przez metodę <i>send</i> wywołaną na obiekcie typu
-                <i>Response</i> w Express.js:
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>string</strong> - przesyłany jest tekst, a nagłówek
-                    <i>Content-Type</i> przyjmuje wartość <i>text/hmtl</i>,
-                </li>
-                <li class="article__list-item"><strong>Buffer</strong> - przesyłane są dane binarne, a nagłówek
-                    <i>Content-Type</i> przyjmuje wartość <i>application/octet-stream</i>,
-                </li>
-                <li class="article__list-item"><strong>array/Object</strong> - przesyłana jest tablica lub obiekt, a
-                    nagłówek <i>Content-Type</i> przyjmuje wartość <i>application/json</i>.</li>
-            </ul>
-            <p class="article__text">Metoda <strong>res.json()</strong> działa podobnie jak metoda <i>send</i>, lecz
-                zawsze wysyła obiekt typu <i>JSON</i> oraz ustawia nagłówek <i>Content-Type</i> na
-                <i>application/json</i>. Metoda ta jest metodą pomocniczą - powstała za względu na fakt, że zdecydowana
-                większość <i>API</i> otrzymuje i przesyła obiekty typu <i>JSON</i>. Kiedy jako odpowiedź oczekiwany jest
-                obiekt typu <i>JSON</i>, zawsze powinno się używać metody <i>json</i>, ponieważ niezależnie od danych
-                wejściowych (nawet gdy jest to łańcuch znaków), wysłany zostanie obiekt typu <i>JSON</i>. Ponadto w
-                Express.js dostępne są specjalne opcje dla metody <i>json</i>, pozwalające m.in. na lepsze formatowanie
-                wysyłanego obiektu.
-            </p>
-            <p class="article__text">Metoda <strong>res.location()</strong> jako argument przyjmuje docelowy adres
-                <i>URL</i> i przekierowuje klienta na inny adres (w wewnętrznym lub zewnętrznym systemie). Aby wykonać
-                prawidłowe przekierowanie z użyciem metody <i>location</i>, należy na obiekcie typu <i>Response</i>
-                ustawić odpowiedni status przekierowania z wykorzystaniem własności <i>statusCode</i> a także zakończyć
-                wysyłanie odpowiedzi z wykorzystaniem metody <i>end</i>.
-            </p>
-            <p class="article__text">Metoda zalecana do tworzenia przekierowań to <strong>res.redirect()</strong>.
-                Jako argument przyjmuje docelowy adres <i>URL</i>. Tworzy ona całkowite przekierowanie: automatycznie
-                ustawia kod statusu odpowiedzi <i>HTTP</i> (domyślnie 302 - można go zmienić dodając numer kodu
-                odpowiedzi jako dodatkowy, pierwszy argument), automatycznie zakańcza wysyłanie odpowiedzi, a także
-                pozwala na używanie specjalnych ścieżek (względnych i cofających).</p>
-            <p class="article__text">Najczęściej używane kody statusów <i>HTTP</i> do przekierowania:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>301 - przekierowanie trwałe</strong> - przeglądarka (lub
-                    wyszukiwarka) zapamiętuje nowy adres i nie odpytuje już więcej przekierowującego adresu.</li>
-                <li class="article__list-item"><strong>302 - przekierowanie nietrwałe</strong> - w momencie żądania
-                    przeglądarka przechodzi na podany adres, ale niekoniecznie musi zachować się podobnie w przyszłości.
-                </li>
-                <li class="article__list-item"><strong>303 - zobacz gdzie indziej</strong> - działanie podobne jak dla
-                    kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>, mające za zadanie przekierować
-                    na metodę <i>GET</i>.</li>
-                <li class="article__list-item"><strong>307 - przekierowanie tymczasowe</strong> - działanie podobne jak
-                    dla kodu 302, ale używane przy innej metodzie <i>HTTP</i> niż <i>GET</i>.</li>
-            </ul>
-            <p class="article__text">Rodzaje ścieżek dla funkcji <i>redirect</i>:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item">Absolutne adresy <i>URL</i>.</li>
-                <li class="article__list-item">Wewnętrzne ścieżki.</li>
-                <li class="article__list-item">Ścieżki względne z użyciem (z użyciem <strong>..</strong>).</li>
-                <li class="article__list-item"><i>back</i> - odniesienie do nagłówka <i>Referer</i> lub jeśli taki
-                    nagłówek nie istnieje - do ścieżki głównej.</li>
-            </ol>
-            <p class="article__text">Metoda <strong>res.sendFile()</strong> jako pierwszy argument przyjmuje ścieżkę do
-                pliku (wymagana jest ścieżka absolutna lub zdefiniowanie elementu <i>root</i>), drugim argumentem może
-                być obiekt opcji. Metoda wysyła plik do klienta. Jest to znaczące ułatwienie ze strony Express.js,
-                ponieważ w Node.js konieczne jest ustalenie typu <i>MIME</i> pliku, następnie jego wczytanie oraz
-                przesłanie lub strumieniowanie do przeglądarki.</p>
-            <p class="article__text">Podstawowe opcje możliwe do przekazania w obiekcie opcji (jako drugi argument
-                metody <i>sendFile</i>):
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>root</strong> - określa katalog główny dla względnych nazw
-                    plików (należy zwrócić szczególną uwagę, aby ze względów bezpieczeństwa pozwolić jedynie na dostęp
-                    do plików znajdujących się w specjalnie wyodrębnionym katalogu).</li>
-                <li class="article__list-item"><strong>lastModified</strong> - ustawia nagłówek zawierający datę
-                    ostatniej modyfikacji pliku w systemie.</li>
-                <li class="article__list-item"><strong>headers</strong> - pozwala na dodanie nagłówków.</li>
-                <li class="article__list-item"><strong>dotfiles</strong> - pozwala na ustawienie obsługi plików
-                    rozpoczynających się od kropki (które z założenia powinny być ukryte). Jako wartość przyjmuje
-                    łańcuch znaków: <i>allow</i>, <i>deny</i> lub <i>ignore</i> (wartość domyślna).
-                </li>
-            </ul>
-            <p class="article__text">Metoda <strong>res.attachment()</strong> jako argument przyjmuje nazwę pliku.
-                Nagłówek odpowiedzi <i>Content-Disposition</i> zostanie ustawiony na wartość <i>attachment</i>, co
-                oznacza że plik powinien być odebrany jako załącznik a nie jako strona internetowa. W przypadku tej
-                metody Express.js nie zakończy automatycznie połączenia, dlatego należy pamiętać o wywołaniu metody
-                <i>end</i> na obiekcie odpowiedzi (chyba że po metodzie <i>attachment</i> wywołana zostanie metoda
-                <i>download</i> - wtedy metoda <i>end</i> nie będzie mogła zostać użyta).
-            </p>
-            <p class="article__text">Metoda <strong>res.download()</strong> jako pierwszy argument przyjmuje ścieżkę do
-                pliku, który zostanie przesłany jako załącznik.</p>
-            <p class="article__text">Metoda <strong>res.set()</strong> pozwala na ustawienie dowolnych nagłówków
-                odpowiedzi. Dla pojedynczego nagłówka jako argumenty przyjmuje dwa łańcuchy znaków - pierwszy
-                zawierający nazwę nagłówka i drugi zawierający jego wartość. Dla wielu nagłówków jako argument przyjmuje
-                obiekt zawierający nazwy i wartości nagłówków.</p>
-            <p class="article__text">Własność <strong>res.headersSent</strong> zwraca wartość logiczną informującą o tym
-                czy nagłówki w zostały już przesłane. Własność ta jest pomocna, ponieważ nie da się już wrócić do
-                ustawiania nagłówków, jeśli rozpoczęło się przesyłanie treści odpowiedzi. Należy zatem pamiętać, aby
-                najpierw ustawiać nagłówki, a dopiero później przesyłać treść odpowiedzi.</p>
-            <p class="article__text">Metoda <strong>res.cookie()</strong> pozwala na ustawienie ciastka, czyli małego
-                fragmentu teksu, służącego do zapamiętania pewnych krótkich informacji na urządzeniu klienta (np.
-                identyfikatorów, informacji na temat bycia zalogowanym). Jako argumenty przyjmuje dwa łańcuchy znaków -
-                pierwszy zawierający nazwę ciastka i drugi zawierający jego wartość. Przy każdym następnym zapytaniu do
-                serwera, klient wyśle także zapisane ciastka. Ciastka są nagłówkami - muszą więc zostać przesłane przed
-                rozpoczęciem wysyłania treści odpowiedzi. Metoda ta ustawia ciastka a także jednocześnie nagłówki
-                <i>Set-Cookie</i> (których może być wiele, w przypadku wystąpienia więcej niż jednego ciastka).
-            </p>
-        </article>
-        <article id="routing" class="article">
-            <h2 class="article__heading">routing</h2>
-            <p class="article__text"><strong>Routing</strong> mówi o tym, co należy wykonać w jakim zasobie (zasób -
-                konkretna metoda oraz ścieżka).</p>
-            <p class="article__text">Parametry (zmienne części) ścieżek pozwalają na przesyłanie dowolnych danych w
-                konkretnym miejscu, dzięki czemu nie jest konieczne tworzenie <i>routingu</i> dla każdego zasobu z
-                osobna. Poszczególne elementy ścieżki oddzielone są od siebie za pomocą: <strong>/</strong>
-                (najczęściej), <strong>.</strong> lub <strong>-</strong>. Nazwy parametrów poprzedzone są znakiem
-                <strong>:</strong>, a reguły dotyczące ich nazywania są takie same jak reguły dotyczące nazywania
-                zmiennych.
-            </p>
-            <p class="article__text">Przykłady:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>/const1/const2/:variable</strong>,</li>
-                <li class="article__list-item"><strong>/const1/const2/:variable1/const3/:variable2</strong>.</li>
-            </ul>
-            <p class="article__text">Należy uważać na podobne ścieżki korzystające z tej samej metody, w której tylko
-                jedna z nich korzysta ze zmiennych. W takim wypadku, tworząc <i>routing</i>, ścieżki korzystające
-                wyłącznie ze stałych należy umieszczać przed ścieżkami wykorzystującymi zmienne. Kod jest interpretowany
-                od góry do dołu i jeśli w pierwszej kolejności zostanie napisany kod obsługujący ścieżkę wykorzysującą
-                zmienną - stała w adresie <i>URL</i> zostanie potraktowana jako ta zmienna.</p>
-            <p class="article__text">Przykłady (oba wykorzystujące tę samą metodę <i>HTTP</i>):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>/hello/new-user</strong> (ten <i>URL</i> powinien zostać
-                    obsłużony w kodzie jako pierwszy),</li>
-                <li class="article__list-item"><strong>/hello/:name</strong> (ten <i>URL</i> powinien zostać obsłużony w
-                    kodzie jako drugi).</li>
-            </ul>
-            <p class="article__text">Parametry opcjonalne to parametry, które nie są wymagane. Często jednak dodawane są
-                ze względu na <i>SEO (search engine optimization)</i>, ponieważ w systemie najczęściej istotne jest
-                <i>id</i>, a nie tytuł czy nazwa. Nazwy parametrów opcjonalnych poprzedzone są znakiem
-                <strong>:</strong> a zakończone znakiem <strong>?</strong>.
-            </p>
-            <p class="article__text">Dzięki parametrom opcjonalnym ścieżka <strong>/article/:id/:title?</strong> pasuje
-                do obu poniższych adresów:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>.../article/123</strong>,</li>
-                <li class="article__list-item"><strong>.../article/123/article-title</strong>.</li>
-            </ul>
-            <p class="article__text">Wszystkie przesłane parametry są dostępne w obiekcie <strong>req.params</strong>
-                pod takimi nazwami jakie zostały ustalone (lecz bez znaku <strong>:</strong>).</p>
-        </article>
-        <article id="cookies" class="article">
-            <h2 class="article__heading">ciastka</h2>
-            <p class="article__text"><strong>Ciastka</strong> wysłane domyślnie (gdzie jedyne argumenty to nazwa i
-                wartość) z użyciem metody <i>cookie</i> na obiekcie odpowiedzi to ciastka sesyjne. Zostają one usunięte
-                w przypadku zakończenia sesji (np. zamknięcia przeglądarki, restartu systemu).
-            </p>
-            <p class="article__text">W celu stworzenia bardziej zaawansowanych ciastek, jako trzeci argument metody
-                <i>cookie</i> należy przekazać obiekt opcji ciastek. Podstawowe właściwości obiektu opcji:
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>domain</strong> - domena, do której będą wysyłane ciastka.</li>
-                <li class="article__list-item"><strong>expires</strong> - czas, do kiedy ciastko ma być zapamiętane.
-                </li>
-                <li class="article__list-item"><strong>maxAge</strong> - czas istnienia ciastka (podany w ms).</li>
-                <li class="article__list-item"><strong>httpOnly</strong> - uniemożliwia front-endowi dostęp do ciastka
-                    (zalecane jest dodawanie tej opcji do wszystkich ciastek związanych z logowaniem).
-                </li>
-            </ul>
-            <p class="article__text">Nazwy, przeznaczenie oraz okres przechowywania ciastek muszą być zawarte w polityce
-                prywatności tworzonej strony internetowej/aplikacji webowej.</p>
-            <p class="article__text">Metoda <strong>res.clearCookie()</strong> pozwala na usunięcie ciastka (np. gdy
-                użytkownik został wylogowany). Jako pierwszy argument przyjmuje nazwę ciastka. Drugim argumentem może
-                być obiekt opcji ciastek (analogiczny jak dla metody <i>cookie</i>).</p>
-        </article>
-        <article id="middleware" class="article">
-            <h2 class="article__heading">middleware</h2>
-            <p class="article__text">Obiekt reprezentujący aplikację Express.js posiada zaawansowaną metodę
-                <strong>app.use()</strong>, która pozwala na wykonanie wielu działań. Jednym z nich jest umożliwienie
-                rejestracji <strong>middleware</strong>, które należy wykonać przed kodem właściwym (przed obsługą
-                ścieżek):<br>
-                <strong>app.use(middlewareExample())</strong>.
-            </p>
-            <p class="article__text"><strong>Middleware</strong> jest to oprogramowanie pośredniczące, umożliwiające
-                komunikację pomiędzy różnymi aplikacjami, usługami lub systemami. <i>Request</i> przed przejściem do
-                zadania głównego może po drodze przejść przez różne <i>middleware</i>, które mogą dodawać, sprawdzać lub
-                modyfikować elementy w zapytaniu. Mogą również nie dopuścić zapytania do głównego zadania (np. gdy
-                użytkownik nie posiada autoryzacji) i przystąpić od razu do przesłania odpowiedzi.</p>
-            <p class="article__text">Rodzaje <i>middleware</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>express.json()</strong> - służy do łatwego odbierania i
-                    odczytywania danych wejściowych JSON od klienta. Jest to <i>middleware</i> wbudowany w Express.js.
-                    Domyślne działanie jest dla większości przypadków wystarczające, lecz opcjonalny argument to obiekt
-                    opcji (np. pozwalający na zmianę maksymalnej wielkości pliku <i>JSON</i> (gdzie domyślna wartość to
-                    100 kb)). Jeśli dane w zapytaniu zostaną określone jako <i>application/json</i>, to
-                    <i>middleware</i> automatycznie rozkoduje plik <i>JSON</i> do obiektu JavaScript. Po rejestracji
-                    tego <i>middleware</i> w obiekcie zapytania pojawi się nowy obiekt <strong>req.body</strong>, który
-                    będzie zawierać rozkodowane dane (o ile przybyły w zapytaniu z danymi o typie
-                    <i>application/json</i>). Dane takie można wykorzystać w dowolny sposób (np. odpowiedzieć na nie z
-                    wykorzystaniem <i>JSON</i>).
-                </li>
-                <li class="article__list-item"><strong>express.static()</strong> - służy do serwowania plików
-                    statycznych (identycznych dla każdego klienta pod danym adresem). Jest to <i>middleware</i>
-                    wbudowany w Express.js. Pierwszym argumentem jest łańcuch znaków zawierający folder plików
-                    statycznych. Domyślne działanie jest dla większości przypadków wystarczające, lecz opcjonalny, drugi
-                    argument to obiekt opcji (pozwalający na wybranie strony głównej, orgraniczenie widzialności plików
-                    z kropką na początku, sterowanie <i>cachem</i>, itp.). Zazwyczaj w ten sposób serwuje się cały
-                    front-end, który znajduje się w osobnym folderze. Aby na ścieżce głównej wyświetlić stronę główną,
-                    należy wybrany plik <i>HTML</i> nazwać <i>index.html</i> oraz umieścić go w głównym katalogu plików
-                    statycznych.</li>
-                <li class="article__list-item"><strong>cookie-parser</strong> - służy do odczytu ciastek w Express.js.
-                    Nie jest to <i>middleware</i> wbudowany w Express.js. Należy doinstalować dodatkowy moduł
-                    <i>cookie-parser</i> z wykorzystaniem komendy <strong>npm i cookie-parser</strong>. W celu użycia
-                    należy pobrać cały moduł do jednej zmiennej bez stosowania destrukturyzacji: <strong>const
-                        cookieParser = require('cookie-parser')</strong>. Moduł taki jest jedną wielką funkcją, którą
-                    należy wywołać jako argument metody <strong>app.use()</strong> w celu użycia <i>middleware</i>:
-                    <strong>app.use(cookieParser());</strong>. Od momentu wywołania ciastka dostępne są w obiekcie
-                    żądania pod nazwą <strong>req.cookies</strong>, a tzw. ciastka podpisane pod
-                    <strong>req.signedCookies</strong>. W obiekcie tym klucze to nazwy ciastek, a wartości to ich
-                    wartości. Klient powinien automatycznie przesłać wszystkie ciastka do serwera przy każdym zapytaniu,
-                    a <i>cookie-parser</i> umożliwi dostęp do nich.
-                </li>
-                <li class="article__list-item"><strong>express.urlencoded()</strong> - służy do odczytania zawartości
-                    formularza przesłanego w tradycyjny sposób (bez użycia metody <i>fetch</i>). Aby dostać się do
-                    danych przesłanych w zapytaniu, należy odwołać się do obiektu <strong>req.body</strong>. Jest to
-                    <i>middleware</i> wbudowany w Express.js. Opcjonalnym argumentem jest obiekt opcji. Wskazane jest
-                    jednak użycie obiektu opcji i określenie wartości (<i>true</i> lub <i>false</i>) dla własności
-                    <i>extended</i>.
-                </li>
-            </ul>
-        </article>
-        <article id="structure" class="article">
-            <h2 class="article__heading">struktura aplikacji</h2>
-            <p class="article__text">W celu uniknięcia chaosu oraz ułatwienia współpracy z innymi programistrami,
-                aplikacje posiadają najczęściej określoną strukturę.</p>
-            <p class="article__text">Przykładowa struktura aplikacji Express.js:</p>
-            <ul class="article__list">
-                <li class="article__list-item">app.js</li>
-                <li class="article__list-item">package.json</li>
-                <li class="article__list-item">public
-                    <ul class="article__list">
-                        <li class="article__list-item">index.html</li>
-                        <li class="article__list-item">imgages</li>
-                        <li class="article__list-item">javascripts</li>
-                        <li class="article__list-item">stylesheets
-                            <ul class="article__list">
-                                <li class="article__list-item">style.css</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="article__list-item">routes
-                    <ul class="article__list">
-                        <li class="article__list-item">index.js</li>
-                        <li class="article__list-item">users.js</li>
-                    </ul>
-                </li>
-            </ul>
-            <p class="article__text">W zaproponowanej powyżej strukturze plik główny aplikacji nazwano <i>app.js</i>. W
-                folderze <i>public</i> znajdują się pliki dostępne na front-endzie, takie jak pliki <i>HTML</i>, arkusze
-                stylów, skrypty czy obrazy. Folder <i>routes</i> zawiera skrypty obsługujące ścieżki.
-            </p>
-            <p class="article__text">Skrypty obsługujące ścieżki powinny być pogrupowane wg logicznej całości (np.
-                obsługa ścieżek związanych z edycją obiektu). Aby poprawnie obsłużyć ścieżki znajdujące się w innym
-                pliku niż plik główny aplikacji należy utworzyć nowy obiekt typu <i>Router</i>: <strong>const
-                    objectEditRouter = express.Router()</strong>. Na tak utworzonym obiekcie należy wywoływać
-                poszczególne metody <i>HTTP</i>: <strong>objectEditRouter.get('/', (req, res) => {})</strong>. Utworzony
-                <i>Router</i> należy wyeksportować: <strong>module.exports = {objectEditRouter, }</strong>. Kolejnym
-                krokiem jest jego import w pliku głównym aplikacji: <strong>const {objectEditRouter} =
-                    require("./routes/objectEdit")</strong> oraz użycie jako własnego <i>middleware</i>:
-                <strong>app.use('/edit', objectEditRouter)</strong>. Dobrą praktyką jest zastosowanie <i>chainingu</i>
-                oraz wyciągnięcie części wspólnej ścieżek do miejsca, w którym <i>router</i> będzie importowany. Pozwoli
-                to uniknąć niepotrzebnego duplikowania kodu zwiększy jego czytelność.
-            </p>
-            <p class="article__text">Program pomagający stworzyć automatycznie strukturę aplikacji to
-                <strong>express-generator</strong>. Instalacja: <strong>npm i express-generator -g</strong>. Utworzenie
-                struktury podobnej do powyższej: <strong>express --no-view --git --project_and_folder_name</strong>.
-            </p>
-            <p class="article__text">Domyślnie uruchomiony serwer jest dostępny globalnie. Aby był dostępny jedynie
-                lokalnie, należy dodać przy wywołaniu funkcji nasłuchującej drugi argument ustawiający hosta:
-                <strong>app.listen('3000', 'localhost')</strong>. Zwiększa to bezpieczeństwo i jest także wykorzystywane
-                w aplikacjach, które mają działać wyłącznie na danym serwerze.
-            </p>
-            <p class="article__text">W praktyce nie stosuje się nigdy samego Node.js. Obsługa w nim, np. <i>SSL</i>
-                jest
-                niewydajna, więc stosuje się tzw. <i>reverse-proxy</i>, które wymaga już gotowego serwera produkcyjnego.
-                Dzięki użyciu <i>reverse-proxy</i> aplikacja wykonuje część rzeczy (często bardzo obciążających, np.
-                negocjowanie <i>SSL</i>) poza Node.js i odwołuje się do niego dopiero w przypadku konieczności
-                skorzystania z logiki biznesowej. Informacje na temat dwóch popularnych konfiguracji
-                <i>reverse-proxy</i> (przekierowanie domeny na port): <a class="article__link"
-                    href="https://www.ionos.com/digitalguide/websites/web-development/nodejs-for-a-website-with-apache-on-ubuntu/#c313777">Apache</a>
-                oraz <a class="article__link"
-                    href="https://docs.nginx.com/nginx/deployment-guides/load-balance-third-party/node-js/#configuring-basic-load-balancing">nginx</a>.
-            </p>
-            <p class="article__text">Node.js jest również bardzo przepustowy, co z jednej strony jest jego wadą.
-                Aplikacja może być skanowana w poszukiwaniu dziur lub podjęte mogą zostać próby łamania haseł
-                użytkowników. Warto zatem panować nad liczbą zapytań i ograniczyć ją, np. z wykorzystaniem modułu <a
-                    class="article__link" href="https://www.npmjs.com/package/express-rate-limit">rate-limiter</a>.</p>
-            <p class="article__text">Narzędzie <a class="article__link"
-                    href="https://pm2.keymetrics.io/docs/usage/quick-start">pm2</a>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">dba o ciągłe uruchomienie procesu,</li>
-                <li class="article__list-item">pozwala pobierać logi aplikacji działających w tle,</li>
-                <li class="article__list-item">udostępnia <i>dashboard</i> aplikacji,</li>
-                <li class="article__list-item">umożliwia skalowanie aplikacji w prosty sposób.</li>
-            </ul>
-            <p class="article__text">
-                Fraza <i>@TODO</i> zawarta w komentarzu edytora <i>WebStorm</i>, spowoduje dodanie zadania do wykonania,
-                które będzie widoczne w zakładce <i>TODO</i>.
-            </p>
-            <p class="article__text">
-                Narzędzie <i>nodemon</i> pozwala na automatyczne ponowne uruchomienie projektu po każdej zmianie
-                dokonanej po stronie back-endu. Może zostać uruchomione z użyciem komendy <strong>npx nodemon
-                    'filename'</strong> (<i>filename</i> - plik główny aplikacji wraz z rozszerzeniem). Komenda
-                <i>npx</i> w przeciwieństwie do <i>npm</i> nie instaluje aplikacji a jedynie je uruchamia. Aby mieć
-                pewność, że aplikacja została przeładowana, można na początku pliku głównego aplikacji wyświetlić w
-                konsoli frazę <i>Running my app...</i>, dzięki czemu pojawi się ona w terminalu po każdym przeładowaniu
-                zakończonym sukcesem.
-            </p>
-        </article>
-        <article id="layout-engines" class="article">
-            <h2 class="article__heading">języki szablonów</h2>
-            <p class="article__text"><strong>Języki/silniki szablonów/widoków (layout engines)</strong> pozwalają na
-                generowanie po stronie serwera szablonów zawierających dane. Szablony te następnie przekazywane są do
-                aplikacji.</p>
-            <p class="article__text">W przeszłości silniki takie były wbudowane w Express.js, lecz zrezygnowano z nich
-                ze względu na duży rozmiar oraz fakt, że każdy może używać innych silników (należy skonfigurować je
-                ręcznie w projekcie). Kolejnym powodem jest to, że często preferowanym podejściem jest tworzenie
-                <i>API</i>, gdzie logika oraz widoki są od siebie oddzielone.
-            </p>
-            <p class="article__text">Jednym z najpopularniejszych języków szablonów jest <strong>Handlebars.js</strong>,
-                który jest szybki, wygodny, bezpieczny i rozszerzalny, a także łatwo integruje się z Express.js.
-            </p>
-            <p class="article__text">Popularnym językiem szablonów wykorzystywanym w Express.js jest
-                <strong>express-handlebars</strong>. W celu jego instalacji, należy użyć komendy <strong>npm i
-                    express-handlebars</strong>. Moduł ten jest wydajny, ponieważ używa asynchronicznego odczytywania
-                plików oraz <i>cachuje</i> odpowiedzi na produkcji (szablony są generowane tylko raz). Jest także prosty
-                w użyciu oraz domyślnie układa aplikację w strukturę wysokiej jakości. <i>Express-handlebars</i> posiada
-                większość ważnych funkcjonalnośći <i>handlebars</i>.
-            </p>
-            <p class="article__text">Moduł <i>express-handlebars</i> wymaga w głównym katalogu projekt folderu
-                <strong>views</strong>, wewnątrz którego znaleźć się musi następująca struktura:
-            </p>
-            <ul class="article__list">
-                <li class="article__list-item">views
-                    <ul class="article__list">
-                        <li class="article__list-item">home.hbs</li>
-                        <li class="article__list-item">layouts
-                            <ul class="article__list">
-                                <li class="article__list-item">main.hbs</li>
-                            </ul>
-                        </li>
-                        <li class="article__list-item">partials
-                            <ul class="article__list">
-                                <li class="article__list-item">partial.hbs</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <p class="article__text">W celu użycia <i>express-handlebars</i> należy pobrać z niego metodę <i>engine</i>
-                (najlepiej z użyciem destrukturyzacji): <strong>const {engine} = require('express-handlebars')</strong>.
-                Następnie na aplikacji Express.js należy wywołać metodę <i>engine</i>, aby wskazać, że używany będzie
-                silnik szablonów (pierwszym argumentem jest łańcuch znaków zawierający rozszerzenie używanych plików z
-                szablonami, drugim argumentem jest wywołana, pobrana wcześniej z modułu <i>express-handlebars</i>,
-                metoda <i>engine</i>, która z kolei jako argument przyjmuje obietkt z własnością <i>extname</i>, której
-                wartością jest łańcuch znaków zawierający rozszerzenie używanych plików z szablonami):
-                <strong>app.engine('.hbs', engine({extname: '.hbs'}))</strong>. Następnie należy wskazać domyślny silnik
-                widoków wywołując na aplikacji Express.js metodę <i>set</i> (pierwszym argumentem jest łańcuch znaków
-                <i>view engine</i>, natomiast drugim łańcuch znaków zawierający rozszerzenie używanych plików z
-                szablonami): <strong>app.set('view engine', '.hbs')</strong>.
-            </p>
-            <p class="article__text">Metoda <strong>res.render('viewFilename')</strong> wywołana na obiekcie odpowiedzi
-                (w miejscu innej metody przesyłającej dane, np. <i>send</i>) pozwala na renderowanie widoków w
-                aplikacji. Argumentem metody jest nazwa pliku z widokiem z folderu <i>views</i>.</p>
-            <p class="article__text">W zaproponowanej powyżej strukturze folder <i>layouts</i> zawiera szablony
-                aplikacji (plik <i>main.hbs</i> zawiera główny szablon). W folderze <i>views</i> znajdują się widoki, do
-                których odnoszą się poszczególne ścieżki aplikacji. Plik szablonów powinien zawierać strukturę
-                <i>HTML</i>. Miejsca szablonów, zawierające zmienne wewnątrz potrójnych nawiasów klamrowych, np.
-                <strong>{{{body}}}</strong>, uzupełniane będą elementami plików z widokami. Możliwe jest także
-                przesłanie <i>HTML</i> z użyciem potrójnych nawiasów klamrowych, jednak ze względów bezpieczeństwa nie
-                jest to zalecane.
-            </p>
-            <p class="article__text">Aby przekazać zmienną do pliku z widokiem, należy umieścić w takim pliku jej nazwę
-                wewnątrz podwójnych nawiasów klamrowych, np. <strong>{{variableName}}</strong>. Drugim argumentem metody
-                <i>render</i> jest obiekt, służący do przekazywania wartości tych zmiennych do widoków (elementami
-                takiego obiektu są nazwy zmiennych oraz ich wartości): <strong>res.render('viewFilename', {variableName:
-                    variableValue})</strong>.
-            </p>
-            <p class="article__text">Możliwe jest również przekazanie zagnieżdżonego obiektu:
-                <strong>res.render('viewFilename', {person: {firstName: 'Person'sFirstName', lastName:
-                    'Person'sLastName'}})</strong>. W takim przypadku możliwe jest dokonanie w pliku widoku
-                destrukturyzacji wszystkich pól z obiektu: <strong>{{#with person}} {{firstName}},
-                    {{lastName}} {{/with}}</strong>.
-            </p>
-            <p class="article__text">Możliwe jest również przekazanie tablicy: <strong>res.render('viewFilename',
-                    {arrayOfItems})</strong>. W takim przypadku możliwe jest dokonanie w pliku widoku iteracji po
-                wszystkich elementach tablicy: <strong>{{#each arrayOfItems}} {{this}} {{/each}}</strong> (gdzie
-                <i>this</i> to kolejny element tablicy). Jeśli tablica nie zawiera elementów, z użyciem
-                <strong>{{else}}</strong> możliwe jest uzupełnienie widoku alternatywną zawartością: <strong>{{#each
-                    arrayOfItems}} {{this}} {{else}}</strong> <i>no results</i> <strong>{{/each}}</strong>.
-            </p>
-            <p class="article__text">
-                W pliku widoku możliwe jest także używanie prostych warunków (sprawdzenie jaką wartość logiczną zwróci
-                zmienna, łańcuch znaków, obiekt czy tablica): <strong>{{#if condition}}</strong> <i>result if true</i>
-                <strong>{{/if}} {{#unless condition}}</strong> <i>result if false</i> <strong>{{/unless}}</strong>.
-                Alternatywna opcja z użyciem <strong>{{else}}</strong>: <strong>{{#if condition}}</strong> <i>result if
-                    true</i> <strong>{{else}}</strong> <i>result if false</i> <strong>{{/if}}</strong>. Warunki o
-                większej złożoności, (np. porównywanie liczb), należy sprawdzać w logice aplikacji a do widoku przekazać
-                jedynie wartość logiczną.
-            </p>
-            <p class="article__text">Zasady bezpieczeństwa podczas korzystania z <i>express-handlebars</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Atak <i>XSS</i> nie powinien zostać wykonany.</li>
-                <li class="article__list-item">Dynamicznie można generować jedynie pliki <i>HTML</i>. Generowanie w taki
-                    sposób plików JavaScript nie jest bezpieczne.</li>
-                <li class="article__list-item">Nie należy nigdy przekazywać wszystkich danych przesłanych przez
-                    użytkownika.</li>
-            </ul>
-            <p class="article__text"><strong>Partial</strong> służy do zautomatyzowania elementów, które nie są częścią
-                szablonu, lecz często się powtarzają (np. sekcja komentarzy, sekcja ocen). Pliki tego typu należy
-                umieścić w folerze <i>partials</i> (możliwe jest rozbudowanie struktury przez podfoldery), a następnie
-                użyć ich w konrtetnym pliku widoku z wykorzystaniem: <strong>{{> partialFileName}}</strong>.
-            </p>
-            <p class="article__text">Aby zakomentować tekst w pliku <i>.hbs</i>, należy wykorzytać nawiasy klamrowe,
-                wykrzyknik i myślniki: <strong>{{!--</strong> <i>commented text</i> <strong>--}}</strong>. Komentarz
-                taki w przeciwieństwie do komentarza <i>HTML</i> nie jest widoczny w źródle strony.
-            </p>
-            <p class="article__text">Aby za pośrednictwem pliku <i>.hbs</i> wyświetlać w informacje w konsoli, należy
-                użyć: <strong>{{log</strong> <i>'first name:' firstName 'last name:' lastName</i><strong>}}</strong>.
-                Argumenty należy oddzielać spacjami.
-            </p>
-            <p class="article__text">Możliwe jest także tworzenie własnych funkcji pomocniczych, tzw. <i>helpers</i>,
-                które opisane zostały w <a class="article__link"
-                    href="https://github.com/express-handlebars/express-handlebars#helpers">dokumentacji</a>
-                <i>express-handlebars</i>.
-            </p>
-        </article>
-        <article id="crud-rest" class="article">
-            <h2 class="article__heading">crud & rest</h2>
-            <p class="article__text"><strong>CRUD</strong> to najczęściej występujące akcje w najprostszych <i>API</i>:
-                dodawanie, odczytywanie, aktulaizowanie oraz usuwanie danych. <i>CRUD</i> jest to akronim od słów:
-                <i>create</i>, <i>read</i>, <i>update</i>, <i>delete</i>.
-            <p class="article__text">Paczki <i>npm</i> przydatne podczas tworzenia aplikacji
-                wykorzystujących <i>CRUD</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong><a class="article__link"
-                            href="https://www.npmjs.com/package/uuid">uuid</a></strong> - w celu stworzenia unikalnego
-                    identyfikatora podczas tworzenia danych,</li>
-                <li class="article__list-item"><strong><a class="article__link"
-                            href="https://www.npmjs.com/package/method-override">method-override</a></strong> - w celu
-                    umożliwienia przesyłania formularza metodami <i>PUT</i> oraz <i>DELETE</i> (domyślnie formularz może
-                    zostać przesłany jedynie z wykorzystaniem metod <i>GET</i> oraz <i>POST</i>)</li>
-                <li class="article__list-item"><strong><a class="article__link"
-                            href="https://www.npmjs.com/package/date-fns">date-fns</a></strong> - w celu zarządzania
-                    datami oraz wykonywania na nich operacji.</li>
-            </ul>
-            <p class="article__text"><strong>REST API</strong> jest stylem architektonicznym służącym do projektowania
-                interfejsów <i>API</i> za pomocą protokołu <i>HTTP</i>. Jego kluczową zaletą jest duża elastyczność.
-                <i>REST API</i> wykorzystywany jest wszędzie tam, gdzie istnieje potrzeba dostarczenia danych
-                użytkownikowi aplikacji internetowej lub witryny bezpośrednio z serwera.
-            </p>
-            <p class="article__text">Umowne zasady <i>REST API</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>Stateless (bezstanowość)</strong> - w przypadku serwisów
-                    <i>REST</i> oznacza, że stan konieczny do obsługi znajduje się w żądaniu klienta (jako część
-                    <i>URL</i>, parametr żądania, fragment nagłówka czy samej treści żądania). Zmodyfikowany stan może
-                    być przesłany przez serwer do klienta w odpowiedzi, jednak żadna informacja o stanie nie jest
-                    przechowywana przez serwer i musi być każdorazowo przesłana przez klienta, jeśli jest ona wymagana
-                    do jego obsługi.
-                </li>
-                <li class="article__list-item"><strong>Używanie odpowiednich metod</strong>:
-                    <ul class="article__list">
-                        <li class="article__list-item"><strong>GET</strong> - pobiera określony zasób na podstawie
-                            podanego indentyfikatora.</li>
-                        <li class="article__list-item"><strong>POST</strong> - tworzy nowy zasób; może służyć do
-                            pobierania danych w przypadku, kiedy w ramach <i>body</i> trzeba dostarczyć dodatkowe
-                            parametry; jest wykorzystywany do wszystkich innych operacji, które nie wpisują się w ramy
-                            innych metod.</li>
-                        <li class="article__list-item"><strong>PUT</strong> - aktualizuje określony zasób na podstawie
-                            podanego identyfikatora; może służyć do tworzenia nowego zasobu, jeżeli jego identyfikator
-                            jest znany.</li>
-                        <li class="article__list-item"><strong>PATCH</strong> - aktualizuje część określonego zasobu.
-                        </li>
-                        <li class="article__list-item"><strong>DELETE</strong> - usuwa określony zasób na podstawie
-                            podanego indentyfikatora.</li>
-                    </ul>
-                </li>
-                <li class="article__list-item"><strong>Metoda oraz ścieżka</strong> powinny opisywać działanie na
-                    konkretnym zasobie, np. <i>PATCH/PUT /base</i> zamiast <i>/set-base</i>.</li>
-                <li class="article__list-item"><strong>Możliwości <i>HTTP</i></strong> powinny być wykorzystane
-                    poprawnie, np. w przypadku błędu użytkownika, należy zwrócić kod 400.</li>
-                <li class="article__list-item"><strong>Korzystanie z nazw kolekcji</strong> - każda ścieżka powinna
-                    rozpoczynać się od takiej nazwy, np. <i>car</i> (lub <i>cars</i>) w przypadku samochodów.</li>
-            </ul>
-            <p class="article__text">Przykłady poprawnych ścieżek w <i>REST API</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>GET /user</strong> - odczyt listy użytkowników.</li>
-                <li class="article__list-item"><strong>GET /user/123</strong> - odczyt użytkownika o <i>id</i> 123.</li>
-                <li class="article__list-item"><strong>POST /user</strong> - dodanie użytkownika.</li>
-                <li class="article__list-item"><strong>PUT/PATCH /user/123</strong> - zastąpienie/nadpisanie/zmiana
-                    użytkownika o <i>id</i> 123.</li>
-                <li class="article__list-item"><strong>DELETE /user/123</strong> - usunięcie użytkownika o <i>id</i>
-                    123.</li>
-            </ul>
-            <p class="article__text">Wskazówki przydatne podczas tworzenia walidacji dla <i>CRUD</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Implementacja walidacji w klasie pojedynczego rekordu.</li>
-                <li class="article__list-item">Obsługa błędów z wykorzystaniem słowa kluczowego <i>throw</i> oraz
-                    obiektu typu <i>Error</i>.</li>
-                <li class="article__list-item">Rozszerzenie klasy <i>Error</i> (z wykorzystaniem słowa kluczowego
-                    <i>extends</i>), w celu uniemożliwienia wyświetlenia błędów wewnętrznych. Błąd programistyczny nie
-                    może zostać zwrócony użytkownikowi.
-                </li>
-                <li class="article__list-item">Używanie odpowiednich kodów błędów.</li>
-            </ul>
-        </article>
+          </li>
+          <li class="article__list-item">
+            <strong>Metoda oraz ścieżka</strong> powinny opisywać działanie na konkretnym zasobie, np. <i>PATCH/PUT /base</i> zamiast <i>/set-base</i>.
+          </li>
+          <li class="article__list-item">
+            <strong>Możliwości <i>HTTP</i></strong> powinny być wykorzystane poprawnie, np. w przypadku błędu użytkownika, należy zwrócić kod 400.
+          </li>
+          <li class="article__list-item">
+            <strong>Korzystanie z nazw kolekcji</strong> - każda ścieżka powinna rozpoczynać się od takiej nazwy, np. <i>car</i> (lub <i>cars</i>) w przypadku
+            samochodów.
+          </li>
+        </ul>
+        <p class="article__text">Przykłady poprawnych ścieżek w <i>REST API</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>GET /user</strong> - odczyt listy użytkowników.</li>
+          <li class="article__list-item"><strong>GET /user/123</strong> - odczyt użytkownika o <i>id</i> 123.</li>
+          <li class="article__list-item"><strong>POST /user</strong> - dodanie użytkownika.</li>
+          <li class="article__list-item"><strong>PUT/PATCH /user/123</strong> - zastąpienie/nadpisanie/zmiana użytkownika o <i>id</i> 123.</li>
+          <li class="article__list-item"><strong>DELETE /user/123</strong> - usunięcie użytkownika o <i>id</i> 123.</li>
+        </ul>
+        <p class="article__text">Wskazówki przydatne podczas tworzenia walidacji dla <i>CRUD</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Implementacja walidacji w klasie pojedynczego rekordu.</li>
+          <li class="article__list-item">Obsługa błędów z wykorzystaniem słowa kluczowego <i>throw</i> oraz obiektu typu <i>Error</i>.</li>
+          <li class="article__list-item">
+            Rozszerzenie klasy <i>Error</i> (z wykorzystaniem słowa kluczowego <i>extends</i>), w celu uniemożliwienia wyświetlenia błędów wewnętrznych. Błąd
+            programistyczny nie może zostać zwrócony użytkownikowi.
+          </li>
+          <li class="article__list-item">Używanie odpowiednich kodów błędów.</li>
+        </ul>
+      </article>
     </main>
     <footer class="footer">
-        <p class="footer__text">Maciej Ryszka - 2022</p>
+      <p class="footer__text">Maciej Ryszka - 2022</p>
     </footer>
     <script src="../scripts/hamburger-menu.js"></script>
     <script src="../scripts/top-button.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,504 +1,515 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MegaKurs - JavaScript</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="header-navigation">
-            <nav class="hamburger-menu hamburger-menu--js">
-                <ul class="hamburger-menu__list">
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="../index.html">strona główna</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">5: TypeScript</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
-                    </li>
-                    <li class="hamburger-menu__list-item">
-                        <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header-navigation__button header-navigation__button--menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <button class="header-navigation__button header-navigation__button--top">
-                <i class="fas fa-arrow-circle-up"></i>
-            </button>
-            <p class="header-navigation__text">mega kurs javascriptu</p>
+      <nav class="header-navigation">
+        <nav class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="../index.html">strona główna</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./javascript.html">1: JavaScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./nodejs.html">2: Node.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./expressjs.html">3: Express.js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="./databases.html">4: bazy danych</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">5: TypeScript</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">6: Full-stack developer</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="#">7: Node.js advanced</a>
+            </li>
+          </ul>
         </nav>
+        <button class="header-navigation__button header-navigation__button--menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="header-navigation__button header-navigation__button--top">
+          <i class="fas fa-arrow-circle-up"></i>
+        </button>
+        <p class="header-navigation__text">mega kurs javascriptu</p>
+      </nav>
     </header>
     <main class="main theory-main">
-        <h1 class="theory-main__heading">bazy danych</h1>
-        <nav class="theory-main__links">
-            <a href="#fundaments" class="theory-main__link">fundamenty baz danych</a>
-            <span class="theory-main__text">•</span>
-            <a href="#relational-basics" class="theory-main__link">relacyjne bazy danych - podstawy</a>
-            <span class="theory-main__text">•</span>
-            <a href="#relational-concepts" class="theory-main__link">relacyjne bazy danych - pojęcia</a>
-            <span class="theory-main__text">•</span>
-            <a href="#sql" class="theory-main__link">sql</a>
-            <span class="theory-main__text">•</span>
-            <a href="#databases-in-code" class="theory-main__link">bazy danych w kodzie</a>
-            <span class="theory-main__text">•</span>
-        </nav>
-        <div class="theory-main__image"></div>
-        <article id="fundaments" class="article">
-            <h2 class="article__heading">fundamenty baz danych</h2>
-            <p class="article__text">Bazy danych to miejsca do stałego przechowywania danych. Umożliwiają łatwe
-                zarządzanie informacjami: dodawanie, pobieranie, aktualizowanie, usuwanie. Bazy danych posiadają
-                zazwyczaj serwer bazodanowy z którym łączy się klient (np. <i>phpMyAdmin</i>, <i>Heidi</i> lub inna
-                aplikacja). Aplikacja będąca serwerem webowym (dla którego klientem jest np. przeglądarka lub
-                <i>Insomnia</i>), może być jednocześnie klientem dla serwera bazodanowego.
-            </p>
-            <p class="article__text">Zalety baz danych:</p>
+      <h1 class="theory-main__heading">bazy danych</h1>
+      <nav class="theory-main__links">
+        <a href="#fundaments" class="theory-main__link">fundamenty baz danych</a>
+        <span class="theory-main__text">•</span>
+        <a href="#relational-basics" class="theory-main__link">relacyjne bazy danych - podstawy</a>
+        <span class="theory-main__text">•</span>
+        <a href="#relational-concepts" class="theory-main__link">relacyjne bazy danych - pojęcia</a>
+        <span class="theory-main__text">•</span>
+        <a href="#sql" class="theory-main__link">sql</a>
+        <span class="theory-main__text">•</span>
+        <a href="#databases-in-code" class="theory-main__link">bazy danych w kodzie</a>
+        <span class="theory-main__text">•</span>
+      </nav>
+      <div class="theory-main__image"></div>
+      <article id="fundaments" class="article">
+        <h2 class="article__heading">fundamenty baz danych</h2>
+        <p class="article__text">
+          Bazy danych to miejsca do stałego przechowywania danych. Umożliwiają łatwe zarządzanie informacjami: dodawanie, pobieranie, aktualizowanie, usuwanie.
+          Bazy danych posiadają zazwyczaj serwer bazodanowy z którym łączy się klient (np. <i>phpMyAdmin</i>, <i>Heidi</i> lub inna aplikacja). Aplikacja będąca
+          serwerem webowym (dla którego klientem jest np. przeglądarka lub <i>Insomnia</i>), może być jednocześnie klientem dla serwera bazodanowego.
+        </p>
+        <p class="article__text">Zalety baz danych:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Przechowywanie danych na stałe (mogą przechowywać biliony informacji gromadzonych w petabajtach).</li>
+          <li class="article__list-item">Wyszukiwanie danych (mogą przeszukiwać miliony elementów w ułamkach sekundy).</li>
+          <li class="article__list-item">Wysoka przepustowość (mogą obsługiwać miliony klientów jednocześnie).</li>
+        </ul>
+      </article>
+      <article id="relational-basics" class="article">
+        <h2 class="article__heading">relacyjne bazy danych - podstawy</h2>
+        <p class="article__text">
+          Relacyjne bazy danych przechowują dane w postaci tabel, które mogą być ze sobą powiązane (np. użytkownik może posiadać jeden lub więcej adresów
+          wysyłki).
+        </p>
+        <p class="article__text">
+          <strong>SQL</strong> to najczęściej wykorzystywany język podczas pracy z relacyjnymi bazami danych. Posiada wiele dialektów, w zależności od bazy
+          danych która z niego korzysta.
+        </p>
+        <p class="article__text">
+          <strong>Relational Database Management System (RDBMS)</strong> to system zarządzania relacyjnymi bazami danych. Najpopularniejszym z nich jest
+          <strong>MySQL</strong>, który nadaje się zarówno do małych projektów jak i do dużych serwisów. Popularną odmianą <i>MySQL</i> jest
+          <strong>MariaDB</strong>. Przykłady innych baz: <i>Oracle Database</i>, <i>Microsoft SQL Server</i>, <i>PostgreSQL</i>.
+        </p>
+        <p class="article__text">Sposoby instalacji <i>MySQL</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Na systemie <i>Windows</i> instalacja odbywa się poprzez zainstalowanie całego pakietu <strong>Xampp</strong> (który zawiera <i>Apache</i>,
+            <i>MariaDB</i>, <i>PHP</i> oraz <i>Perl</i>). Pakiet <i>XAMPP</i> znajduje się pod linkiem
+            <a class="article__link" href="https://www.apachefriends.org/">apachefriends.org</a>.
+          </li>
+          <li class="article__list-item">
+            Na systemie <i>OS X</i> instalacja odbywa się poprzez użycie gotowej, darmowej paczki <strong>MAMP</strong>, która znajduje się pod linkiem
+            <a class="article__link" href="https://www.mamp.info/">mamp.info</a>.
+          </li>
+          <li class="article__list-item">
+            Na systemie <i>Linux</i> instalacja odbywa się poprzez użycie paczki z oficjalnego repozytorium: <i>APT</i>, <i>Yum</i> lub <i>SUSE</i>. Opis
+            znajduje się pod linkiem <a class="article__link" href="https://dev.mysql.com/downloads/">dev.mysql.com/downloads</a>. Zainstalowany zostanie
+            jedynie serwer baz danych bez dodatków.
+          </li>
+        </ul>
+        <p class="article__text">Narzędzia umożliwiające zarządzanie bazami danych:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Oficjalny klient <i>MySQL</i>.</li>
+          <li class="article__list-item">
+            <strong>phpMyAdmin</strong> - udostępniany przez gotowe paczki (np. <i>XAMPP</i>, <i>MAMP</i>). Po instalacji i uruchomieniu, dostęp do narzędzia
+            najprawdopodobniej znajduje się pod adresem <a class="article__link" href="http://localhost/phpmyadmin">localhost/phpmyadmin</a>.
+          </li>
+          <li class="article__list-item">
+            <strong>HeidiSQL</strong> - wszechstronne, szybkie i ergonomiczne narzędzie, dostępne do pobrania za darmo pod adresem
+            <a class="article__link" href="https://www.heidisql.com/">heidisql.com</a>. Parametry połączenia z bazą danych:
+          </li>
+          <ul class="article__list">
+            <li class="article__list-item">host: <i>localhost</i>,</li>
+            <li class="article__list-item">port: <i>3306</i>,</li>
+            <li class="article__list-item">nazwa użytkownika: <i>root</i> (domyślnie),</li>
+            <li class="article__list-item">hasło: (domyślnie jest puste).</li>
+          </ul>
+        </ul>
+        <p class="article__test">Trzy ważne zasady podczas doboru odpowiedniego kodowania:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">Ustawienie takiego samego kodowaia w każdym parametrze, jeśli jest to tylko możliwe.</li>
+          <li class="article__list-item">Ustawienie kodowania o takim samym początku nazwy, jeśli ustawienie identycznego nie jest możliwe.</li>
+          <li class="article__list-item">Użycie kodowania <strong>utf8mb4_unicode_ci</strong>.</li>
+        </ol>
+        <p class="article__test">Kodowanie <i>utf8mb4_unicode_ci</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>utf8mb4</strong> - jest to poprawna implementacja <i>UTF8</i>, która używa 1-4 bajtów na znak.</li>
+          <li class="article__list-item"><strong>unicode</strong> - wskazuje na implementację <i>Unicode</i>.</li>
+          <li class="article__list-item">
+            <strong>ci (case insensitive)</strong> - porównywanie odbywa się bez względu na wielkość liter, co jest zazwyczaj pożądane w bazach danych.
+          </li>
+          <li class="article__list-item">Spacje wokół tekstu są traktowane jako nieistniejące podczas porównania.</li>
+        </ul>
+      </article>
+      <article id="relational-concepts" class="article">
+        <h2 class="article__heading">relacyjne bazy danych - pojęcia</h2>
+        <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik dla arkusza kalkulacyjnego):</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>baza danych</strong> (plik),</li>
+          <li class="article__list-item"><strong>tabela</strong> (arkusz),</li>
+          <li class="article__list-item"><strong>kolumna</strong> (kolumna),</li>
+          <li class="article__list-item"><strong>rekord/encja</strong> (wiersz),</li>
+          <li class="article__list-item"><strong>pole/komórka</strong> (komórka).</li>
+        </ul>
+        <p class="article__text">Pozostałe pojęcia:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>Typ kolumny</strong> - określa jakiego typu dane są przechowywane w kolumnie.</li>
+          <li class="article__list-item">
+            <strong>Indeks</strong> - oznacza dane, po którch często następuje przeszukiwanie. Przyspiesza wyszukiwanie, kosztem większej ilości danych
+            przechowywanych na dysku.
+          </li>
+          <li class="article__list-item">
+            <strong>Klucz główny (primary key)</strong> - specjalny rodzaj indeksu, który zawsze istnieje. Jest unikalnym identyfikatorem rekordu.
+          </li>
+          <li class="article__list-item"><strong>Klucze obce (foreign keys)</strong> - pozwalają na utworzenie relacji pomiędzy tabelami.</li>
+          <li class="article__list-item">
+            <strong>AUTO_INCREMENT</strong> - inkrementuje klucz główny rekordu jeśli jest on liczbowy. Żadna wartość nigdy nie będzie powtórzona (nawet w
+            przypadku usunięcia rekordu).
+          </li>
+          <li class="article__list-item">
+            <strong>NULLABLE</strong> - określa czy wartość pola może przyjąć wartość <i>null</i> (nie można zostawić pustego pola, kiedy jego wartość nie
+            została określona).
+          </li>
+        </ul>
+        <p class="article__text">
+          Użwywa się różnych typów i długości danych. Jeśli długość danych będzie zbyt krótka, baza skróci dane i nie przechowa ich w całości. Jeśli długość
+          danych będzie zbyt długa, baza będzie wolna oraz ze względu na istniejące limity (łącznej liczby znaków ze wszystkich kolumn), nie będzie w stanie
+          przechować wszystkich potrzebnych danych. Ważny jest zatem jak najlepszy dobór długości danych.
+        </p>
+        <p class="article__text">Najważniejsze typy kolumn:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>VARCHAR, CHAR</strong> - przechowują tekst (określenie maksymalnej ilości znaków jest wymagane).</li>
+          <li class="article__list-item">
+            <strong>TEXT, LONGTEXT i inne</strong> - przechowują tekst (określenie maksymalnej ilości znaków nie jest wymagane).
+          </li>
+          <li class="article__list-item">
+            <strong>SMALLINT, INT, BIGINT i inne</strong> - przechowują liczby całkowite (określenie maksymalnej ilości cyfr jest wymagane, lecz przechowana
+            liczba nie może być większa niż zakres danego typu).
+          </li>
+          <li class="article__list-item">
+            <strong>DECIMAL</strong> - przechowuje liczby zmiennoprzecinkowe (wymagane jest określenie precyzji (maksymalnej ilości cyfr ogółem) oraz skali
+            (maksymalnej ilości cyfr po przecinku)).
+          </li>
+          <li class="article__list-item"><strong>DATETIME, DATE, TIME i inne</strong> - przechowują datę, czas, itp.</li>
+        </ul>
+        <p class="article__text">
+          Nie jest możliwa zmiana nazwy bazy danych. Narzędzia do zarządzania bazami danych umożliwiają utworzenie nowej bazy danych z takimi samymi danymi oraz
+          usunięcie starej, lecz operacja ta nie działa dla każdego przypadku.
+        </p>
+      </article>
+      <article id="sql" class="article">
+        <h2 class="article__heading">sql</h2>
+        <p class="article__text">Łańcuchy znaków w <i>SQL</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">nazwy baz, tabel czy kolumn należy pisać wewnątrz grawisów (`),</li>
+          <li class="article__list-item">pozostałe łańcuchy znaków należy pisać wewnątrz apostrofów (') lub cudzysłowów (").</li>
+        </ul>
+        <p class="article__text">Kolejność formułowania kwerend w <i>SQL</i>:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item"><strong>SELECT</strong>,</li>
+          <li class="article__list-item"><strong>FROM</strong>,</li>
+          <li class="article__list-item"><strong>WHERE</strong>,</li>
+          <li class="article__list-item"><strong>GROUP BY</strong>,</li>
+          <li class="article__list-item"><strong>HAVING</strong>,</li>
+          <li class="article__list-item"><strong>ORDER BY</strong>,</li>
+          <li class="article__list-item"><strong>LIMIT</strong>.</li>
+        </ol>
+        <p class="article__text">Kolejność wykonywania kwerend w <i>SQL</i>:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item"><strong>FROM, JOIN</strong> - najpierw serwer musi wiedzieć skąd pobrać dane,</li>
+          <li class="article__list-item"><strong>WHERE</strong> - następnie filtruje dane i bierze tylko te potrzebne,</li>
+          <li class="article__list-item"><strong>GROUP BY</strong> - kolejnym krokiem jest pogrupowanie danych,</li>
+          <li class="article__list-item"><strong>HAVING</strong> - teraz silnik filtruje grupy,</li>
+          <li class="article__list-item"><strong>SELECT</strong> - dopiero w tym kroku wybierane są potrzebne nam dane i wyliczane są funkcje agregujące,</li>
+          <li class="article__list-item"><strong>ORDER BY (ASC/DESC)</strong> - na samym końcu wiersze zostaną posortowane,</li>
+          <li class="article__list-item"><strong>TOP</strong> - i wybrane te w odpowiedniej ilości,</li>
+        </ol>
+        <p class="article__text">Optymalizacja <i>SQL</i> - wskazówki:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Należy unikać pobierania danych ze wszystkich kolumn i wybierać jedynie te wymagane (<i>FROM</i>).</li>
+          <li class="article__list-item">Należy wybierać konkretne dane (<i>WHERE</i>).</li>
+          <li class="article__list-item">
+            Należy wyszukiwać daty, porównując je do łańcucha znaków w formacie
+            <strong>'YYYY-MM-DD hh:mm:ss'</strong>.
+          </li>
+        </ul>
+        <p class="article__text">Operatory <i>SQL</i> dla <i>WHERE</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>=</strong> - równy,</li>
+          <li class="article__list-item"><strong>&lt;&gt;</strong> - różny niż,</li>
+          <li class="article__list-item"><strong>&lt;</strong> - mniejszy niż,</li>
+          <li class="article__list-item"><strong>&gt;</strong> - większy niż,</li>
+          <li class="article__list-item"><strong>&lt;=</strong> - mniejszy lub równy niż,</li>
+          <li class="article__list-item"><strong>&gt;=</strong> - większy lub równy niż,</li>
+          <li class="article__list-item"><strong>IS NULL</strong> - czy ma wartość równą <i>null</i>,</li>
+          <li class="article__list-item"><strong>IS NOT NULL</strong> - czy ma wartość różną niż <i>null</i>,</li>
+          <li class="article__list-item"><strong>OR</strong> - lub,</li>
+          <li class="article__list-item"><strong>AND</strong> - oraz,</li>
+          <li class="article__list-item">
+            <strong>IN()</strong> - pozwala określić kilka wartości (alternatywa dla użytego wielokrotnie operatora <i>OR</i>),
+          </li>
+          <li class="article__list-item">
+            <strong>BETWEEN</strong> - pozwala zastąpić dwa wyrażenia jednocześnie (<strong>&lt;=</strong> oraz <strong>&gt;=</strong>) i ograniczyć zbiór
+            obustronnie (wartości graniczne należy oddzielić słowem kluczowym <i>AND</i>),
+          </li>
+          <li class="article__list-item">
+            <strong>LIKE</strong> - pozwala wyszukać określony wzorzec w kolumnie:
             <ul class="article__list">
-                <li class="article__list-item">Przechowywanie danych na stałe (mogą przechowywać biliony informacji
-                    gromadzonych w petabajtach).</li>
-                <li class="article__list-item">Wyszukiwanie danych (mogą przeszukiwać miliony elementów w ułamkach
-                    sekundy).</li>
-                <li class="article__list-item">Wysoka przepustowość (mogą obsługiwać miliony klientów jednocześnie).
-                </li>
+              <li class="article__list-item"><strong>%</strong> - reprezentuje zero, jeden lub wiele znaków,</li>
+              <li class="article__list-item"><strong>_</strong> - reprezentuje jeden, pojedynczy znak.</li>
             </ul>
-        </article>
-        <article id="relational-basics" class="article">
-            <h2 class="article__heading">relacyjne bazy danych - podstawy</h2>
-            <p class="article__text">Relacyjne bazy danych przechowują dane w postaci tabel, które mogą być ze sobą
-                powiązane (np. użytkownik może posiadać jeden lub więcej adresów wysyłki).</p>
-            <p class="article__text"><strong>SQL</strong> to najczęściej wykorzystywany język podczas pracy z
-                relacyjnymi bazami danych. Posiada wiele dialektów, w zależności od bazy danych która z niego korzysta.
-            </p>
-            <p class="article__text"><strong>Relational Database Management System (RDBMS)</strong> to system
-                zarządzania relacyjnymi bazami danych. Najpopularniejszym z nich jest <strong>MySQL</strong>, który
-                nadaje się zarówno do małych projektów jak i do dużych serwisów. Popularną odmianą <i>MySQL</i> jest
-                <strong>MariaDB</strong>. Przykłady innych baz: <i>Oracle Database</i>, <i>Microsoft SQL
-                    Server</i>, <i>PostgreSQL</i>.
-            </p>
-            <p class="article__text">Sposoby instalacji <i>MySQL</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Na systemie <i>Windows</i> instalacja odbywa się poprzez zainstalowanie
-                    całego pakietu <strong>Xampp</strong> (który zawiera <i>Apache</i>, <i>MariaDB</i>, <i>PHP</i> oraz
-                    <i>Perl</i>). Pakiet <i>XAMPP</i> znajduje się pod linkiem <a class="article__link"
-                        href="https://www.apachefriends.org/">apachefriends.org</a>.
-                </li>
-                <li class="article__list-item">Na systemia <i>OS X</i> instalacja odbywa się poprzez użycie gotowej,
-                    darmowej paczki <strong>MAMP</strong>, która znajduje się pod linkiem <a class="article__link"
-                        href="https://www.mamp.info/">mamp.info</a>.</li>
-                <li class="article__list-item">Na systemia <i>Linux</i> instalacja odbywa się poprzez użycie paczki z
-                    oficjalnego repozytorium: <i>APT</i>, <i>Yum</i> lub <i>SUSE</i>. Opis znajduje się pod linkiem <a
-                        class="article__link" href="https://dev.mysql.com/downloads/">dev.mysql.com/downloads</a>.
-                    Zainstalowany zostanie jedynie serwer baz danych bez dodatków.</li>
-            </ul>
-            <p class="article__text">Narzędzia umożliwiające zarządzanie bazami danych:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Oficjalny klient <i>MySQL</i>.</li>
-                <li class="article__list-item"><strong>phpMyAdmin</strong> - udostępniany przez gotowe paczki (np.
-                    <i>XAMPP</i>, <i>MAMP</i>). Po instalacji i uruchomieniu, dostęp do narzędzia najprawdopodobniej
-                    znajduje się pod adresem <a class="article__link"
-                        href="http://localhost/phpmyadmin">localhost/phpmyadmin</a>.
-                </li>
-                <li class="article__list-item"><strong>HeidiSQL</strong> - wszechstronne, szybkie i ergonomiczne
-                    narzędzie, dostępne do pobrania za darmo pod adresem <a class="article__link"
-                        href="https://www.heidisql.com/">heidisql.com</a>. Parametry połączenia z bazą danych:</li>
-                <ul class="article__list">
-                    <li class="article__list-item">host: <i>localhost</i>,</li>
-                    <li class="article__list-item">port: <i>3306</i>,</li>
-                    <li class="article__list-item">nazwa użytkownika: <i>root</i> (domyślnie),</li>
-                    <li class="article__list-item">hasło: (domyślnie jest puste).</li>
-                </ul>
-            </ul>
-            <p class="article__test">Trzy ważne zasady podczas doboru odpowiedniego kodowania:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item">Ustawienie takiego samego kodowaia w każdym parametrze, jeśli jest to
-                    tylko możliwe.</li>
-                <li class="article__list-item">Ustawienie kodowania o takim samym początku nazwy, jeśli ustawienie
-                    identycznego nie jest możliwe.</li>
-                <li class="article__list-item">Użycie kodowania <strong>utf8mb4_unicode_ci</strong>.</li>
-            </ol>
-            <p class="article__test">Kodowanie <i>utf8mb4_unicode_ci</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>utf8mb4</strong> - jest to poprawna implementacja <i>UTF8</i>,
-                    która używa 1-4 bajtów na znak.</li>
-                <li class="article__list-item"><strong>unicode</strong> - wskazuje na implementację <i>Unicode</i>.</li>
-                <li class="article__list-item"><strong>ci (case insensitive)</strong> - porównywanie odbywa się bez
-                    względu na wielkość liter, co jest zazwyczaj pożądane w bazach danych.</li>
-                <li class="article__list-item">Spacje wokół tekstu są traktowane jako nieistniejące podczas porównania.
-                </li>
-            </ul>
-        </article>
-        <article id="relational-concepts" class="article">
-            <h2 class="article__heading">relacyjne bazy danych - pojęcia</h2>
-            <p class="article__text">Podstawowe pojęcia dotyczące relacyjnych baz danych (w nawiasie podano odpowiednik
-                dla arkusza kalkulacyjnego):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>baza danych</strong> (plik),</li>
-                <li class="article__list-item"><strong>tabela</strong> (arkusz),</li>
-                <li class="article__list-item"><strong>kolumna</strong> (kolumna),</li>
-                <li class="article__list-item"><strong>rekord/encja</strong> (wiersz),</li>
-                <li class="article__list-item"><strong>pole/komórka</strong> (komórka).</li>
-            </ul>
-            <p class="article__text">Pozostałe pojęcia:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>Typ kolumny</strong> - określa jakiego typu dane są przechowywane
-                    w kolumnie.</li>
-                <li class="article__list-item"><strong>Indeks</strong> - oznacza dane, po którch często następuje
-                    przeszukiwanie. Przyspiesza wyszukiwanie, kosztem większej ilości danych przechowywanych na dysku.
-                </li>
-                <li class="article__list-item"><strong>Klucz główny (primary key)</strong> - specjalny rodzaj indeksu,
-                    który zawsze istnieje. Jest unikalnym identyfikatorem rekordu.</li>
-                <li class="article__list-item"><strong>Klucze obce (foreign keys)</strong> - pozwalają na utworzenie
-                    relacji pomiędzy tabelami.</li>
-                <li class="article__list-item"><strong>AUTO_INCREMENT</strong> - inkrementuje klucz główny rekordu jeśli
-                    jest on liczbowy. Żadna wartość nigdy nie będzie powtórzona (nawet w przypadku usunięcia rekordu).
-                </li>
-                <li class="article__list-item"><strong>NULLABLE</strong> - określa czy wartość pola może przyjąć wartość
-                    <i>null</i> (nie można zostawić pustego pola, kiedy jego wartość nie została określona).
-                </li>
-            </ul>
-            <p class="article__text">Użwywa się różnych typów i długości danych. Jeśli długość danych będzie zbyt
-                krótka, baza skróci dane i nie przechowa ich w całości. Jeśli długość danych będzie zbyt długa, baza
-                będzie wolna oraz ze względu na istniejące limity (łącznej liczby znaków ze wszystkich kolumn), nie
-                będzie w stanie przechować wszystkich potrzebnych danych. Ważny jest zatem jak najlepszy dobór długości
-                danych.</p>
-            <p class="article__text">Najważniejsze typy kolumn:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>VARCHAR, CHAR</strong> - przechowują tekst (określenie
-                    maksymalnej ilości znaków jest wymagane).</li>
-                <li class="article__list-item"><strong>TEXT, LONGTEXT i inne</strong> - przechowują tekst (określenie
-                    maksymalnej ilości znaków nie jest wymagane).</li>
-                <li class="article__list-item"><strong>SMALLINT, INT, BIGINT i inne</strong> - przechowują liczby
-                    całkowite (określenie maksymalnej ilości cyfr jest wymagane, lecz przechowana liczba nie może być
-                    większa niż zakres danego typu).</li>
-                <li class="article__list-item"><strong>DECIMAL</strong> - przechowuje liczby zmiennoprzecinkowe
-                    (wymagane jest określenie precyzji (maksymalnej ilości cyfr ogółem) oraz skali (maksymalnej ilości
-                    cyfr po przecinku)).</li>
-                <li class="article__list-item"><strong>DATETIME, DATE, TIME i inne</strong> - przechowują datę, czas,
-                    itp.</li>
-            </ul>
-            <p class="article__text">Nie jest możliwa zmiana nazwy bazy danych. Narzędzia do zarządzania bazami danych
-                umożliwiają utworzenie nowej bazy danych z takimi samymi danymi oraz usunięcie starej, lecz operacja ta
-                nie działa dla każdego przypadku.</p>
-        </article>
-        <article id="sql" class="article">
-            <h2 class="article__heading">sql</h2>
-            <p class="article__text">Łańcuchy znaków w <i>SQL</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">nazwy baz, tabel czy kolumn należy pisać wewnątrz grawisów (`),</li>
-                <li class="article__list-item">pozostałe łańcuchy znaków należy pisać wewnątrz apostrofów (') lub
-                    cudzysłowów (").</li>
-            </ul>
-            <p class="article__text">Kolejność formułowania kwerend w <i>SQL</i>:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item"><strong>SELECT</strong>,</li>
-                <li class="article__list-item"><strong>FROM</strong>,</li>
-                <li class="article__list-item"><strong>WHERE</strong>,</li>
-                <li class="article__list-item"><strong>GROUP BY</strong>,</li>
-                <li class="article__list-item"><strong>HAVING</strong>,</li>
-                <li class="article__list-item"><strong>ORDER BY</strong>,</li>
-                <li class="article__list-item"><strong>LIMIT</strong>.</li>
-            </ol>
-            <p class="article__text">Kolejność wykonywania kwerend w <i>SQL</i>:</p>
-            <ol class="article__list article__list--ordered">
-                <li class="article__list-item"><strong>FROM, JOIN</strong> - najpierw serwer musi wiedzieć skąd pobrać
-                    dane,</li>
-                <li class="article__list-item"><strong>WHERE</strong> - następnie filtruje dane i bierze tylko te
-                    potrzebne,</li>
-                <li class="article__list-item"><strong>GROUP BY</strong> - kolejnym krokiem jest pogrupowanie danych,
-                </li>
-                <li class="article__list-item"><strong>HAVING</strong> - teraz silnik filtruje grupy,</li>
-                <li class="article__list-item"><strong>SELECT</strong> - dopiero w tym kroku wybierane są potrzebne nam
-                    dane i wyliczane są funkcje agregujące,</li>
-                <li class="article__list-item"><strong>ORDER BY (ASC/DESC)</strong> - na samym końcu wiersze zostaną
-                    posortowane,
-                </li>
-                <li class="article__list-item"><strong>TOP</strong> - i wybrane te w odpowiedniej ilości,</li>
-            </ol>
-            <p class="article__text">Optymalizacja <i>SQL</i> - wskazówki:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Należy unikać pobierania danych ze wszystkich kolumn i wybierać jedynie
-                    te wymagane (<i>FROM</i>).</li>
-                <li class="article__list-item">Należy wybierać konkretne dane (<i>WHERE</i>).</li>
-                <li class="article__list-item">Należy wyszukiwać daty, porównując je do łańcucha znaków w formacie
-                    <strong>'YYYY-MM-DD hh:mm:ss'</strong>.
-                </li>
-            </ul>
-            <p class="article__text">Operatory <i>SQL</i> dla <i>WHERE</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>=</strong> - równy,</li>
-                <li class="article__list-item"><strong>&lt;&gt;</strong> - różny niż,</li>
-                <li class="article__list-item"><strong>&lt;</strong> - mniejszy niż,</li>
-                <li class="article__list-item"><strong>&gt;</strong> - większy niż,</li>
-                <li class="article__list-item"><strong>&lt;=</strong> - mniejszy lub równy niż,</li>
-                <li class="article__list-item"><strong>&gt;=</strong> - większy lub równy niż,</li>
-                <li class="article__list-item"><strong>IS NULL</strong> - czy ma wartość równą <i>null</i>,</li>
-                <li class="article__list-item"><strong>IS NOT NULL</strong> - czy ma wartość różną niż <i>null</i>,</li>
-                <li class="article__list-item"><strong>OR</strong> - lub,</li>
-                <li class="article__list-item"><strong>AND</strong> - oraz,</li>
-                <li class="article__list-item"><strong>IN()</strong> - pozwala określić kilka wartości (alternatywa dla
-                    użytego wielokrotnie operatora <i>OR</i>),</li>
-                <li class="article__list-item"><strong>BETWEEN</strong> - pozwala zastąpić dwa wyrażenia jednocześnie
-                    (<strong>&lt;=</strong> oraz <strong>&gt;=</strong>) i ograniczyć zbiór obustronnie (wartości
-                    graniczne należy oddzielić słowem kluczowym <i>AND</i>),
-                </li>
-                <li class="article__list-item"><strong>LIKE</strong> - pozwala wyszukać określony wzorzec w kolumnie:
-                    <ul class="article__list">
-                        <li class="article__list-item"><strong>%</strong> - reprezentuje zero, jeden lub wiele znaków,
-                        </li>
-                        <li class="article__list-item"><strong>_</strong> - reprezentuje jeden, pojedynczy znak.</li>
-                    </ul>
-                </li>
-                <li class="article__list-item"><strong>()</strong> - pozwalają kontrolować pierwszeństwo wyrażeń.
-            </ul>
-            <p class="article__text">Ograniczenie liczby wyników odbywa się z pomocą <i>LIMIT</i>. Jeśli podany zostanie
-                jeden argument, określi on liczbę wyników jakie zostaną zwrócone. Jeśli zostaną podane dwa argumenty,
-                pierwszy z nich określi po którym z kolei elemencie rozpocząć wyświetlanie (liczone od 0), a drugi z
-                nich określi liczbę wyników jakie zostaną zwrócone.</p>
-            <p class="article__text">Alias nadaje tabeli lub kolumnie tymczasową (najczęściej skróconą) nazwę. Po pełnej
-                nazwie należy użyć słowa kluczowego <i>AS</i>, a po nim zapisać nazwę skróconą. W kolejnej części
-                kwerendy możliwe jest korzystanie ze skróconej nazwy.</p>
-            <p class="article__text"><strong>Funkcje agregujące</strong> zwracają podsumowania dla całej tabeli, grupy
-                wierszy w tabeli lub zbioru wynikowego. Przykłady:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>AVG(columnName)</strong> - zwraca wartość średnią,</li>
-                <li class="article__list-item"><strong>COUNT(*)</strong> - zwraca liczbę wybranych wierszy,</li>
-                <li class="article__list-item"><strong>COUNT(columnName)</strong> - zwraca liczbę wierszy w zbiorze,
-                </li>
-                <li class="article__list-item"><strong>MAX(columnName)</strong> - zwraca największą wartość w zbiorze,
-                </li>
-                <li class="article__list-item"><strong>MIN(columnName)</strong> - zwraca najmniejszą wartość w zbiorze,
-                </li>
-                <li class="article__list-item"><strong>SUM(columnName)</strong> - zwraca sumę kolumn ze zbioru wierszy.
-                </li>
-            </ul>
-            <p class="article__text">Wstawianie danych do tabeli odbywa się z użyciem <i>INSERT INTO</i> (można wstawić
-                kilka rekordów jedocześnie, odzielając kolejne nawiasy z wartościami pól przecinkiem):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>INSERT INTO `tableName` (column1, column2, column3, ...) VALUES
-                        (value1, value2, value3, ...)</strong> - jeśli dodawane są wartośći dla wybranych kolumn, należy
-                    podać nazwy tych kolumn w kwerendzie,</li>
-                <li class="article__list-item"><strong>INSERT INTO `tableName` VALUES (value1, value2, value3,
-                        ...)</strong> - jeśli dodawane są wartości dla wszystkich kolumn tabeli, można pominąć nazwy
-                    kolumn w kwerendzie, lecz należy pamiętać o takiej samej kolejności podawania danych jak kolejność
-                    kolumn w tabeli.</li>
-            </ul>
-            <p class="article__text">Najczęstsze rodzaje aktualizacji i usuwania danych:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Po <i>id</i> - bezpieczne,</li>
-                <li class="article__list-item">Po danych - wymaga ostrożności,</li>
-                <li class="article__list-item">Bez klauzuli <i>WHERE</i> - niebezpieczne.</li>
-            </ul>
-            <p class="article__text">Podczas aktualizacji lub usuwania danych należy pamiętać o klauzuli <i>WHERE</i>
-                (bez niej wszystkie rekordy zostaną zaktualizowane/usunięte):</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>UPDATE `tableName` SET column1 = value1, column2 = value2, ...
-                        WHERE condition</strong> - aktualizuje rekord w danej tabeli,</li>
-                <li class="article__list-item"><strong>DELETE FROM `tableName` WHERE condition</strong> - usuwa rekord z
-                    danej tabeli.</li>
-            </ul>
-            <p class="article__text"><i>Id</i> generowane automatycznie z wykorzystaniem <i>AUTO_INCREMENT</i> są
-                problematyczne, ponieważ są przewidywalne. Rozwiązaniem jest użycie wbudowanej funkcji <i>UUID</i>
-                zamiast kolejnych liczb. Jako typ danych należy wybrać <i>VARCHAR</i> o długości 36 znaków, a jako
-                domyślną wartość - wyrażenie <i>UUID()</i>.
-            </p>
-            <p class="article__text">Możliwe jest ustawienie aktualnej daty i czasu (np. aby posortować rekordy od
-                najwcześniej dodanego). Należy utworzyć kolumnę przechowującą takie dane i jako typ wybrać
-                <i>DATETIME</i>, a jako domyślną wartość - wyrażenie <i>CURRENT_TIMESTAMP()</i>.
-            </p>
-            <p class="article__text"><strong>Relacja</strong> to powiązanie ze sobą dwóch tabel. Rodzaje relacji:</p>
-            <ul class="article__list">
-                <li class="article__list-item">jeden do jednego,</li>
-                <li class="article__list-item">jeden do wielu (a po drugiej stronie - wiele do jednego),</li>
-                <li class="article__list-item">wiele do wielu (wymaga tabeli pośredniej).</li>
-            </ul>
-            <p class="article__text"><strong>Unified Modeling Language (UML)</strong> to półNformalny język
-                wykorzystywany do modelowania różnego rodzaju systemów. Aplikacja pozwalająca stworzyć <i>UML</i> to <a
-                    class="article__link" href="https://www.drawio.com/">drawio.com</a>. W <i>phpMyAdmin</i> możliwe
-                jest tworzenie <i>UML</i> w narzędziu <i>Designer</i> (należy je otworzyć z poziomu widoku bazy danych).
-            </p>
-            <p class="article__text">Tworzenie relacji między tabelami:</p>
-            <ol class="article__list article__list--ordered">
-                <li class=" article__list-item">Utworzenie kolumny w tabeli (o nazwie będącej połączeniem nazwy tabeli
-                    referencyjnej oraz nazwy jej klucza głównego).</li>
-                <li class="article__list-item">Nadanie utworzonej kolumnie identycznego typu danych i długości, jakie ma
-                    kolumna w tabeli referencyjnej.</li>
-                <li class="article__list-item">Pozwolenie na przyjęcie wartości <i>null</i> przez kolumnę.</li>
-                <li class="article__list-item">Utworzenie klucza obcego.</li>
-                <li class="article__list-item">Przypisanie do utworzonego klucza: utworzonej kolumny, referencyjnej
-                    tabeli oraz referencyjnej kolumny z tej tabeli.</li>
-            </ol>
-            <p class="article__text">Relacja utworzona powyższym sposobem jest typu "jeden do wielu". Aby utworzyć
-                relację typu "jeden do jednego", należy powtórzyć wymienione czynności w drugą stronę (utworzyć nową
-                kolumnę w tabeli, będącej poprzednio tabelą referencyjną).</p>
-            <p class="article__text">
-                Aby utworzyć relację typu "wiele do wielu", należy utworzyć tabelę pośrednią (o nazwie będącej
-                oddzielonymi podkreślnikiem nazwami obu tabel, między którymi wystąpi relacja). Klucz główny w takiej
-                tabeli może być generowany z wykorzystaniem <i>AUTO_INCREMENT</i>, ponieważ nie będzie nigdzie
-                wykorzystywany. Utworzoną tabelę pośrednią należy połączyć (zgodnie z powyższymi krokami) relacjami typu
-                "jeden do wielu" z obiema tabelami, pomiędzy którymi tworzona jest relacja "wiele do wielu".
-            </p>
-            <p class="article__text">
-                Łączenie wierszy z dwóch lub więcej tabel na podstawie powiązanej między nimi kolumny, odbywa się z
-                wykorzystaniem klauzuli <i>JOIN</i> (lewa tabela, to wymieniona w kwerendzie przed słowem kluczowym
-                <i>JOIN</i>, prawa tabela, to wymieniona w kwerendzie po słowie kluczowym <i>JOIN</i>). Przy każdym
-                takim połączeniu należy po słowie kluczowym <i>ON</i>, określić kolumny łączącą obie tabele:
-                <strong>SELECT * FROM `table1` JOIN `table2` ON `table1`.`column1` = `table2`.`column2`</strong>.
-            </p>
-            <p class="article__text">Rodzaje połączeń pomiędzy tabelami:</p>
-            <ul class="article__list">
-                <li class="article__list-item"><strong>(INNER) JOIN</strong> - zwraca rekordy, które występują w obu
-                    tabelach,</li>
-                <li class="article__list-item"><strong>LEFT (OUTER) JOIN</strong> - zwraca rekordy, które występują w
-                    lewej tabeli (wraz z rekordami z prawej tabeli, które wystąpiły jednocześnie w lewej tabeli),</li>
-                <li class="article__list-item"><strong>RIGHT (OUTER) JOIN</strong> - zwraca rekordy, które występują w
-                    prawej tabeli (wraz z rekordami z lewej tabeli, które wystąpiły jednocześnie w prawej tabeli),</li>
-                <li class="article__list-item"><strong>FULL (OUTER) JOIN</strong> - zwraca rekordy, które wysąpiły w
-                    lewej lub prawej tabeli.</li>
-            </ul>
-            <p class="article__text">W przypadku wyszukiwania danych z wielu tabel, nazwę kolumny należy poprzedzić
-                nazwą tabeli oraz kropką. Uniemożliwi to ewentualny konflikt nazw: <strong>SELECT `table1`.`columnName`,
-                    `table2`.`columnName` </strong>.</p>
-        </article>
-        <article id="databases-in-code" class="article">
-            <h2 class="article__heading">bazy danych w kodzie</h2>
-            <p class="article__text">Paczka umożliwiająca korzystanie z baz danych w kodzie to <a class="article__link"
-                    href="https://www.npmjs.com/package/mysql2">mysql2</a>. Dostępna jest także w wersji używającej
-                obiektów typu <i>promise</i>. Paczka w tej wersji charakteryzuje się dużą szybkością działania oraz
-                szerokim zakresem oferowanych możliwości. Jej pobranie możliwe jest za pośrednictwem menadżera
-                <i>npm</i>.
-            </p>
-            <p class="article__text">Sposób pracy z bazą danych w kodzie:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Import wersji używającej obiektów typu <i>promise</i>:<br>
-                    <strong>const mysql = require('mysql2/promise');</strong>
-                </li><br>
-                <li class="article__list-item">Uwtorzenie połączenia z bazą danych:<br>
-                    <strong>(async () => {<br>
-                        &emsp;const conn = await mysql.createConnection({<br>
-                        &emsp;&emsp;host: 'localhost',<br>
-                        &emsp;&emsp;user: 'root',<br>
-                        &emsp;&emsp;password: '',<br>
-                        &emsp;&emsp;database: 'test',<br>
-                        &emsp;&emsp;decimalNumbers: true,<br>
-                        &emsp;&emsp;namedPlaceholders: true,<br>
-                        &emsp;});<br>
-                        })();</strong>
-                </li><br>
-                <li class="article__list-item">Wykonanie kwerendy <i>SQL</i> zawierającej instrukcję <i>SELECT</i>
-                    (wykonano destrukturyzację, ponieważ funkcja <i>execute</i> dla takiej kwerendy zwraca tablicę dwóch
-                    tablic, z których pierwsza zawiera właściwe rekordy, a druga informacje o kolumnach):<br>
-                    <strong>const [results] = await conn.execute('SELECT * FROM `table`;');</strong>
-                </li><br>
-                <li class="article__list-item">Wykonanie kwerend <i>SQL</i> zawierających instrukcje <i>UPDATE</i>,
-                    <i>DELETE</i> lub <i>INSERT</i> (funkcja <i>execute</i> dla takich kwerend zwraca pojedynczy obiekt,
-                    zawierający informacje dotyczące aktualizacji, usunięcia lub wstawienia rekordu):<br><strong>const
-                        { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = "X" WHERE `id` =
-                        1;'))[0];</strong><br>
-                    <strong>const { insertId } = (await conn.execute('INSERT INTO `table` VALUES(NULL, 1,
-                        "X")'))[0];</strong>
-                </li><br>
-            </ul>
-            <p class="article__text">Domyślnie liczby zmiennoprzecinkowe odczytywane są z bazy danych jako łańcuchy
-                znaków. Aby odczytać je jako liczby, należy podczas tworzenia połączenia z bazą danych ustawić
-                właściwość <i>decimalNumbers</i> jako <i>true</i>. Jednak w przypadku wielu miejsc po przecinku, należy
-                upewnić się ,czy dokładność nie została utracona.
-            </p>
-            <p class="article__text">W przypadku pracy z bazami danych nie należy używać narzędzi automatycznie
-                uruchamiających projekt (np. <i>nodemon</i>), ponieważ możliwa jest niepożądana modyfikacja lub
-                usunięcie elementów bazy danych.</p>
-            <p class="article__text">Należy uważać na <strong>SQL Injection</strong>, czyli jeden z najpoważniejszych
-                błędów bezpieczeństwa w IT. Nie wolno w sposób bezpośredni wykorzystywać danych wprowadzonych przez
-                użytkownika do tworzenia zapytań. Należy również używać funkcji <i>execute</i> zamiast <i>query</i> do
-                wykonywania kwerend a także upewnić się podczas konfigurowania połączenia z bazą danych, że właściwość
-                <i>multipleStatements</i> nie została włączona (domyślnie jest wyłączona).
-            </p>
-            <p class="article__text">Bezpieczne oraz szybsze wykonywanie zapytań z wykorzystaniem danych wprowadzonych
-                przez użytkownika odbywa się dzięki funkcjonalności <strong>prepared statements</strong>. Pozwala ona
-                również na wielokrotne używanie tych danych. Dzięki <i>prepared statements</i> wprowadzone dane są
-                interpretowane jedynie jako zmienne i nigdy nie zostaną zinterpretowane jako kwerenda.</p>
-            <p class="article__text">Przykłady użycia <i>prepared statements</i>:</p>
-            <ul class="article__list">
-                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest tablica
-                    wartości. Wartości te w kwerendzie oznaczone są przez znaki zapytania (<strong>?</strong>), których
-                    kolejność jest taka sama jak kolejność wartości w tablicy:<br>
-                    <strong>const affectedId = 1000</strong>;<br>
-                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = ? WHERE `id` =
-                        ?;', ['new value', affectedId]))[0];</strong>
-                </li>
-                <li class="article__list-item">Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest obiekt
-                    (wariant ten, podczas tworzenia połączenia z bazą danych, wymaga ustawienia właściwości
-                    <i>namedPlaceholders</i> jako <i>true</i>). Kluczami w tym obiekcie są nazwy użyte w kwerendzie
-                    (nazwa w kwerendzie poprzedzona jest dwukropkiem (<strong>:</strong>)), a wartościami dane, które
-                    zostaną wstawione do kwerendy:<br>
-                    <strong>const affectedId = 2000</strong>;<br>
-                    <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = :myValue WHERE
-                        `id` = :affectedId;', {myValue: 'new value', affectedId}))[0];</strong>
-                </li>
-            </ul>
-            <p class="article__text">Przygotowanie zapytania do późniejszego wykonania (operacja zwiększająca
-                wydajność, należy pamiętać o zamknięciu <i>statement</i> w bloku <i>finally</i>):<br>
-                <strong>
-                    const newCars = [{registrationNo: 'NO 1',brand: 'CarOne',},{registrationNo: 'NO 2',brand:
-                    'CarTwo',},];<br>
-                    const statement = await conn.prepare('INSERT INTO `cars` VALUES (?,?)');<br>
-                    try {<br>
-                    &emsp;for (const car of newCars) {<br>
-                    &emsp;&emsp;await statement.execute(Object.values(car));<br>
-                    &emsp;}<br>
-                    } finally {<br>
-                    &emsp;statement.close();<br>
-                    }
-                </strong>
-            </p>
-            <p class="article__text">W celu zwiększenia przepustowości aplikacji należy tworzyć połączenie z bazą danych
-                z użyciem metody <i>createPool</i>. W przypadku wielu klientów odpytujących bazę, liczba połączeń
-                również wzrośnie. Konfiguracja połączenia jest analogiczna jak w przypadku metody
-                <i>createConnection</i>:<br>
-                <strong>(async () => {<br>
-                    &emsp;const pool = await mysql.createPool({<br>
-                    &emsp;&emsp;host: 'localhost',<br>
-                    &emsp;&emsp;user: 'root',<br>
-                    &emsp;&emsp;password: '',<br>
-                    &emsp;&emsp;database: 'test',<br>
-                    &emsp;&emsp;decimalNumbers: true,<br>
-                    &emsp;&emsp;namedPlaceholders: true,<br>
-                    &emsp;});<br>
-                    })();</strong>
-            </p>
-            <p class="article__text">Aby program nie oczekiwał na dalsze rzeczy po wykonaniu zapytania/zapytań, należy
-                po wykonaniu ostatniego z nich oczekiwać na funkcję kończącą:<br>
-                <strong>await pool.end()</strong>.
-            </p>
-        </article>
+          </li>
+          <li class="article__list-item"><strong>()</strong> - pozwalają kontrolować pierwszeństwo wyrażeń.</li>
+        </ul>
+
+        <p class="article__text">
+          Ograniczenie liczby wyników odbywa się z pomocą <i>LIMIT</i>. Jeśli podany zostanie jeden argument, określi on liczbę wyników jakie zostaną zwrócone.
+          Jeśli zostaną podane dwa argumenty, pierwszy z nich określi po którym z kolei elemencie rozpocząć wyświetlanie (liczone od 0), a drugi z nich określi
+          liczbę wyników jakie zostaną zwrócone.
+        </p>
+        <p class="article__text">
+          Alias nadaje tabeli lub kolumnie tymczasową (najczęściej skróconą) nazwę. Po pełnej nazwie należy użyć słowa kluczowego <i>AS</i>, a po nim zapisać
+          nazwę skróconą. W kolejnej części kwerendy możliwe jest korzystanie ze skróconej nazwy.
+        </p>
+        <p class="article__text">
+          <strong>Funkcje agregujące</strong> zwracają podsumowania dla całej tabeli, grupy wierszy w tabeli lub zbioru wynikowego. Przykłady:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>AVG(columnName)</strong> - zwraca wartość średnią,</li>
+          <li class="article__list-item"><strong>COUNT(*)</strong> - zwraca liczbę wybranych wierszy,</li>
+          <li class="article__list-item"><strong>COUNT(columnName)</strong> - zwraca liczbę wierszy w zbiorze,</li>
+          <li class="article__list-item"><strong>MAX(columnName)</strong> - zwraca największą wartość w zbiorze,</li>
+          <li class="article__list-item"><strong>MIN(columnName)</strong> - zwraca najmniejszą wartość w zbiorze,</li>
+          <li class="article__list-item"><strong>SUM(columnName)</strong> - zwraca sumę kolumn ze zbioru wierszy.</li>
+        </ul>
+        <p class="article__text">
+          Wstawianie danych do tabeli odbywa się z użyciem
+          <i>INSERT INTO</i> (można wstawić kilka rekordów jedocześnie, odzielając kolejne nawiasy z wartościami pól przecinkiem):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>INSERT INTO `tableName` (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)</strong>
+            - jeśli dodawane są wartośći dla wybranych kolumn, należy podać nazwy tych kolumn w kwerendzie,
+          </li>
+          <li class="article__list-item">
+            <strong>INSERT INTO `tableName` VALUES (value1, value2, value3, ...)</strong>
+            - jeśli dodawane są wartości dla wszystkich kolumn tabeli, można pominąć nazwy kolumn w kwerendzie, lecz należy pamiętać o takiej samej kolejności
+            podawania danych jak kolejność kolumn w tabeli.
+          </li>
+        </ul>
+        <p class="article__text">Najczęstsze rodzaje aktualizacji i usuwania danych:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Po <i>id</i> - bezpieczne,</li>
+          <li class="article__list-item">Po danych - wymaga ostrożności,</li>
+          <li class="article__list-item">Bez klauzuli <i>WHERE</i> - niebezpieczne.</li>
+        </ul>
+        <p class="article__text">
+          Podczas aktualizacji lub usuwania danych należy pamiętać o klauzuli
+          <i>WHERE</i> (bez niej wszystkie rekordy zostaną zaktualizowane/usunięte):
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <strong>UPDATE `tableName` SET column1 = value1, column2 = value2, ... WHERE condition</strong>
+            - aktualizuje rekord w danej tabeli,
+          </li>
+          <li class="article__list-item"><strong>DELETE FROM `tableName` WHERE condition</strong> - usuwa rekord z danej tabeli.</li>
+        </ul>
+        <p class="article__text">
+          <i>Id</i> generowane automatycznie z wykorzystaniem <i>AUTO_INCREMENT</i> są problematyczne, ponieważ są przewidywalne. Rozwiązaniem jest użycie
+          wbudowanej funkcji <i>UUID</i> zamiast kolejnych liczb. Jako typ danych należy wybrać <i>VARCHAR</i> o długości 36 znaków, a jako domyślną wartość -
+          wyrażenie <i>UUID()</i>.
+        </p>
+        <p class="article__text">
+          Możliwe jest ustawienie aktualnej daty i czasu (np. aby posortować rekordy od najwcześniej dodanego). Należy utworzyć kolumnę przechowującą takie dane
+          i jako typ wybrać <i>DATETIME</i>, a jako domyślną wartość - wyrażenie <i>CURRENT_TIMESTAMP()</i>.
+        </p>
+        <p class="article__text"><strong>Relacja</strong> to powiązanie ze sobą dwóch tabel. Rodzaje relacji:</p>
+        <ul class="article__list">
+          <li class="article__list-item">jeden do jednego,</li>
+          <li class="article__list-item">jeden do wielu (a po drugiej stronie - wiele do jednego),</li>
+          <li class="article__list-item">wiele do wielu (wymaga tabeli pośredniej).</li>
+        </ul>
+        <p class="article__text">
+          <strong>Unified Modeling Language (UML)</strong> to półNformalny język wykorzystywany do modelowania różnego rodzaju systemów. Aplikacja pozwalająca
+          stworzyć <i>UML</i> to <a class="article__link" href="https://www.drawio.com/">drawio.com</a>. W <i>phpMyAdmin</i> możliwe jest tworzenie <i>UML</i> w
+          narzędziu <i>Designer</i> (należy je otworzyć z poziomu widoku bazy danych).
+        </p>
+        <p class="article__text">Tworzenie relacji między tabelami:</p>
+        <ol class="article__list article__list--ordered">
+          <li class="article__list-item">
+            Utworzenie kolumny w tabeli (o nazwie będącej połączeniem nazwy tabeli referencyjnej oraz nazwy jej klucza głównego).
+          </li>
+          <li class="article__list-item">Nadanie utworzonej kolumnie identycznego typu danych i długości, jakie ma kolumna w tabeli referencyjnej.</li>
+          <li class="article__list-item">Pozwolenie na przyjęcie wartości <i>null</i> przez kolumnę.</li>
+          <li class="article__list-item">Utworzenie klucza obcego.</li>
+          <li class="article__list-item">
+            Przypisanie do utworzonego klucza: utworzonej kolumny, referencyjnej tabeli oraz referencyjnej kolumny z tej tabeli.
+          </li>
+        </ol>
+        <p class="article__text">
+          Relacja utworzona powyższym sposobem jest typu "jeden do wielu". Aby utworzyć relację typu "jeden do jednego", należy powtórzyć wymienione czynności w
+          drugą stronę (utworzyć nową kolumnę w tabeli, będącej poprzednio tabelą referencyjną).
+        </p>
+        <p class="article__text">
+          Aby utworzyć relację typu "wiele do wielu", należy utworzyć tabelę pośrednią (o nazwie będącej oddzielonymi podkreślnikiem nazwami obu tabel, między
+          którymi wystąpi relacja). Klucz główny w takiej tabeli może być generowany z wykorzystaniem <i>AUTO_INCREMENT</i>, ponieważ nie będzie nigdzie
+          wykorzystywany. Utworzoną tabelę pośrednią należy połączyć (zgodnie z powyższymi krokami) relacjami typu "jeden do wielu" z obiema tabelami, pomiędzy
+          którymi tworzona jest relacja "wiele do wielu".
+        </p>
+        <p class="article__text">
+          Łączenie wierszy z dwóch lub więcej tabel na podstawie powiązanej między nimi kolumny, odbywa się z wykorzystaniem klauzuli
+          <i>JOIN</i> (lewa tabela, to wymieniona w kwerendzie przed słowem kluczowym <i>JOIN</i>, prawa tabela, to wymieniona w kwerendzie po słowie kluczowym
+          <i>JOIN</i>). Przy każdym takim połączeniu należy po słowie kluczowym <i>ON</i>, określić kolumny łączącą obie tabele:
+          <strong>SELECT * FROM `table1` JOIN `table2` ON `table1`.`column1` = `table2`.`column2`</strong>.
+        </p>
+        <p class="article__text">Rodzaje połączeń pomiędzy tabelami:</p>
+        <ul class="article__list">
+          <li class="article__list-item"><strong>(INNER) JOIN</strong> - zwraca rekordy, które występują w obu tabelach,</li>
+          <li class="article__list-item">
+            <strong>LEFT (OUTER) JOIN</strong> - zwraca rekordy, które występują w lewej tabeli (wraz z rekordami z prawej tabeli, które wystąpiły jednocześnie
+            w lewej tabeli),
+          </li>
+          <li class="article__list-item">
+            <strong>RIGHT (OUTER) JOIN</strong> - zwraca rekordy, które występują w prawej tabeli (wraz z rekordami z lewej tabeli, które wystąpiły jednocześnie
+            w prawej tabeli),
+          </li>
+          <li class="article__list-item"><strong>FULL (OUTER) JOIN</strong> - zwraca rekordy, które wysąpiły w lewej lub prawej tabeli.</li>
+        </ul>
+        <p class="article__text">
+          W przypadku wyszukiwania danych z wielu tabel, nazwę kolumny należy poprzedzić nazwą tabeli oraz kropką. Uniemożliwi to ewentualny konflikt nazw:
+          <strong>SELECT `table1`.`columnName`, `table2`.`columnName` </strong>.
+        </p>
+      </article>
+      <article id="databases-in-code" class="article">
+        <h2 class="article__heading">bazy danych w kodzie</h2>
+        <p class="article__text">
+          Paczka umożliwiająca korzystanie z baz danych w kodzie to
+          <a class="article__link" href="https://www.npmjs.com/package/mysql2">mysql2</a>. Dostępna jest także w wersji używającej obiektów typu <i>promise</i>.
+          Paczka w tej wersji charakteryzuje się dużą szybkością działania oraz szerokim zakresem oferowanych możliwości. Jej pobranie możliwe jest za
+          pośrednictwem menadżera <i>npm</i>.
+        </p>
+        <p class="article__text">Sposób pracy z bazą danych w kodzie:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Import wersji używającej obiektów typu <i>promise</i>:<br />
+            <strong>const mysql = require('mysql2/promise');</strong>
+          </li>
+          <br />
+          <li class="article__list-item">
+            Uwtorzenie połączenia z bazą danych:<br />
+            <strong
+              >(async () => {<br />
+              &emsp;const conn = await mysql.createConnection({<br />
+              &emsp;&emsp;host: 'localhost',<br />
+              &emsp;&emsp;user: 'root',<br />
+              &emsp;&emsp;password: '',<br />
+              &emsp;&emsp;database: 'test',<br />
+              &emsp;&emsp;decimalNumbers: true,<br />
+              &emsp;&emsp;namedPlaceholders: true,<br />
+              &emsp;});<br />
+              })();</strong
+            >
+          </li>
+          <br />
+          <li class="article__list-item">
+            Wykonanie kwerendy <i>SQL</i> zawierającej instrukcję <i>SELECT</i> (wykonano destrukturyzację, ponieważ funkcja <i>execute</i> dla takiej kwerendy
+            zwraca tablicę dwóch tablic, z których pierwsza zawiera właściwe rekordy, a druga informacje o kolumnach):<br />
+            <strong>const [results] = await conn.execute('SELECT * FROM `table`;');</strong>
+          </li>
+          <br />
+          <li class="article__list-item">
+            Wykonanie kwerend <i>SQL</i> zawierających instrukcje <i>UPDATE</i>, <i>DELETE</i> lub <i>INSERT</i> (funkcja <i>execute</i> dla takich kwerend
+            zwraca pojedynczy obiekt, zawierający informacje dotyczące aktualizacji, usunięcia lub wstawienia rekordu):<br /><strong
+              >const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = "X" WHERE `id` = 1;'))[0];</strong
+            ><br />
+            <strong>const { insertId } = (await conn.execute('INSERT INTO `table` VALUES(NULL, 1, "X")'))[0];</strong>
+          </li>
+          <br />
+        </ul>
+        <p class="article__text">
+          Domyślnie liczby zmiennoprzecinkowe odczytywane są z bazy danych jako łańcuchy znaków. Aby odczytać je jako liczby, należy podczas tworzenia
+          połączenia z bazą danych ustawić właściwość
+          <i>decimalNumbers</i> jako <i>true</i>. Jednak w przypadku wielu miejsc po przecinku, należy upewnić się ,czy dokładność nie została utracona.
+        </p>
+        <p class="article__text">
+          W przypadku pracy z bazami danych nie należy używać narzędzi automatycznie uruchamiających projekt (np. <i>nodemon</i>), ponieważ możliwa jest
+          niepożądana modyfikacja lub usunięcie elementów bazy danych.
+        </p>
+        <p class="article__text">
+          Należy uważać na <strong>SQL Injection</strong>, czyli jeden z najpoważniejszych błędów bezpieczeństwa w IT. Nie wolno w sposób bezpośredni
+          wykorzystywać danych wprowadzonych przez użytkownika do tworzenia zapytań. Należy również używać funkcji <i>execute</i> zamiast <i>query</i> do
+          wykonywania kwerend a także upewnić się podczas konfigurowania połączenia z bazą danych, że właściwość <i>multipleStatements</i> nie została włączona
+          (domyślnie jest wyłączona).
+        </p>
+        <p class="article__text">
+          Bezpieczne oraz szybsze wykonywanie zapytań z wykorzystaniem danych wprowadzonych przez użytkownika odbywa się dzięki funkcjonalności
+          <strong>prepared statements</strong>. Pozwala ona również na wielokrotne używanie tych danych. Dzięki <i>prepared statements</i> wprowadzone dane są
+          interpretowane jedynie jako zmienne i nigdy nie zostaną zinterpretowane jako kwerenda.
+        </p>
+        <p class="article__text">Przykłady użycia <i>prepared statements</i>:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest tablica wartości. Wartości te w kwerendzie oznaczone są przez znaki zapytania
+            (<strong>?</strong>), których kolejność jest taka sama jak kolejność wartości w tablicy:<br />
+            <strong>const affectedId = 1000</strong>;<br />
+            <strong>const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = ? WHERE `id` = ?;', ['new value', affectedId]))[0];</strong>
+          </li>
+          <li class="article__list-item">
+            Drugim (oprócz kwerendy) argumentem funkcji <i>execute</i> jest obiekt (wariant ten, podczas tworzenia połączenia z bazą danych, wymaga ustawienia
+            właściwości <i>namedPlaceholders</i> jako <i>true</i>). Kluczami w tym obiekcie są nazwy użyte w kwerendzie (nazwa w kwerendzie poprzedzona jest
+            dwukropkiem (<strong>:</strong>)), a wartościami dane, które zostaną wstawione do kwerendy:<br />
+            <strong>const affectedId = 2000</strong>;<br />
+            <strong
+              >const { affectedRows } = (await conn.execute('UPDATE `table` SET `column` = :myValue WHERE `id` = :affectedId;', {myValue: 'new value',
+              affectedId}))[0];</strong
+            >
+          </li>
+        </ul>
+        <p class="article__text">
+          Przygotowanie zapytania do późniejszego wykonania (operacja zwiększająca wydajność, należy pamiętać o zamknięciu
+          <i>statement</i> w bloku <i>finally</i>):<br />
+          <strong>
+            const newCars = [{registrationNo: 'NO 1',brand: 'CarOne',},{registrationNo: 'NO 2',brand: 'CarTwo',},];<br />
+            const statement = await conn.prepare('INSERT INTO `cars` VALUES (?,?)');<br />
+            try {<br />
+            &emsp;for (const car of newCars) {<br />
+            &emsp;&emsp;await statement.execute(Object.values(car));<br />
+            &emsp;}<br />
+            } finally {<br />
+            &emsp;statement.close();<br />
+            }
+          </strong>
+        </p>
+        <p class="article__text">
+          W celu zwiększenia przepustowości aplikacji należy tworzyć połączenie z bazą danych z użyciem metody <i>createPool</i>. W przypadku wielu klientów
+          odpytujących bazę, liczba połączeń również wzrośnie. Konfiguracja połączenia jest analogiczna jak w przypadku metody <i>createConnection</i>:<br />
+          <strong
+            >(async () => {<br />
+            &emsp;const pool = await mysql.createPool({<br />
+            &emsp;&emsp;host: 'localhost',<br />
+            &emsp;&emsp;user: 'root',<br />
+            &emsp;&emsp;password: '',<br />
+            &emsp;&emsp;database: 'test',<br />
+            &emsp;&emsp;decimalNumbers: true,<br />
+            &emsp;&emsp;namedPlaceholders: true,<br />
+            &emsp;});<br />
+            })();</strong
+          >
+        </p>
+        <p class="article__text">
+          Aby program nie oczekiwał na dalsze rzeczy po wykonaniu zapytania/zapytań, należy po wykonaniu ostatniego z nich oczekiwać na funkcję kończącą:<br />
+          <strong>await pool.end()</strong>.
+        </p>
+      </article>
     </main>
     <footer class="footer">
-        <p class="footer__text">Maciej Ryszka - 2023</p>
+      <p class="footer__text">Maciej Ryszka - 2023</p>
     </footer>
     <script src="../scripts/hamburger-menu.js"></script>
     <script src="../scripts/top-button.js"></script>
-</body>
-
+  </body>
 </html>
